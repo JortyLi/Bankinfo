@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="copyright" content="All Rights Reserved, Copyright (C) 2013, Wuyeguo, Ltd."/>
+    <title>银行信息配置</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/easyui/themes/default/easyui.css}"
+          href="../static/easyui/themes/default/easyui.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/wu.css}" href="../static/css/wu.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/icon.css}" href="../static/css/icon.css"/>
+    <script type="text/javascript" th:src="@{/easyui/jquery.min.js}" src="../static/easyui/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{/easyui/jquery.easyui.min.js}"
+            src="../static/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" th:src="@{/easyui/locale/easyui-lang-zh_CN.js}"
+            src="../static/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body class="easyui-layout">
+<div region="center" title="银行信息配置" style="width: 50%;height: 100%;padding: 80px">
+    <div style="text-align: center; padding-bottom: 50px">
+        <h1><span id="bamkname" style="color: #ff0c40;font-size: 30px" th:text="${openBank.bankName}"></span></h1>
+    </div>
+    <form id="bank-from" method="post">
+        <div style="margin-bottom:20px" id="bank_url">
+            <input class="easyui-textbox" id="url" name="url" style="width:100%;visibility:hidden"
+                   th:value="${openBank.url}"
+                   data-options="label:'url:',required:true"/>
+        </div>
+        <div style="margin-bottom:20px" id="bank_cookie">
+            <input class="easyui-textbox" id="cookie" name="cookie" style="width:100%" th:value="${openBank.cookie}"
+                   data-options="label:'cookie:',required:true"/>
+            <input value="1" name="isOpen" type="hidden"/>
+        </div>
+        <div style="margin-bottom:20px" id="bank_param">
+            <input class="easyui-textbox" id="param" name="param" style="width:100%" th:value="${openBank.param}"
+                   data-options="label:'参数:',required:true"/>
+        </div>
+        <div style="display:none;width:30%;height:50%;margin:0 auto" id="bankes">
+            <table id="banke_table" class="easyui-datagrid"
+                   style="width:10px;height:50%;"></table>
+        </div>
+
+        <div style="margin-bottom:20px;text-align: center">
+            <label style="font-size: 14px; cursor: pointer;" th:each="bank:${banks}">
+                <input type="radio" name="id" th:value="${bank.id}" styyle="cursor: pointer;"
+                       th:checked="${bank.isOpen} == 1"/><font th:text="${bank.bankName}" style="font-size: 18px;"/>
+            </label>
+        </div>
+    </form>
+    <div style="text-align:center;padding:5px 0">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">提交</a>
+    </div>
+</div>
+<div region="east" hideCollapsedContent="false" collapsed="true" title="银行信息配置2"
+     style="width: 50%;height: 100%;padding: 150px">
+    <form id="bank-from1" method="post">
+        <div id="urldates" style="margin-bottom:20px">
+            <input class="easyui-textbox" name="url" style="width:100%" th:value="${openBank1.url}"
+                   data-options="label:'url:',required:true"/>
+        </div>
+        <div style="margin-bottom:20px">
+            <input class="easyui-textbox" name="cookie" style="width:100%" th:value="${openBank1.cookie}"
+                   data-options="label:'cookie:',required:true"/>
+            <input value="1" name="isOpen" type="hidden"/>
+        </div>
+        <div style="margin-bottom:20px">
+            <input class="easyui-textbox" name="param" style="width:100%" th:value="${openBank1.param}"
+                   data-options="label:'参数:',required:true"/>
+        </div>
+        <div style="margin-bottom:20px;text-align: center">
+            <label style="font-size: 14px; cursor: pointer;" th:each="bank:${banks1}">
+                <input type="radio" name="id" th:value="${bank.id}" styyle="cursor: pointer;"
+                       th:checked="${bank.isOpen} == 1"/><font th:text="${bank.bankName}" style="font-size: 18px;"/>
+            </label>
+        </div>
+    </form>
+    <div style="text-align:center;padding:5px 0">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm1()" style="width:80px">提交</a>
+    </div>
+</div>
+<script>
+    var number;
+    $(function () {
+        var numbers = $("input[name='id'][checked]").val();
+        number = numbers;
+        if (numbers > 7) {
+            $("#bankes").css("display", "");
+            $("#bank_url").css("display", "none");
+            $("#bank_cookie").css("display", "none");
+            $("#bank_param").css("display", "none");
+            getGrid(numbers);
+        } else {
+            $("#bank_url").css("display", "");
+            $("#bank_cookie").css("display", "");
+            $("#bank_param").css("display", "");
+            $("#bankes").css("display", "none");
+        }
+
+    });
+
+    function getGrid(number) {
+        $("#banke_table").datagrid({
+            url: '/bankeList',
+            pageSize: 10,
+            pageList: [10, 20, 30, 40],
+            singleSelect: true,
+            pagination: true,
+            fitColumns: true,
+            fit: true,
+            striped: true,
+            queryParams: {bankConfid: number},
+            columns: [[
+                {field: 'id', checkbox: true},
+                {field: 'bankName', title: '银行名称', align: 'center'},
+                {field: 'userName', title: '用户名', align: 'center'},
+                {field: 'loginName', title: '客户号/卡号', align: 'center'}
+            ]]
+        });
+    }
+
+
+    function submitForm() {
+        var numbs = number;
+        var param = $('#banke_table').datagrid('getSelected');
+        if (numbs > 10) {
+            if (!param) return $.messager.alert("", "请选择银行！");
+            $('#bank-from').form('submit', {
+                url: '/upbankList',
+                success: function (data) {
+                    $.messager.alert('信息', data);
+                }
+            });
+        } else {
+            $('#bank-from').form('submit', {
+                url: '/update',
+                success: function (data) {
+                    $.messager.alert('信息', data);
+                }
+            });
+        }
+
+    }
+
+    function submitForm1() {
+        $('#bank-from1').form('submit', {
+            url: '/update1',
+            success: function (data) {
+                $.messager.alert('信息', data);
+            }
+        });
+    }
+
+    $("input[name=id]").click(function () {
+        debugger;
+        number = this.value;
+        setDisplay(number);
+        $.ajax({
+            url: '/parameters',
+            data: {id: this.value},
+            dataType: 'json',
+            success: function (data) {
+                var par = data.parameter;
+                $("#bamkname").text(par.bankName);
+                $("#url").textbox('setValue', par.url);
+                $("#cookie").textbox('setValue', par.cookie);
+                $("#param").textbox('setValue', par.param);
+            }
+        });
+    });
+
+    function setDisplay(number) {
+        if (number >10) {
+            $("#bankes").css("display", "");
+            $("#bank_url").css("display", "none");
+            $("#bank_cookie").css("display", "none");
+            $("#bank_param").css("display", "none");
+            getGrid(number);
+        } else {
+            $("#bank_url").css("display", "");
+            $("#bank_cookie").css("display", "");
+            $("#bank_param").css("display", "");
+            $("#bankes").css("display", "none");
+        }
+    }
+
+</script>
+</body>
+</html>

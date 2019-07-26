@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.bankinfo.mapper.RecordMapper">
+  <resultMap id="BaseResultMap" type="com.example.bankinfo.domain.Record">
+    <!-- @mbggenerated -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="tradingHour" jdbcType="VARCHAR" property="tradinghour" />
+    <result column="incoming" jdbcType="REAL" property="incoming" />
+    <result column="balance" jdbcType="REAL" property="balance" />
+    <result column="tradeType" jdbcType="VARCHAR" property="tradetype" />
+    <result column="isHandle" jdbcType="INTEGER" property="ishandle" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="station" jdbcType="VARCHAR" property="station" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="order" jdbcType="VARCHAR" property="order" />
+    <result column="is_sum" jdbcType="INTEGER" property="isSum" />
+    <result column="bname" jdbcType="VARCHAR" property="bname" />
+    <result column="token" jdbcType="VARCHAR" property="token" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!-- @mbggenerated -->
+    id, tradingHour, incoming, balance, tradeType, isHandle, uid, station, remark, `order`,
+    is_sum,bname,token
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!-- @mbggenerated -->
+    select 
+    <include refid="Base_Column_List" />
+    from record
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!-- @mbggenerated -->
+    delete from record
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insertSelective" parameterType="com.example.bankinfo.domain.Record">
+    <!-- @mbggenerated -->
+    insert into ${tableName}
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="tradinghour != null">
+        tradingHour,
+      </if>
+      <if test="incoming != null">
+        incoming,
+      </if>
+      <if test="balance != null">
+        balance,
+      </if>
+      <if test="tradetype != null">
+        tradeType,
+      </if>
+      <if test="ishandle != null">
+        isHandle,
+      </if>
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="station != null">
+        station,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="order != null">
+        `order`,
+      </if>
+      <if test="isSum != null">
+        is_sum,
+      </if>
+      <if test="bname != null">
+        bname,
+      </if>
+      <if test="token != null">
+        token,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="tradinghour != null">
+        #{tradinghour,jdbcType=VARCHAR},
+      </if>
+      <if test="incoming != null">
+        #{incoming,jdbcType=REAL},
+      </if>
+      <if test="balance != null">
+        #{balance,jdbcType=REAL},
+      </if>
+      <if test="tradetype != null">
+        #{tradetype,jdbcType=VARCHAR},
+      </if>
+      <if test="ishandle != null">
+        #{ishandle,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="station != null">
+        #{station,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="order != null">
+        #{order,jdbcType=VARCHAR},
+      </if>
+      <if test="isSum != null">
+        #{isSum,jdbcType=INTEGER},
+      </if>
+      <if test="bname != null">
+        #{bname,jdbcType=VARCHAR},
+      </if>
+      <if test="token != null">
+        #{token,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.bankinfo.domain.Record">
+    <!-- @mbggenerated -->
+    update ${tableName}
+    <set>
+      <if test="tradinghour != null">
+        tradingHour = #{tradinghour,jdbcType=VARCHAR},
+      </if>
+      <if test="incoming != null">
+        incoming = #{incoming,jdbcType=REAL},
+      </if>
+      <if test="balance != null">
+        balance = #{balance,jdbcType=REAL},
+      </if>
+      <if test="tradetype != null">
+        tradeType = #{tradetype,jdbcType=VARCHAR},
+      </if>
+      <if test="ishandle != null">
+        isHandle = #{ishandle,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="station != null">
+        station = #{station,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="order != null">
+        `order` = #{order,jdbcType=VARCHAR},
+      </if>
+      <if test="isSum != null">
+        is_sum = #{isSum,jdbcType=INTEGER},
+      </if>
+      <if test="bname != null">
+        bname = #{bname,jdbcType=VARCHAR},
+      </if>
+      <if test="token != null">
+        token = #{token,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="findAll" parameterType="com.example.bankinfo.domain.Record" resultMap="BaseResultMap">
+    <!-- @mbggenerated -->
+    select 
+    <include refid="Base_Column_List" />
+    from ${tableName}
+    <where>
+      <if test="id != null">
+         and id = #{id,jdbcType=INTEGER}
+      </if>
+      <if test="tradinghour != null">
+         and tradingHour > #{tradinghour,jdbcType=VARCHAR}
+      </if>
+      <if test="incoming != null">
+         and incoming = #{incoming,jdbcType=REAL}
+      </if>
+      <if test="balance != null">
+         and balance = #{balance,jdbcType=REAL}
+      </if>
+      <if test="tradetype != null">
+         and tradeType = #{tradetype,jdbcType=VARCHAR}
+      </if>
+      <if test="ishandle != null">
+         and isHandle = #{ishandle,jdbcType=INTEGER}
+      </if>
+      <if test="uid != null">
+         and uid = #{uid,jdbcType=INTEGER}
+      </if>
+      <if test="station != null">
+         and station = #{station,jdbcType=VARCHAR}
+      </if>
+      <if test="remark != null">
+         and remark  like concat('%',#{remark,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="order != null">
+         and `order` = #{order,jdbcType=VARCHAR}
+      </if>
+      <if test="isSum != null">
+         and is_sum = #{isSum,jdbcType=INTEGER}
+      </if>
+      <if test="token != null">
+         and token = #{token,jdbcType=VARCHAR}
+      </if>
+      <if test='bname != null and bname != "notNull"'>
+         and bname = #{bname,jdbcType=VARCHAR}
+      </if>
+      <if test='bname != null and bname == "notNull"'>
+         and bname IS NOT NULL
+      </if>
+    </where>
+    ORDER  BY tradinghour DESC
+  </select>
+  <select id="findSumMoney" resultType="java.lang.Float">
+      select ifnull(sum(incoming),0) from ${tableName} where tradingHour > #{changeTime} and incoming > 0
+  </select>
+
+  <select id="findNewMoney" resultType="java.lang.Float">
+    select ifnull(sum(incoming),0) from ${tableName} where tradingHour > #{changeTime} and incoming > 0 and isHandle = 0
+  </select>
+
+  <select id="findBalance" resultType="java.lang.Float">
+      select balance from ${tableName} order by tradingHour desc limit 1
+  </select>
+  <select id="findRecord" resultMap="BaseResultMap">
+  select
+  <include refid="Base_Column_List" />
+  from ${tableName}
+  <where>
+    <if test="tradinghour != null">
+      and tradingHour = #{tradinghour,jdbcType=VARCHAR}
+    </if>
+    <if test="incoming != null">
+      and incoming = #{incoming,jdbcType=REAL}
+    </if>
+    <if test="balance != null">
+      and balance = #{balance,jdbcType=REAL}
+    </if>
+    <if test="remark != null">
+      and remark  = #{remark,jdbcType=VARCHAR}
+    </if>
+  </where>
+  limit 1
+</select>
+
+  <select id="findNewRecord" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from ${tableName} order by tradingHour desc limit 1;
+
+  </select>
+
+  <select id="findDaySumMoney" resultType="java.lang.Float">
+    SELECT ifnull(sum(incoming),0) FROM ${tableName} WHERE tradingHour BETWEEN #{startTime} AND #{endTime} AND isHandle=1;
+  </select>
+
+  <select id="findNamber" resultMap="BaseResultMap">
+    SELECT * FROM `record` where incoming &lt; 0 GROUP BY tradingHour desc limit 1;
+  </select>
+
+  <update id="updateBnameByExpend" parameterType="com.example.bankinfo.domain.Record">
+    update ${tableName}
+    <set>
+      <if test="bname != null">
+        bname = #{bname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <where>
+       and bname IS NULL
+    </where>
+  </update>
+
+</mapper>

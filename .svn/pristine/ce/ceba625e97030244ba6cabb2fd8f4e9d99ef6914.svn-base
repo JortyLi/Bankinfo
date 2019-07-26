@@ -1,0 +1,454 @@
+package com.example.bankinfo.task;
+
+import com.example.bankinfo.BankInfoApplication;
+import com.example.bankinfo.common.DateConvert;
+import com.example.bankinfo.common.HttpSendHelper;
+import com.example.bankinfo.common.SpringUtil;
+import com.example.bankinfo.domain.Record;
+import com.example.bankinfo.service.RecordService;
+import net.sf.json.JSONObject;
+import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+@Component
+public class AddMoneyTask {
+    /*日志*/
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    /*汇款接口地址*/
+    @Value("${station}")
+    public String station;
+
+    /*汇款接口地址*/
+    @Value("${station1}")
+    public String station1;
+
+    /*汇款接口地址*/
+    @Value("${hk.interface}")
+    public String hkURL;
+
+    /*微信汇款接口地址*/
+    @Value("${wx.interface}")
+    public String wxURL;
+
+    /*加币接口地址*/
+    @Value("${jb.interface}")
+    public String jbURL;
+
+    /*维纳斯加币接口地址*/
+    @Value("${jb.interface1}")
+    public String jbURL1;
+
+    /*加币key*/
+    @Value("${jb.key.value}")
+    public String jbKey;
+
+    /*加币倍率*/
+    @Value("${jb.times.value}")
+    public String jbTimesValue;
+
+    @Autowired
+    RecordService recordService;
+
+    public static Boolean IS_CLOSE = true;
+
+    /*加币任务*/
+    @Scheduled(fixedRate = 30 * 1000)
+    public void addMoney() {
+        if (StringUtils.isNotEmpty(BankInfoApplication.startDate1) || StringUtils.isNotEmpty(BankInfoApplication.startDate)) {
+//            if (BankInfoApplication.IS_START) {
+                System.out.println("加币--开始①");
+                List<Record> records = recordService.findAll(new Record(0, BankInfoApplication.BANK_RECORD_TABLE_NAME));
+                for (Record record : records) {//遍历未加币记录
+                    record.setNumber(1);
+                    record.setTableName(BankInfoApplication.BANK_RECORD_TABLE_NAME);
+                    /*金额小于0修改为转出状态*/
+                    if (upZhuanChu(record)) continue;
+
+                    /*时间小于今天修改为保留未加币状态*/
+                    if (upBaoLiu(record, 1)) continue;
+
+                    /*无法解析真实姓名的记录-请求（无姓名）参数汇款接口并据返回信息更新该条加币状态*/
+                    if (!"y".equals(station))//不是维纳斯才有微信接口
+                        if (notNameInterface(record)) continue;
+
+                    /*根据汇款接口返回信息进行加币*/
+                    sendHkResultUp(record);
+                }
+                System.out.println("加币--结束①");
+//            }
+//            if (BankInfoApplication.IS_START1) {
+//                System.out.println("加币--开始②");
+//                List<Record> records = recordService.findAll(new Record(0, BankInfoApplication.BANK_RECORD_TABLE_NAME_2));
+//                for (Record record : records) {//遍历未加币记录
+//                    record.setNumber(2);
+//                    record.setTableName(BankInfoApplication.BANK_RECORD_TABLE_NAME_2);
+//                    /*金额小于0修改为转出状态*/
+//                    if (upZhuanChu(record)) continue;
+//
+//                    /*时间小于今天修改为保留未加币状态*/
+//                    if (upBaoLiu(record, 2)) continue;
+//
+//                    /*无法解析真实姓名的记录-请求（无姓名）参数汇款接口并据返回信息更新该条加币状态*/
+//                    if (!"y".equals(station))//不是维纳斯才有微信接口
+//                        if (notNameInterface(record)) continue;
+//
+//                    /*根据汇款接口返回信息进行加币*/
+//                    sendHkResultUp(record);
+//                }
+//                System.out.println("加币--结束②");
+//            }
+        }
+    }
+
+    /**
+     * 根据汇款接口返回信息进行加币
+     *
+     * @param record 银行记录对象
+     */
+    private void sendHkResultUp(Record record) {
+        try {
+
+            /*秀场加币*/
+            xiuChangAddMoney(record);
+
+            /*维纳斯加币*/
+            if ("y".equals(station1)){
+                record.setStation(station1);
+                wnsAddMoney(record);
+            }
+
+        } catch (Exception e) {
+            logger.error("加币异常：" + e.toString());
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 秀场加币处理
+     *
+     * @param record
+     */
+    private void xiuChangAddMoney(Record record) {
+        String result = sendHuiKuan(record);
+        if (BankInfoApplication.isJSON(result)) {//调用秀场汇款接口返回成功
+            JSONObject jsonObject = JSONObject.fromObject(result);
+            record.setUid(Integer.parseInt(jsonObject.get("uid").toString()));
+
+            if (record.getUid() >= 10000) {
+                if (StringUtils.isEmpty(record.getBname())) {//更新收款银行信息
+                    record.setBname(jsonObject.get("bname").toString());
+                    recordService.updateByPrimaryKeySelective(record);
+                    recordService.updateBnameByExpend(record);
+                }
+                if (isOrder(jsonObject.get("orderno").toString(), record.getTableName())) {
+                    logger.info("该订单号已存在！不给于加币处理！并改为已加币！");
+                    record.setIshandle(1);
+                    recordService.updateByPrimaryKeySelective(record);
+                } else {
+                    record.setOrder(jsonObject.get("orderno").toString());
+                    record.setStation(jsonObject.get("station").toString());
+                    if (!"1".equals(jsonObject.get("flag").toString())) {//新站加入gsite值
+                        record.setGsite(jsonObject.get("gsite").toString());
+                    }
+                    String result1 = sendJiaBi(record);
+                    if (result1 != null && !"-102".equals(result))
+                        recordService.updateByPrimaryKeySelective(record);
+                }
+            }
+        }
+    }
+
+    /**
+     * 获取order_type
+     *
+     * @return
+     */
+    private String getOrderType(String str) {
+        // 匹配数字开头的部分
+        Pattern pattern = Pattern.compile("[0-9]+.*");
+        Matcher match = pattern.matcher(str);
+        String numPat = "";
+        while (match.find()) {
+            numPat = match.group();
+        }
+
+        // 订单头
+        String orderType = "";
+        if (!"".equals(numPat)) {
+            String arr[] = str.split(numPat);
+            for (String s : arr) {
+                orderType = s;
+                break;
+            }
+        }
+
+        return orderType;
+    }
+
+    /**
+     * 获取order_id
+     *
+     * @return
+     */
+    private String getOrderId(String str) {
+        // 匹配数字开头的部分
+        Pattern pattern = Pattern.compile("[0-9]+.*");
+        Matcher match = pattern.matcher(str);
+        String numPat = "";
+        while (match.find()) {
+            numPat = match.group();
+        }
+        return numPat;
+    }
+
+    /**
+     * 订单号是否存在
+     *
+     * @return
+     */
+    private boolean isOrder(String order, String tableName) {
+        Record record = new Record();
+        record.setOrder(order);
+        record.setTableName(tableName);
+        List<Record> list = recordService.findAll(record);
+        if (list == null || list.size() == 0)
+            return false;
+        else
+            return true;
+    }
+
+    /**
+     * 维纳斯加币处理
+     *
+     * @param record 银行记录对象
+     */
+    private boolean wnsAddMoney(Record record) throws UnsupportedEncodingException {
+        boolean flag = false;
+        String param;
+        if (Pattern.matches("^-?\\d+$", record.getRemark()) || getRealName(record.getRemark()).contains("有限公司")) {
+            param = null;
+        } else {
+            param = "realname=" + URLEncoder.encode(getRealName(record.getRemark()), "UTF-8") +
+                    "&money=" + record.getIncoming() +
+                    "&pay_time=" + URLEncoder.encode(record.getTradinghour(), "UTF-8");
+        }
+        String result = HttpSendHelper.sendGet(jbURL1, param);
+        logger.info("维纳斯接口：" + "URL:" + jbURL1 + "?" + param + "-----接口返回:" + result);
+        if (BankInfoApplication.isJSON(result)) {
+            JSONObject jsonObject = JSONObject.fromObject(result);
+            record.setUid(Integer.parseInt(jsonObject.get("uid").toString()));
+            if (record.getUid() == -4 || record.getUid() > 0) {
+                record.setIshandle(1);
+                if (record.getUid() > 0)
+                    record.setOrder(jsonObject.get("oder_id").toString());
+                record.setBname("VYS");
+                record.setToken(SpringUtil.getToken());
+                recordService.updateByPrimaryKeySelective(record);
+                logger.info("加币成功!");
+            }
+            if (StringUtils.isBlank(record.getOrder())){
+                flag = false;
+            }else {
+                flag = true ;
+            }
+        }
+        return  flag ;
+    }
+
+    /**
+     * 无法解析真实姓名的记录-请求（无姓名）参数汇款接口并据返回信息更新该条加币状态
+     * ^-?\d+$   最多只能有一个'-'，且至少包含一个数字
+     *
+     * @param record 银行记录对象
+     * @return boolean
+     */
+    private boolean notNameInterface(Record record) {
+        boolean flag = false;
+        if (Pattern.matches("^-?\\d+$", record.getRemark()) || record.getRemark().contains("有限公司") ||
+                "网联业务交易".equals(record.getRemark()) || StringUtils.isEmpty(record.getRemark()) ||
+                record.getRemark().contains("转账到银行卡") || "支付宝".equals(record.getRemark()) || "财付通".equals(record.getRemark())) {
+
+            String result = sendWeiXin(record);
+            if (BankInfoApplication.isJSON(result)) {
+                JSONObject jsonObject = JSONObject.fromObject(result);
+                if (Integer.parseInt(jsonObject.get("uid").toString()) > 0) {
+                    record.setIshandle(1);
+                    record.setStation(station);
+                    record.setUid(Integer.parseInt(jsonObject.get("uid").toString()));
+                    if (StringUtils.isEmpty(record.getBname())) {//更新收款银行信息
+                        record.setBname(jsonObject.get("bname").toString());
+                    }
+                    recordService.updateByPrimaryKeySelective(record);
+                    recordService.updateBnameByExpend(record);
+                }
+            }
+            flag = true;
+        }
+        return flag;
+    }
+
+    /**
+     * 修改保留加币状态
+     *
+     * @param record 银行记录对象
+     * @return boolean
+     */
+    private boolean upBaoLiu(Record record, Integer index) {
+        boolean flag = false;
+        /*获取设置的时间戳*/
+        Long timeLong;
+        if (index == 1) timeLong = DateConvert.convertLong(BankInfoApplication.startDate);
+        else timeLong = DateConvert.convertLong(BankInfoApplication.startDate1);
+        /*获取银行记录时间戳*/
+        Long recordLong = DateConvert.convertLong(record.getTradinghour());
+        if (recordLong < timeLong) {
+            record.setIshandle(2);
+            recordService.updateByPrimaryKeySelective(record);
+            flag = true;
+        }
+        return flag;
+    }
+
+    /**
+     * 修改转出状态
+     *
+     * @param record 银行记录对象
+     * @return boolean
+     */
+    private boolean upZhuanChu(Record record) {
+        boolean flag = false;
+        if (record.getIncoming() < 0) {
+            if ("y".equals(station)) {
+                record.setBname("VYS");
+                record.setToken(SpringUtil.getToken());
+            }
+            record.setIshandle(3);
+            recordService.updateByPrimaryKeySelective(record);
+            flag = true;
+        }
+        return flag;
+    }
+
+    /**
+     * 加币接口调用
+     *
+     * @param record 银行记录对象
+     * @return String result
+     */
+    public String sendJiaBi(Record record) {
+        String result = "";
+        try {
+            String prarm = "uid=" + record.getUid() + "&points=" + Math.round(record.getIncoming() * Integer.parseInt(jbTimesValue))
+                    + "&sgi_key=" + jbKey + "&order_id=" + getOrderId(record.getOrder()) + "&order_type=" + getOrderType(record.getOrder());
+            if (StringUtils.isNotEmpty(record.getGsite()))
+                prarm = prarm + "&gsite=" + record.getGsite();
+            result = HttpSendHelper.sendGet(jbURL, prarm);
+            logger.info(record.getNumber() + "加币接口成功：" + "URL:" + jbURL + "?" + prarm + "-----接口返回:" + result);
+            JSONObject jsonObject = JSONObject.fromObject(result);
+            if ("-102".equals(jsonObject.get("ret").toString())) {
+                record.setIshandle(0);
+            } else {
+                record.setIshandle(1);
+                record.setStation(station);
+                logger.info("加币成功");
+            }
+        } catch (Exception e) {
+            record.setIshandle(0);
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    /**
+     * 汇款接口调用
+     *
+     * @param record 银行记录对象
+     * @return String result
+     */
+    public String sendHuiKuan(Record record) {
+        String result = "";
+        try {
+            String timeE = URLEncoder.encode(record.getTradinghour(), "UTF-8").replaceAll("\\+", "%2B");
+            String realName = URLEncoder.encode(getRealName(record.getRemark()), "utf-8");
+            result = HttpSendHelper.sendGet(hkURL, "realname=" + realName + "&money=" + record.getIncoming() + "&pay_time=" + timeE);
+            logger.info(record.getNumber() + "汇款接口成功：" + "URL:" + hkURL + "?" + "realname=" + realName + "&money=" + record.getIncoming() + "&pay_time=" + timeE + "-----接口返回:" + result);
+            logger.info("未加密信息：{pay_time=" + record.getTradinghour() + "realname=" + getRealName(record.getRemark()) + "}");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    /**
+     * 微信汇款接口调用
+     *
+     * @param record 银行记录对象
+     * @return String result
+     */
+    public String sendWeiXin(Record record) {
+        String result = "";
+        try {
+            String timeE = URLEncoder.encode(record.getTradinghour(), "UTF-8").replaceAll("\\+", "%2B");
+            result = HttpSendHelper.sendGet(wxURL, "money=" + record.getIncoming() + "&pay_time=" + timeE + "&station=" + station);
+            logger.info(record.getNumber() + "微信接口成功：" + "URL:" + wxURL + "?" + "money=" + record.getIncoming() + "&pay_time=" + timeE + "&station=" + station + "-----接口返回:" + result);
+            logger.info("未加密信息：{pay_time=" + record.getTradinghour() + "}");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    /**
+     * 根据银行记录获取真实姓名
+     *
+     * @param remark 银行记录描述
+     * @return String realName
+     */
+    public static String getRealName(String remark) {
+        String realName = remark;
+        if (remark.contains(" ") && !remark.contains("-")) {
+            String[] arr = remark.split(" ");
+            realName = arr[arr.length - 1];
+        } else if (remark.contains("支付宝")) {
+            String[] arr = remark.split("支付宝");
+            realName = arr[0];
+        } else if (remark.contains("-")) {
+            String[] arr = remark.split("-");
+            realName = arr[0];
+        }
+        if (BankInfoApplication.bankConfiguration != null && "浦发银行".equals(BankInfoApplication.bankConfiguration.getBankName())) {
+            if (remark.contains("-") && remark.contains(":")) {
+                realName = remark.substring(remark.indexOf(":") + 1, remark.lastIndexOf("支"));
+            }
+        }
+        if (BankInfoApplication.bankConfiguration1 != null && "浦发银行".equals(BankInfoApplication.bankConfiguration1.getBankName())) {
+            if (remark.contains("-") && remark.contains(":")) {
+                realName = remark.substring(remark.indexOf(":") + 1, remark.lastIndexOf("支"));
+            }
+        }
+        return realName.trim();
+    }
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+//        String url = "http://payy8.gk50.com/transOrders/public/queryTrans";
+//        String timeE = URLEncoder.encode("2018-05-11 07:03:06", "UTF-8").replaceAll("\\+", "%2B");
+//        String realName = URLEncoder.encode(getRealName("货款、材料款、工资等 袁连柱"), "utf-8");
+//        float money = 2000;
+//        String result = HttpSendHelper.sendGet(url, "pay_time=" + timeE + "&realname=" + realName + "&money=" + money);
+//        System.out.println(result);
+//        <span style="white-space:pre;">     </span>// 创建与微软应用程序的新连接。传入的参数是注册表中注册的程序的名称。
+
+    }
+}

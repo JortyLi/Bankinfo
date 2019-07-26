@@ -1,0 +1,200 @@
+package com.example.bankinfo.common.single;
+
+import com.example.bankinfo.common.HttpClientUtil;
+import com.example.bankinfo.common.SpringUtil;
+import com.example.bankinfo.domain.BankConfiguration;
+import com.example.bankinfo.domain.BjrcbDetail;
+import com.example.bankinfo.domain.Record;
+import com.example.bankinfo.service.RecordService;
+import org.apache.commons.lang.StringUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+/**
+ * 北京农商银行---单例类
+ */
+public class BjrcbSingle {
+    /**
+     * 创建 BjrcbSingle 的一个对象
+     */
+    private static BjrcbSingle instance = new BjrcbSingle();
+
+    /**
+     * 让构造函数为 private，这样该类就不会被实例化
+     */
+    private BjrcbSingle() {
+    }
+
+    /**
+     * 获取唯一可用的对象
+     */
+    public static BjrcbSingle getInstance() {
+        if (instance == null) {
+            synchronized (BjrcbSingle.class) {
+                if (instance == null) {
+                    instance = new BjrcbSingle();
+                }
+            }
+        }
+        return instance;
+    }
+
+    /**
+     * 银行记录server
+     */
+    RecordService recordService;
+
+    public void BjrcbRun(BankConfiguration bankConfiguration, String tableName, RecordService recordService) {
+        //银行请求得到HTML字符数据
+        String result = HttpClientUtil.htRequest(bankConfiguration.getUrl(), "POST", bankConfiguration.getParam(), bankConfiguration.getCharsetname(), bankConfiguration.getCookie());
+        //将银行html数据转换成Document处理
+        Elements masthead = Jsoup.parse(result).select("table[class=biaocss4]").select("tr");
+
+        //循环银行取得TR标签数据
+        for (int i = 1; i < masthead.size(); i++) {
+            Element element = masthead.get(i);
+            //获取当前遍历中td元素数据
+            Elements e_td = element.select("td");
+            //获取已设置好的部分银行数据
+            Record record = setBankInfo(e_td, tableName);
+            //设置银行记录中-详细的时间
+            setDateTime(bankConfiguration, element, record);
+            //设置token
+            record.setToken(SpringUtil.getToken());
+            //保存已抓取的银行完整数据
+            recordService.insertSelective(record);
+
+
+        }
+    }
+
+//    /**
+//     * 根据参数截取出最后一页获取的HTML数据
+//     *
+//     * @param bankConfiguration 当前银行配置信息
+//     * @return String HTML信息
+//     */
+//    private String getResult(BankConfiguration bankConfiguration) {
+//        String result = HttpClientUtil.htRequest(bankConfiguration.getUrl(), "POST", bankConfiguration.getParam(), bankConfiguration.getCharsetname(), bankConfiguration.getCookie());
+//        Document docs1 = Jsoup.parse(result);
+//        Elements masthead1 = docs1.select("INPUT[name=recordNumber]");
+//        int sumIndex = Integer.parseInt(masthead1.attr("value"));
+//
+//        int pageSize = 20;
+//        int pageNo = sumIndex / pageSize;
+//
+//        String[] parmArr = bankConfiguration.getParam().split("&");
+//
+//        parmArr[1] = "PageNo=" + pageNo;
+//        parmArr[25] = "PerPage=" + pageSize;
+//        parmArr[28] = "currentIndex=" + pageNo * pageSize;
+//        parmArr[29] = "recordNumber=" + sumIndex;
+//        String resultParam = "";
+//        for (int i = 0; i < parmArr.length; i++) {
+//            String s = parmArr[i];
+//            resultParam += s + "&";
+//        }
+//        resultParam = resultParam.substring(0, resultParam.length() - 1);
+//        return HttpClientUtil.htRequest(bankConfiguration.getUrl(), "POST", resultParam, bankConfiguration.getCharsetname(), bankConfiguration.getCookie());
+//    }
+
+    /**
+     * 设置银行记录中-详细的时间
+     *
+     * @param bankConfiguration 当前银行配置信息
+     * @param element           遍历元素
+     * @param record            银行记录类
+     */
+    private void setDateTime(BankConfiguration bankConfiguration, Element element, Record record) {
+        //a标签详细参数
+        String aHrefVal = element.select("a[href]").attr("href");
+        if ("#".equals(aHrefVal) || StringUtils.isEmpty(aHrefVal)) {//没有姓名的追加显示交易类型
+            record.setRemark(record.getTradetype());
+        } else {//有时间则进入详细页面获取数据 并更新到银行对象Tradinghour里面
+            aHrefVal = aHrefVal.substring(aHrefVal.indexOf("('") + 2, aHrefVal.length() - 2);
+            record.setTradinghour(record.getTradinghour() + " " + detailOrSetTime(aHrefVal, bankConfiguration));
+        }
+    }
+
+    /**
+     * 设置取得对应银行记录对应的数据{日期（yyyy-MM-dd）、收支、余额、交易类型、对方姓名}
+     *
+     * @param e_td      td元素数据
+     * @param tableName 存入的数据库表名
+     */
+    private Record setBankInfo(Elements e_td, String tableName) {
+        //银行记录接收类
+        Record record = new Record();
+        //日期
+        String date = e_td.get(0).text();
+        record.setTradinghour(date);
+        //收支
+        String sr = e_td.get(1).text().replaceAll(",", "");
+        String zc = e_td.get(2).text().replaceAll(",", "");
+        Float incoming = 0F;
+        if (zc.contains("-")) {
+            zc = String.valueOf(zc.charAt(1));
+        }
+        incoming = (Float.valueOf(sr) > 0) ? Float.valueOf(sr) : Float.valueOf("-" + zc);
+
+        record.setIncoming(incoming);
+        //余额
+        Float balance = Float.valueOf(e_td.get(3).text().replaceAll(",", ""));
+        record.setBalance(balance);
+        //交易类型
+        String tradeType = e_td.get(6).text().trim();
+        record.setTradetype(tradeType);
+        //对方姓名
+        String remark = e_td.get(5).text().trim();
+        record.setRemark(remark);
+        //表名
+        record.setTableName(tableName);
+        return record;
+    }
+
+    /**
+     * 银行数据并进入详情数据获取更新准确时间
+     *
+     * @param aHrefVal a标签详细参数
+     * @return 准确时间{12:00:00}
+     */
+    private String detailOrSetTime(String aHrefVal, BankConfiguration bankConfiguration) {
+        //截取A标签内参数为-数组（1.00&&20190103&&215500690&&支付宝&&转帐&&TLR&&KJ0441125&&1&&&&&&182746&&6210676862125278932&&孙翠菊&&）
+        String[] aParamArr = aHrefVal.replaceAll("&&", "&& ").split("&&");
+        //获取设置好的详情参数对象
+        BjrcbDetail bjrcbDetail = getBjrcbDetail(aParamArr);
+        //https请求获取详细页面的HTML结果数据
+        String result = new HttpClientUtil().htRequest("https://ibs.bjrcb.com/per/QueryOtherDetail.do", "POST", bjrcbDetail.toDetailParam(), "GBK", bankConfiguration.getCookie());
+        //将银行html数据转换成Document处理
+        Elements masthead = Jsoup.parse(result).select("div[style=padding-left: 10px;]");
+        //返回准备时间字符
+        return masthead.get(12).text();
+    }
+
+    /**
+     * 获取设置好的详情参数对象
+     *
+     * @param aParamArr A标签数据参数数组
+     * @return 详情参数对象
+     */
+    private BjrcbDetail getBjrcbDetail(String[] aParamArr) {
+        BjrcbDetail bjrcbDetail = new BjrcbDetail();
+        bjrcbDetail.setAmount(aParamArr[0].trim());
+        bjrcbDetail.setTrsDate(aParamArr[1].trim());
+        bjrcbDetail.setAcNo2(aParamArr[2].trim());
+        bjrcbDetail.setAcName2(aParamArr[3].trim());
+        bjrcbDetail.setMsgCode(aParamArr[4].trim());
+        bjrcbDetail.setChannel(aParamArr[5].trim());
+        bjrcbDetail.setHostJnlNo(aParamArr[6].trim());
+        bjrcbDetail.setdCFlag(aParamArr[7].trim());
+        bjrcbDetail.setPostscript_L(aParamArr[8].trim());
+        bjrcbDetail.setNote_L(aParamArr[9].trim());
+        bjrcbDetail.setTrsTime(aParamArr[10].trim());
+        bjrcbDetail.setAcNo(aParamArr[11].trim());
+        bjrcbDetail.setAcName(aParamArr[12].trim());
+        bjrcbDetail.setOtherBranchNo(aParamArr[13].trim());
+        return bjrcbDetail;
+    }
+
+}

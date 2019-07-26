@@ -1,0 +1,2041 @@
+<input name="saveFiledValueFirefox" type="hidden">
+<script type="text/javascript">
+var structCode_utb = "1";
+   </script>	
+
+
+
+
+ 
+ 
+ 
+<script language="JavaScript1.2" src="/icbc/newperbank/js/includes/layer.js"></script>
+
+
+
+    
+
+
+  
+<script>var ComputIDForDeskBal = '10';
+	var SessionId_Ajax="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC";</script>
+<script src="/icbc/newperbank/js/includes/jgetCardBalance_sp2.js?ver=2019061605"></script>
+<script src="&#10;&#9;&#9;&#9;&#9;&#9;&#9;/icbc/newperbank/js/tomoney_fordisplay.js?ver=2019061605"></script>
+
+          <form name="balanceform" action="/servlet/ICBCINBSCenterServlet?dse_sessionId=EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC&amp;requestTokenid=15607437489691171669994" method="post">
+          	<input name="ActionUrl" type="hidden" value="/icbc/newperbank/ib_payment/ibp_query_balance.jsp">
+         	<input name="queryCardnum" type="hidden" value="">
+          	<input name="openBankname" type="hidden" value="">
+          	<input name="pcFeeAmt" type="hidden" value="">
+          	<input name="bankID" type="hidden" value="">
+          	<input name="CID" type="hidden" value="">
+          	<input name="acctName" type="hidden" value="">         
+          </form>
+
+
+
+
+<link href="/icbc/newperbank/perbank3/css/frame/css/style.css?ver=2019061605" rel="stylesheet" type="text/css">
+<link href="&#10;&#9;/icbc/newperbank/perbank3/css/frame/css/kabao.css?ver=2019061605" rel="stylesheet" type="text/css">
+
+<script src="/icbc/newperbank/js/swapimage.js?ver=2019061605"></script>
+<script src="&#10;&#9;/icbc/newperbank/js/account/account_query_myacct.js?ver=2019061605"></script>
+<script src="&#10;&#9;/icbc/newperbank/js/accountlist.js?ver=2019061605"></script>
+<script src="&#10;&#9;/icbc/newperbank/js/tomoney_fordisplay.js?ver=2019061605"></script>
+<script src="&#10;&#9;/icbc/newperbank/js/ajax/json2.js?ver=2019061605"></script>
+<script src="&#10;&#9;/icbc/newperbank/js/ajax/datastruct-ajax-eb.js?ver=2019061605"></script>
+<script src="&#10;&#9;/icbc/newperbank/js/ebdp-cardnumberdivide.js?ver=2019061605"></script>
+<script src="&#10;&#9;/icbc/newperbank/js/floatTip1.js?ver=2019061605"></script>
+<script src="&#10;&#9;/icbc/newperbank/perbank3/js/account/account_list_regacct.js?ver=2019061605"></script>
+<script src="&#10;&#9;/icbc/newperbank/perbank3/js/frame/js/kabao.js?ver=2019061605"></script>
+<script src="&#10;&#9;/icbc/newperbank/js/account/accountlist_investnew.js?ver=2019061605"></script>
+
+<script type="text/javascript">
+var sessionIdPara = "SessionId";
+var sessionIdValue = "EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC";
+var imagePathPara = "/icbc/newperbank/images/";
+var currentServiceId_account = "PBL20171501";
+var tipsforCard = "您未开通查询权限";
+</script>
+
+
+<div id="tooltip2" style="width: 116px; height: 20px; visibility: hidden; position: absolute; background-color: rgb(255, 255, 255);">
+	<layer name="nstip" bgcolor="#FF0000" width="1000px"></layer>
+</div>
+
+<title>个人网上银行-我的账户</title>
+
+
+
+
+
+
+
+
+
+<!-- 开放式网银不显示 -->
+
+ 
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+
+
+<tbody><tr><td class="tdspace"></td>
+<td>
+<table width="85%" align="left" class="td_L_main" id="主交易区" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td>
+
+<form name="form_qryAccountList" style="display: none;" action="/servlet/ICBCINBSReqServlet" method="post"><input name="Rec_Dep_Acc" type="hidden"> <input name="cardNum" type="hidden"> <input name="flag" type="hidden" value="0"> <input name="zh_CNreplyPage" type="hidden" value="newperbank/account/account_query_myacct.jsp">
+<input name="dse_sessionId" type="hidden" value="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC">
+<input name="requestTokenid" type="hidden" value="15607437489691171669994">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_LogonQueryAllAcctListOp">
+<input name="dse_pageId" type="hidden" value="24"></form>
+
+<form name="form2" style="display: none;" onsubmit="javascript:return false;" action="/servlet/ICBCINBSReqServlet" method="post">
+	<input name="tranFlag" type="hidden" value="1">
+	<input name="menuFlag" type="hidden" value="">	
+	<input name="regCardNum" type="hidden">		
+	<input name="cardtype" type="hidden">
+	<input name="areaname" type="hidden">		
+	<input name="openAreaCode" type="hidden">		
+	<input name="regmode" type="hidden">
+	<input name="entranceId" type="hidden">	
+	<input name="cardOwnerType" type="hidden">	
+	<input name="skFlag" type="hidden">	
+	<input name="skNo" type="hidden">	
+	<input name="cardDescs" type="hidden">	
+	<input name="acctCode" type="hidden">	
+	<input name="acctNum" type="hidden">
+	<input name="ltCardFlag" type="hidden">	
+	<input name="dse_sessionId" type="hidden" value="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC">
+<input name="requestTokenid" type="hidden" value="15607437489691171669994">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_CardMyMultiAcctCardOp">
+<input name="dse_pageId" type="hidden" value="24">
+</form>
+
+<form name="form3" style="display: none;" action="/servlet/ICBCINBSReqServlet" method="post">
+ 	<input name="dse_sessionId" type="hidden" value="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC">
+<input name="requestTokenid" type="hidden" value="15607437489691171669994">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_CardMyCreditCardOp">
+<input name="dse_pageId" type="hidden" value="24">
+	<input name="CardNum" type="hidden" value="">
+	<input name="cardArea" type="hidden" value="">
+	<input name="tranFlag" type="hidden" value="">
+	<input name="doFlag" type="hidden" value="">
+	<input name="currLen" type="hidden" value="">
+	<input name="cardRegMode" type="hidden" value="">
+	<input name="cardType" type="hidden" value="">
+	<input name="cardFlag" type="hidden" value="">
+	<input name="parsentAcct" type="hidden" value="">
+	<input name="parsentNum" type="hidden" value="">
+	<input name="isChip" type="hidden" value="">
+	<input name="isOperNoNet" type="hidden" value="">
+	<input name="TipOpenFlagTemp" type="hidden" value="">
+	<input name="vbv" type="hidden" value="0">
+	<input name="cardareacode" type="hidden" value="">
+	<input name="mycardOwnerType" type="hidden" value="">
+	<input name="crebFlag" type="hidden" value="">
+	<input name="skFlag" type="hidden" value="">
+	<input name="cardDescs" type="hidden" value="">
+</form>
+<form name="brnoform" style="display: none;" action="/servlet/ICBCINBSReqServlet" method="post">
+	<input name="dse_sessionId" type="hidden" value="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC">
+<input name="requestTokenid" type="hidden" value="15607437489691171669994">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_AccountQueryOpenAccNetInfoOp">
+<input name="dse_pageId" type="hidden" value="24">
+	<input name="cardNum" type="hidden">
+	<input name="acctNum" type="hidden">
+	<input name="acctType" type="hidden">
+	<input name="acctCode" type="hidden">
+</form>
+<form name="ecardform" action="/servlet/ICBCINBSReqServlet">
+<input name="tradeFlag" type="hidden" value="0">
+<input name="cardCount" type="hidden" value="">
+<input name="cardNum" type="hidden" value="">
+<input name="fromVbV" type="hidden" value="2">
+<input name="dse_sessionId" type="hidden" value="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC">
+<input name="requestTokenid" type="hidden" value="15607437489691171669994">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_ECardListQueryOp">
+<input name="dse_pageId" type="hidden" value="24">
+</form>
+<form name="interForm" style="display: none;" action="/servlet/ICBCINBSReqServlet" method="post">
+<input name="dse_sessionId" type="hidden" value="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC">
+<input name="requestTokenid" type="hidden" value="15607437489691171669994">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_CardMyCreditCardOp">
+<input name="dse_pageId" type="hidden" value="24">
+	<input name="doFlag" type="hidden" value="34">
+	<input name="cardType" type="hidden" value="008">
+	<input name="cardNum" type="hidden" value="">
+	<input name="cardFlag" type="hidden" value="0">
+	<input name="acctNum" type="hidden" value="">
+</form>
+<form name="businessCardForm" action="/servlet/ICBCINBSReqServlet" method="post">
+	<input name="dse_sessionId" type="hidden" value="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC">
+<input name="requestTokenid" type="hidden" value="15607437489691171669994">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_CardMyCreditCardOp">
+<input name="dse_pageId" type="hidden" value="24">
+	<input name="CardNum" type="hidden" value="">
+	<input name="doFlag" type="hidden" value="22">
+	<input name="vbv" type="hidden" value="1">
+</form>
+<form name="EAccountForm" action="/servlet/ICBCINBSReqServlet" method="post">
+	<input name="dse_sessionId" type="hidden" value="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC">
+<input name="requestTokenid" type="hidden" value="15607437489691171669994">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_AccountEMoreInfoOp">
+<input name="dse_pageId" type="hidden" value="24">
+	<input name="tranFlag" type="hidden" value="1">
+	<input name="regCardNum" type="hidden">		
+	<input name="cardtype" type="hidden">
+	<input name="isEAccount" type="hidden">
+	<input name="areaname" type="hidden">		
+	<input name="acctCode" type="hidden">
+</form>
+<div align="center" width="100%">
+	<div class="kabao-block" id="pad-top">
+		<div class="kabao-box width">
+			<div class="kabao-list">
+				<div class="kabao-main">
+				
+				<div id="kabao-defaultCard-list"></div>
+		
+						<div class="kabao-main-item kabao-main-item1" id="li_1">
+				<div class="kabao-main-item-box">
+				
+					<a title="点击设置默认卡！" class="kabao-xz" style="display: inline;"></a>
+					
+					<div class="kabao-main-item-left">
+                        <div class="card-div">
+                            <div class="card-img" style='background: url("/icbc/newperbank/perbank3/images/newsmallcard/blue_card2.png");'></div>
+                            <div class="card-info">
+                                <h6><span id="cardalias_6222030409001016188"></span><script>jQuery('#cardalias_6222030409001016188').html(decodeURIComponent(''));</script><i><b>保定</b>
+                                	工银借记卡
+
+                                </i></h6>
+                                <p class="cardNumberDivide card-number" style="white-space: nowrap;" cardnumber="6222030409001016188">622203 0409001016188</p>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <div class="kabao-main-item-center">
+                        <div class="card-money-div">
+                            <div class="table-box" style="width: 410px; height: auto;">
+                                <table class="card-money-table show-span" rules="none" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th class="b-20 t-left btn-box  active">
+                                            	币种
+                                            	
+													<b class="down-btn"></b>
+		                            			
+                                            </th>
+                                            <th class="b-40 t-right">余额</th>
+                                            <th class="b-40 t-right">可用余额</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="span_blance_6222030409001016188"><tr><td class="b-20 t-left"><span class="active">人民币</span></td><td class="b-40 t-right"><span class="active">0.00</span></td><td class="b-40 t-right"><span class="active">0.00</span></td></tr></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    	
+                    
+	                    <div class="kabao-main-item-right kabao-main-item-right1">
+	                    	<ul class="handle-ul">
+	                            <li onclick="javascript:AtomSerivceSubmit('PBL200711','6222030409001016188||no|000||myacct|');">明细</li>
+	                            
+	                            	<li onclick="javascript:AtomSerivceSubmit('PBL200811>PBL200810','PBL200810:*6222030409001016188');">汇款</li>
+	                            
+	                             <li onclick="javascript:queryNet('6222030409001016188','011','00000','0409336401104583963','0');">开户网点 </li>
+	                        </ul>
+	                    </div>
+	                    <div class="kabao-main-item-right">
+	                        <ul class="handle-ul">
+		                        <li onclick="javascript:AtomSerivceSubmit('PBL300101','');">缴费</li>
+	                            <li onclick="javascript:AtomSerivceSubmit('PBL201131','');">理财</li>
+                            	
+                            		<li onclick="javascript:moreInfo('2', '6222030409001016188','011','保定','0409','0','350202','0','0','','','00000','0409336401104583963');">更多</li>
+                        		
+	                        </ul>
+	                    </div>
+	                    
+                    
+                    
+               </div>
+
+		
+					</div>
+					
+	
+	               
+					
+					
+					
+						
+				
+				      
+				
+				      
+					
+					<!-- 人民币e卡 begin -->
+					
+
+
+			
+
+
+				
+				
+
+
+				
+				
+				
+
+	
+					
+					
+
+				
+				</div>
+				
+					
+<script type="text/javascript">
+	var needGetFAFlag="true";//session数据，如果本次登录已经查过，则不再调用接口查询
+	var sessionIdParameter = "dse_sessionId=EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC&requestTokenid=15607437489691171669994";
+	
+		var isOwnAcct = true;
+		var sessionAreaCode = "0409";
+	
+	
+	function setButtoGray(){//1809 华商屏蔽操作按钮
+		
+	}
+	$(function(){
+		setButtoGray();
+	})
+</script>
+
+
+ <div class="tzlczh-box">
+    	<div class="tzlczh-tit">
+        	<h6 align="left">投资理财账户</h6>
+            <span>展开</span>
+        </div>
+
+    <div class="tzlczh-body-hide">
+    	<div class="tzlczh-body">
+             <table class="tzlczh-table" rules="none" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>开户地区</th>
+                            <th>类型</th>
+                            <th>账户</th>
+                            <th>所属交易卡</th>
+                            <th></th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="FAcctTable">
+                    
+                      	
+                    </tbody>
+             </table>
+        </div>  
+    </div>
+</div>
+				
+	    		<div class="tianjia-div">
+	    			
+			    	<a class="add-btn active" style="padding: 8px 16px; margin-left: 2px;" onclick="javascript:AtomSerivceSubmit('PBL20171510','');">+ 添加银行卡</a>
+			    	
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+
+
+<script>
+	//绑定clicknull的清空方法
+	jQuery(".mobileSecured").unbind("focus").bind("focus",function(){jQuery(this).val("")});
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- <script type="text/javascript" src="/icbc/newperbank/js/perbank3/locationmap.js"></script> -->
+
+<script src="/icbc/newperbank/js/perbank3/js0001.js?ver=2019061605"></script>
+
+<script type="text/javascript">
+
+	var loctionmapList=new LoctionmapList();
+var nologonList= new Array();
+var loctionmapListourl= new Array();
+nologonList[0]=new Loctionmap('PBL20132107','','','0','1、客户可注销交易账户或调整交易卡。注销交易账户前客户须清空持仓及保证金账户。');
+loctionmapList.add(new Loctionmap('PBL201427','022502'));
+loctionmapListourl[0]=new Loctionmap('PBL201427','022502','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201803','171005'));
+loctionmapListourl[1]=new Loctionmap('PBL20201803','171005','','0','','/icbc/newperbank/fakeexchange/stock_fake_lsmx.jsp','','','0','','','');
+nologonList[1]=new Loctionmap('PBL201428','','网点预约','1','');
+nologonList[2]=new Loctionmap('PBL20132108','','','0','1、您可以通过“查询持仓的份额调整记录”功能了解所持有的账户原油连续产品和账户天然气的份额调整情况。<br>2、您的账户原油连续产品持仓资产规模在份额调整前后保持不变，即调整前持仓*份额调整前价格=调整后持仓*份额调整后价格+退还资金（释放保证金），其中份额调整过程中剩余不足开仓0.1桶的资金（或保证金）将退还至您的资金账户（或释放到保证金账户）。<br>3、您的账户天然气持仓资产规模在份额调整前后保持不变，即调整前持仓*份额调整前价格=调整后持仓*份额调整后价格+退还资金（释放保证金），其中份额调整过程中剩余不足开仓1百万英热单位的资金（或保证金）将退还至您的资金账户（或释放到保证金账户）。<br>4、您可以通过“查询历史份额调整价格”功能了解账户原油连续产品和账户天然气历史份额调整价格。<br>5、您可以通过“份额调整短信提醒”功能订阅账户原油连续产品和账户天然气份额调整结果通知，并修改接收短信的手机号码。');
+loctionmapList.add(new Loctionmap('PBL20091101','400101'));
+loctionmapListourl[2]=new Loctionmap('PBL20091101','400101','','0','','/icbc/newperbank/reckoning/reckoning_service_apply_index.jsp','','','0','','cardNumInject','payerNameInject');
+nologonList[3]=new Loctionmap('PBL201429','230501','网点预约','1','您提交预约申请后，我行将实时反馈预约结果，并向您发送业务提醒短信。<br>外币现金存取款预约业务目前最多可支持21个外币的预约服务，不同地区的网点支持可预约的外币币种不同。我行将根据您的币种要求，自动回显可预约该币种的网点。');
+loctionmapList.add(new Loctionmap('PBL201429','230501'));
+loctionmapListourl[3]=new Loctionmap('PBL20091102','','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20091103','4003'));
+loctionmapListourl[4]=new Loctionmap('PBL20091103','4003','','0','','/icbc/newperbank/reckoning/reckoning_mybill_person_index.jsp','','','0','','parentServiceId','');
+loctionmapList.add(new Loctionmap('PBL20091104','4004'));
+loctionmapListourl[5]=new Loctionmap('PBL20091104','4004','','0','','/icbc/newperbank/reckoning/reckoning_detail_submit.jsp','','','0','','parentServiceId','');
+loctionmapList.add(new Loctionmap('PBL20109101','0804'));
+loctionmapListourl[6]=new Loctionmap('PBL201670','','活动大厅','0','','/icbc/Emall/main/forward.jsp','/icbc/Emall/main/forward.jsp','','0','','turnUrl','');
+nologonList[4]=new Loctionmap('PBL20132110','','','0','1、客户设置到期转期类型后，中国工商银行在产品到期日按到期转期结算价格及客户选定的转期方式自动平仓上期产品并开仓下期产品，一般在次日的7:05起开始转期交易。<br>2、客户设置自选转期类型后，中国工商银行在产品到期日按客户选择的转期时点自选转期价格和客户选定的转期方式自动平仓上期产品并开仓下期产品，一般在转期时点后5分钟后开始转期交易。<br>3、到期转期和自选转期一经开启、长期有效，客户可在“管理自动转期”菜单下终止转期功能。<br>4、按金额转期（即固定金额转期）的方式是使用平仓全部上期产品数量所得资金，以最大可开仓数量同时开仓下期产品；按桶数转期（即固定数量转期）的方式是按客户持有的全部上期产品数量，尽可能开仓相同数量的下期产品。<br><font color="red">5、自选转期和到期转期中上期产品平仓价和下期产品开仓价一般情况下大幅好于同时点账户客户卖出价/买入价（即银行买入价/卖出价）。</font><br>6、具体功能请查询账户能源的产品介绍及交易规则。');
+nologonList[5]=new Loctionmap('PBL201430','','我的网点预约','1','');
+nologonList[6]=new Loctionmap('PBL201431','','我的网点预约','0','');
+nologonList[7]=new Loctionmap('PBL20132111','','','0','1、客户可以通过点击“撤销”取消已经预约的转期计划。');
+nologonList[8]=new Loctionmap('PBL201432','','','1','');
+nologonList[9]=new Loctionmap('PBL20132112','','','0','1、客户可以查询账户原油实时转期、自选转期和到期转期的交易明细。');
+nologonList[10]=new Loctionmap('PBL201433','','申请借记卡','1','');
+nologonList[11]=new Loctionmap('PBL20132113','','','0','1、客户可以查询账户原油转期的历史价格。');
+nologonList[12]=new Loctionmap('PBL20132118','420102','','0','1、账户原油期次产品的交易起始日、交易结束日和结算日等信息可在账户原油“查询产品信息”栏目下查询。<br>2、账户原油连续产品份额调整的有关信息，可在“我的账户原油”栏目下的查询份额调整信息功能查询。<br>3、账户原油交易时间一般为周一9：00到24：00，周二至周五每日0：00到4：00与9：00到24：00，周六0：00到4：00。<br>4、客户通过我行风险能力评测和投资交易类产品适合度评估后方能办理账户原油开户及交易业务。<br>5、挂单交易的有效期包括24小时、48小时、72小时、96小时、120小时，客户可通过挂单有效期下拉选项选择。对于账户原油连续产品，份额调整时点前未成交的挂单将自动失效。<br>6、在账户原油行情报价，您看到的报价为参考报价，仅供您参考，不能凭此达成交易；如您需要达成交易，请联动到交易区获取可成交报价后完成交易。<br>7、根据国际市场流动性差异，我行账户原油产品在不同时段报价价差不同，一般情况下欧美时段(17:00-次日4:00)价差好于亚洲时段(9:00-17:00)价差，且亚洲时段早间价差变化较大。根据市场情况，我行可能调整账户原油的银行买入价/卖出价和交易价差，请客户在达成交易前注意。<br>8、因国家监管政策等原因，我行对所有客户人民币账户原油产品总持仓净额设定上、下限。当客户持仓触及上、下限时，客户将不能进行新开仓操作，平仓操作不受影响。<br>9、某期账户原油期次产品到期后，客户若没有参与转期而仍持有该期产品，我行将按照该期产品到期结算价为客户进行结算，客户资金在该期产品结算日到账。<br>10、为便于客户更好地了解该业务，我行在门户网站-个人业务-金融市场投资交易-热点问答中增加了账户原油交易业务知识问答。');
+loctionmapList.add(new Loctionmap('PBL20132118','420102'));
+loctionmapListourl[7]=new Loctionmap('PBL20132118','420102','','0','','','','','','0','prodcode','cashsign');
+nologonList[13]=new Loctionmap('PBL20132120','420101','','0','1、产品定义。中国工商银行账户原油，是中国工商银行为个人客户提供的，采取只计份额、不提取实物原油的方式，以人民币或美元买卖原油份额的投资交易产品。<br>2、开办准备。（1）客户办理账户原油交易应充分认识并完全理解可能遇到的各类风险，在通过风险能力评测和投资交易类产品适合度评估后方能办理账户原油开户及交易业务。建议您仔细阅读账户原油产品介绍、交易规则、交易协议及知识问答（详见网上银行右侧交易区下方“产品详情”），以更好地了解本产品。<br>（2）如您的资金账户不是多币种借记卡或结算账户，请您在办理前指定新的多币种借记卡或结算账户，或到网上银行“我的账户原油-交易账户管理-调整交易卡”栏目/营业网点柜面调整账户属性。<br>3、交易时间。网上银行账户原油交易时间一般为周一9：00到24：00，周二至周五每日0：00到4：00与9：00到24：00，周六0：00到4：00。如遇节假日等特殊情况，请以我行网站公告为准。<br>4、界面指引。左侧实时行情区提供账户原油报价与走势图，该区域所有价格均为参考报价，不能凭此达成交易。右侧交易区提供了先买入后卖出、先卖出后买入两种交易类型，以及实时、挂单两种交易方式。如您希望按照当前交易报价实时买卖账户原油，请选择实时交易，我行将在您提交交易指令后显示当前可成交价格，该价格有效期为10秒钟，请您尽快确认；如您希望未来一段时间内以您指定的条件成交，请选择挂单交易，各种挂单种类与挂单有效期介绍请参阅产品介绍（各地区挂单种类可能不同，请以实际情况为准），挂单成功后，如您需撤销挂单，请到“我的账户原油-挂单管理”中办理。<br> 5、特别提示。<br>（1）我行账户原油产品分为期次产品与连续产品。期次产品按期次发行，每期产品到期后客户将不能继续交易。连续产品没有到期日，客户可持续交易。<br>（2）期次产品到期自动结算。在某期次产品到期后，客户若没有参与转期而仍持有该期产品，我行将按照该期产品到期结算价为客户进行结算，客户资金在该期产品结算日到账；期次产品的交易起始日、交易结束日和结算日等信息可在“我的账户原油-产品信息和结算价格”栏目查询。<br>（3）期次产品转期功能。客户持有的期次产品可通过转期功能转换为下一期产品（限同一币种、同一交易类型）。我行提供实时转期、自选转期和到期转期三种转期类型。其中，对于实时转期，我行按照实时转期价格为客户办理转期（即平仓上期产品同时开仓下期产品）；对于自选转期，我行根据客户选定的转期时点，按照相应时点的自选转期价格为客户办理转期；对于到期转期，我行按照上期产品的到期转期结算价格和下期产品的当日转期结算价格于到期日次日为客户办理转期；无论选择哪种转期类型，转期前后客户的资产总值不变。具体转期功能设置及转期明细查询可在“我的账户原油-转期管理”栏目进行。<br>（4）连续产品份额调整。连续产品存续期间会根据参考的交易所原油合约期次调整情况同步调整客户持有的份额；份额调整前价格、份额调整后价格参考交易所对应期次合约的份额调整日结算价以及我行当日结售汇牌价。我行不收取份额调整费用，份额调整前后客户的资产总值不变；连续产品份额调整的有关信息（包括调整日、调整价格、份额调整记录等），可在“我的账户原油-查询份额调整信息”栏目查询。<br>（5）总持仓限额。因国家监管政策等原因，我行对所有客户人民币账户原油产品总持仓净额设定上、下限。当所有客户持仓触及上、下限时，您将不能进行新开仓操作，平仓操作不受影响。<br>（6）产品报价时段差异。根据国际市场流动性差异，我行账户原油产品在不同时段报价价差不同，一般情况下欧美时段(17:00-次日4:00)价差好于亚洲时段(9:00-17:00)价差，且亚洲时段早间价差变化较大。根据市场情况，我行可能会调整账户原油的银行买入价/卖出价和交易价差，请您在达成交易前注意。<br>6、如有其它疑问，请致电95588咨询。<br>7、如您需要查看账户原油客户文档，请点击<a href="http://www.icbc.com.cn/ICBC/yxyw7/13.htm" target="_blank">此链接</a>');
+loctionmapList.add(new Loctionmap('PBL20132120','420101'));
+loctionmapList.add(new Loctionmap('PBL20133211','160201'));
+loctionmapListourl[8]=new Loctionmap('PBL201200','','基金.证券.期货','0','','','/icbc/newperbank/perbank3/fund/frame_fund_nologin.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20133212','160201'));
+loctionmapList.add(new Loctionmap('PBL20133213','160201'));
+loctionmapList.add(new Loctionmap('PBL20133214','160201'));
+loctionmapList.add(new Loctionmap('PBL20132125','420105'));
+loctionmapList.add(new Loctionmap('PBL20133215','160201'));
+loctionmapList.add(new Loctionmap('PBL20133216','160201'));
+loctionmapList.add(new Loctionmap('PBL20133217','160201'));
+loctionmapList.add(new Loctionmap('PBL20133218','160201'));
+loctionmapList.add(new Loctionmap('PBL20091121','400102'));
+loctionmapListourl[9]=new Loctionmap('PBL20091121','400102','','0','','/icbc/newperbank/reckoning/reckoning_gathering_submit.jsp','','','0','','parentServiceId','');
+loctionmapList.add(new Loctionmap('PBL20133219','160201'));
+loctionmapList.add(new Loctionmap('PBL20091122','4002'));
+loctionmapListourl[10]=new Loctionmap('PBL20091122','4002','','0','','/icbc/newperbank/reckoning/reckoning_payment_submit.jsp','','','0','','parentServiceId','');
+loctionmapList.add(new Loctionmap('PBL20091123','400103'));
+loctionmapListourl[11]=new Loctionmap('PBL20091123','400103','','0','','/icbc/newperbank/reckoning/reckoning_myRegularBillIndex.jsp','','','0','','parentServiceId','');
+nologonList[14]=new Loctionmap('PBL201210','','基金产品','0','');
+loctionmapListourl[12]=new Loctionmap('PBL201210','','基金产品','0','','','/icbc/newperbank/perbank3/fund/frame_fund_index_out.jsp','','0','','','');
+nologonList[15]=new Loctionmap('PBL20134311','','','1','1、账户外汇交易时间一般为周一早07：00到周六早04：00，如遇节假日等特殊情况，请以中国工商银行网站公告为准，或可咨询95588。<br/>2、在左侧实时行情区，您看到的报价为参考报价，仅供您参考，不能凭此达成交易；如您需要达成交易，请联动到交易区获取可成交报价后完成交易。直接点击银行买入价或银行卖出价，可联动到右侧交易区的实时交易，办理实时账户外汇买卖交易。<br/>3、在右侧交易区，提供了实时交易、获利挂单、止损挂单、双向挂单等多种交易方式。各种挂单介绍见《中国工商银行账户外汇产品介绍》。在提交交易指令后，请尽快完成确认。各地区挂单种类可能不同，请以实际情况为准。<br/>4、挂单有效期包括24小时、48小时、72小时、96小时、120小时等。<br/>5、挂单成功后，如您需撤销挂单，请到“管理挂单”中办理。<br/>6、根据《中国工商银行账户外汇交易协议》和《中国工商银行账户外汇产品介绍》，我行可能会调整买入/卖出价格与中间价间价差，请您在交易前注意确认。');
+loctionmapList.add(new Loctionmap('PBL20134312','130602'));
+nologonList[16]=new Loctionmap('PBL201212','','货币基金','1','');
+loctionmapListourl[13]=new Loctionmap('PBL201212','','货币基金','1','','','/icbc/newperbank/perbank3/fund/frame_fund_index_out.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20134313','130603'));
+nologonList[17]=new Loctionmap('PBL201213','','股票基金','1','');
+loctionmapListourl[14]=new Loctionmap('PBL201213','','股票基金','1','','','/icbc/newperbank/perbank3/fund/frame_fund_index_out.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20134314','130606'));
+nologonList[18]=new Loctionmap('PBL201214','','债券基金','1','');
+loctionmapListourl[15]=new Loctionmap('PBL201214','','债券基金','1','','','/icbc/newperbank/perbank3/fund/frame_fund_index_out.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20200501','170107'));
+loctionmapListourl[16]=new Loctionmap('PBL20200501','170107','','0','','/icbc/newperbank/stock/3fcg/3FCGBank2StockPreSet_index.jsp','','','0','','','');
+nologonList[19]=new Loctionmap('PBL201215','','混合基金','1','');
+loctionmapListourl[17]=new Loctionmap('PBL201215','','混合基金','1','','','/icbc/newperbank/perbank3/fund/frame_fund_index_out.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20200502','170108'));
+loctionmapListourl[18]=new Loctionmap('PBL20200502','170108','','0','','/icbc/newperbank/stock/3fcg/3FCGStock2BankPreSet_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20134315','130604'));
+nologonList[20]=new Loctionmap('PBL201216','','基金定投  ','1','');
+loctionmapListourl[19]=new Loctionmap('PBL201216','','基金定投  ','1','','','/icbc/newperbank/perbank3/fund/frame_fund_fixed_nologin.jsp','','0','','','');
+loctionmapListourl[20]=new Loctionmap('PBL201217','','基金','','','','','','','','','');
+nologonList[21]=new Loctionmap('PBL201218','','','0','');
+nologonList[22]=new Loctionmap('PBL201219','','','0','');
+nologonList[23]=new Loctionmap('PBL201220','','保险','0','');
+loctionmapListourl[21]=new Loctionmap('PBL201220','','保险','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_index_out.jsp','','0','','','');
+nologonList[24]=new Loctionmap('PBL201221','','','0','');
+loctionmapListourl[22]=new Loctionmap('PBL201221','','','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_index_out.jsp','','0','','','');
+nologonList[25]=new Loctionmap('PBL20122101','','购买保险','0','');
+loctionmapListourl[23]=new Loctionmap('PBL20122101','','购买保险','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_index_nosess.jsp','','0','0','insurecorporno','insurekindno');
+nologonList[26]=new Loctionmap('PBL201222','','投资型保险','0','');
+loctionmapListourl[24]=new Loctionmap('PBL201222','','投资型保险','0','','','','','0','','','');
+nologonList[27]=new Loctionmap('PBL201223','','','0','');
+loctionmapListourl[25]=new Loctionmap('PBL201223','','','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_index_out.jsp','','0','','','');
+loctionmapListourl[26]=new Loctionmap('PBL20122102','','我的保险','0','','/icbc/newperbank/assurance/assurance_myown_index.jsp','','','0','0','','');
+nologonList[28]=new Loctionmap('PBL20112302','150802','','0','1、国债的认购交易须在发行认购期内进行，购买储蓄国债(电子式)交易时间一般为8：30－16：30，以财政部公告为准。<br/>2、如为浮动利率债或通胀指数债，请点击对应的基本利率，可进入门户债券公告页面查看具体的利率及计息规则。');
+loctionmapList.add(new Loctionmap('PBL20112302','150802'));
+loctionmapListourl[27]=new Loctionmap('PBL20112302','150802','','0','','','','','0','','','');
+nologonList[29]=new Loctionmap('PBL201224','','万能险','0','');
+loctionmapListourl[28]=new Loctionmap('PBL201224','','万能险','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20122103','2003'));
+loctionmapList.add(new Loctionmap('PBL20201601','170402'));
+loctionmapList.add(new Loctionmap('PBL20112303','150803'));
+loctionmapListourl[29]=new Loctionmap('PBL20112303','150803','','0','','/icbc/newperbank/nationaldebt/save_nationaldebt_accquery_balance.jsp','','','0','','','');
+nologonList[30]=new Loctionmap('PBL201225','','','0','');
+loctionmapListourl[30]=new Loctionmap('PBL201225','','','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_index_out.jsp','','0','','','');
+loctionmapListourl[31]=new Loctionmap('PBL20122104','','续期缴费','0','','/icbc/newperbank/assurance/assurance_extend_index.jsp','','','0','0','','');
+loctionmapList.add(new Loctionmap('PBL20201602','170403'));
+loctionmapList.add(new Loctionmap('PBL20112304','150804'));
+loctionmapListourl[32]=new Loctionmap('PBL20112304','150804','','0','','/icbc/newperbank/nationaldebt/save_nationaldebt_accquery_current_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20122105','2006'));
+loctionmapListourl[33]=new Loctionmap('PBL20122105','2006','我的保险芯片卡','0','','/icbc/newperbank/assurance/assurance_mychipcard_index.jsp','','','0','0','','');
+nologonList[31]=new Loctionmap('PBL201226','','稳健投资','0','');
+loctionmapListourl[34]=new Loctionmap('PBL201226','','稳健投资','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_index_out.jsp','','','','','');
+loctionmapList.add(new Loctionmap('PBL20201603','170405'));
+loctionmapListourl[35]=new Loctionmap('PBL20201603','170405','','0','','/icbc/newperbank/stock/financing/financing_query_lsmx_index.jsp','','','0','','protserno','stockcode');
+loctionmapList.add(new Loctionmap('PBL20112305','150805'));
+loctionmapListourl[36]=new Loctionmap('PBL20112305','150805','','0','','/icbc/newperbank/nationaldebt/nationaldebt_subscribe_status_index.jsp','','','0','','','');
+nologonList[32]=new Loctionmap('PBL201227','','健康人生','0','');
+loctionmapListourl[37]=new Loctionmap('PBL201227','','健康人生','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_index_out.jsp','','','','','');
+loctionmapList.add(new Loctionmap('PBL20201604','170401'));
+loctionmapListourl[38]=new Loctionmap('PBL20201604','170401','','0','','/icbc/newperbank/stock/financing/financing_list_index.jsp','','','0','','','');
+loctionmapListourl[39]=new Loctionmap('PBL20112306','','','0','','','','','0','','bondid','');
+nologonList[33]=new Loctionmap('PBL201228','','安全出行','0','');
+loctionmapListourl[40]=new Loctionmap('PBL201228','','安全出行','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_index_out.jsp','','','','','');
+nologonList[34]=new Loctionmap('PBL20112307','','债券','0','');
+loctionmapListourl[41]=new Loctionmap('PBL20201605','','','0','','/icbc/newperbank/stock/3fcg_queryMoney_index.jsp','','','0','','transData','');
+nologonList[35]=new Loctionmap('PBL201229','','养老无忧','0','');
+loctionmapListourl[42]=new Loctionmap('PBL201229','','养老无忧','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_index_out.jsp','','','','','');
+loctionmapListourl[43]=new Loctionmap('PBL20190001','','','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','','','','');
+loctionmapList.add(new Loctionmap('PBL20071301','020210'));
+loctionmapListourl[44]=new Loctionmap('PBL20071301','020210','','0','','/ctp/icbc/newperbank/account/account_query_bankstatement_index_hid.jsp','','','0','','','');
+loctionmapListourl[45]=new Loctionmap('PBL20190002','','','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','','','','');
+loctionmapList.add(new Loctionmap('PBL20071302','110202'));
+loctionmapListourl[46]=new Loctionmap('PBL20071302','110202','','0','','/icbc/newperbank/card/card_myBill_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20071303','110203'));
+loctionmapListourl[47]=new Loctionmap('PBL20071303','110203','','0','','/icbc/newperbank/annuity/annuity_reportdownload_hid.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20071304','110204'));
+loctionmapListourl[48]=new Loctionmap('PBL20071304','110204','','0','','/icbc/newperbank/fund/fund_statement_hid.jsp','','','0','','','');
+nologonList[36]=new Loctionmap('PBL201230','','保险产品','0','');
+loctionmapListourl[49]=new Loctionmap('PBL201230','','保险产品','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_index_out.jsp','','0','','','');
+loctionmapListourl[50]=new Loctionmap('PBL201231','','我的保险','0','','','','','0','','','');
+loctionmapListourl[51]=new Loctionmap('PBL20167001','','热门活动','0','','/icbc/Emall/main/forward.jsp','/icbc/Emall/main/forward.jsp','','0','','turnUrl','');
+loctionmapListourl[52]=new Loctionmap('PBL201232','','专属保险','0','','','','','0','','','');
+loctionmapListourl[53]=new Loctionmap('PBL20167002','','我的奖品','0','','/icbc/Emall/main/forward.jsp','/icbc/Emall/main/forward.jsp','','0','','turnUrl','');
+loctionmapList.add(new Loctionmap('PBL20082201','060101'));
+loctionmapListourl[54]=new Loctionmap('PBL20082201','060101','','0','','/icbc/newperbank/remit/remit_foreignCard_submit.jsp','','','0','','snapTranData','parentServiceId');
+loctionmapList.add(new Loctionmap('PBL20082202','060293'));
+loctionmapListourl[55]=new Loctionmap('PBL20082202','060293','','0','','/icbc/newperbank/remit/remit_toforeignvisamater_result.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20072401','251301'));
+loctionmapListourl[56]=new Loctionmap('PBL20072401','251301','','0','','','','','0','','','');
+loctionmapListourl[57]=new Loctionmap('PBL20082203','','','0','','','','','0','','','');
+loctionmapListourl[58]=new Loctionmap('PBL20171501','','账户列表-注册账户列表','0','','/icbc/newperbank/account/account_list_regacct.jsp','','','0','','acctparas','');
+loctionmapList.add(new Loctionmap('PBL20072402','251302'));
+loctionmapListourl[59]=new Loctionmap('PBL20072402','251302','','0','','','','','0','','','');
+loctionmapListourl[60]=new Loctionmap('PBL20171502','','','0','','/icbc/newperbank/account/account_list_otherbankacct.jsp','','','0','','','');
+loctionmapListourl[61]=new Loctionmap('PBL20171503','','','0','','/icbc/newperbank/account/account_list_managedacct.jsp','','','0','','','');
+loctionmapListourl[62]=new Loctionmap('PBL20171504','','','0','','/icbc/newperbank/account/account_list_points.jsp','','','0','','','');
+loctionmapListourl[63]=new Loctionmap('PBL20171505','','','0','','/icbc/newperbank/housefund/housefund_index.jsp','','','0','','','');
+loctionmapListourl[64]=new Loctionmap('PBL20171506','','','0','','/ctp/icbc/newperbank/socialinsurance/socialinsurance_myinfo.jsp','','','0','','','');
+loctionmapListourl[65]=new Loctionmap('PBL20171507','','','0','','/icbc/newperbank/annuity/pension_prod_list_index.jsp','','','0','','','');
+loctionmapListourl[66]=new Loctionmap('PBL20171508','','银商银权','0','','/icbc/newperbank/exchange/MyMarket_index.jsp','','','0','银商银权','showmarket','');
+loctionmapListourl[67]=new Loctionmap('PBL20171509','','','0','','/icbc/newperbank/perbank3/stock/myStock_index.jsp','','','0','','tradeflag','');
+loctionmapListourl[68]=new Loctionmap('PBL201000','','存款.贷款','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20134101','130402'));
+loctionmapListourl[69]=new Loctionmap('PBL20134102','','','0','','/ctp/icbc/newperbank/foreign/foreign_two_entrust_submit.jsp','','','0','','tranCardNum','');
+loctionmapListourl[70]=new Loctionmap('PBL20100101','','','0','','/icbc/newperbank/account/account_save_list.jsp','','','0','','','');
+nologonList[37]=new Loctionmap('PBL300101','','e缴费','0','');
+loctionmapListourl[71]=new Loctionmap('PBL300101','','e缴费','0','','/icbc/newperbank/onlinePayment/forwardToPayment.jsp','/icbc/newperbank/onlinePayment/forwardToPayment.jsp','1','0','','','');
+loctionmapList.add(new Loctionmap('PBL20134103','1305'));
+loctionmapListourl[72]=new Loctionmap('PBL20100102','','','0','','/icbc/newperbank/perbank3/finance/frame_finance_query.jsp','','','0','','','');
+loctionmapListourl[73]=new Loctionmap('PBL300102','','','0','','/icbc/newperbank/onlinePayment/login/index_atom.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20134104','130404'));
+nologonList[38]=new Loctionmap('PBL300103','','','0','');
+loctionmapListourl[74]=new Loctionmap('PBL300103','','','0','','/icbc/newperbank/onlinePayment/forwardToPayment.jsp','/icbc/newperbank/onlinePayment/forwardToPayment.jsp','1','0','','menuFlag','keyword');
+loctionmapListourl[75]=new Loctionmap('PBL20100103','','','0','','/icbc/newperbank/fund/fund_acct_query_index.jsp','','','0','','','');
+loctionmapListourl[76]=new Loctionmap('PBL20100104','','','0','','/icbc/newperbank/perbank3/financialproducts/finance_mygold.jsp','','','0','','','');
+loctionmapListourl[77]=new Loctionmap('PBL20134105','','','0','','/ctp/icbc/newperbank/foreign/foreign_tran_confirm_mid.jsp?menuId=130103','','','0','','tranCardNum','backFlag');
+nologonList[39]=new Loctionmap('PBL20134106','','','0','');
+loctionmapListourl[78]=new Loctionmap('PBL20134106','','','0','','','','','0','','','');
+loctionmapListourl[79]=new Loctionmap('PBL20100105','','金融持仓-保险','0','','/icbc/newperbank/assurance/assurance_myown_index.jsp','','','0','','','');
+nologonList[40]=new Loctionmap('PBL20134107','','','0','');
+loctionmapListourl[80]=new Loctionmap('PBL20134107','','','0','','','','','0','','','');
+nologonList[41]=new Loctionmap('PBL20134108','','','0','');
+loctionmapListourl[81]=new Loctionmap('PBL20134108','','','0','','','','','0','','','');
+nologonList[42]=new Loctionmap('PBL20134109','','','0','');
+loctionmapListourl[82]=new Loctionmap('PBL20134109','','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20171510','020103'));
+loctionmapListourl[83]=new Loctionmap('PBL20182401','','','0','','','','','','','','');
+loctionmapListourl[84]=new Loctionmap('PBL20171511','','账户列表-注册账户列表-横版','0','','/icbc/newperbank/account/account_list_regacct_horizontal.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20171512','020111'));
+nologonList[43]=new Loctionmap('PBL20134110','','','0','');
+loctionmapListourl[85]=new Loctionmap('PBL20134110','','','0','','','','','0','','','');
+loctionmapListourl[86]=new Loctionmap('PBL201010','','存款','0','','','','','0','','','');
+loctionmapListourl[87]=new Loctionmap('PBL20134111','','','0','','/icbc/newperbank/perbank3/foreign/foreign_collect_sub.jsp','','','0','','','');
+nologonList[44]=new Loctionmap('PBL201011','','通知存款','1','');
+nologonList[45]=new Loctionmap('PBL20134112','','','0','1、个人网上银行外汇买卖交易时间一般为周一早07：00到周六早04：00，如遇节假日等特殊情况，请以中国工商银行网站公告为准，或可咨询95588。<br />2、在左侧行情报价区，您看到的报价为参考报价，仅供您参考，不能凭此达成交易；如您需要达成交易，请联动到交易区获取可成交报价后完成交易。您可以根据自己的需要，在此设置常用货币对的报价。直接点击银行买入价或银行卖出价，可联动到页面右侧外汇交易区，办理外汇实时交易。<br />3、在右侧交易区，提供了实时交易、获利挂单、止损挂单、双向挂单、追加挂单、循环挂单、一对多挂单及触发挂单等多种交易方式，交易起点一般不低于等值50美元。各挂单介绍见《中国工商银行外汇买卖产品介绍》。在提交交易指令后，请尽快完成确认。各地区挂单种类可能有所不同，以实际情况为准。<br />4、挂单有效期包括24小时、48小时、72小时、96小时、120小时、当周有效和30天，其中当周有效的失效时间为当周六早4点，30天的有效期为720小时。<br />5、挂单成功后，如您需撤销挂单，请到“管理挂单交易”或“挂单明细查询”中办理。<br />6、循环挂单、一对多及触发挂单暂不支持当周有效和30天两种挂单有效期。<br />7、根据《中国工商银行外汇买卖交易协议》，我行可能会调整买入/卖出价格与参考中间价间价差，请您在交易前注意确认。 ');
+loctionmapListourl[88]=new Loctionmap('PBL20134112','','','0','','','/ctp/icbc/newperbank/foreign/foreignTranTradeIFrame_nologin.jsp','','0','','buyCurr','sellCurr');
+nologonList[46]=new Loctionmap('PBL20111001','','','0','');
+loctionmapListourl[89]=new Loctionmap('PBL20111001','','','0','','/icbc/newperbank/perbank3/includes/menu_all.jsp','/icbc/newperbank/perbank3/includes/menu_all_out.jsp','','0','','tapkeydata','');
+nologonList[47]=new Loctionmap('PBL201012','','七天通知存款','1','');
+nologonList[48]=new Loctionmap('PBL20111002','','理财产品','0','');
+loctionmapList.add(new Loctionmap('PBL20200301','171201'));
+nologonList[49]=new Loctionmap('PBL20111004','','私人银行','0','');
+loctionmapListourl[90]=new Loctionmap('PBL20111004','','私人银行','0','','/icbc/newperbank/perbank3/includes/menu_all.jsp','/icbc/newperbank/perbank3/includes/menu_all_out.jsp','','0','','','');
+loctionmapListourl[91]=new Loctionmap('PBL20060201','','','0','','','','','0','','','');
+loctionmapListourl[92]=new Loctionmap('PBL201020','','定期存款','0','','','','','0','','','');
+nologonList[50]=new Loctionmap('PBL201021','','定期存款','1','');
+loctionmapListourl[93]=new Loctionmap('PBL20134122','','','0','','','','','0','','','');
+nologonList[51]=new Loctionmap('PBL201022','','零存整取','1','');
+nologonList[52]=new Loctionmap('PBL20112101','150701','','0','1、处于发行期的柜台记账式债券，在认购时按照发行价进行交易。<br/>2、“票面利率”一栏，对于附息债券显示的是票面利率，对于贴现债券显示的是以发行价格计算的折合年化收益率。<br/>3、处于交易期的柜台记账式债券则按照当日公布的净价进行交易，全价进行资金结算。债券交易实际成交的金额以系统成交金额为准。<br/>4、所有连续交易品种的“债券名称”和“债券简称”均增加了“连续”字样。<br/>5、柜台记账式债券交易时间（电子银行渠道）: 适用于债券发行认购、债券续发行认购、现券买卖和债券转托管。（1）债券发行/续发行认购：债券发行/续发行起始日10:00至截止日16:30。（2）现券买卖/债券转托管：连续交易品种：周一：10:00～24:00；周二至周四：00:00～24:00；周五:00:00～16:30。非连续交易品种：周一至周五：10:00～16:30。国家法定节假日、按国家规定调整后的实际休息日以及监管部门规定的停止交易日除外。<br/>6、柜台记账式债券的开户时间（电子银行渠道）为每周一至周日：0：00－24:00。<br/>7、本行根据市场变化制定债券交易价格，投资人自担风险。<br/>8、本期利息收益、持有到期利息收益计算公式如下：本期利息收益=票面利率/付息频率-应计利息；持有到期利息收益=票面利率/付息频率*剩余付息次数-应计利息。其中，付息频率取年付息次数，对于贴现债券付息频率为1。');
+loctionmapList.add(new Loctionmap('PBL20112101','150701'));
+loctionmapListourl[94]=new Loctionmap('PBL20112101','150701','','0','','/icbc/newperbank/nationaldebt/nationaldebt_infoquery_product.jsp','/icbc/newperbank/nationaldebt/nationaldebt_infoquery_product_nosession.jsp','','0','','defaultTab','');
+nologonList[53]=new Loctionmap('PBL201023','','教育储蓄','1','');
+loctionmapList.add(new Loctionmap('PBL20112102','150702'));
+loctionmapListourl[95]=new Loctionmap('PBL20112102','150702','','0','','','','','0','','','');
+nologonList[54]=new Loctionmap('PBL201024','','存本取息','1','');
+loctionmapList.add(new Loctionmap('PBL20112103','150703'));
+loctionmapListourl[96]=new Loctionmap('PBL20112103','150703','','0','','','','','0','','','');
+nologonList[55]=new Loctionmap('PBL201025','','大额存单','1','');
+loctionmapList.add(new Loctionmap('PBL20112104','150704'));
+loctionmapListourl[97]=new Loctionmap('PBL20112104','150704','','0','','','','','0','','','');
+nologonList[56]=new Loctionmap('PBL20112105','','','0','');
+loctionmapListourl[98]=new Loctionmap('PBL20112105','','','0','','/icbc/newperbank/perbank3/nationaldebt/nationaldebt_index_information.jsp?infoFlag=1','/icbc/newperbank/perbank3/nationaldebt/nationaldebt_index_information_nosession.jsp','','0','','','');
+loctionmapListourl[99]=new Loctionmap('PBL20112106','','','0','','/icbc/newperbank/nationaldebt/nationaldebt_enews_setmodify_firstitem1.jsp','','','0','','','');
+loctionmapListourl[100]=new Loctionmap('PBL20112107','','','0','','/icbc/newperbank/perbank3/nationaldebt/nationaldebt_index_information.jsp?infoFlag=1','','','0','','','');
+loctionmapListourl[101]=new Loctionmap('PBL20112108','','','0','','/icbc/newperbank/perbank3/nationaldebt/nationaldebt_index_information.jsp?infoFlag=2','','','0','','','');
+loctionmapListourl[102]=new Loctionmap('PBL20112109','','','0','','/icbc/newperbank/perbank3/nationaldebt/nationaldebt_index_information.jsp?infoFlag=3','','','0','','','');
+loctionmapListourl[103]=new Loctionmap('PBL201030','','特色存款','0','','','','','0','','','');
+nologonList[57]=new Loctionmap('PBL201031','','节节高','1','');
+loctionmapListourl[104]=new Loctionmap('PBL20112110','','','0','','','','','0','','BondID','salePriceLoad');
+loctionmapListourl[105]=new Loctionmap('PBL20112111','','','0','','','','','0','','BondID','');
+loctionmapListourl[106]=new Loctionmap('PBL20112112','','','0','','','','','0','','BondID','');
+loctionmapListourl[107]=new Loctionmap('PBL20112113','','','0','','','','','0','','BondID','BondName');
+loctionmapListourl[108]=new Loctionmap('PBL20103401','','','0','','','','','0','','','');
+loctionmapListourl[109]=new Loctionmap('PBL20103402','','','0','','','','','0','','','');
+nologonList[58]=new Loctionmap('PBL20112115','','推荐产品','1','');
+loctionmapListourl[110]=new Loctionmap('PBL20112117','','','0','','','','','0','','','');
+nologonList[59]=new Loctionmap('PBL20072201','','','0','1、请申请人认真阅读《中国工商银行牡丹信用卡章程》、《牡丹信用卡领用合约》、《安全用卡须知》、《自动还款业务协议书》。<br/>2、如您申请副卡，领卡时须主卡人和副卡人同时持各自有效证件办领卡手续。<br/>3、请确保您所填写的联系方式的准确性，收到申请后我行将与您联系。<br/>');
+loctionmapListourl[111]=new Loctionmap('PBL20072201','','','0','','/icbc/newperbank/card/card_applycard_index.jsp','/icbc/newperbank/bankbook/bankbook_onlineapply_mid.jsp','','0','','corpCode','firstPage');
+loctionmapListourl[112]=new Loctionmap('PBL20170212','','','0','','','','','0','','jumpParam','');
+nologonList[60]=new Loctionmap('PBL20072202','','','0','');
+loctionmapListourl[113]=new Loctionmap('PBL20072202','','','0','','','/icbc/newperbank/card/card_queryCard_cred_nosess.jsp','','0','','','');
+nologonList[61]=new Loctionmap('PBL20072203','','','0','');
+loctionmapListourl[114]=new Loctionmap('PBL20072203','','','0','','','/icbc/newperbank/card/card_queryChangeCard_cred_nosess.jsp','','0','','','');
+loctionmapListourl[115]=new Loctionmap('PBL20076801','','','0','','/icbc/newperbank/card/fund_peony_set_cardlistquery.jsp','','','0','','','');
+loctionmapListourl[116]=new Loctionmap('PBL20072204','','','0','','','','','0','','filerArea','filerBespeakFlag');
+loctionmapListourl[117]=new Loctionmap('PBL20076802','','','0','','','','','0','','','');
+loctionmapListourl[118]=new Loctionmap('PBL20076803','','','0','','','','','0','','','');
+loctionmapListourl[119]=new Loctionmap('PBL201040','','贷款','0','','','','','0','','','');
+loctionmapListourl[120]=new Loctionmap('PBL201050','','质押贷款','0','','','','','0','','','');
+loctionmapListourl[121]=new Loctionmap('PBL201052','','第三人质物质押贷款','1','','/icbc/newperbank/loan/loan_thirdperson_index.jsp','','','0','','','');
+nologonList[62]=new Loctionmap('PBL20139601','','','0','');
+loctionmapList.add(new Loctionmap('PBL20200101','171301'));
+loctionmapListourl[122]=new Loctionmap('PBL20200101','171301','','0','','/icbc/newperbank/stock/derivative/derivative_bank2stock_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20200102','171302'));
+loctionmapListourl[123]=new Loctionmap('PBL20200102','171302','','0','','/icbc/newperbank/stock/derivative/derivative_stock2bank_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20200103','171303'));
+loctionmapListourl[124]=new Loctionmap('PBL20200103','171303','','0','','/icbc/newperbank/stock/derivative/derivative_query_lsmx_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20139606','420505'));
+nologonList[63]=new Loctionmap('PBL20139608','420501','','0','本页面为模拟交易，账号、投资资金、保证金及交易均是虚拟的，与现实金融交易无关。使用者不得就模拟交易系统中的账户、投资资金、保证金及交易主张任何权利。');
+loctionmapList.add(new Loctionmap('PBL20139608','420501'));
+loctionmapList.add(new Loctionmap('PBL20074401','020119'));
+loctionmapListourl[125]=new Loctionmap('PBL20074401','020119','','0','','/ctp/icbc/newperbank/account/fova_addtofova_app_info.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20074402','020120'));
+loctionmapListourl[126]=new Loctionmap('PBL20074402','020120','','0','','/ctp/icbc/newperbank/account/fova_addtofova_qry_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20074403','020121'));
+loctionmapListourl[127]=new Loctionmap('PBL20074403','020121','','0','','/ctp/icbc/newperbank/account/fova_addtoicbc_con_index.jsp','','','0','','','');
+loctionmapListourl[128]=new Loctionmap('PBL20074404','','','0','','','','','0','','','');
+loctionmapListourl[129]=new Loctionmap('PBL201060','','抵押贷款','0','','','','','0','','','');
+loctionmapListourl[130]=new Loctionmap('PBL201062','','房产价值评估','0','','','','','0','','','');
+loctionmapListourl[131]=new Loctionmap('PBL203001','','投资理财','0','','','','','0','','','');
+nologonList[64]=new Loctionmap('PBL20102101','0310','','0','1、转出账户为理财金账户卡、e时代卡或灵通卡的卡内活期账户时，转入账户可以是同一注册卡的基本账户，也可以是其他网上银行注册卡。<br/>2、贷记卡、信用卡、国际卡不支持透支转账。<br/>3、我行为您提供定期存款到期自动转存服务，在您设定定期存款约定转存期限后，在定期存款到期日将税后利息并入本金自动转存。本服务一直有效，在到期日及约转到期日自动进行转存。到期自动转存后，如您需要支取定期存款，除到期日和约转到期日外，均为提前支取。<br/>4、存入账户与付款账户如为同一地区的账户，不收取手续费。如不为同一地区的账户，手续费从付款账户中直接扣收；手续费请参考我行门户网站公布的收费标准及相关优惠活动。<br/>5、本功能不支持自助添加的网银注册卡作为活期转定期功能的转出方。<br/>6、定期存款年利率根据挂牌利率浮动，以浮动后实际利率为准。<br/>7、上海自贸区客户执行市场化浮动利率，浮动利率=挂牌利率±市场化浮动利率。实际执行利率见交易结果。<br/>8、支取教育储蓄时，需要到柜面出具相关证明才能享受优惠利率。');
+loctionmapList.add(new Loctionmap('PBL20102101','0310'));
+loctionmapListourl[132]=new Loctionmap('PBL20102101','0310','','0','','/icbc/newperbank/account/account_currtransfix_submit.jsp','/icbc/newperbank/account/account_currtransfix_submit_out.jsp','','0','','IN_APPID','IN_SAVETYPE');
+loctionmapList.add(new Loctionmap('PBL20102102','0311'));
+loctionmapList.add(new Loctionmap('PBL20102103','0310'));
+loctionmapListourl[133]=new Loctionmap('PBL20102103','0310','','0','','/icbc/newperbank/account/account_fix_frame.jsp','','','0','','IN_APPID','IN_SAVETYPE');
+loctionmapList.add(new Loctionmap('PBL20102104','0313'));
+nologonList[65]=new Loctionmap('PBL20102106','','','0','1、转出账户为理财金账户卡、e时代卡或灵通卡的卡内活期账户时，转入账户可以是同一注册卡的基本账户，也可以是其他网上银行注册卡。<br/>2、贷记卡、信用卡、国际卡不支持透支转账。<br/>3、我行为您提供定期存款到期自动转存服务，在您设定定期存款约定转存期限后，在定期存款到期日将税后利息并入本金自动转存。本服务一直有效，在到期日及约转到期日自动进行转存。到期自动转存后，如您需要支取定期存款，除到期日和约转到期日外，均为提前支取。<br/>4、存入账户与付款账户如为同一地区的账户，不收取手续费。如不为同一地区的账户，手续费从付款账户中直接扣收；手续费请参考我行门户网站公布的收费标准及相关优惠活动。<br/>5、本功能不支持自助添加的网银注册卡作为活期转定期功能的转出方。<br/>6、定期存款年利率根据挂牌利率浮动，以浮动后实际利率为准。<br/>7、上海自贸区客户执行市场化浮动利率，浮动利率=挂牌利率±市场化浮动利率。实际执行利率见交易结果。<br/>8、支取教育储蓄时，需要到柜面出具相关证明才能享受优惠利率。');
+loctionmapListourl[134]=new Loctionmap('PBL20102106','','','0','','/icbc/newperbank/account/account_currtransfix_submit.jsp','/icbc/newperbank/account/account_currtransfix_submit_out.jsp','','0','','productIdTmp','orderIdTmp');
+loctionmapListourl[135]=new Loctionmap('PBL201070','','存贷通','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20103201','031201'));
+loctionmapListourl[136]=new Loctionmap('PBL20103201','031201','','0','','/icbc/newperbank/account/account_fixcurrlink_pro.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20103202','031202'));
+loctionmapList.add(new Loctionmap('PBL20202301','190302'));
+loctionmapListourl[137]=new Loctionmap('PBL20202301','190302','','0','','/icbc/newperbank/stock/futurepreopen/futurePreopen_preopen_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20202302','190303'));
+loctionmapListourl[138]=new Loctionmap('PBL20202302','190303','','0','','/icbc/newperbank/stock/futurepreopen/futurePreopen_resultquery_index.jsp','','','0','','','');
+loctionmapListourl[139]=new Loctionmap('PBL20171101','','','','','/icbc/Emall/main/forward.jsp','/icbc/Emall/main/forward.jsp','1','0','','turnUrl','');
+loctionmapListourl[140]=new Loctionmap('PBL20076601','','','0','','','','','0','','','');
+loctionmapListourl[141]=new Loctionmap('PBL20171102','','','','','/icbc/Emall/main/forward.jsp','/icbc/Emall/main/forward.jsp','1','0','','turnUrl','');
+loctionmapListourl[142]=new Loctionmap('PBL20076602','','','0','','','','','0','','','');
+nologonList[66]=new Loctionmap('PBL201080','','其他贷款','1','储蓄国债');
+loctionmapListourl[143]=new Loctionmap('PBL201080','','其他贷款','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','/icbc/newperbank/perbank3/includes/menu_all_out.jsp','','0','','','');
+loctionmapListourl[144]=new Loctionmap('PBL201081','','其他贷款申请','1','','/icbc/newperbank/loan/loan_apply_index.jsp','','','0','','','');
+loctionmapListourl[145]=new Loctionmap('PBL20077701','','','0','','','','','0','','creditCardNo','PROVINCE');
+loctionmapListourl[146]=new Loctionmap('PBL20077702','','','0','','','/icbc/newperbank/card/card_queryCard_cred_nosess.jsp','','0','','','');
+loctionmapListourl[147]=new Loctionmap('PBL201090','','贷款查询','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201091','0802'));
+loctionmapList.add(new Loctionmap('PBL201092','0803'));
+loctionmapListourl[148]=new Loctionmap('PBL201095','','贷款测算','0','','','','','0','0','','');
+nologonList[67]=new Loctionmap('PBL201096','','还款测算','1','');
+loctionmapListourl[149]=new Loctionmap('PBL201096','','还款测算','1','','/icbc/newperbank/finance/finance_calculate_loan.jsp','/icbc/newperbank/finance/finance_calculate_loan_ex.jsp','','0','0','','');
+nologonList[68]=new Loctionmap('PBL201097','','贷款','0','');
+nologonList[69]=new Loctionmap('PBL201098','0801','','0','');
+loctionmapList.add(new Loctionmap('PBL201098','0801'));
+loctionmapListourl[150]=new Loctionmap('PBL201098','0801','','0','','/icbc/newperbank/loan/loan_myLoan_index_mid2.jsp','/icbc/newperbank/loan/loan_HomePage_nosession.jsp','','0','','','');
+nologonList[70]=new Loctionmap('PBL20139401','','','0','');
+loctionmapList.add(new Loctionmap('PBL20183101','3114'));
+loctionmapListourl[151]=new Loctionmap('PBL20183101','3114','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20074201','022001'));
+loctionmapListourl[152]=new Loctionmap('PBL20074201','022001','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20074202','022002'));
+loctionmapListourl[153]=new Loctionmap('PBL20074202','022002','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20074203','022003'));
+loctionmapListourl[154]=new Loctionmap('PBL20074203','022003','','0','','/ctp/icbc/newperbank/account/account_query_comacct_detail.jsp','','','0','','','');
+loctionmapListourl[155]=new Loctionmap('PBL20300101','','理财产品','0','','','','','0','','','');
+loctionmapListourl[156]=new Loctionmap('PBL500101','','','0','','','','','0','','tranType','protocolCode');
+loctionmapListourl[157]=new Loctionmap('PBL500102','','','0','','','','','0','','orderId','roleType');
+loctionmapListourl[158]=new Loctionmap('PBL500103','','二手住房购置贷款申请','0','','','','','0','','source','backUrl');
+nologonList[71]=new Loctionmap('PBL500104','','按订单列表查询二手房按揭贷款进度','0','');
+loctionmapListourl[159]=new Loctionmap('PBL500104','','按订单列表查询二手房按揭贷款进度','0','','','','','0','','orderId','roleType');
+nologonList[72]=new Loctionmap('PBL20139420','','','0','本页面为模拟交易，账号、投资资金、保证金及交易均是虚拟的，与现实金融交易无关。使用者不得就模拟交易系统中的账户、投资资金、保证金及交易主张任何权利。');
+loctionmapListourl[160]=new Loctionmap('PBL20137001','','','0','','/icbc/newperbank/perbank3/financialproducts/finance_myAcctproduct.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20161101','240302'));
+loctionmapListourl[161]=new Loctionmap('PBL20161101','240302','','0','','/icbc/newperbank/payment/payment_build_agreement1.jsp','','','0','','','');
+loctionmapListourl[162]=new Loctionmap('PBL20076401','','','0','','/icbc/newperbank/card/card_applyCashInstall_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20161102','240303'));
+loctionmapListourl[163]=new Loctionmap('PBL20161102','240303','','0','','/icbc/newperbank/payment/payment_query_agreement1.jsp','','','0','','','');
+loctionmapListourl[164]=new Loctionmap('PBL20076402','','','0','','/icbc/newperbank/card/card_query_applyCashIntallment_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20161103','240305'));
+loctionmapListourl[165]=new Loctionmap('PBL20161103','240305','','0','','/icbc/newperbank/payment/agreementConfirm/payment_confirm_agreement_index.jsp','','','0','','','');
+loctionmapListourl[166]=new Loctionmap('PBL20076403','','','0','','/icbc/newperbank/card/card_query_cashInstallment_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20161104','240304'));
+loctionmapListourl[167]=new Loctionmap('PBL20161104','240304','','0','','/icbc/newperbank/payment/payment_query_agreements_index.jsp','','','0','','','');
+loctionmapListourl[168]=new Loctionmap('PBL20076404','','','0','','/icbc/newperbank/card/card_query_cashInstallmentList_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20104101','080801'));
+loctionmapList.add(new Loctionmap('PBL20104102','080803'));
+loctionmapList.add(new Loctionmap('PBL20203201','3802'));
+loctionmapListourl[169]=new Loctionmap('PBL20203201','3802','','0','','/icbc/newperbank/exchange/MyMarket_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20104103','080802'));
+loctionmapListourl[170]=new Loctionmap('PBL20203202','','','0','','/icbc/newperbank/exchange/MyMarket_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20104104','080804'));
+loctionmapList.add(new Loctionmap('PBL20162201','0402'));
+loctionmapListourl[171]=new Loctionmap('PBL20162201','0402','','0','','/icbc/newperbank/donation/donation_index.jsp','','','0','','payname','paycode');
+loctionmapList.add(new Loctionmap('PBL20077501','2502'));
+loctionmapListourl[172]=new Loctionmap('PBL20077501','2502','','0','','/icbc/newperbank/card/card_forward.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20162202','0403'));
+loctionmapListourl[173]=new Loctionmap('PBL20162202','0403','','0','','/icbc/newperbank/donation/donation_query_forward.jsp','','','0','','','');
+loctionmapListourl[174]=new Loctionmap('PBL20139201','','','0','','','','','0','','','');
+loctionmapListourl[175]=new Loctionmap('PBL20139202','','','0','','','','','0','','simgameid','qrySign');
+nologonList[73]=new Loctionmap('PBL20139204','','','0','');
+loctionmapList.add(new Loctionmap('PBL20163301','3214'));
+loctionmapListourl[176]=new Loctionmap('PBL20163301','3214','','0','','/icbc/newperbank/service/myStarLevel/service_mystarlevel_query_index.jsp','','','0','','','');
+loctionmapListourl[177]=new Loctionmap('PBL200800','','汇款','0','','','','','0','','','');
+loctionmapListourl[178]=new Loctionmap('PBL200809','','转账汇款','0','','','','','0','','','');
+nologonList[74]=new Loctionmap('PBL20031301','','点金组合','0','');
+nologonList[75]=new Loctionmap('PBL201900','','汇款','0','');
+loctionmapListourl[179]=new Loctionmap('PBL201901','','','0','','/icbc/newperbank/perbank3/myprivilege/myprivilege_mind.jsp','','','0','','','');
+loctionmapListourl[180]=new Loctionmap('PBL20086001','','','0','','/icbc/newperbank/account/account_submit_batch_index.jsp','','','0','','','');
+loctionmapListourl[181]=new Loctionmap('PBL20086002','','','0','','/icbc/newperbank/account/account_submit_batch_index.jsp','','','0','','parentServiceId','');
+loctionmapListourl[182]=new Loctionmap('PBL20076201','','','0','','','','','0','','','');
+loctionmapListourl[183]=new Loctionmap('PBL20076202','','','0','','','','','0','','','');
+loctionmapListourl[184]=new Loctionmap('PBL20086003','','','0','','/icbc/newperbank/account/account_submit_batch_query.jsp','','','0','','','');
+loctionmapListourl[185]=new Loctionmap('PBL200820','','跨境汇款','0','','','','','0','','','');
+loctionmapListourl[186]=new Loctionmap('PBL20086004','','','0','','/icbc/newperbank/account/account_submit_batch_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20111901','PB111901'));
+loctionmapListourl[187]=new Loctionmap('PBL20111901','PB111901','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20111902','PB111902'));
+loctionmapListourl[188]=new Loctionmap('PBL20111902','PB111902','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20076211','250301'));
+loctionmapListourl[189]=new Loctionmap('PBL20076211','250301','','0','','/icbc/newperbank/card/card_partRepaySetting_sub.jsp','','','0','','CardNum','');
+nologonList[76]=new Loctionmap('PBL10010101','','','0','');
+loctionmapList.add(new Loctionmap('PBL20076212','250307'));
+loctionmapListourl[190]=new Loctionmap('PBL20076212','250307','','0','','/icbc/newperbank/card/card_colletPartSetting_sub.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20077301','310601'));
+loctionmapListourl[191]=new Loctionmap('PBL20077301','310601','注册账户挂失','0','','','','','0','','cardNum','');
+loctionmapListourl[192]=new Loctionmap('PBL200830','','收款绑定','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20076213','250302'));
+loctionmapListourl[193]=new Loctionmap('PBL20076213','250302','','0','','/icbc/newperbank/card/card_debtpay.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20077302','310603'));
+loctionmapListourl[194]=new Loctionmap('PBL20077302','310603','非注册账户挂失','0','','/ctp/icbc/newperbank/service/service_lossregcard_othercard.jsp','','','0','','transnum','');
+loctionmapList.add(new Loctionmap('PBL20076214','250303'));
+loctionmapListourl[195]=new Loctionmap('PBL20076214','250303','','0','','/icbc/newperbank/card/card_detail_sub.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20077303','310603'));
+loctionmapListourl[196]=new Loctionmap('PBL20077303','310603','闪酷卡挂失','0','','/ctp/icbc/newperbank/service/service_lossregcard_othercard.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20076215','250304'));
+loctionmapListourl[197]=new Loctionmap('PBL20076215','250304','','0','','/icbc/newperbank/loan/loan_apply_credConsume_mid.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20077304','310604'));
+loctionmapListourl[198]=new Loctionmap('PBL20077304','310604','安全介质挂失','0','','/icbc/newperbank/service/service_MediumLossreg_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20077305','310601'));
+loctionmapListourl[199]=new Loctionmap('PBL20077305','310601','','0','','','','','0','','cardNum','');
+loctionmapList.add(new Loctionmap('PBL20076216','250305'));
+loctionmapListourl[200]=new Loctionmap('PBL20076216','250305','','0','','/icbc/newperbank/card/card_instalment_custom_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20076217','250306'));
+loctionmapListourl[201]=new Loctionmap('PBL20076217','250306','','0','','/icbc/newperbank/card/card_instalment_custom_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20076221','080701'));
+loctionmapListourl[202]=new Loctionmap('PBL20076221','080701','','0','','/icbc/newperbank/loan/loan_fast_protocol_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20076222','080702'));
+loctionmapListourl[203]=new Loctionmap('PBL20076222','080702','','0','','/icbc/newperbank/loan/loan_fast_conductindex.jsp','','','0','','','');
+loctionmapListourl[204]=new Loctionmap('PBL20078401','','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20076223','080703'));
+loctionmapListourl[205]=new Loctionmap('PBL20076223','080703','','0','','','','','0','','','');
+loctionmapListourl[206]=new Loctionmap('PBL200840','','投标保证金','0','','','','','0','','','');
+nologonList[77]=new Loctionmap('PBL20020201','','','0','');
+loctionmapListourl[207]=new Loctionmap('PBL20020201','','','0','','/icbc/newperbank/logonFreeze.jsp','/icbc/newperbank/logonFreeze.jsp','1','0','','','');
+loctionmapList.add(new Loctionmap('PBL20076224','080704'));
+loctionmapListourl[208]=new Loctionmap('PBL20076224','080704','','0','','','','','0','','','');
+nologonList[78]=new Loctionmap('PBL20020202','','','0','');
+loctionmapListourl[209]=new Loctionmap('PBL20020202','','','0','','/icbc/newperbank/wapLogonFreeze.jsp','/icbc/newperbank/wapLogonFreeze.jsp','1','0','','','');
+loctionmapList.add(new Loctionmap('PBL20076225','080705'));
+loctionmapListourl[210]=new Loctionmap('PBL20076225','080705','','0','','','','','0','','','');
+nologonList[79]=new Loctionmap('PBL20020203','','','0','');
+loctionmapListourl[211]=new Loctionmap('PBL20020203','','','0','','/icbc/newperbank/bankbook/bankbook_index.jsp','/icbc/newperbank/bankbook/bankbook_index.jsp','1','0','','','');
+nologonList[80]=new Loctionmap('PBL200601','','账户贵金属','1','');
+loctionmapList.add(new Loctionmap('PBL20076226','080706'));
+loctionmapListourl[212]=new Loctionmap('PBL20076226','080706','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL200602','160102'));
+nologonList[81]=new Loctionmap('PBL200603','','贵金属','0','');
+loctionmapListourl[213]=new Loctionmap('PBL200603','','贵金属','0','','/icbc/newperbank/perbank3/gold/frame_acgold_index_in.jsp','/icbc/newperbank/perbank3/gold/frame_acgold_index_out.jsp','','0','','','');
+loctionmapListourl[214]=new Loctionmap('PBL200850','','工银e支付绑定','0','','','','','0','','','');
+loctionmapListourl[215]=new Loctionmap('PBL201710','','','0','','','','','0','','','');
+loctionmapListourl[216]=new Loctionmap('PBL201711','','','1','','','','','0','','','');
+loctionmapListourl[217]=new Loctionmap('PBL201712','','','1','','','','','0','','','');
+loctionmapListourl[218]=new Loctionmap('PBL201714','','','0','','','','','0','','','');
+loctionmapListourl[219]=new Loctionmap('PBL201715','','','0','','','','','0','','','');
+loctionmapListourl[220]=new Loctionmap('PBL201716','','','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapListourl[221]=new Loctionmap('PBL201717','','资产','','','','','','','','','');
+loctionmapListourl[222]=new Loctionmap('PBL201718','','负债','','','','','','','','','');
+loctionmapListourl[223]=new Loctionmap('PBL201719','','','','','','','','','','','');
+loctionmapListourl[224]=new Loctionmap('PBL20076010','','信用卡账户','0','','','','','0','','','');
+loctionmapListourl[225]=new Loctionmap('PBL20076011','','卡片管理','0','','','','','0','','','');
+loctionmapListourl[226]=new Loctionmap('PBL200870','','','0','','','','','0','','','');
+loctionmapListourl[227]=new Loctionmap('PBL20076012','','卡片操作','0','','','','','0','','','');
+loctionmapListourl[228]=new Loctionmap('PBL20076013','','服务','0','','','','','0','','','');
+nologonList[82]=new Loctionmap('PBL100200','','体验评价','1','');
+loctionmapListourl[229]=new Loctionmap('PBL100200','','体验评价','1','','/icbc/newperbank/includes/idea_submit.jsp','/icbc/newperbank/includes/idea_submit_nologon.jsp','1','1','','','');
+loctionmapListourl[230]=new Loctionmap('PBL201721','','','0','','/icbc/newperbank/perbank3/finance/financial_position_menu.jsp','','','0','','','');
+loctionmapListourl[231]=new Loctionmap('PBL201725','','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201726','2304'));
+loctionmapListourl[232]=new Loctionmap('PBL201726','2304','','0','','/icbc/newperbank/precontract/precontract_detail_submit.jsp','','','0','','preType','');
+loctionmapListourl[233]=new Loctionmap('PBL201727','','','0','','/icbc/newperbank/perbank3/myprivilege/privilege_frame.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201729','020106'));
+loctionmapListourl[234]=new Loctionmap('PBL200880','','财务管理','0','','/icbc/newperbank/account/account_guiji_frame.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201730','020123'));
+loctionmapList.add(new Loctionmap('PBL201731','020124'));
+loctionmapListourl[235]=new Loctionmap('PBL201731','020124','账户欠费补缴','1','','/icbc/newperbank/account/account_arrearpay_index.jsp','','','0','','cardNum','acctNum');
+loctionmapList.add(new Loctionmap('PBL201732','3114'));
+loctionmapListourl[236]=new Loctionmap('PBL201732','3114','','0','','','','0','0','','','');
+nologonList[83]=new Loctionmap('PBL200401','','','0','');
+nologonList[84]=new Loctionmap('PBL200402','','','0','');
+loctionmapList.add(new Loctionmap('PBL200404','120104'));
+nologonList[85]=new Loctionmap('PBL200405','','','0','');
+loctionmapListourl[237]=new Loctionmap('PBL200890','','工银e支付','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201500','43'));
+loctionmapListourl[238]=new Loctionmap('PBL201500','43','私人银行','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201501','4301'));
+loctionmapListourl[239]=new Loctionmap('PBL201501','4301','金融服务','0','','','','','0','','','');
+loctionmapListourl[240]=new Loctionmap('PBL300601','','投资理财协议','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201502','4302'));
+loctionmapListourl[241]=new Loctionmap('PBL201502','4302','非金融服务','0','','','','','0','','','');
+loctionmapListourl[242]=new Loctionmap('PBL300602','','转账支付协议','0','','','','','0','','','');
+nologonList[86]=new Loctionmap('PBL201503','430201','专属理财服务','1','');
+loctionmapList.add(new Loctionmap('PBL201503','430201'));
+loctionmapListourl[243]=new Loctionmap('PBL201503','430201','专属理财服务','1','','','/icbc/newperbank/perbank3/finance/frame_finance_index_private_out.jsp','','0','','','');
+loctionmapListourl[244]=new Loctionmap('PBL300603','','工银e支付协议','0','','/icbc/newperbank/Epay/myEpay/index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201504','4305'));
+loctionmapListourl[245]=new Loctionmap('PBL201504','4305','撮合平台','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapListourl[246]=new Loctionmap('PBL300604','','工银信使协议','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201505','430501'));
+loctionmapListourl[247]=new Loctionmap('PBL201505','430501','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201506','430502'));
+loctionmapListourl[248]=new Loctionmap('PBL201506','430502','','0','','','','','0','','','');
+loctionmapListourl[249]=new Loctionmap('PBL300605','','其他','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201507','430503'));
+loctionmapListourl[250]=new Loctionmap('PBL201507','430503','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201508','430205'));
+loctionmapListourl[251]=new Loctionmap('PBL201510','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[87]=new Loctionmap('PBL20131101','','','0','1、产品定义。中国工商银行账户贵金属，是中国工商银行为个人客户提供的，采用账户记载形式，以人民币或美元买卖贵金属份额的投资交易产品。其中，账户黄金可根据客户需要，在柜面按照相关报价转换为品牌黄金并提取实物；其余账户贵金属产品，不得提取实物贵金属。<br>2、开办准备。<br>（1）客户办理账户贵金属交易应充分认识并完全理解可能遇到的各类风险，在通过风险能力评测和投资交易类产品适合度评估后方能办理账户贵金属开户及交易业务。建议您仔细阅读账户贵金属产品介绍、交易规则、交易协议及知识问答（详见网上银行右侧交易区下方“产品详情”），以更好地了解本产品。<br>（2）如您的资金账户不是多币种借记卡或结算账户，请您在办理前指定新的多币种借记卡或结算账户，或到网上银行“我的账户贵金属-交易账户管理-调整交易卡”栏目/营业网点柜面调整账户属性。<br>3、交易时间。网上银行账户贵金属交易时间一般为周一早07：00到周六早04：00。如遇节假日等特殊情况，请以我行网站公告为准。<br>4、界面指引。左侧实时行情区提供账户贵金属报价与走势图，该区域所有价格均为参考报价，不能凭此达成交易。右侧交易区提供了先买入后卖出、先卖出后买入两种交易类型，以及实时、挂单、定投三种交易方式。如您希望按照当前交易报价实时买卖账户贵金属，请选择实时交易，我行将在您提交交易指令后显示当前可成交价格，该价格有效期为10秒钟，请您尽快确认；如您希望未来一段时间内以您指定的条件成交，请选择挂单交易，各种挂单种类与挂单有效期介绍请参阅产品介绍（各地区挂单种类可能不同，请以实际情况为准），挂单成功后，如您需撤销挂单，请到“我的账户贵金属-挂单管理”中办理；如您希望在一段时间内定期买入账户贵金属，请选择定投交易，定投交易仅适用于先买入后卖出交易类型。<br>5、特别提示。<br>（1）价差调整说明。根据市场情况，我行可能会调整账户贵金属的银行买入价/卖出价和交易价差，请您在达成交易前注意。<br>（2）质押融资服务。您可以通过网银账户贵金属质押或网上贷款栏目，将持有的账户贵金属办理个人质押贷款业务。<br>6、如有其它疑问，请致电95588咨询。');
+loctionmapListourl[252]=new Loctionmap('PBL20111500','','','0','','/icbc/newperbank/finance/finance_new_custrisk_index.jsp','','','0','','fundCode','');
+loctionmapListourl[253]=new Loctionmap('PBL20111501','','','0','','/icbc/newperbank/finance/finance_new_drmx_query.jsp','','','0','','','');
+loctionmapListourl[254]=new Loctionmap('PBL201512','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[255]=new Loctionmap('PBL20111502','','','0','','/icbc/newperbank/finance/finance_new_acct_query_index.jsp','','','0','','','');
+loctionmapListourl[256]=new Loctionmap('PBL201513','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[257]=new Loctionmap('PBL20111503','','','0','','/icbc/newperbank/finance/finance_new_unitvalue_query.jsp','','','0','','fundname2','fundno2');
+loctionmapListourl[258]=new Loctionmap('PBL201514','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[88]=new Loctionmap('PBL20111504','12011102','','0','');
+loctionmapList.add(new Loctionmap('PBL20111504','12011102'));
+loctionmapListourl[259]=new Loctionmap('PBL20111504','12011102','','0','','/icbc/newperbank/perbank3/finance/frame_finance_productinfo_login.jsp','/icbc/newperbank/perbank3/finance/frame_finance_productinfo_unlogin.jsp','','0','','','');
+loctionmapListourl[260]=new Loctionmap('PBL201515','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapList.add(new Loctionmap('PBL20111505','12011107'));
+loctionmapListourl[261]=new Loctionmap('PBL20111505','12011107','','0','','/icbc/newperbank/finance/finance_new_cancel_index.jsp','','','0','','','');
+loctionmapListourl[262]=new Loctionmap('PBL201517','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[263]=new Loctionmap('PBL201518','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[264]=new Loctionmap('PBL201519','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[265]=new Loctionmap('PBL20090102','','','0','','/icbc/newperbank/remit/remit_queryremitpack_index.jsp','','','0','','','');
+loctionmapListourl[266]=new Loctionmap('PBL20090103','','','0','','/icbc/newperbank/remit/remit_queryremitpack_index1.jsp','','','0','','','');
+loctionmapListourl[267]=new Loctionmap('PBL201760','','','0','','/icbc/newperbank/perbank3/quickFuc/quickTrans.jsp','','','0','','','');
+loctionmapListourl[268]=new Loctionmap('PBL20176001','','','0','','/icbc/newperbank/account/AccountQuery.jsp','','','0','','','');
+nologonList[89]=new Loctionmap('PBL20131111','','','0','1、个人网上银行账户贵金属交易时间一般为周一早07：00到周六早04：00，如遇节假日等特殊情况，请以中国工商银行网站公告为准，或可咨询95588。<br/>2、在左侧实时行情区，您看到的报价为参考报价，仅供您参考，不能凭此达成交易；如您需要达成交易，请联动到交易区获取可成交报价后完成交易。直接点击银行买入价或银行卖出价，可联动到右侧交易区的即时交易，办理即时账户贵金属买卖交易。<br/>3、在右侧交易区，提供了实时交易、获利挂单、止损挂单、双向挂单、追加挂单、循环挂单、一对多挂单及触发挂单等多种交易方式。各种挂单介绍见《中国工商银行账户贵金属产品介绍》。在提交交易指令后，请尽快完成确认。各地区挂单种类可能不同，请以实际情况为准。<br/>4、挂单有效期包括24小时、48小时、72小时、96小时、120小时、当周有效和30天，其中当周有效的失效时间为当周周六早4点，30天的有效期为720小时。<br/>5、挂单成功后，如您需撤销挂单，请到“我的账户贵金属-挂单管理”中办理。<br/>6、根据《中国工商银行账户贵金属交易协议》，我行可能会调整买入/卖出价格与中间价间价差，请您在交易前注意确认。<br/>7、如您的资金账户不是多币种借记卡或结算账户，在办理美元账户贵金属和人民币账户贵金属先卖出后买入交易前，请您指定新的多币种借记卡或结算账户，或到网上银行“我的账户贵金属-交易账户管理-调整交易卡”栏目/营业网点柜面调整账户属性。如有疑问，请致电咨询95588。<br/>8、您可以通过网银账户贵金属质押或网上贷款栏目，将持有的账户贵金属办理个人质押贷款业务，贷款利率优惠。');
+loctionmapListourl[269]=new Loctionmap('PBL201520','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[270]=new Loctionmap('PBL201521','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[90]=new Loctionmap('PBL20132201','','','0','1、客户可通过“查询份额调整信息”功能查询账户农产品连续产品的份额调整记录、历史份额调整价格、份额调整日期等信息，并可以修改接收份额调整短信的手机号码。<br>2、客户若查询其他地区账户农产品账户中的余额，请调整至相应地区的交易卡（账）号。');
+loctionmapListourl[271]=new Loctionmap('PBL201522','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[91]=new Loctionmap('PBL20132202','','','0','1、客户若查询其他地区建立的挂单交易明细，请调整至相应地区的交易卡（账）号。<br />2、客户可查询半年内的挂单交易明细。');
+nologonList[92]=new Loctionmap('PBL20132203','','','0','1、您可查询保证金账户中的美元或人民币资金余额。<br />2、您可将资金账户中的美元或人民币转入保证金账户，也可将保证金账户中的可用资金转出。<br />3、美元保证金账户的钞汇类型与上一次转入美元资金的钞汇类型一致，若调整保证金账户钞汇类型，请清空保证金账户余额并转入相应的美元钞或者美元汇。');
+loctionmapListourl[272]=new Loctionmap('PBL201523','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[273]=new Loctionmap('PBL201524','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[93]=new Loctionmap('PBL20132204','','','0','1、客户可实时提交产品转期指令，中国工商银行按照客户指定数量及实时转期价格自动平仓上期产品并开仓下期产品。<br>2、转期功能支持同一币种、同一交易类型账户农产品上期产品向下期产品的转换。<br>3、实时转期的办理时间一般为在上下两期产品同时在线期间（即下期产品交易起始日至上期产品交易结束日间）的账户农产品交易时间。<br><font color="red">4、实时转期中上期产品平仓价和下期产品开仓价一般情况下大幅好于同时点账户农产品客户卖出价/买入价（即银行买入价/卖出价）。</font><br>5、具体功能请查询账户农产品的产品介绍及交易规则。');
+loctionmapListourl[274]=new Loctionmap('PBL201525','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapList.add(new Loctionmap('PBL20201901','171102'));
+loctionmapListourl[275]=new Loctionmap('PBL20201901','171102','','0','','/icbc/newperbank/stock/stock_bank_fund_query_index.jsp','','','0','','','');
+nologonList[94]=new Loctionmap('PBL20132205','420505','','0','1、客户若查询其他地区开立的账户农产品交易账户交易明细，请调整至相应地区的交易卡（账）号。');
+loctionmapList.add(new Loctionmap('PBL20132205','420505'));
+loctionmapListourl[276]=new Loctionmap('PBL201526','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapList.add(new Loctionmap('PBL20201902','171103'));
+loctionmapListourl[277]=new Loctionmap('PBL20201902','171103','','0','','/icbc/newperbank/stock/stock_fund_query_index.jsp','','','0','','','');
+nologonList[95]=new Loctionmap('PBL20132206','','','0','1、客户可查询账户农产品的交易起始日、交易结束日、结算日信息和结算价格。<br />2、美元账户农产品产品的到期结算价为产品交易结束日相应农产品期货合约的国际市场结算价格。<br />3、人民币账户农产品产品的到期结算价分为先买入后卖出到期结算价和先卖出后买入到期结算价，以上两个到期结算价格分别根据美元账户农产品的到期结算价格和中国工商银行在结算日前一工作日23:30公布的人民币兑美元即期结售汇挂牌牌价的银行现汇买入价和银行现汇卖出价计算得出。');
+loctionmapListourl[278]=new Loctionmap('PBL201527','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[96]=new Loctionmap('PBL20132207','','','0','1、客户可注销交易账户或调整交易卡。注销交易账户前客户须清空持仓及保证金账户。');
+loctionmapList.add(new Loctionmap('PBL20201903','171104'));
+loctionmapListourl[279]=new Loctionmap('PBL20201903','171104','','0','','/icbc/newperbank/stock/stock_success_detail_query_index.jsp','','','0','','','');
+nologonList[97]=new Loctionmap('PBL20132208','','','0','1、您可以通过“查询持仓的份额调整记录”功能了解所持有的账户农产品连续产品的份额调整情况。<br />2、您的账户农产品连续产品持仓资产规模在份额调整前后保持不变，即调整前持仓*份额调整前价格=调整后持仓*份额调整后价格+退还资金（释放保证金），其中份额调整过程中剩余不足开仓1蒲式耳的资金（或保证金）将退还至您的资金账户（或释放到保证金账户）。<br />3、您可以通过“查询历史份额调整价格”功能了解账户农产品连续产品历史份额调整价格。<br />4、您可以通过“份额调整短信提醒”功能订阅账户农产品连续产品份额调整结果通知，并修改接收短信的手机号码。');
+loctionmapListourl[280]=new Loctionmap('PBL201528','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapList.add(new Loctionmap('PBL20201904','171105'));
+loctionmapListourl[281]=new Loctionmap('PBL20201904','171105','','0','','/icbc/newperbank/stock/stock_bank2stock_index.jsp','','','0','','','');
+loctionmapListourl[282]=new Loctionmap('PBL201529','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapList.add(new Loctionmap('PBL20201905','171106'));
+loctionmapListourl[283]=new Loctionmap('PBL20201905','171106','','0','','/icbc/newperbank/stock/stock_stock2bank_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201906','171107'));
+loctionmapListourl[284]=new Loctionmap('PBL20201906','171107','','0','','/icbc/newperbank/stock/stock_client_mess_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201907','171108'));
+loctionmapListourl[285]=new Loctionmap('PBL20201907','171108','','0','','/icbc/newperbank/stock/stock_online_help.jsp','','','0','','','');
+nologonList[98]=new Loctionmap('PBL200440','','','0','');
+nologonList[99]=new Loctionmap('PBL200441','','','0','');
+nologonList[100]=new Loctionmap('PBL20132210','','','0','1、客户设置到期转期类型后，中国工商银行在产品到期日按到期转期结算价格及客户选定的转期方式自动平仓上期产品并开仓下期产品，一般在次日的7:05起开始转期交易。<br>2、到期转期一经开启、长期有效，客户可在“管理自动转期”菜单下终止转期功能。<br>3、按金额转期（即固定金额转期）的方式是使用平仓全部上期产品数量所得资金，以最大可开仓数量同时开仓下期产品；按桶数转期（即固定数量转期）的方式是按客户持有的全部上期产品数量，尽可能开仓相同数量的下期产品。<br><font color="red">4、到期转期中上期产品平仓价和下期产品开仓价一般情况下大幅好于同时点账户客户卖出价/买入价（即银行买入价/卖出价）。</font><br>5、具体功能请查询账户农产品的产品介绍及交易规则。');
+loctionmapListourl[286]=new Loctionmap('PBL201530','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[101]=new Loctionmap('PBL200442','','转让产品','0','');
+loctionmapListourl[287]=new Loctionmap('PBL201531','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[102]=new Loctionmap('PBL20132211','','','0','1、客户可以通过点击“撤销”取消已经预约的转期计划。');
+loctionmapListourl[288]=new Loctionmap('PBL201532','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[103]=new Loctionmap('PBL200201','','','0','');
+loctionmapListourl[289]=new Loctionmap('PBL200201','','','0','','/icbc/newperbank/perbank3/indexin.jsp','/icbc/newperbank/perbank3/indexout.jsp','','0','','','');
+nologonList[104]=new Loctionmap('PBL20132212','','','0','1、客户可以查询账户农产品实时转期和到期转期的交易明细。');
+nologonList[105]=new Loctionmap('PBL200202','','首页','0','');
+loctionmapListourl[290]=new Loctionmap('PBL200202','','首页','0','','/icbc/newperbank/1.html','/icbc/newperbank/1.html','','0','','','');
+nologonList[106]=new Loctionmap('PBL20132213','','','0','');
+nologonList[107]=new Loctionmap('PBL200203','','','0','');
+loctionmapListourl[291]=new Loctionmap('PBL200203','','','0','','/icbc/newperbank/perbank3/frame/huishenghuo.jsp','/icbc/newperbank/perbank3/frame/huishenghuo_ns.jsp','','0','','','');
+loctionmapListourl[292]=new Loctionmap('PBL201534','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[293]=new Loctionmap('PBL201535','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[108]=new Loctionmap('PBL200204','','','0','');
+loctionmapListourl[294]=new Loctionmap('PBL200204','','','0','','/icbc/newperbank/perbank3/frame/all_products.jsp','/icbc/newperbank/perbank3/frame/all_products.jsp','','0','','isLogin','topServiceId');
+loctionmapListourl[295]=new Loctionmap('PBL201536','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[296]=new Loctionmap('PBL201537','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[297]=new Loctionmap('PBL201538','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[298]=new Loctionmap('PBL201539','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[109]=new Loctionmap('PBL20132220','420501','','0','1、产品定义。中国工商银行账户农产品，是中国工商银行为个人客户提供的，采取只计份额、不提取实物农产品的方式，以人民币或美元交易农产品份额的投资交易产品。<br>2、开办准备。（1）客户办理账户农产品交易应充分认识并完全理解可能遇到的各类风险，在通过风险能力评测和投资交易类产品适合度评估后方能办理账户农产品开户及交易业务。建议您仔细阅读账户农产品产品介绍、交易规则、交易协议及知识问答（详见网上银行右侧交易区下方“产品详情”），以更好地了解本产品。<br>（2）如您的资金账户不是多币种借记卡或结算账户，请您在办理前指定新的多币种借记卡或结算账户，或到网上银行“我的账户农产品-交易账户管理-调整交易卡”栏目/营业网点柜面调整账户属性。<br>3、交易时间。网上银行账户农产品交易时间一般为周一9：30到20：30与22：30到24：00，周二至周五每日0：00到2：00、9：30到20：30与22：30到24：00，周六0：00到2：00。如遇节假日等特殊情况，请以我行网站公告为准。<br> 4、界面指引。左侧实时行情区提供账户农产品报价与走势图，该区域所有价格均为参考报价，不能凭此达成交易。右侧交易区提供了先买入后卖出、先卖出后买入两种交易类型，以及实时、挂单两种交易方式。如您希望按照当前交易报价实时买卖账户农产品，请选择实时交易，我行将在您提交交易指令后显示当前可成交价格，该价格有效期为10秒钟，请您尽快确认；如您希望未来一段时间内以您指定的条件成交，请选择挂单交易，各种挂单种类与挂单有效期介绍请参阅产品介绍（各地区挂单种类可能不同，请以实际情况为准），挂单成功后，如您需撤销挂单，请到“我的账户农产品-挂单管理”中办理。<br>5、特别提示。<br>（1）我行账户农产品分为期次产品与连续产品。期次产品按期次发行，每期产品到期后客户将不能继续交易。连续产品没有到期日，客户可持续交易。<br>（2）期次产品到期自动结算。在某期次产品到期后，客户若没有参与转期而仍持有该期产品，我行将按照该期产品到期结算价为客户进行结算，客户资金在该期产品结算日到账；期次产品的交易起始日、交易结束日和结算日等信息可在“我的账户农产品-产品信息和结算价格”栏目查询。<br>（3）期次产品转期功能。客户持有的账户农产品可通过转期功能转换为下一期产品（限同一币种、同一交易类型）。我行提供实时转期和到期转期两种转期类型。其中，对于实时转期，我行按照实时转期价格为客户办理转期（即平仓上期产品同时开仓下期产品）；对于到期转期，我行按照上期产品的到期转期结算价格和下期产品的当日转期结算价格于到期日次日为客户办理转期；无论选择哪种转期类型，转期前后客户的资产总值不变。具体转期功能设置及转期明细查询可在“我的账户农产品-转期管理”栏目进行。<br>（4）连续产品份额调整。连续产品存续期间会根据参考的交易所农产品合约期次调整情况同步调整客户持有的份额；份额调整前价格、份额调整后价格参考交易所对应期次合约的份额调整日结算价以及我行当日结售汇牌价。我行不收取份额调整费用，份额调整前后客户的资产总值不变；连续产品份额调整的有关信息（包括调整日、调整价格、份额调整记录等），可在“我的账户农产品-查询份额调整信息”栏目查询。<br>（5）总持仓限额。因国家监管政策等原因，我行对所有客户人民币账户农产品总持仓净额设定上、下限。当所有客户持仓触及上、下限时，您将不能进行新开仓操作，平仓操作不受影响。<br>（6）价差调整说明。根据市场情况，我行可能会调整账户农产品的银行买入价/卖出价和交易价差，请您在达成交易前注意。<br>6、如有其它疑问，请致电95588咨询。');
+loctionmapList.add(new Loctionmap('PBL20132220','420501'));
+loctionmapListourl[299]=new Loctionmap('PBL201540','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[300]=new Loctionmap('PBL20178201','','','0','','/icbc/newperbank/account/account_eChartsNew.jsp','','','0','','','');
+loctionmapListourl[301]=new Loctionmap('PBL201541','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[302]=new Loctionmap('PBL20178202','','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20133311','160301'));
+loctionmapListourl[303]=new Loctionmap('PBL201542','','','0','','','','','0','','','');
+loctionmapListourl[304]=new Loctionmap('PBL201300','','贵金属.外汇.账户商品','0','','','','','0','','','');
+loctionmapListourl[305]=new Loctionmap('PBL20178203','','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20133312','160301'));
+loctionmapListourl[306]=new Loctionmap('PBL201543','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[307]=new Loctionmap('PBL20178204','','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20133313','160301'));
+loctionmapListourl[308]=new Loctionmap('PBL201544','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapList.add(new Loctionmap('PBL20133314','160301'));
+loctionmapList.add(new Loctionmap('PBL201545','4301'));
+loctionmapListourl[309]=new Loctionmap('PBL201545','4301','我的财富','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20132225','420505'));
+loctionmapList.add(new Loctionmap('PBL20133315','160301'));
+loctionmapList.add(new Loctionmap('PBL201546','4311'));
+loctionmapListourl[310]=new Loctionmap('PBL201546','4311','服务协议管理','0','','/icbc/newperbank/private/private_RemoteService_menu_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20133316','160301'));
+loctionmapList.add(new Loctionmap('PBL201547','4304'));
+loctionmapListourl[311]=new Loctionmap('PBL201547','4304','资产管理','1','','/icbc/newperbank/private/private_report_menu_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20133317','160301'));
+loctionmapListourl[312]=new Loctionmap('PBL201548','','增值服务专区','0','','/icbc/newperbank/private/private_activity_area.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20133318','160301'));
+loctionmapList.add(new Loctionmap('PBL201549','4310'));
+loctionmapListourl[313]=new Loctionmap('PBL201549','4310','对账单','0','','/icbc/newperbank/private/private_buildstatemente_menu_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201550','4309'));
+loctionmapListourl[314]=new Loctionmap('PBL201550','4309','委托确认','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201551','4306'));
+loctionmapListourl[315]=new Loctionmap('PBL201551','4306','增值服务','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201552','4307'));
+loctionmapListourl[316]=new Loctionmap('PBL201552','4307','资讯平台','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapListourl[317]=new Loctionmap('PBL201310','','账户贵金属','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201553','4308'));
+loctionmapListourl[318]=new Loctionmap('PBL201553','4308','财富顾问','1','','/icbc/newperbank/private/private_message_menu_index.jsp','','','0','','','');
+nologonList[110]=new Loctionmap('PBL201311','160101','账户贵金属','0','');
+loctionmapList.add(new Loctionmap('PBL201311','160101'));
+nologonList[111]=new Loctionmap('PBL201312','','账户贵金属指数','0','');
+loctionmapList.add(new Loctionmap('PBL201554','430101'));
+loctionmapListourl[319]=new Loctionmap('PBL201554','430101','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201555','430102'));
+loctionmapListourl[320]=new Loctionmap('PBL201555','430102','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201556','430103'));
+loctionmapListourl[321]=new Loctionmap('PBL201556','430103','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201557','430104'));
+loctionmapListourl[322]=new Loctionmap('PBL201557','430104','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201558','431101'));
+loctionmapListourl[323]=new Loctionmap('PBL201558','431101','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201559','430901'));
+loctionmapListourl[324]=new Loctionmap('PBL201559','430901','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201560','430902'));
+loctionmapListourl[325]=new Loctionmap('PBL201560','430902','','0','','','','','0','','','');
+nologonList[112]=new Loctionmap('PBL20132241','420502','','0','1、账户农产品产品的交易起始日、交易结束日和结算日等信息可在账户农产品“查询产品信息”栏目下查询，账户大豆1蒲式耳约合27.2千克。<br />2、账户农产品交易时间一般为周一9：30到20：30与22：30到24：00，周二至周五每日0：00到2：00、9：30到20：30与22：30到24：00，周六0：00到2：00。<br />3、客户通过我行风险能力评测和投资交易类产品适合度评估后方能办理账户农产品开户及交易业务。<br />4、挂单交易的有效期包括24小时、48小时、72小时、96小时、120小时，客户可通过挂单有效期下拉选项选择。<br />5、在账户农产品行情报价，您看到的报价为参考报价，仅供您参考，不能凭此达成交易；如您需要达成交易，请联动到交易区获取可成交报价后完成交易。<br />6、根据市场情况，我行可能调整账户农产品的银行买入价/卖出价和交易价差，请客户在达成交易前注意。<br />7、因国家监管政策等原因，我行对所有客户人民币账户农产品产品总持仓净额设定上、下限。当客户持仓触及上、下限时，客户将不能进行新开仓操作，平仓操作不受影响。<br />8、某期账户农产品产品到期后，客户若没有参与转期而仍持有该期产品，我行将按照该期产品到期结算价为客户进行结算，客户资金在该期产品结算日到账。<br />9、为便于客户更好地了解该业务，我行在门户网站-个人业务-金融市场投资交易-热点问答中增加了账户农产品交易业务知识问答。');
+loctionmapList.add(new Loctionmap('PBL20132241','420502'));
+loctionmapListourl[326]=new Loctionmap('PBL20132241','420502','','0','','','','','','0','prodcode','cashsign');
+loctionmapList.add(new Loctionmap('PBL201561','430401'));
+loctionmapListourl[327]=new Loctionmap('PBL201561','430401','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201562','430601'));
+loctionmapListourl[328]=new Loctionmap('PBL201562','430601','','0','','','','','0','','','');
+loctionmapListourl[329]=new Loctionmap('PBL201320','','账户商品','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201563','430602'));
+loctionmapListourl[330]=new Loctionmap('PBL201563','430602','','0','','','','','0','','','');
+nologonList[113]=new Loctionmap('PBL201321','420101','账户能源','0','');
+loctionmapList.add(new Loctionmap('PBL201321','420101'));
+loctionmapList.add(new Loctionmap('PBL201564','431001'));
+loctionmapListourl[331]=new Loctionmap('PBL201564','431001','','0','','','','','0','','','');
+nologonList[114]=new Loctionmap('PBL201322','420501','账户农产品 ','0','');
+loctionmapList.add(new Loctionmap('PBL201322','420501'));
+loctionmapList.add(new Loctionmap('PBL201565','431002'));
+loctionmapListourl[332]=new Loctionmap('PBL201565','431002','','0','','','','','0','','','');
+nologonList[115]=new Loctionmap('PBL201323','420601','账户基本金属','0','');
+loctionmapList.add(new Loctionmap('PBL201323','420601'));
+loctionmapList.add(new Loctionmap('PBL201566','430701'));
+loctionmapListourl[333]=new Loctionmap('PBL201566','430701','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201567','430702'));
+loctionmapListourl[334]=new Loctionmap('PBL201567','430702','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201701','170302'));
+loctionmapList.add(new Loctionmap('PBL201568','430703'));
+loctionmapListourl[335]=new Loctionmap('PBL201568','430703','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201702','170303'));
+loctionmapList.add(new Loctionmap('PBL201569','430704'));
+loctionmapListourl[336]=new Loctionmap('PBL201569','430704','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201703','170305'));
+loctionmapListourl[337]=new Loctionmap('PBL20201703','170305','','0','','/icbc/newperbank/stock/Bstock/bstock_query_lsmx_index.jsp','','','0','','protserno','stockcode');
+loctionmapList.add(new Loctionmap('PBL20201704','170301'));
+loctionmapListourl[338]=new Loctionmap('PBL20201704','170301','','0','','/icbc/newperbank/stock/Bstock/bstock_list_index.jsp','','','0','','','');
+loctionmapListourl[339]=new Loctionmap('PBL20201705','','','0','','/icbc/newperbank/stock/3fcg_queryMoney_index.jsp','','','0','','transData','');
+loctionmapListourl[340]=new Loctionmap('PBL20081201','','','0','','/icbc/newperbank/account/account_currtranscurr_index.jsp','','','0','','parentServiceId','');
+loctionmapListourl[341]=new Loctionmap('PBL20081202','','','0','','/icbc/newperbank/account/account_quick_currtranscurr_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20071401','020213'));
+loctionmapListourl[342]=new Loctionmap('PBL20071401','020213','','0','','/icbc/newperbank/account/account_query_Ebill_sub.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20071402','021301'));
+loctionmapListourl[343]=new Loctionmap('PBL20071402','021301','','0','','/icbc/newperbank/e_bill/ebill_verify_query.jsp','','','0','','','');
+nologonList[116]=new Loctionmap('PBL20109001','','个人住房贷款','1','');
+loctionmapList.add(new Loctionmap('PBL201570','430801'));
+loctionmapListourl[344]=new Loctionmap('PBL201570','430801','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201571','4303'));
+loctionmapListourl[345]=new Loctionmap('PBL201571','4303','新产品意向征集','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201572','430301'));
+loctionmapListourl[346]=new Loctionmap('PBL201572','430301','','0','','','','','0','','','');
+loctionmapListourl[347]=new Loctionmap('PBL201330','','实物贵金属','0','','','','','0','','','');
+nologonList[117]=new Loctionmap('PBL201331','160601','积存金','1','');
+loctionmapList.add(new Loctionmap('PBL201331','160601'));
+loctionmapList.add(new Loctionmap('PBL201573','430302'));
+loctionmapListourl[348]=new Loctionmap('PBL201573','430302','','0','','','','','0','','','');
+loctionmapListourl[349]=new Loctionmap('PBL201574','','','0','','','','','0','','productId4Finance','');
+nologonList[118]=new Loctionmap('PBL201332','160201','代理贵金属现货','0','1、委托交易请在金交所系统服务时间办理，交易时间详见：<a target="_blank" href="http://www.icbc.com.cn/SiteCollectionDocuments/ICBC/Resources/ICBC/guijinshu/download/2013/fujianjiaoyishijianmingxibiao.pdf">《上海黄金交易所交易时间明细表》</a>，如有变动，以交易所开市时间为准。委托仅在当前交易日有效。<br />2、请选择交易品种，输入委托价格及委托数量，并点击“提交”。<br />3、委托价格可输入两位小数，委托数量必须大于最低交易数量，并且要求为整数“手”。<br />4、点击“重置”后，可重新选择并输入买金委托。<br />5、买金委托交易前，请确认您的实物黄金交易资金可用余额是否足够，否则委托可能不成功。<br />6、根据上海黄金交易所的安排，目前可以办理提金的地区包括北京、上海、辽宁、江苏、浙江、福建、山东、河南、湖北、湖南、广东、四川、云南、陕西、新疆、深圳，如发生变更请按提金申请时实际可选择地区为准。<br />7、您可以点击价量区的买一至买五、卖一至卖五，按照对应价格进行快速下单。<br />8、客户在进行提金操作时，我行会代理上海黄金交易所收取个人黄金现货仓储费、运保费和溢短费等费用，具体费率详见上海黄金交易所网站《上海黄金交易所现货交易交割细则》。<br />9、我行代理竞价业务协议内容将于2018年1月更新，具体参见贵金属“<a target="_blank" href="http://www.icbc.com.cn/ICBC/%E7%BD%91%E4%B8%8A%E9%BB%84%E9%87%91/%E4%BA%A4%E6%98%93%E6%8F%90%E7%A4%BA/default.htm">交易提示</a>”栏目相关公告。');
+loctionmapList.add(new Loctionmap('PBL201332','160201'));
+loctionmapList.add(new Loctionmap('PBL201575','431301'));
+loctionmapListourl[350]=new Loctionmap('PBL201575','431301','','0','','','','','0','','','');
+nologonList[119]=new Loctionmap('PBL201333','160301','代理贵金属递延','0','1、通过实时行情可以查询各黄金递延品种的实时曲线图、日K线图、周K线图和月K线图。<br />2、委托交易请在金交所系统服务时间办理，交易时间详见：<a target="_blank" href="http://www.icbc.com.cn/SiteCollectionDocuments/ICBC/Resources/ICBC/guijinshu/download/2013/fujianjiaoyishijianmingxibiao.pdf">《上海黄金交易所交易时间明细表》</a>，如有变动，以交易所开市时间为准。委托仅在当前交易日有效。<br />3、委托价格可输入两位小数，委托数量必须大于最低交易数量，并且要求为整数“手”。<br />4、委托交易前，请确认您的交易资金可用余额以及合约头寸是否足够，否则委托可能不成功。<br />5、您可以点击价量区的买一至买五、卖一至卖五，按照对应价格进行快速下单。<br />6、最大可交易手数受交易所规则和我行风险管理要求限制。<br />7、我行代理竞价业务协议内容将于2018年1月更新，具体参见贵金属“<a target="_blank" href="http://www.icbc.com.cn/ICBC/%E7%BD%91%E4%B8%8A%E9%BB%84%E9%87%91/%E4%BA%A4%E6%98%93%E6%8F%90%E7%A4%BA/default.htm">交易提示</a>”栏目相关公告。');
+loctionmapList.add(new Loctionmap('PBL201333','160301'));
+loctionmapList.add(new Loctionmap('PBL201576','431302'));
+loctionmapListourl[351]=new Loctionmap('PBL201576','431302','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201334','160602'));
+loctionmapListourl[352]=new Loctionmap('PBL201334','160602','','0','','','','','0','','','');
+loctionmapListourl[353]=new Loctionmap('PBL201335','','','0','','','','','0','','prodcode','Goldtype');
+loctionmapList.add(new Loctionmap('PBL201577','4313'));
+loctionmapListourl[354]=new Loctionmap('PBL201577','4313','投资账户','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+nologonList[120]=new Loctionmap('PBL201578','','专属基金','0','');
+loctionmapListourl[355]=new Loctionmap('PBL201336','','','0','','','','','0','','prodcode','Goldtype');
+loctionmapListourl[356]=new Loctionmap('PBL201579','','我的预留产品','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+nologonList[121]=new Loctionmap('PBL201337','','品牌贵金属购买','1','1、个人网上银行实物贵金属销售时间一般为周一至周日，每日09：00至22：30，特殊情况请以中国工商银行网站公告为准，或可咨询95588；<br/>2、通过输入产品名称、材质、价格范围、规格等查询条件，可缩小产品选择范围。更多贵金属产品展示及优惠活动，欢迎登陆http://mall.icbc.com.cn工行旗舰店查看；<br/>3、图片展示仅供参考，具体产品规格及样式以提取时的实物为准；<br/>4、部分热销产品可能会出现库存不足的现象，我行会尽快补充库存，敬请谅解！欢迎您致电贵金属旗舰店了解产品情况：http://www.icbc.com.cn/ICBC/网上黄金/贵金属旗舰店/default.htm；<br/>5、成功支付前，所选择产品的库存可能会发生变化，当网点库存不足时，会导致购金失败；<br/>6、实际支付价格以支付时点的网上实时报价为准。<br/>7、成功支付前，所选择产品的库存可能会发生变化，当网点库存不足时，会导致购金失败；<br/>8、手机号码为接收提金密码的唯一渠道，请确保手机号码正确，并妥善保管提金密码。如提金密码丢失，可登录个人网银，通过“品牌贵金属在线购买＞订单明细管理”栏目，使用“重发提金短信”获得提金密码”。<br/>9、当选择保存订单方式购金时，所保存的订单有效期为24小时，超期订单将失效。<br/>10、完成付款后，请在7天内至所选提金网点领取实物，若超期未提，我们无法保证您随到随提，需要您提前致电网点进行预约。请在网点营业时间内至网点提金。<br/>11、为了您的提金安全，目前我行仅限购金本人自行提金操作，感谢您的配合。');
+loctionmapList.add(new Loctionmap('PBL20092101','06010801'));
+loctionmapListourl[357]=new Loctionmap('PBL20092101','06010801','','0','','/icbc/newperbank/remit_bidbond/remit_bidbond_pay_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20092102','06010802'));
+loctionmapListourl[358]=new Loctionmap('PBL20092102','06010802','','0','','/icbc/newperbank/remit_bidbond/remit_bidbond_query.jsp','','','0','','','');
+loctionmapListourl[359]=new Loctionmap('PBL20082302','','','0','','/icbc/newperbank/WURemit/WUReceiveIndex.jsp','','','0','','parentServiceId','');
+loctionmapList.add(new Loctionmap('PBL20092103','06010803'));
+loctionmapListourl[360]=new Loctionmap('PBL20092103','06010803','','0','','/icbc/newperbank/remit_bidbond/remit_bidbond_refund_query.jsp','','','0','','','');
+loctionmapListourl[361]=new Loctionmap('PBL20082303','','','0','','/icbc/newperbank/WURemit/WURemitSendAndRcvDetail.jsp','','','0','','','');
+loctionmapListourl[362]=new Loctionmap('PBL20150915','','','0','','/icbc/newperbank/gold/ACgold_apply_account.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201581','4314'));
+loctionmapListourl[363]=new Loctionmap('PBL201581','4314','境外账户','1','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201582','4315'));
+loctionmapListourl[364]=new Loctionmap('PBL201582','4315','投资资讯','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+nologonList[122]=new Loctionmap('PBL201340','','外汇','0','');
+loctionmapListourl[365]=new Loctionmap('PBL201340','','外汇','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201583','4315'));
+loctionmapListourl[366]=new Loctionmap('PBL201583','4315','私行境外资讯','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+nologonList[123]=new Loctionmap('PBL201341','','外汇买卖','1','');
+loctionmapListourl[367]=new Loctionmap('PBL201100','','理财.债券','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20134201','1802'));
+loctionmapListourl[368]=new Loctionmap('PBL20134201','1802','','0','','/icbc/newperbank/account/account_smallPurchaseFE_prior.jsp','','','0','','','');
+nologonList[124]=new Loctionmap('PBL201343','','账户外汇','1','');
+loctionmapList.add(new Loctionmap('PBL20134202','1803'));
+loctionmapListourl[369]=new Loctionmap('PBL20134202','1803','','0','','/icbc/newperbank/account/account_smallSellFE_prior.jsp','','','0','','','');
+nologonList[125]=new Loctionmap('PBL201344','','外汇','0','');
+loctionmapListourl[370]=new Loctionmap('PBL20134203','','','0','','/icbc/newperbank/account/account_smallPurchaseFEQuery_submit.jsp','','','0','','','');
+nologonList[126]=new Loctionmap('PBL201345','4501','账户外汇指数','1','');
+loctionmapList.add(new Loctionmap('PBL201345','4501'));
+loctionmapListourl[371]=new Loctionmap('PBL201350','','品种转换','0','','','','','0','','','');
+nologonList[127]=new Loctionmap('PBL201351','','账户贵金属转换','1','');
+nologonList[128]=new Loctionmap('PBL201110','','理财','0','');
+loctionmapListourl[372]=new Loctionmap('PBL201110','','理财','0','','','','','0','','','');
+nologonList[129]=new Loctionmap('PBL201111','','推荐产品','0','');
+loctionmapListourl[373]=new Loctionmap('PBL201111','','推荐产品','0','','/icbc/newperbank/perbank3/includes/menu_all.jsp','/icbc/newperbank/perbank3/includes/menu_all_out.jsp','','0','','','');
+nologonList[130]=new Loctionmap('PBL201112','','现金管理','0','');
+loctionmapListourl[374]=new Loctionmap('PBL201112','','现金管理','0','','/icbc/newperbank/perbank3/includes/menu_all.jsp','/icbc/newperbank/perbank3/includes/menu_all_out.jsp','','0','','','');
+nologonList[131]=new Loctionmap('PBL201113','','精品主题','0','');
+loctionmapListourl[375]=new Loctionmap('PBL201113','','精品主题','0','','/icbc/newperbank/perbank3/includes/menu_all.jsp','/icbc/newperbank/perbank3/includes/menu_all_out.jsp','','0','','','');
+nologonList[132]=new Loctionmap('PBL201114','','外币类','0','');
+loctionmapListourl[376]=new Loctionmap('PBL201114','','外币类','0','','/icbc/newperbank/perbank3/includes/menu_all.jsp','/icbc/newperbank/perbank3/includes/menu_all_out.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20200402','171402'));
+nologonList[133]=new Loctionmap('PBL201115','','新型理财','1','');
+nologonList[134]=new Loctionmap('PBL201116','','理财定投','0','');
+loctionmapListourl[377]=new Loctionmap('PBL201116','','理财定投','0','','/icbc/newperbank/finance/finance_curpropub_mid.jsp','','','0','','','');
+nologonList[135]=new Loctionmap('PBL201117','','优选净值','0','');
+loctionmapListourl[378]=new Loctionmap('PBL201117','','优选净值','0','','/icbc/newperbank/perbank3/includes/menu_all.jsp','/icbc/newperbank/perbank3/includes/menu_all_out.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201118','120105'));
+loctionmapList.add(new Loctionmap('PBL201119','PB201119'));
+loctionmapListourl[379]=new Loctionmap('PBL201120','','债券','0','','','','','0','','','');
+nologonList[136]=new Loctionmap('PBL201121','','柜台记账式债券','1','');
+nologonList[137]=new Loctionmap('PBL20122001','','','0','');
+loctionmapListourl[380]=new Loctionmap('PBL20122001','','','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_index_out.jsp','','0','','protype','');
+nologonList[138]=new Loctionmap('PBL201122','','储蓄国债','0','储蓄国债');
+loctionmapListourl[381]=new Loctionmap('PBL20112201','','','0','','/icbc/newperbank/perbank3/nationaldebt/Mynationaldebt.jsp','','','0','','','');
+nologonList[139]=new Loctionmap('PBL201123','','储蓄国债','1','');
+loctionmapList.add(new Loctionmap('PBL20112202','150801'));
+loctionmapListourl[382]=new Loctionmap('PBL20112202','150801','','0','','','/icbc/newperbank/perbank3/nationaldebt/nationaldebt_CertBond_infoquery_product_nosession.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201501','170103'));
+loctionmapListourl[383]=new Loctionmap('PBL20112203','','','0','','/icbc/newperbank/nationaldebt/save_nationaldebt_accquery_balance.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201502','170104'));
+loctionmapListourl[384]=new Loctionmap('PBL20112204','','','0','','/icbc/newperbank/nationaldebt/save_nationaldebt_accquery_current_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201503','170105'));
+loctionmapListourl[385]=new Loctionmap('PBL20112205','','','0','','/icbc/newperbank/nationaldebt/nationaldebt_subscribe_status_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201504','170106'));
+loctionmapListourl[386]=new Loctionmap('PBL20201504','170106','','0','','/icbc/newperbank/stock/3fcg/3fcg_tradequery_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201505','170102'));
+loctionmapListourl[387]=new Loctionmap('PBL20201505','170102','','0','','/icbc/newperbank/stock/3fcg/3fcg_list_index.jsp','','','0','','','');
+loctionmapListourl[388]=new Loctionmap('PBL20201506','','','0','','/icbc/newperbank/stock/3fcg_queryMoney_index.jsp','','','0','','transData','');
+loctionmapListourl[389]=new Loctionmap('PBL20081001','','','0','','/icbc/newperbank/remit/remittance_DomesticTransfer_Payee_Block.jsp','','','0','境内汇款-收款人信息快','','');
+loctionmapListourl[390]=new Loctionmap('PBL20201507','','','0','','/icbc/newperbank/stock/3fcg/3fcg_change_accno_index.jsp','','','0','','transData','');
+loctionmapListourl[391]=new Loctionmap('PBL20081002','','','0','','','','','0','境内汇款-快照信息块','','');
+loctionmapList.add(new Loctionmap('PBL20081003','020402'));
+loctionmapListourl[392]=new Loctionmap('PBL20081003','020402','','0','','/icbc/newperbank/remit/remittance_DomesticTransfer_submit.jsp','','','0','境内汇款-汇款提交页面','payeeMsg','NormalOrBooking');
+loctionmapList.add(new Loctionmap('PBL20081004','060301'));
+loctionmapListourl[393]=new Loctionmap('PBL20081004','060301','','0','','','','','0','境内汇款-我的收款人','injectType','injectData');
+loctionmapList.add(new Loctionmap('PBL20081005','060298'));
+loctionmapListourl[394]=new Loctionmap('PBL20081005','060298','','0','','','','','0','境内汇款-明细查询','queryMode','injectType');
+loctionmapListourl[395]=new Loctionmap('PBL20081006','','','0','','/icbc/newperbank/remit/remitexc_verify_query_sub.jsp','','','0','境内汇款-明细查询-电话核实交易查询','','');
+loctionmapList.add(new Loctionmap('PBL20081007','020302'));
+loctionmapListourl[396]=new Loctionmap('PBL20081007','020302','','0','','/icbc/newperbank/account/account_currtranscurr_index.jsp','','','0','境内汇款-转本人','','');
+loctionmapList.add(new Loctionmap('PBL20081008','081008'));
+loctionmapListourl[397]=new Loctionmap('PBL20081008','081008','','0','','/icbc/newperbank/precontract/precontract_myprecontract_submit.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20081009','081008'));
+loctionmapListourl[398]=new Loctionmap('PBL20081009','081008','','0','','/icbc/newperbank/precontract/precontract_myprecontract_submit.jsp','','','0','','','');
+nologonList[140]=new Loctionmap('PBL201370','','账户商品','0','');
+nologonList[141]=new Loctionmap('PBL201131','','','0','');
+loctionmapListourl[399]=new Loctionmap('PBL201134','','','0','','/icbc/newperbank/finance/finance_new_acct_query_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201135','120106'));
+loctionmapListourl[400]=new Loctionmap('PBL201135','120106','','0','','','','','','','','');
+loctionmapListourl[401]=new Loctionmap('PBL201136','','','0','','/icbc/newperbank/perbank3/finance/agency_goto_index.jsp','','','','','','');
+loctionmapListourl[402]=new Loctionmap('PBL201137','','','0','','/icbc/newperbank/perbank3/finance/agency_goto_index.jsp','','','','','','');
+nologonList[142]=new Loctionmap('PBL201139','','理财','0','');
+loctionmapList.add(new Loctionmap('PBL20082101','020602'));
+loctionmapListourl[403]=new Loctionmap('PBL20082101','020602','','0','','/icbc/newperbank/remit/remit_foreignsample_query.jsp','','','0','','fovaAcct','parentServiceId');
+loctionmapList.add(new Loctionmap('PBL20181201','3703'));
+loctionmapList.add(new Loctionmap('PBL20082102','060297'));
+loctionmapListourl[404]=new Loctionmap('PBL20082102','060297','','0','','/icbc/newperbank/remit/remit_toforeignicbc_result.jsp','','','0','','','');
+loctionmapListourl[405]=new Loctionmap('PBL20184711','','','','','','','','','','','');
+loctionmapListourl[406]=new Loctionmap('PBL20082103','','','0','','','','','0','','','');
+loctionmapListourl[407]=new Loctionmap('PBL201140','','理财服务','0','','','','','0','','','');
+loctionmapListourl[408]=new Loctionmap('PBL201141','','申请理财服务','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201142','120202'));
+loctionmapList.add(new Loctionmap('PBL20158201','431501'));
+loctionmapListourl[409]=new Loctionmap('PBL20158201','431501','','1','','','','','0','','','');
+loctionmapListourl[410]=new Loctionmap('PBL201143','','查询执行明细','1','','/icbc/newperbank/finance/finance_agreement_resultquery.jsp','','','0','','','');
+loctionmapListourl[411]=new Loctionmap('PBL201144','','利添利','0','','/icbc/newperbank/finance/finance_sign_negotiateFundtransferAgreement_intro.jsp','','','','','','');
+loctionmapList.add(new Loctionmap('PBL750001','320301'));
+loctionmapListourl[412]=new Loctionmap('PBL750001','320301','','0','','/icbc/newperbank/service/service_integral_query_mid.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL750002','320305'));
+loctionmapListourl[413]=new Loctionmap('PBL750002','320305','','0','','/icbc/newperbank/service/service_integral_history_sub.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL750003','320306'));
+loctionmapListourl[414]=new Loctionmap('PBL750003','320306','','0','','/icbc/newperbank/card/card_integral_query_unitePoint_select.jsp','','','0','','','');
+loctionmapListourl[415]=new Loctionmap('PBL750004','','','0','','','','','0','','','');
+nologonList[143]=new Loctionmap('PBL750005','','','0','');
+loctionmapListourl[416]=new Loctionmap('PBL750005','','','0','','/icbc/Emall/main/forward.jsp','/icbc/Emall/main/forward.jsp','1','0','','turnUrl','');
+nologonList[144]=new Loctionmap('PBL750006','','','0','');
+loctionmapListourl[417]=new Loctionmap('PBL750006','','','0','','/icbc/Emall/main/forward.jsp','/icbc/Emall/main/forward.jsp','1','0','','turnUrl','');
+nologonList[145]=new Loctionmap('PBL750007','','融e购','0','');
+loctionmapListourl[418]=new Loctionmap('PBL750007','','融e购','0','','/icbc/Emall/main/forward.jsp','/icbc/Emall/main/forward.jsp','1','0','','turnUrl','data');
+loctionmapListourl[419]=new Loctionmap('PBL750008','','','0','','/icbc/newperbank/assetDeposit/assetDeposit_query.jsp','','','0','','','');
+loctionmapListourl[420]=new Loctionmap('PBL20083202','','','0','','/icbc/newperbank/binding/bindingEmail_resend_submit.jsp','','','0','','','');
+nologonList[146]=new Loctionmap('PBL201391','160901','账户贵金属(模拟)','0','');
+loctionmapList.add(new Loctionmap('PBL201391','160901'));
+nologonList[147]=new Loctionmap('PBL201393','','账户外汇(模拟)','1','');
+nologonList[148]=new Loctionmap('PBL201394','420101','账户能源(模拟)','0','');
+loctionmapList.add(new Loctionmap('PBL201394','420101'));
+nologonList[149]=new Loctionmap('PBL201395','420501','账户农产品(模拟)','0','');
+loctionmapList.add(new Loctionmap('PBL201395','420501'));
+loctionmapListourl[421]=new Loctionmap('PBL202000','','保险.养老金.社保.公积金','0','','','','','0','','','');
+nologonList[150]=new Loctionmap('PBL201396','420601','账户基本金属(模拟)','0','');
+loctionmapList.add(new Loctionmap('PBL201396','420601'));
+loctionmapList.add(new Loctionmap('PBL202001','1713'));
+loctionmapListourl[422]=new Loctionmap('PBL202001','1713','银衍转账','0','','/icbc/newperbank/perbank3/stock/derivative_index.jsp','','','0','','','');
+nologonList[151]=new Loctionmap('PBL201397','160901','账户贵金属指数(模拟)','0','');
+loctionmapList.add(new Loctionmap('PBL201397','160901'));
+nologonList[152]=new Loctionmap('PBL20101101','3601','','0','1、通知存款按照确定通知时间的不同，分为1天通知存款和7天通知存款两种类型。<br/>2、人民币通知存款的最低存款金额为5万元（含），外币通知存款的最低存款金额各地区略有不同，约为等值人民币5万元（含）。<br/>3、通知存款一次存入，可一次或多次支取，部分提取通知存款时，每次提取的金额应大于通知存款的最低起存金额。<br/>4、通知存款按照支取日银行挂牌公告的相应利率和实际存期计息，利随本清。<br/>5、如果您未按照存款时确定的通知时间支取通知存款，通知存款将按照活期存款利率计算利息。');
+loctionmapList.add(new Loctionmap('PBL20101101','3601'));
+loctionmapListourl[423]=new Loctionmap('PBL20101101','3601','','0','','/icbc/newperbank/account/account_tzck_index.jsp','/icbc/newperbank/account/account_tzck_index_out.jsp','','0','','productIdTmp','orderIdTmp');
+loctionmapList.add(new Loctionmap('PBL202002','1705'));
+loctionmapListourl[424]=new Loctionmap('PBL202002','1705','银证期三通','0','','/icbc/newperbank/perbank3/stock/BSF_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20200201','170501'));
+loctionmapListourl[425]=new Loctionmap('PBL20200201','170501','','0','','/icbc/newperbank/stock/BSFLinks/BSF_futures2stock_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20101102','3602'));
+loctionmapList.add(new Loctionmap('PBL202003','1712'));
+nologonList[153]=new Loctionmap('PBL20139702','160901','','0','');
+loctionmapList.add(new Loctionmap('PBL20139702','160901'));
+loctionmapList.add(new Loctionmap('PBL202004','1714'));
+loctionmapList.add(new Loctionmap('PBL20200202','170502'));
+loctionmapListourl[426]=new Loctionmap('PBL20200202','170502','','0','','/icbc/newperbank/stock/BSFLinks/BSF_stock2futures_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20101103','3601'));
+loctionmapListourl[427]=new Loctionmap('PBL20101103','3601','','0','','/icbc/newperbank/account/account_tzck_frame.jsp','','','0','','IN_TERM1','');
+loctionmapList.add(new Loctionmap('PBL20101104','3603'));
+loctionmapListourl[428]=new Loctionmap('PBL202005','','银证转账预约设置','0','','/icbc/newperbank/perbank3/stock/preOrder_index.jsp','','','0','','','');
+loctionmapListourl[429]=new Loctionmap('PBL20060101','','','0','','','','','0','','prodcode','tradeflag');
+loctionmapList.add(new Loctionmap('PBL20074501','410501'));
+loctionmapListourl[430]=new Loctionmap('PBL20074501','410501','注册e支付','0','','/icbc/newperbank/Epay/open/index.jsp','','','0','','INFLAG','CNO');
+loctionmapList.add(new Loctionmap('PBL20074502','410502'));
+loctionmapListourl[431]=new Loctionmap('PBL20074502','410502','我的e支付','0','','/icbc/newperbank/Epay/myEpay/index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20074503','410503'));
+loctionmapListourl[432]=new Loctionmap('PBL20074503','410503','查询交易明细','0','','/icbc/newperbank/Epay/detail/Epay_detail.jsp','','','0','','','');
+nologonList[154]=new Loctionmap('PBL20074504','410504','查询操作记录','0','');
+loctionmapList.add(new Loctionmap('PBL20074504','410504'));
+loctionmapListourl[433]=new Loctionmap('PBL20074504','410504','查询操作记录','0','','/icbc/newperbank/Epay/detail/Epay_operateDetail.jsp','/icbc/newperbank/perbank3/Epay/Epay_outswitch.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20074505','2803'));
+loctionmapListourl[434]=new Loctionmap('PBL20074506','','','0','','/icbc/newperbank/Epay/Epay_menu_safe_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL2007461','3004'));
+loctionmapListourl[435]=new Loctionmap('PBL20134020','','','0','','/icbc/newperbank/perbank3/financialproducts/finance_foreign.jsp','','','0','','','');
+loctionmapListourl[436]=new Loctionmap('PBL202010','','银证','0','','','','','0','','','');
+nologonList[155]=new Loctionmap('PBL20139711','','','0','本页面为模拟交易，账号、投资资金、保证金及交易均是虚拟的，与现实金融交易无关。使用者不得就模拟交易系统中的账户、投资资金、保证金及交易主张任何权利。 ');
+loctionmapList.add(new Loctionmap('PBL202014','170102'));
+loctionmapListourl[437]=new Loctionmap('PBL202014','170102','我的第三方存管','0','','/icbc/newperbank/perbank3/stock/goto_index.jsp','','','0','','tradeflag','');
+loctionmapListourl[438]=new Loctionmap('PBL20201301','','','0','','/icbc/newperbank/stock/3fcg/3FCGselOpenAccount_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL202015','1701'));
+loctionmapListourl[439]=new Loctionmap('PBL20201302','','','0','','/icbc/newperbank/stock/3fcg/3FCGselOpenAccount_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL202016','1704'));
+loctionmapList.add(new Loctionmap('PBL202017','1703'));
+loctionmapList.add(new Loctionmap('PBL202018','1710'));
+loctionmapListourl[440]=new Loctionmap('PBL202018','1710','B股证券业务','0','','/icbc/newperbank/perbank3/stock/fakeexchange_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL202019','1711'));
+loctionmapListourl[441]=new Loctionmap('PBL202019','1711','B股证券转账（深圳、上海）','0','','/icbc/newperbank/perbank3/stock/stock_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL2007471','3003'));
+loctionmapListourl[442]=new Loctionmap('PBL2007471','3003','','0','','','','','0','','','');
+loctionmapListourl[443]=new Loctionmap('PBL202020','','期货','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL202021','190207'));
+loctionmapListourl[444]=new Loctionmap('PBL202021','190207','集中式银期注册','1','','/icbc/newperbank/stock/cenFuture_selopen_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL202022','1902'));
+nologonList[156]=new Loctionmap('PBL20113101','120103','','0','');
+loctionmapList.add(new Loctionmap('PBL20113101','120103'));
+loctionmapListourl[445]=new Loctionmap('PBL20113101','120103','','0','','/icbc/newperbank/perbank3/finance/finance_sub_index_in.jsp','/icbc/newperbank/perbank3/finance/finance_sub_index_out.jsp','','','','','');
+loctionmapList.add(new Loctionmap('PBL202023','1903'));
+loctionmapListourl[446]=new Loctionmap('PBL20103301','','','0','','/icbc/newperbank/account/account_xjy_index.jsp','','','0','','prodType','');
+nologonList[157]=new Loctionmap('PBL20113102','','','0','');
+loctionmapListourl[447]=new Loctionmap('PBL20103302','','','0','','/icbc/newperbank/account/account_myXJYList.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20181001','3101'));
+loctionmapListourl[448]=new Loctionmap('PBL20181001','3101','','0','','','','','0','','','');
+loctionmapListourl[449]=new Loctionmap('PBL20076701','','','0','','/icbc/newperbank/card/card_chip_query_sub.jsp','','','0','','','');
+loctionmapListourl[450]=new Loctionmap('PBL20076702','','','0','','/icbc/newperbank/card/card_chip_define_sub.jsp','','','0','','','');
+loctionmapListourl[451]=new Loctionmap('PBL20076703','','','0','','/icbc/newperbank/card/card_chip_save_link.jsp','','','0','','','');
+loctionmapListourl[452]=new Loctionmap('PBL20076704','','','0','','/icbc/newperbank/card/card_chip_fetch_sub.jsp','','','0','','','');
+loctionmapListourl[453]=new Loctionmap('PBL20076705','','','0','','/icbc/newperbank/card/card_chip_autosave_link.jsp','','','0','','','');
+loctionmapListourl[454]=new Loctionmap('PBL20076706','','','0','','/icbc/newperbank/card/card_chip_manage_link.jsp','','','0','','','');
+loctionmapListourl[455]=new Loctionmap('PBL202030','','银商银权','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL202033','3803'));
+loctionmapListourl[456]=new Loctionmap('PBL202033','3803','查询出入金状态','1','','/icbc/newperbank/exchange/ExchangeTransStat_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL740003','2904'));
+loctionmapListourl[457]=new Loctionmap('PBL740003','2904','','0','','/icbc/newperbank/guarantee/guarantee_hisagr_prior.jsp','','','0','','','');
+loctionmapListourl[458]=new Loctionmap('PBL202040','','养老金·社保·公积金','0','','','','','0','','','');
+nologonList[158]=new Loctionmap('PBL20139501','','','0','');
+loctionmapListourl[459]=new Loctionmap('PBL400001','','','0','','/icbc/newperbank/perbank3/includes/emallTip.jsp','','','0','','','');
+loctionmapListourl[460]=new Loctionmap('PBL400002','','','0','','/icbc/newperbank/perbank3/includes/CustMobileMergeRemind.jsp','','','0','','','');
+loctionmapListourl[461]=new Loctionmap('PBL400003','','','0','','/icbc/newperbank/perbank3/includes/OrderUnFinishedTip.jsp','','','0','','','');
+loctionmapListourl[462]=new Loctionmap('PBL400004','','','0','','/icbc/newperbank/perbank3/includes/ServiceReSignTip.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20139506','420505'));
+nologonList[159]=new Loctionmap('PBL20139508','420501','','0','本页面为模拟交易，账号、投资资金、保证金及交易均是虚拟的，与现实金融交易无关。使用者不得就模拟交易系统中的账户、投资资金、保证金及交易主张任何权利。');
+loctionmapList.add(new Loctionmap('PBL20139508','420501'));
+loctionmapList.add(new Loctionmap('PBL20074301','020115'));
+loctionmapList.add(new Loctionmap('PBL20074302','020116'));
+loctionmapList.add(new Loctionmap('PBL20074303','020118'));
+loctionmapListourl[463]=new Loctionmap('PBL20201101','','','0','','/icbc/newperbank/stock/bankstockCar/preOpenAccount_index.jsp','','','0','','','');
+loctionmapListourl[464]=new Loctionmap('PBL20201102','','','0','','/icbc/newperbank/stock/bankstockCar/stockfast_query_openresult_index.jsp','','','0','','','');
+loctionmapListourl[465]=new Loctionmap('PBL20201103','','','0','','/icbc/newperbank/stock/bankstockCar/preOpenAccount_index.jsp','','','0','','','');
+nologonList[160]=new Loctionmap('PBL20103101','031303','','0','1、节节高1号是为客户提供的在协议有效期内存入定期存款，支取时按照资金的实际存期和是否满足余额下限要求，为客户提供分段组合计息的一项增值服务。<br/>2、节节高2号是在一定起存金额之上，存期为2年的定期存款，不可部分提前支取，全额提前支取时按照实际存期靠档计息方式为客户提供的一项增值服务。<br/>3、温馨提示：以上产品利率仅供参考，请您以实际交易利率为准。 ');
+loctionmapList.add(new Loctionmap('PBL20103101','031303'));
+loctionmapListourl[466]=new Loctionmap('PBL20103101','031303','','0','','/icbc/newperbank/account/account_currtransfix_submit.jsp','/icbc/newperbank/account/account_currtransfix_submit_out.jsp','','0','','JJGFLAG','productIdTmp');
+loctionmapList.add(new Loctionmap('PBL20202201','190202'));
+loctionmapListourl[467]=new Loctionmap('PBL20202201','190202','','0','','/icbc/newperbank/stock/cenFuture_regModify_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20103102','031304'));
+loctionmapList.add(new Loctionmap('PBL20103103','031303'));
+loctionmapListourl[468]=new Loctionmap('PBL20103103','031303','','0','','/icbc/newperbank/account/account_fixfixlink_frame.jsp','','','0','','JJGFLAG','');
+loctionmapList.add(new Loctionmap('PBL20202202','190203'));
+loctionmapListourl[469]=new Loctionmap('PBL20202202','190203','','0','','/icbc/newperbank/stock/futures_centralize_bank2futures_forward.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20202203','190204'));
+loctionmapListourl[470]=new Loctionmap('PBL20202203','190204','','0','','/icbc/newperbank/stock/futures_centralize_futures2bank_forward.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20202204','190206'));
+loctionmapListourl[471]=new Loctionmap('PBL20202204','190206','','0','','/icbc/newperbank/stock/cenFuture_queryHis_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20161201','240202'));
+loctionmapListourl[472]=new Loctionmap('PBL20161201','240202','','0','','/ctp/icbc/newperbank/payment/payment_submit_schooling_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20161202','240203'));
+loctionmapListourl[473]=new Loctionmap('PBL20161202','240203','','0','','/ctp/icbc/newperbank/payment/payment_query_schooling1.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20104201','080701'));
+loctionmapListourl[474]=new Loctionmap('PBL20104202','','','0','','/icbc/newperbank/loan/loan_fast_conductindex.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL730001','1001'));
+loctionmapListourl[475]=new Loctionmap('PBL730001','1001','','0','','/icbc/newperbank/annuity/pension_prod_list_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL730002','1002'));
+loctionmapListourl[476]=new Loctionmap('PBL730002','1002','','0','','/icbc/newperbank/annuity/annuity_querydetail_queryType_sel.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20104204','080708'));
+loctionmapListourl[477]=new Loctionmap('PBL20104204','080708','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL730003','1004'));
+loctionmapListourl[478]=new Loctionmap('PBL730003','1004','','0','','/icbc/newperbank/annuity/annuity_reportdownload_hid.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL730004','1003'));
+loctionmapListourl[479]=new Loctionmap('PBL730004','1003','','0','','/icbc/newperbank/annuity/annuity_modifybasicinfo1.jsp','','','0','','','');
+loctionmapListourl[480]=new Loctionmap('PBL700601','','','0','','/icbc/newperbank/housefund/housefund_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL730005','1005'));
+loctionmapListourl[481]=new Loctionmap('PBL730005','1005','','0','','/icbc/newperbank/annuity/pension_qry_notice_index.jsp','','','0','','','');
+loctionmapListourl[482]=new Loctionmap('PBL700602','','','0','','/ctp/icbc/newperbank/housefund/housefund_queryplan_index.jsp','','','0','','','');
+nologonList[161]=new Loctionmap('PBL730006','','','0','');
+nologonList[162]=new Loctionmap('PBL20139301','','','1','');
+nologonList[163]=new Loctionmap('PBL10011501','321301','','0','');
+loctionmapList.add(new Loctionmap('PBL10011501','321301'));
+loctionmapListourl[483]=new Loctionmap('PBL200900','','结算套餐','0','','','','','0','','','');
+nologonList[164]=new Loctionmap('PBL20139311','','','1','本页面为模拟交易，账号、投资资金、保证金及交易均是虚拟的，与现实金融交易无关。使用者不得就模拟交易系统中的账户、投资资金、保证金及交易主张任何权利。 ');
+loctionmapList.add(new Loctionmap('PBL20104221','080702'));
+loctionmapListourl[484]=new Loctionmap('PBL20104221','080702','','0','','/icbc/newperbank/loan/loan_fast_conductindex.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20104222','080704'));
+loctionmapListourl[485]=new Loctionmap('PBL20104222','080704','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20104223','080706'));
+loctionmapListourl[486]=new Loctionmap('PBL20104223','080706','','0','','','','','0','','','');
+loctionmapListourl[487]=new Loctionmap('PBL20075201','','','0','','','','','0','','CardNum','myregmode');
+loctionmapListourl[488]=new Loctionmap('PBL200910','','收付款账单','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20104231','080703'));
+loctionmapList.add(new Loctionmap('PBL20104232','080705'));
+loctionmapListourl[489]=new Loctionmap('PBL20104232','080705','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20104233','080707'));
+loctionmapListourl[490]=new Loctionmap('PBL20104233','080707','','0','','/icbc/newperbank/loan/loan_fast_changeaccount_index.jsp','','','0','','','');
+loctionmapListourl[491]=new Loctionmap('PBL200921','','投标保证金','0','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapListourl[492]=new Loctionmap('PBL20203101','','','1','','','','','0','','CZMarketID','CZMarketName');
+loctionmapList.add(new Loctionmap('PBL20203102','3801'));
+loctionmapListourl[493]=new Loctionmap('PBL20203102','3801','','0','','/icbc/newperbank/exchange/Product_List.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL720001','022101'));
+loctionmapListourl[494]=new Loctionmap('PBL720001','022101','','0','','/ctp/icbc/newperbank/socialinsurance/socialinsurance_myinfo.jsp','','','0','','','');
+loctionmapListourl[495]=new Loctionmap('PBL20203103','','','0','','/icbc/newperbank/exchange/Product_List.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL720002','022102'));
+loctionmapListourl[496]=new Loctionmap('PBL720002','022102','','0','','/ctp/icbc/newperbank/socialinsurance/socialinsurance_prodlist_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL720003','022106'));
+loctionmapListourl[497]=new Loctionmap('PBL720003','022106','','0','','/ctp/icbc/newperbank/socialinsurance/socialinsurance_myagreement_index.jsp','','','0','','tranFlag','inTo');
+nologonList[165]=new Loctionmap('PBL20162101','2101','','0','1、可预约号源时间，以医院预约挂号相关规定为准。<br/>2、预约号源是否可退号，以医院相关规定为准。');
+loctionmapList.add(new Loctionmap('PBL20162101','2101'));
+loctionmapListourl[498]=new Loctionmap('PBL20162101','2101','','0','','','/icbc/newperbank/hospital/hospital_out_index.jsp','','0','','','');
+nologonList[166]=new Loctionmap('PBL20077401','','','0','');
+loctionmapListourl[499]=new Loctionmap('PBL20077401','','','0','','','/icbc/newperbank/card/card_queryCard_cred_nosess.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20162102','2102'));
+loctionmapListourl[500]=new Loctionmap('PBL20162102','2102','','0','','/icbc/newperbank/hospital/hospital_mycontract_index.jsp','/icbc/newperbank/hospital/hospital_mycontractlist_out_index.jsp','','0','','','');
+loctionmapListourl[501]=new Loctionmap('PBL20077402','','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20162103','2106'));
+loctionmapListourl[502]=new Loctionmap('PBL20162103','2106','','0','','','','','0','','','');
+loctionmapListourl[503]=new Loctionmap('PBL100501','','','0','','/icbc/newperbank/perbank3/includes/changeFrame_service.jsp','','','0','','formAction','inputString');
+loctionmapList.add(new Loctionmap('PBL20162104','2103'));
+loctionmapListourl[504]=new Loctionmap('PBL20162104','2103','','0','','/icbc/newperbank/hospital/hospital_tranhis_index.jsp','/icbc/newperbank/hospital/hospital_tranhis_index_unlogin.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20162105','2104'));
+loctionmapListourl[505]=new Loctionmap('PBL20162105','2104','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20162106','2105'));
+loctionmapListourl[506]=new Loctionmap('PBL20162106','2105','','0','','/icbc/newperbank/hospital/hospital_mycontract_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20162107','2107'));
+loctionmapListourl[507]=new Loctionmap('PBL20162107','2107','','0','','/icbc/newperbank/hospital/hospital_tranhis_index.jsp','','','0','','','');
+nologonList[167]=new Loctionmap('PBL20139101','','','0','本页面为模拟交易，账号、投资资金、保证金及交易均是虚拟的，与现实金融交易无关。使用者不得就模拟交易系统中的账户、投资资金、保证金及交易主张任何权利。 ');
+nologonList[168]=new Loctionmap('PBL20139102','160901','','0','');
+loctionmapList.add(new Loctionmap('PBL20139102','160901'));
+nologonList[169]=new Loctionmap('PBL20030101','','','1','');
+loctionmapListourl[508]=new Loctionmap('PBL20030101','','','1','','','/icbc/newperbank/perbank3/fund/frame_fund_index_out.jsp','','0','','menuFlag','');
+loctionmapList.add(new Loctionmap('PBL20163201','321701'));
+loctionmapListourl[509]=new Loctionmap('PBL20163201','321701','','0','','/icbc/newperbank/service/service_lotteryinfo_activities_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20163202','321702'));
+loctionmapListourl[510]=new Loctionmap('PBL20163202','321702','','0','','/icbc/newperbank/service/service_lotteryinfo_myinfo_index.jsp','','','0','','','');
+loctionmapListourl[511]=new Loctionmap('PBL200700','','银行卡.账户','0','','','','','0','','','');
+nologonList[170]=new Loctionmap('PBL20139111','','','0','本页面为模拟交易，账号、投资资金、保证金及交易均是虚拟的，与现实金融交易无关。使用者不得就模拟交易系统中的账户、投资资金、保证金及交易主张任何权利。 ');
+nologonList[171]=new Loctionmap('PBL20139119','','模拟交易','0','');
+loctionmapList.add(new Loctionmap('PBL20031201','140202'));
+loctionmapListourl[512]=new Loctionmap('PBL200710','','账户服务','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL200711','020205'));
+nologonList[172]=new Loctionmap('PBL201800','','业务申请','0','');
+loctionmapListourl[513]=new Loctionmap('PBL201800','','业务申请','0','','/icbc/newperbank/perbank3/includes/busiapply_index.jsp','/icbc/newperbank/perbank3/includes/busiapply_index_nologin.jsp','','0','','','');
+loctionmapList.add(new Loctionmap('PBL200712','020203'));
+loctionmapList.add(new Loctionmap('PBL201805','3222'));
+loctionmapListourl[514]=new Loctionmap('PBL201805','3222','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL200716','410503'));
+loctionmapListourl[515]=new Loctionmap('PBL201806','','','1','','','','','','','','');
+loctionmapList.add(new Loctionmap('PBL20076101','250401'));
+loctionmapListourl[516]=new Loctionmap('PBL20076101','250401','','0','','/icbc/newperbank/card/card_myRepay_index.jsp','','','0','','cardType','currType');
+loctionmapList.add(new Loctionmap('PBL20076102','250402'));
+loctionmapListourl[517]=new Loctionmap('PBL20076102','250402','','0','','/icbc/newperbank/card/card_autoRepay_index.jsp','','','0','','','');
+loctionmapListourl[518]=new Loctionmap('PBL200720','','借记卡服务','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20076103','250403'));
+loctionmapListourl[519]=new Loctionmap('PBL20076103','250403','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201810','3101'));
+loctionmapListourl[520]=new Loctionmap('PBL201810','3101','','0','','','','','0','','','');
+nologonList[173]=new Loctionmap('PBL200721','','借记卡申请','1','');
+loctionmapList.add(new Loctionmap('PBL201811','3102'));
+loctionmapListourl[521]=new Loctionmap('PBL201811','3102','','0','','/ctp/icbc/newperbank/service/safe_modifycustmessage_sub.jsp','','','0','','','');
+nologonList[174]=new Loctionmap('PBL200722','','申请及进度','1','1、请申请人认真阅读《中国工商银行牡丹信用卡章程》、《牡丹信用卡领用合约》、《安全用卡须知》、《自动还款业务协议书》。<br/>2、如您申请副卡，领卡时须主卡人和副卡人同时持各自有效证件办领卡手续。<br/>3、请确保您所填写的联系方式的准确性，收到申请后我行将与您联系。<br/>');
+loctionmapList.add(new Loctionmap('PBL201812','3703'));
+loctionmapListourl[522]=new Loctionmap('PBL201812','3703','','0','','/icbc/newperbank/perbank3/eleacc/eleacc_beforechangephone_judge.jsp','','','0','','','');
+nologonList[175]=new Loctionmap('PBL200723','','电子账户申请','1','');
+loctionmapListourl[523]=new Loctionmap('PBL200723','','电子账户申请','1','','','','3','1','https://epass.icbc.com.cn/regist/regist_index.jsp','','');
+loctionmapList.add(new Loctionmap('PBL201813','3109'));
+loctionmapListourl[524]=new Loctionmap('PBL201813','3109','','0','','/icbc/newperbank/service/signMyPayeeAgreementSub.jsp','','','0','','','');
+loctionmapListourl[525]=new Loctionmap('PBL200725','','申请副卡','1','','/icbc/newperbank/card/card_applySubCard_index.jsp','','','0','','','');
+loctionmapListourl[526]=new Loctionmap('PBL201814','','','0','','/icbc/newperbank/perbank3/featureset/feature_setting_BePriIn_frame.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201815','320201'));
+loctionmapListourl[527]=new Loctionmap('PBL201815','320201','','0','','/ctp/icbc/newperbank/service/service_updatealias_sub.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201816','3209'));
+loctionmapListourl[528]=new Loctionmap('PBL201816','3209','','0','','/ctp/icbc/newperbank/service/service_unreg_mid.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201817','3226'));
+loctionmapList.add(new Loctionmap('PBL201818','3111'));
+loctionmapListourl[529]=new Loctionmap('PBL201818','3111','','0','','/icbc/newperbank/service/service_logonoff_history_index.jsp','','','0','','','');
+loctionmapListourl[530]=new Loctionmap('PBL201819','','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL710001','021402'));
+loctionmapListourl[531]=new Loctionmap('PBL710001','021402','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL710002','021403'));
+loctionmapListourl[532]=new Loctionmap('PBL710002','021403','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL710003','021404'));
+loctionmapListourl[533]=new Loctionmap('PBL710003','021404','','0','','/ctp/icbc/newperbank/net_tax/tax_query_sub.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL2013321','160201'));
+loctionmapList.add(new Loctionmap('PBL710004','021405'));
+loctionmapListourl[534]=new Loctionmap('PBL710004','021405','','0','','/ctp/icbc/newperbank/net_tax/taxInfo.jsp','','','0','','','');
+loctionmapListourl[535]=new Loctionmap('PBL200730','','','0','','','','','0','','','');
+loctionmapListourl[536]=new Loctionmap('PBL201820','','','0','','/icbc/newperbank/perbank3/featureset/feature_setting_cert_frame.jsp','','','0','','cert_tempflag','');
+loctionmapListourl[537]=new Loctionmap('PBL100301','','','0','','','','','0','','','');
+loctionmapListourl[538]=new Loctionmap('PBL201821','','','0','','/icbc/newperbank/perbank3/featureset/feature_setting_pwdInstrument_frame.jsp','','','0','','','');
+loctionmapListourl[539]=new Loctionmap('PBL201822','','','0','','/icbc/newperbank/perbank3/featureset/feature_setting_dynamicCardAdmin_frame.jsp','','','0','','cert_tempflag','');
+loctionmapList.add(new Loctionmap('PBL200733','020221'));
+loctionmapListourl[540]=new Loctionmap('PBL200733','020221','工资明细','1','','/ctp/icbc/newperbank/account/account_query_salarydetail.jsp','','','','','','');
+loctionmapList.add(new Loctionmap('PBL201823','3113'));
+loctionmapListourl[541]=new Loctionmap('PBL201823','3113','','0','','','','','0','','','');
+loctionmapListourl[542]=new Loctionmap('PBL201824','','','0','','','','','','','','');
+loctionmapListourl[543]=new Loctionmap('PBL201825','','','0','','/icbc/newperbank/Epay/ajust/Epay_menu_ajustLimit_index.jsp','','','0','','','');
+loctionmapListourl[544]=new Loctionmap('PBL201826','','','0','','/icbc/newperbank/Epay/ajust/Epay_menu_modifyPhoneNo_index.jsp','','','0','','','');
+loctionmapListourl[545]=new Loctionmap('PBL201828','','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL2013331','160301'));
+loctionmapList.add(new Loctionmap('PBL20088101','088101'));
+loctionmapListourl[546]=new Loctionmap('PBL20088101','088101','','0','','/icbc/newperbank/account/account_currtranscurr_index.jsp','','','0','','','');
+loctionmapListourl[547]=new Loctionmap('PBL20078301','','','0','','','','','0','','formOrder','formNum');
+loctionmapListourl[548]=new Loctionmap('PBL200740','','账户协议','0','','','','','0','','','');
+loctionmapListourl[549]=new Loctionmap('PBL20078302','','','0','','','','','0','','','');
+loctionmapListourl[550]=new Loctionmap('PBL20088103','','','0','','','','','0','','payerAcct','payeeMsg');
+loctionmapList.add(new Loctionmap('PBL201830','3103'));
+loctionmapListourl[551]=new Loctionmap('PBL201830','3103','','0','','/ctp/icbc/newperbank/service/service_tfec_sub.jsp','','','0','','','');
+loctionmapListourl[552]=new Loctionmap('PBL200741','','托管账户','0','','/icbc/newperbank/account/account_list_managedacct_0.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201831','3114'));
+loctionmapListourl[553]=new Loctionmap('PBL201831','3114','','0','','','','','0','','','');
+nologonList[176]=new Loctionmap('PBL200501','200101','','0','');
+loctionmapList.add(new Loctionmap('PBL200501','200101'));
+nologonList[177]=new Loctionmap('PBL200502','','','0','');
+loctionmapList.add(new Loctionmap('PBL200745','41'));
+loctionmapListourl[554]=new Loctionmap('PBL200503','','','1','','','','','0','','insurecorporno','insurekindno');
+loctionmapList.add(new Loctionmap('PBL200746','3002'));
+loctionmapList.add(new Loctionmap('PBL200504','200201'));
+loctionmapListourl[555]=new Loctionmap('PBL200504','200201','','0','','/icbc/newperbank/assurance/assurance_myown_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL200747','3001'));
+nologonList[178]=new Loctionmap('PBL200505','','','0','');
+loctionmapListourl[556]=new Loctionmap('PBL200505','','','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_list_nosess.jsp','','0','','injectFlag','setType');
+loctionmapListourl[557]=new Loctionmap('PBL200748','','','0','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[558]=new Loctionmap('PBL200506','','','0','','','','','0','','','');
+loctionmapListourl[559]=new Loctionmap('PBL200749','','','0','','','','','0','','isOrder','MsgItemNofld');
+nologonList[179]=new Loctionmap('PBL200507','','','0','');
+loctionmapListourl[560]=new Loctionmap('PBL200507','','','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_list_nosess.jsp','','','','injectFlag','setType');
+nologonList[180]=new Loctionmap('PBL200508','','','0','');
+loctionmapListourl[561]=new Loctionmap('PBL200508','','','0','','','/icbc/newperbank/perbank3/assurance/frame_assurance_list_nosess.jsp','','','','injectFlag','setType');
+loctionmapListourl[562]=new Loctionmap('PBL200509','','','1','','','','','0','','insurecorporno','insurekindno');
+loctionmapListourl[563]=new Loctionmap('PBL20181901','','','0','','','','','0','','','');
+loctionmapListourl[564]=new Loctionmap('PBL200750','','借记卡服务','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201840','320101'));
+loctionmapListourl[565]=new Loctionmap('PBL200510','','','1','','','','','0','','insurecorporno','insurekindno');
+loctionmapListourl[566]=new Loctionmap('PBL201600','','生活缴费.本地特色','0','','','','','0','','','');
+nologonList[181]=new Loctionmap('PBL200511','200102','保险','0','');
+loctionmapList.add(new Loctionmap('PBL200511','200102'));
+nologonList[182]=new Loctionmap('PBL201601','','预约取号','1','');
+loctionmapList.add(new Loctionmap('PBL201844','140308'));
+loctionmapListourl[567]=new Loctionmap('PBL201844','140308','','0','','/icbc/newperbank/fund/fund_trade_risktest_index.jsp','','','0','','','');
+loctionmapListourl[568]=new Loctionmap('PBL300701','','新建归集','0','','/icbc/newperbank/account/account_guiji_tran.jsp','','','0','','cardNum','');
+loctionmapListourl[569]=new Loctionmap('PBL201845','','','0','','/icbc/newperbank/perbank3/featureset/feature_setting_contact_frame.jsp','','','0','','contact_tempflag','');
+loctionmapListourl[570]=new Loctionmap('PBL201846','','','0','','/icbc/newperbank/perbank3/featureset/feature_setting_custInfoModiDetail.jsp','','','0','','','');
+nologonList[183]=new Loctionmap('PBL201604','','','1','');
+loctionmapListourl[571]=new Loctionmap('PBL300703','','查询明细','0','','/icbc/newperbank/account/account_guiji_qrylist_index.jsp','','','0','','','');
+loctionmapListourl[572]=new Loctionmap('PBL300704','','','0','','','','','0','','cardNum','');
+loctionmapListourl[573]=new Loctionmap('PBL201849','','','0','','','','','0','','backPara','');
+loctionmapListourl[574]=new Loctionmap('PBL200760','','信用卡','0','','','','','0','','','');
+loctionmapListourl[575]=new Loctionmap('PBL201850','','电子银行管理','0','','/icbc/newperbank/ebankreg/ebankreg_reg_query_submit.jsp','','','0','','','');
+loctionmapListourl[576]=new Loctionmap('PBL201851','','','0','','/icbc/newperbank/perbank3/safeNew/safeNew_detection.jsp','','','','','','');
+nologonList[184]=new Loctionmap('PBL20131201','','','0','1、个人网上银行账户贵金属指数交易时间一般为周一早07:00到周六早04:00。如遇节假日等特殊情况，请以中国工商银行网站公告为准，或可咨询95588。<br/>2、在左侧实时行情区，您看到的报价为参考报价，仅供您参考，不能凭此达成交易；如您需要达成交易，请联动到交易区获取可成交报价后完成交易。直接点击银行买入价或银行卖出价，可联动到右侧交易区的即时交易，办理即时账户贵金属指数买卖交易。<br/>3、在右侧交易区，提供了实时交易、获利挂单、止损挂单及双向挂单等多种交易方式。各种挂单介绍见《中国工商银行账户贵金属指数产品介绍》。在提交交易指令后，请尽快完成确认。各地区挂单种类可能不同，请以实际情况为准。<br/>4、挂单有效期包括24小时、48小时、72小时、96小时、120小时。<br/>5、挂单成功后，如您需撤销挂单，请到“我的账户贵金属指数-挂单管理”中办理。<br/>6、根据《中国工商银行指数产品交易协议》，我行可能会调整买入/卖出价格与中间价间价差，请您在交易前注意确认。<br/>7、如您的资金账户不是多币种借记卡或结算账户，在办理美元账户贵金属指数和人民币账户贵金属指数先卖出后买入交易前，请您指定新的多币种借记卡或结算账户，或到网上银行“我的账户贵金属指数-交易账户管理-调整交易卡”栏目/营业网点柜面调整账户属性。如有疑问，请致电咨询95588。');
+loctionmapListourl[577]=new Loctionmap('PBL201852','','','0','','','','','','','','');
+loctionmapList.add(new Loctionmap('PBL201610','2401'));
+loctionmapListourl[578]=new Loctionmap('PBL201610','2401','缴费','0','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapListourl[579]=new Loctionmap('PBL201853','','','0','','','','','','','','');
+loctionmapList.add(new Loctionmap('PBL201611','2403'));
+loctionmapListourl[580]=new Loctionmap('PBL201611','2403','委托代扣','0','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201612','2402'));
+loctionmapListourl[581]=new Loctionmap('PBL20111601','','','0','','/icbc/newperbank/finance/finance_curfixedpur_index.jsp','','','0','','RMBFinanceId','');
+loctionmapListourl[582]=new Loctionmap('PBL20111602','','','0','','/icbc/newperbank/finance/finance_curpropub_mid.jsp','','','0','','','');
+loctionmapListourl[583]=new Loctionmap('PBL200768','','牡丹基金卡服务','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL200769','250104'));
+loctionmapListourl[584]=new Loctionmap('PBL20090202','','','0','','/icbc/newperbank/remit/remit_queryremitpack_index.jsp','','','0','','','');
+loctionmapListourl[585]=new Loctionmap('PBL20090203','','','0','','/icbc/newperbank/remit/remit_queryremitpack_index1.jsp','','','0','','','');
+loctionmapListourl[586]=new Loctionmap('PBL200770','','其他服务','0','','','','','0','','','');
+loctionmapListourl[587]=new Loctionmap('PBL200771','','开户网点查询','1','','/ctp/icbc/newperbank/account/account_query_openaccnet_submit.jsp','','','0','','','');
+loctionmapListourl[588]=new Loctionmap('PBL200772','','小额账户销户','1','','','','','0','','','');
+nologonList[185]=new Loctionmap('PBL20131211','','','0','1、产品定义。中国工商银行账户贵金属指数，是中国工商银行以工行账户黄金、账户白银、账户铂金和账户钯金产品作为指数成分，按照一定方法编制的，综合反映工行账户贵金属各品种价格涨跌的相对数，分为人民币账户贵金属指数和美元账户贵金属指数。<br/>2、开办准备。<br/>（1）客户办理账户贵金属指数交易应充分认识并完全理解可能遇到的各类风险，在通过风险能力评测和投资交易类产品适合度评估后方能办理账户贵金属指数开户及交易业务。建议您仔细阅读账户贵金属指数产品介绍、交易规则及知识问答（详见网上银行右侧交易区下方“产品详情”），以更好地了解本产品。<br/>（2）如您的资金账户不是多币种借记卡或结算账户，请您在办理前指定新的多币种借记卡或结算账户，或到网上银行“我的账户贵金属指数-交易账户管理-调整交易卡”栏目/营业网点柜面调整账户属性。<br/>3、交易时间。网上银行账户贵金属指数交易时间一般为周一早07:00到周六早04:00。如遇节假日等特殊情况，请以我行网站公告为准。<br/>4、界面指引。左侧实时行情区提供账户贵金属指数报价与走势图，该区域所有价格均为参考报价，不能凭此达成交易。右侧交易区提供了先买入后卖出、先卖出后买入两种交易类型，以及实时、挂单两种交易方式。如您希望按照当前交易报价实时买卖账户贵金属指数，请选择实时交易，我行将在您提交交易指令后显示当前可成交价格，该价格有效期为10秒钟，请您尽快确认；如您希望未来一段时间内以您指定的条件成交，请选择挂单交易，各种挂单种类与挂单有效期介绍请参阅产品介绍（各地区挂单种类可能不同，请以实际情况为准），挂单成功后，如您需撤销挂单，请到“我的账户贵金属指数-挂单管理”中办理。<br/>5、特别提示。<br/>（1）价差调整说明。根据市场情况，我行可能会调整账户贵金属指数的银行买入价/卖出价和交易价差，请您在达成交易前注意。<br/>（2）账户贵金属指数以2016年10月1日为基期，选取当日工行各品种账户贵金属凌晨4:00的中间价作为基期价格，基期指数值设定为100。<br/>（3）账户贵金属指数再平衡是中国工商银行定期使账户贵金属指数涉及的各品种账户贵金属金额权重回归账户黄金60%、账户白银30%、账户铂金5%、账户钯金5%的一种处理方法，再平衡前后客户持有指数份额和指数价值不变。中国工商银行于每年1月份的第二个星期日进行再平衡操作。<br/>6、如有其它疑问，请致电95588咨询。');
+loctionmapListourl[589]=new Loctionmap('PBL201620','','生活服务','0','','','','','0','','','');
+nologonList[186]=new Loctionmap('PBL100101','','','0','');
+nologonList[187]=new Loctionmap('PBL201621','','银医服务','1','');
+loctionmapListourl[590]=new Loctionmap('PBL100102','','','0','','','','','0','','','');
+nologonList[188]=new Loctionmap('PBL20132301','','','0','1、客户可通过“查询份额调整信息”功能查询账户基本金属连续产品的份额调整记录、历史份额调整价格、份额调整日期等信息，并可以修改接收份额调整短信的手机号码。<br>2、客户若查询其他地区账户基本金属账户中的余额，请调整至相应地区的交易卡（账）号。');
+nologonList[189]=new Loctionmap('PBL200774','','','0','');
+loctionmapList.add(new Loctionmap('PBL201622','04'));
+nologonList[190]=new Loctionmap('PBL20132302','','','0','1、客户若查询其他地区建立的挂单交易明细，请调整至相应地区的交易卡（账）号。<br />2、客户可查询半年内的挂单交易明细。');
+loctionmapListourl[591]=new Loctionmap('PBL100104','','','0','','/icbc/newperbank/account/user_integrate_frame.jsp','','','0','','','');
+loctionmapListourl[592]=new Loctionmap('PBL201623','','纳税 ','1','','/ctp/icbc/newperbank/perbank3/net_tax/tax_declare_index_info.jsp','','','0','','','');
+nologonList[191]=new Loctionmap('PBL20132303','','','0','1、您可查询保证金账户中的美元或人民币资金余额。<br />2、您可将资金账户中的美元或人民币转入保证金账户，也可将保证金账户中的可用资金转出。<br />3、美元保证金账户的钞汇类型与上一次转入美元资金的钞汇类型一致，若调整保证金账户钞汇类型，请清空保证金账户余额并转入相应的美元钞或者美元汇。');
+nologonList[192]=new Loctionmap('PBL200776','','','0','');
+loctionmapListourl[593]=new Loctionmap('PBL200776','','','0','','/icbc/newperbank/card/card_applycard_index.jsp','/icbc/newperbank/bankbook/bankbook_onlineapply_mid.jsp','','0','','corpCode','groupid');
+loctionmapListourl[594]=new Loctionmap('PBL100105','','','0','','/icbc/newperbank/account/user_autoIntegrate_frame.jsp','','','0','','','');
+nologonList[193]=new Loctionmap('PBL20132304','','','0','1、客户可实时提交产品转期指令，中国工商银行按照客户指定数量及实时转期价格自动平仓上期产品并开仓下期产品。<br>2、转期功能支持同一币种、同一交易类型账户基本金属上期产品向下期产品的转换。<br>3、实时转期的办理时间一般为在上下两期产品同时在线期间（即下期产品交易起始日至上期产品交易结束日间）的账户基本金属交易时间。<br><font color="red">4、实时转期中上期产品平仓价和下期产品开仓价一般情况下大幅好于同时点账户基本金属客户卖出价/买入价（即银行买入价/卖出价）。</font><br>5、具体功能请查询账户基本金属的产品介绍及交易规则。');
+loctionmapListourl[595]=new Loctionmap('PBL100106','','','0','','/icbc/newperbank/modify_initmm.jsp','','','0','','','');
+nologonList[194]=new Loctionmap('PBL20132305','420605','','0','1、客户若查询其他地区开立的账户基本金属交易账户交易明细，请调整至相应地区的交易卡（账）号。');
+loctionmapList.add(new Loctionmap('PBL20132305','420605'));
+nologonList[195]=new Loctionmap('PBL20132306','','','0','1、客户可查询账户基本金属产品的交易起始日、交易结束日和结算日信息。<br />2、客户可以查询账户基本金属产品的结算价格。<br />3、美元账户基本金属产品的到期结算价为产品交易结束日相应基本金属期货合约的国际市场结算价格。<br />4、人民币账户基本金属产品的到期结算价分为先买入后卖出到期结算价和先卖出后买入到期结算价，以上两个到期结算价格分别根据美元账户基本金属的到期结算价格和中国工商银行在结算日前一工作日23:30公布的人民币兑美元即期结售汇挂牌牌价的银行现汇买入价和银行现汇卖出价计算得出。');
+loctionmapListourl[596]=new Loctionmap('PBL100107','','','0','','','','','0','','','');
+nologonList[196]=new Loctionmap('PBL20132307','','','0','1、客户可注销交易账户或调整交易卡。注销交易账户前客户须清空持仓及保证金账户。');
+loctionmapListourl[597]=new Loctionmap('PBL100108','','','0','','','','','0','','tranFlag','iicardno');
+nologonList[197]=new Loctionmap('PBL20132308','','','0','1、您可以通过“查询持仓的份额调整记录”功能了解所持有的账户基本金属连续产品的份额调整情况。<br />2、您的账户基本金属连续产品持仓资产规模在份额调整前后保持不变，即调整前持仓*份额调整前价格=调整后持仓*份额调整后价格+退还资金（释放保证金），其中份额调整过程中剩余不足开仓1磅的资金（或保证金）将退还至您的资金账户（或释放到保证金账户）。<br />3、您可以通过“查询历史份额调整价格”功能了解账户基本金属连续产品历史份额调整价格。<br />4、您可以通过“份额调整短信提醒”功能订阅账户基本金属连续产品份额调整结果通知，并修改接收短信的手机号码。');
+loctionmapListourl[598]=new Loctionmap('PBL100109','','','0','','/icbc/newperbank/perbank3/includes/AntiPhishing.jsp','','','0','','','');
+loctionmapListourl[599]=new Loctionmap('PBL201628','','公益捐款注入','0','','','','','0','','payname','paycode');
+loctionmapList.add(new Loctionmap('PBL201870','3117'));
+loctionmapListourl[600]=new Loctionmap('PBL201870','3117','','0','','','','','0','','','');
+loctionmapListourl[601]=new Loctionmap('PBL201871','','','0','','','','','0','','','');
+loctionmapListourl[602]=new Loctionmap('PBL100110','','','0','','/icbc/newperbank/perbank3/includes/USTip.jsp','','','0','','','');
+loctionmapListourl[603]=new Loctionmap('PBL200783','','资信证明','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+nologonList[198]=new Loctionmap('PBL20132310','','','0','1、客户设置到期转期类型后，中国工商银行在产品到期日按到期转期结算价格及客户选定的转期方式自动平仓上期产品并开仓下期产品，一般在次日的7:05起开始转期交易。<br>2、到期转期一经开启、长期有效，客户可在“管理自动转期”菜单下终止转期功能。<br>3、按金额转期（即固定金额转期）的方式是使用平仓全部上期产品数量所得资金，以最大可开仓数量同时开仓下期产品；按桶数转期（即固定数量转期）的方式是按客户持有的全部上期产品数量，尽可能开仓相同数量的下期产品。<br><font color="red">4、到期转期中上期产品平仓价和下期产品开仓价一般情况下大幅好于同时点账户客户卖出价/买入价（即银行买入价/卖出价）。</font><br>5、具体功能请查询账户基本金属的产品介绍及交易规则。');
+loctionmapListourl[604]=new Loctionmap('PBL201630','','专属权益','1','','','','','0','优惠活动','','');
+loctionmapListourl[605]=new Loctionmap('PBL100111','','','0','','/icbc/newperbank/perbank3/includes/Ebankptop_US_alert.jsp','','','0','','judgeUSBLevel','');
+loctionmapListourl[606]=new Loctionmap('PBL200784','','办理进度','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapListourl[607]=new Loctionmap('PBL100112','','','0','','/icbc/newperbank/perbank3/test/test.jsp','','','0','','','');
+nologonList[199]=new Loctionmap('PBL20132311','','','0','1、客户可以通过点击“撤销”取消已经预约的转期计划。');
+nologonList[200]=new Loctionmap('PBL20132312','','','0','1、客户可以查询账户基本金属实时转期和到期转期的交易明细。');
+nologonList[201]=new Loctionmap('PBL200301','140202','','0','');
+loctionmapList.add(new Loctionmap('PBL200301','140202'));
+loctionmapListourl[608]=new Loctionmap('PBL100113','','','0','','/icbc/newperbank/perbank3/includes/signTaxDocTips.jsp','','','0','','','');
+nologonList[202]=new Loctionmap('PBL200302','','','0','');
+nologonList[203]=new Loctionmap('PBL20132313','','','0','');
+loctionmapListourl[609]=new Loctionmap('PBL100114','','','0','','/icbc/newperbank/perbank3/includes/integrityCheckTip.jsp','','','0','','','');
+loctionmapListourl[610]=new Loctionmap('PBL200304','','','0','','/icbc/newperbank/fund/fund_acct_query_index.jsp','','','0','','','');
+loctionmapListourl[611]=new Loctionmap('PBL100116','','','0','','/icbc/newperbank/perbank3/includes/accountCheck.jsp','','','0','','checkflag','');
+loctionmapListourl[612]=new Loctionmap('PBL201635','','优惠券','0','','/icbc/Emall/main/forward.jsp','/icbc/Emall/main/forward.jsp','1','0','','turnUrl','');
+loctionmapListourl[613]=new Loctionmap('PBL100117','','','0','','/icbc/newperbank/perbank3/includes/setSecInfoTip.jsp','','','0','','','');
+nologonList[204]=new Loctionmap('PBL200305','','','0','');
+loctionmapListourl[614]=new Loctionmap('PBL200305','','','0','','','/icbc/newperbank/perbank3/fund/frame_fund_income_nologin.jsp','','0','','','');
+loctionmapListourl[615]=new Loctionmap('PBL100118','','','0','','/icbc/newperbank/perbank3/includes/mobileModify_tips.jsp','','','0','','','');
+nologonList[205]=new Loctionmap('PBL200306','','','0','');
+loctionmapListourl[616]=new Loctionmap('PBL200306','','','0','','','/icbc/newperbank/perbank3/fund/frame_fund_hot_nologin.jsp','','0','','','');
+loctionmapListourl[617]=new Loctionmap('PBL100119','','','0','','/icbc/newperbank/perbank3/includes/setAddrInfoTips.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL200308','140305'));
+loctionmapListourl[618]=new Loctionmap('PBL200308','140305','','0','','/icbc/newperbank/fund/fund_fixedcancel_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL200309','140402'));
+nologonList[206]=new Loctionmap('PBL20170816','','','1','');
+loctionmapListourl[619]=new Loctionmap('PBL100120','','','0','','/icbc/newperbank/includes/drawgiftnew/DrawGiftNew_frame.jsp','','','0','','','');
+nologonList[207]=new Loctionmap('PBL20132320','420601','','0','1、产品定义。中国工商银行账户基本金属，是中国工商银行为个人客户提供的，采取只计份额、不提取实物基本金属的方式，以人民币或美元交易基本金属份额的投资交易产品。<br>2、开办准备。（1）客户办理账户基本金属交易应充分认识并完全理解可能遇到的各类风险，在通过风险能力评测和投资交易类产品适合度评估后方能办理账户基本金属开户及交易业务。建议您仔细阅读账户基本金属产品介绍、交易规则、交易协议及知识问答（详见网上银行右侧交易区下方“产品详情”），以更好地了解本产品。<br>（2）如您的资金账户不是多币种借记卡或结算账户，请您在办理前指定新的多币种借记卡或结算账户，或到网上银行“我的账户基本金属-交易账户管理-调整交易卡”栏目/营业网点柜面调整账户属性。<br> 3、交易时间。网上银行账户基本金属交易时间一般为周一9：00到24：00，周二至周五每日0：00到2：00与9：00到24：00，周六0：00到2：00。如遇节假日等特殊情况，请以我行网站公告为准。<br>4、界面指引。左侧实时行情区提供账户基本金属报价与走势图，该区域所有价格均为参考报价，不能凭此达成交易。右侧交易区提供了先买入后卖出、先卖出后买入两种交易类型，以及实时、挂单两种交易方式。如您希望按照当前交易报价实时买卖账户基本金属，请选择实时交易，我行将在您提交交易指令后显示当前可成交价格，该价格有效期为10秒钟，请您尽快确认；如您希望未来一段时间内以您指定的条件成交，请选择挂单交易，各种挂单种类与挂单有效期介绍请参阅产品介绍（各地区挂单种类可能不同，请以实际情况为准），挂单成功后，如您需撤销挂单，请到“我的账户基本金属-挂单管理”中办理。<br> 5、特别提示。<br>（1）我行账户基本金属分为期次产品与连续产品。期次产品按期次发行，每期产品到期后客户将不能继续交易。连续产品没有到期日，客户可持续交易。<br>（2）期次产品到期自动结算。在某期次产品到期后，客户若没有参与转期而仍持有该期产品，我行将按照该期产品到期结算价为客户进行结算，客户资金在该期产品结算日到账；期次产品的交易起始日、交易结束日和结算日等信息可在“我的账户基本金属-产品信息和结算价格”栏目查询。<br>（3）期次产品转期功能。客户持有的账户基本金属可通过转期功能转换为下一期产品（限同一币种、同一交易类型）。我行提供实时转期和到期转期两种转期类型。其中，对于实时转期，我行按照实时转期价格为客户办理转期（即平仓上期产品同时开仓下期产品）；对于到期转期，我行按照上期产品的到期转期结算价格和下期产品的当日转期结算价格于到期日次日为客户办理转期；无论选择哪种转期类型，转期前后客户的资产总值不变。具体转期功能设置及转期明细查询可在“我的账户基本金属-转期管理”栏目进行。<br>（4）连续产品份额调整。连续产品存续期间会根据参考的交易所基本金属合约期次调整情况同步调整客户持有的份额；份额调整前价格、份额调整后价格参考交易所对应期次合约的份额调整日结算价以及我行当日结售汇牌价。我行不收取份额调整费用，份额调整前后客户的资产总值不变；连续产品份额调整的有关信息（包括调整日、调整价格、份额调整记录等），可在“我的账户基本金属-查询份额调整信息”栏目查询。<br>（5）总持仓限额。因国家监管政策等原因，我行对所有客户人民币账户基本金属产品总持仓净额设定上、下限。当所有客户持仓触及上、下限时，您将不能进行新开仓操作，平仓操作不受影响。<br>（6）价差调整说明。根据市场情况，我行可能会调整账户基本金属的银行买入价/卖出价和交易价差，请您在达成交易前注意。<br>6、如有其它疑问，请致电95588咨询。');
+loctionmapList.add(new Loctionmap('PBL20132320','420601'));
+loctionmapListourl[620]=new Loctionmap('PBL100121','','','0','','/icbc/newperbank/perbank3/includes/browserDownload.jsp','','','0','','','');
+loctionmapListourl[621]=new Loctionmap('PBL201640','','本地特色','0','','','','','0','','','');
+loctionmapListourl[622]=new Loctionmap('PBL20178301','','','0','','','','','0','','','');
+loctionmapListourl[623]=new Loctionmap('PBL20178302','','','0','','','','','0','','','');
+loctionmapListourl[624]=new Loctionmap('PBL201400','','信使.预约','0','','','','','0','','','');
+nologonList[208]=new Loctionmap('PBL200311','140201','','0','');
+loctionmapList.add(new Loctionmap('PBL200311','140201'));
+loctionmapListourl[625]=new Loctionmap('PBL20178303','','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL200312','140401'));
+nologonList[209]=new Loctionmap('PBL200313','','','0','');
+loctionmapList.add(new Loctionmap('PBL20132325','420605'));
+nologonList[210]=new Loctionmap('PBL200317','','基金','0','');
+nologonList[211]=new Loctionmap('PBL20134508','','','0','1、工银人民币账户外汇指数交易时间一般为周一早07：00到周六早04：00，如遇节假日等特殊情况，请以中国工商银行网站公告为准，或可咨询95588。<br/>2、在左侧实时行情区，您看到的报价为参考报价，仅供您参考，不能凭此达成交易；如您需要达成交易，请联动到交易区获取可成交报价后完成交易。直接点击银行买入价或银行卖出价，可联动到右侧交易区的实时交易，办理实时工银人民币账户外汇指数买卖交易。<br/>3、在右侧交易区，提供了实时交易、获利挂单、止损挂单、双向挂单等多种交易方式。各种挂单介绍见《中国工商银行账户外汇指数产品介绍》。在提交交易指令后，请尽快完成确认。各地区挂单种类可能不同，请以实际情况为准。<br/>4、挂单有效期包括24小时、48小时、72小时、96小时、120小时等。<br/>5、挂单成功后，如您需撤销挂单，请到“管理挂单”中办理。<br/>6、根据《中国工商银行指数产品交易协议》和《中国工商银行账户外汇指数产品介绍》，我行可能会调整买入/卖出价格与中间价间价差，请您在交易前注意确认。');
+loctionmapListourl[626]=new Loctionmap('PBL20134508','','','0','','','','','0','0','','');
+nologonList[212]=new Loctionmap('PBL20134509','','','0','');
+nologonList[213]=new Loctionmap('PBL20134510','','','1','1、工银人民币账户外汇指数交易时间一般为周一早07：00到周六早04：00，如遇节假日等特殊情况，请以中国工商银行网站公告为准，或可咨询95588。<br/>2、在左侧实时行情区，您看到的报价为参考报价，仅供您参考，不能凭此达成交易；如您需要达成交易，请联动到交易区获取可成交报价后完成交易。直接点击银行买入价或银行卖出价，可联动到右侧交易区的实时交易，办理实时工银人民币账户外汇指数买卖交易。<br/>3、在右侧交易区，提供了实时交易、获利挂单、止损挂单、双向挂单等多种交易方式。各种挂单介绍见《中国工商银行账户外汇指数产品介绍》。在提交交易指令后，请尽快完成确认。各地区挂单种类可能不同，请以实际情况为准。<br/>4、挂单有效期包括24小时、48小时、72小时、96小时、120小时等。<br/>5、挂单成功后，如您需撤销挂单，请到“管理挂单”中办理。<br/>6、根据《中国工商银行指数产品交易协议》和《中国工商银行账户外汇指数产品介绍》，我行可能会调整买入/卖出价格与中间价间价差，请您在交易前注意确认。');
+nologonList[214]=new Loctionmap('PBL201410','','工银信使','0','');
+loctionmapListourl[627]=new Loctionmap('PBL201410','','工银信使','0','','','','','0','','','');
+loctionmapListourl[628]=new Loctionmap('PBL201412','','贵金属到价提醒','1','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[629]=new Loctionmap('PBL201413','','重要事项提醒','1','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[630]=new Loctionmap('PBL201414','','新品通知','1','','','','','0','','isOrder','MsgItemNofld');
+loctionmapListourl[631]=new Loctionmap('PBL201660','','增值服务','1','','','','','0','','','');
+nologonList[215]=new Loctionmap('PBL20132342','420602','','0','1、账户基本金属产品的交易起始日、交易结束日和结算日等信息可在账户基本金属“查询产品信息”栏目下查询，账户北美铜1磅约合0.4536千克。<br />2、账户基本金属交易时间一般为周一9：00到24：00，周二至周五每日0：00到2：00与9：00到24：00，周六0：00到2：00。<br />3、客户通过我行风险能力评测和投资交易类产品适合度评估后方能办理账户基本金属开户及交易业务。<br />4、挂单交易的有效期包括24小时、48小时、72小时、96小时、120小时，客户可通过挂单有效期下拉选项选择。<br />5、在账户基本金属行情报价，您看到的报价为参考报价，仅供您参考，不能凭此达成交易；如您需要达成交易，请联动到交易区获取可成交报价后完成交易。<br />6、根据市场情况，我行可能调整账户基本金属的银行买入价/卖出价和交易价差，请客户在达成交易前注意。<br />7、因国家监管政策等原因，我行对所有客户人民币账户基本金属产品总持仓净额设定上、下限。当客户持仓触及上、下限时，客户将不能进行新开仓操作，平仓操作不受影响。<br />8、某期账户基本金属产品到期后，客户若没有参与转期而仍持有该期产品，我行将按照该期产品到期结算价为客户进行结算，客户资金在该期产品结算日到账。<br />9、为便于客户更好地了解该业务，我行在门户网站-个人业务-金融市场投资交易-热点问答中增加了账户基本金属交易业务知识问答。');
+loctionmapList.add(new Loctionmap('PBL20132342','420602'));
+loctionmapListourl[632]=new Loctionmap('PBL20132342','420602','','0','','','','','','0','prodcode','cashsign');
+loctionmapList.add(new Loctionmap('PBL20166101','322001'));
+loctionmapListourl[633]=new Loctionmap('PBL20166101','322001','','0','','','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL201420','230502'));
+loctionmapListourl[634]=new Loctionmap('PBL201421','','','1','','/icbc/newperbank/perbank3/includes/menu_all.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20166102','322002'));
+loctionmapListourl[635]=new Loctionmap('PBL20166102','322002','','0','','','','','0','','','');
+nologonList[216]=new Loctionmap('PBL20132101','','','0','1、客户可通过“查询份额调整信息”功能查询账户原油连续产品和账户天然气的份额调整记录、历史份额调整价格、份额调整日期等信息，并可以修改接收份额调整短信的手机号码。<br>2、客户若查询其他地区账户能源账户中的余额，请调整至相应地区的交易卡（账）号。<br>');
+loctionmapList.add(new Loctionmap('PBL20166103','322003'));
+loctionmapListourl[636]=new Loctionmap('PBL20166103','322003','','0','','','','','0','','','');
+nologonList[217]=new Loctionmap('PBL20132102','','','0','1、客户若查询其他地区建立的挂单交易明细，请调整至相应地区的交易卡（账）号。<br />2、客户可查询半年内的挂单交易明细。');
+nologonList[218]=new Loctionmap('PBL20132103','','','0','1、您可查询保证金账户中的美元或人民币资金余额。<br />2、您可将资金账户中的美元或人民币转入保证金账户，也可将保证金账户中的可用资金转出。<br />3、美元保证金账户的钞汇类型与上一次转入美元资金的钞汇类型一致，若调整保证金账户钞汇类型，请清空保证金账户余额并转入相应的美元钞或者美元汇。');
+loctionmapListourl[637]=new Loctionmap('PBL201424','','','0','','/icbc/newperbank/precontract/precontract_myprecontract_submit.jsp','','','0','','','');
+nologonList[219]=new Loctionmap('PBL20132104','','','0','1、客户可实时提交产品转期指令，中国工商银行按照客户指定数量及实时转期价格自动平仓上期产品并开仓下期产品。<br>2、转期功能支持同一币种、同一交易类型账户原油上期产品向下期产品的转换。<br>3、实时转期的办理时间一般为在上下两期产品同时在线期间（即下期产品交易起始日至上期产品交易结束日间）的账户原油交易时间。<br><font color="red">4、实时转期中上期产品平仓价和下期产品开仓价一般情况下大幅好于同时点账户原油客户卖出价/买入价（即银行买入价/卖出价）。</font><br>5、具体功能请查询账户能源的产品介绍及交易规则。');
+nologonList[220]=new Loctionmap('PBL20132105','420105','','0','1、客户若查询其他地区开立的账户能源交易账户交易明细，请调整至相应地区的交易卡（账）号。');
+loctionmapList.add(new Loctionmap('PBL20132105','420105'));
+loctionmapListourl[638]=new Loctionmap('PBL201425','','','0','','/icbc/newperbank/precontract/precontract_myprecontract_submit.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201801','171002'));
+loctionmapListourl[639]=new Loctionmap('PBL20201801','171002','','0','','/icbc/newperbank/fakeexchange/stock_fake_balance_query.jsp','','','0','','','');
+nologonList[221]=new Loctionmap('PBL20132106','','','0','1、客户可以查询账户原油期次产品的交易起始日、交易结束日、结算日信息和结算价格。<br />2、美元账户原油期次产品的到期结算价为产品交易结束日相应原油期货合约的国际市场结算价格。<br />3、人民币账户原油期次产品的到期结算价分为先买入后卖出到期结算价和先卖出后买入到期结算价，以上两个到期结算价格分别根据美元账户原油期次产品的到期结算价格和中国工商银行在结算日前一工作日23:30公布的人民币兑美元即期结售汇挂牌牌价的银行现汇买入价和银行现汇卖出价计算得出。');
+loctionmapList.add(new Loctionmap('PBL201426','022501'));
+loctionmapListourl[640]=new Loctionmap('PBL201426','022501','','0','','/icbc/newperbank/account/account_creditcertificate_open_index.jsp','','','0','','','');
+loctionmapList.add(new Loctionmap('PBL20201802','171003'));
+loctionmapListourl[641]=new Loctionmap('PBL20201802','171003','','0','','/icbc/newperbank/fakeexchange/stock_fake_transfer.jsp','','','0','','','');
+var localMapList_serviceIdNeedNotLogon='|PBL20132107|PBL201428|PBL20132108|PBL201429|PBL20132110|PBL201430|PBL201431|PBL20132111|PBL201432|PBL20132112|PBL201433|PBL20132113|PBL20132118|PBL20132120|PBL201210|PBL20134311|PBL201212|PBL201213|PBL201214|PBL201215|PBL201216|PBL201218|PBL201219|PBL201220|PBL201221|PBL20122101|PBL201222|PBL201223|PBL20112302|PBL201224|PBL201225|PBL201226|PBL201227|PBL201228|PBL20112307|PBL201229|PBL201230|PBL300101|PBL300103|PBL20134106|PBL20134107|PBL20134108|PBL20134109|PBL20134110|PBL201011|PBL20134112|PBL20111001|PBL201012|PBL20111002|PBL20111004|PBL201021|PBL201022|PBL20112101|PBL201023|PBL201024|PBL201025|PBL20112105|PBL201031|PBL20112115|PBL20072201|PBL20072202|PBL20072203|PBL20139601|PBL20139608|PBL20102101|PBL20102106|PBL201080|PBL201096|PBL201097|PBL201098|PBL20139401|PBL500104|PBL20139420|PBL20139204|PBL20031301|PBL201900|PBL10010101|PBL20020201|PBL20020202|PBL20020203|PBL200601|PBL200603|PBL100200|PBL200401|PBL200402|PBL200405|PBL201503|PBL20131101|PBL20111504|PBL20131111|PBL20132201|PBL20132202|PBL20132203|PBL20132204|PBL20132205|PBL20132206|PBL20132207|PBL20132208|PBL200440|PBL200441|PBL20132210|PBL200442|PBL20132211|PBL200201|PBL20132212|PBL200202|PBL20132213|PBL200203|PBL200204|PBL20132220|PBL201311|PBL201312|PBL20132241|PBL201321|PBL201322|PBL201323|PBL20109001|PBL201331|PBL201332|PBL201333|PBL201578|PBL201337|PBL201340|PBL201341|PBL201343|PBL201344|PBL201345|PBL201351|PBL201110|PBL201111|PBL201112|PBL201113|PBL201114|PBL201115|PBL201116|PBL201117|PBL201121|PBL20122001|PBL201122|PBL201123|PBL201370|PBL201131|PBL201139|PBL750005|PBL750006|PBL750007|PBL201391|PBL201393|PBL201394|PBL201395|PBL201396|PBL201397|PBL20101101|PBL20139702|PBL20074504|PBL20139711|PBL20113101|PBL20113102|PBL20139501|PBL20139508|PBL20103101|PBL730006|PBL20139301|PBL10011501|PBL20139311|PBL20162101|PBL20077401|PBL20139101|PBL20139102|PBL20030101|PBL20139111|PBL20139119|PBL201800|PBL200721|PBL200722|PBL200723|PBL200501|PBL200502|PBL200505|PBL200507|PBL200508|PBL200511|PBL201601|PBL201604|PBL20131201|PBL20131211|PBL100101|PBL201621|PBL20132301|PBL200774|PBL20132302|PBL20132303|PBL200776|PBL20132304|PBL20132305|PBL20132306|PBL20132307|PBL20132308|PBL20132310|PBL20132311|PBL20132312|PBL200301|PBL200302|PBL20132313|PBL200305|PBL200306|PBL20170816|PBL20132320|PBL200311|PBL200313|PBL200317|PBL20134508|PBL20134509|PBL20134510|PBL201410|PBL20132342|PBL20132101|PBL20132102|PBL20132103|PBL20132104|PBL20132105|PBL20132106|';
+
+var localMapList_serviceIdMustInMainFrame='|PBL201427|PBL20201803|PBL20091101|PBL20091102|PBL20091103|PBL20091104|PBL201670|PBL20132118|PBL201200|PBL20091121|PBL20091122|PBL20091123|PBL201210|PBL201212|PBL201213|PBL201214|PBL20200501|PBL201215|PBL20200502|PBL201216|PBL201217|PBL201220|PBL201221|PBL20122101|PBL201222|PBL201223|PBL20122102|PBL20112302|PBL201224|PBL20112303|PBL201225|PBL20122104|PBL20112304|PBL20122105|PBL201226|PBL20201603|PBL20112305|PBL201227|PBL20201604|PBL20112306|PBL201228|PBL20201605|PBL201229|PBL20190001|PBL20071301|PBL20190002|PBL20071302|PBL20071303|PBL20071304|PBL201230|PBL201231|PBL20167001|PBL201232|PBL20167002|PBL20082201|PBL20082202|PBL20072401|PBL20082203|PBL20171501|PBL20072402|PBL20171502|PBL20171503|PBL20171504|PBL20171505|PBL20171506|PBL20171507|PBL20171508|PBL20171509|PBL201000|PBL20134102|PBL20100101|PBL300101|PBL20100102|PBL300102|PBL300103|PBL20100103|PBL20100104|PBL20134105|PBL20134106|PBL20100105|PBL20134107|PBL20134108|PBL20134109|PBL20182401|PBL20171511|PBL20134110|PBL201010|PBL20134111|PBL20134112|PBL20111001|PBL20111004|PBL20060201|PBL201020|PBL20134122|PBL20112101|PBL20112102|PBL20112103|PBL20112104|PBL20112105|PBL20112106|PBL20112107|PBL20112108|PBL20112109|PBL201030|PBL20112110|PBL20112111|PBL20112112|PBL20112113|PBL20103401|PBL20103402|PBL20112117|PBL20072201|PBL20170212|PBL20072202|PBL20072203|PBL20076801|PBL20072204|PBL20076802|PBL20076803|PBL201040|PBL201050|PBL201052|PBL20200101|PBL20200102|PBL20200103|PBL20074401|PBL20074402|PBL20074403|PBL20074404|PBL201060|PBL201062|PBL203001|PBL20102101|PBL20102103|PBL20102106|PBL201070|PBL20103201|PBL20202301|PBL20202302|PBL20171101|PBL20076601|PBL20171102|PBL20076602|PBL201080|PBL201081|PBL20077701|PBL20077702|PBL201090|PBL201095|PBL201096|PBL201098|PBL20183101|PBL20074201|PBL20074202|PBL20074203|PBL20300101|PBL500101|PBL500102|PBL500103|PBL500104|PBL20137001|PBL20161101|PBL20076401|PBL20161102|PBL20076402|PBL20161103|PBL20076403|PBL20161104|PBL20076404|PBL20203201|PBL20203202|PBL20162201|PBL20077501|PBL20162202|PBL20139201|PBL20139202|PBL20163301|PBL200800|PBL200809|PBL201901|PBL20086001|PBL20086002|PBL20076201|PBL20076202|PBL20086003|PBL200820|PBL20086004|PBL20111901|PBL20111902|PBL20076211|PBL20076212|PBL20077301|PBL200830|PBL20076213|PBL20077302|PBL20076214|PBL20077303|PBL20076215|PBL20077304|PBL20077305|PBL20076216|PBL20076217|PBL20076221|PBL20076222|PBL20078401|PBL20076223|PBL200840|PBL20020201|PBL20076224|PBL20020202|PBL20076225|PBL20020203|PBL20076226|PBL200603|PBL200850|PBL201710|PBL201711|PBL201712|PBL201714|PBL201715|PBL201716|PBL201717|PBL201718|PBL201719|PBL20076010|PBL20076011|PBL200870|PBL20076012|PBL20076013|PBL100200|PBL201721|PBL201725|PBL201726|PBL201727|PBL200880|PBL201731|PBL201732|PBL200890|PBL201500|PBL201501|PBL300601|PBL201502|PBL300602|PBL201503|PBL300603|PBL201504|PBL300604|PBL201505|PBL201506|PBL300605|PBL201507|PBL201510|PBL20111500|PBL20111501|PBL201512|PBL20111502|PBL201513|PBL20111503|PBL201514|PBL20111504|PBL201515|PBL20111505|PBL201517|PBL201518|PBL201519|PBL20090102|PBL20090103|PBL201760|PBL20176001|PBL201520|PBL201521|PBL201522|PBL201523|PBL201524|PBL201525|PBL20201901|PBL201526|PBL20201902|PBL201527|PBL20201903|PBL201528|PBL20201904|PBL201529|PBL20201905|PBL20201906|PBL20201907|PBL201530|PBL201531|PBL201532|PBL200201|PBL200202|PBL200203|PBL201534|PBL201535|PBL200204|PBL201536|PBL201537|PBL201538|PBL201539|PBL201540|PBL20178201|PBL201541|PBL20178202|PBL201542|PBL201300|PBL20178203|PBL201543|PBL20178204|PBL201544|PBL201545|PBL201546|PBL201547|PBL201548|PBL201549|PBL201550|PBL201551|PBL201552|PBL201310|PBL201553|PBL201554|PBL201555|PBL201556|PBL201557|PBL201558|PBL201559|PBL201560|PBL20132241|PBL201561|PBL201562|PBL201320|PBL201563|PBL201564|PBL201565|PBL201566|PBL201567|PBL201568|PBL201569|PBL20201703|PBL20201704|PBL20201705|PBL20081201|PBL20081202|PBL20071401|PBL20071402|PBL201570|PBL201571|PBL201572|PBL201330|PBL201573|PBL201574|PBL201575|PBL201576|PBL201334|PBL201335|PBL201577|PBL201336|PBL201579|PBL20092101|PBL20092102|PBL20082302|PBL20092103|PBL20082303|PBL20150915|PBL201581|PBL201582|PBL201340|PBL201583|PBL201100|PBL20134201|PBL20134202|PBL20134203|PBL201350|PBL201110|PBL201111|PBL201112|PBL201113|PBL201114|PBL201116|PBL201117|PBL201120|PBL20122001|PBL20112201|PBL20112202|PBL20112203|PBL20112204|PBL20112205|PBL20201504|PBL20201505|PBL20201506|PBL20081001|PBL20201507|PBL20081002|PBL20081003|PBL20081004|PBL20081005|PBL20081006|PBL20081007|PBL20081008|PBL20081009|PBL201134|PBL201135|PBL201136|PBL201137|PBL20082101|PBL20082102|PBL20184711|PBL20082103|PBL201140|PBL201141|PBL20158201|PBL201143|PBL201144|PBL750001|PBL750002|PBL750003|PBL750004|PBL750005|PBL750006|PBL750007|PBL750008|PBL20083202|PBL202000|PBL202001|PBL20101101|PBL202002|PBL20200201|PBL20200202|PBL20101103|PBL202005|PBL20060101|PBL20074501|PBL20074502|PBL20074503|PBL20074504|PBL20074506|PBL20134020|PBL202010|PBL202014|PBL20201301|PBL20201302|PBL202018|PBL202019|PBL2007471|PBL202020|PBL202021|PBL20113101|PBL20103301|PBL20103302|PBL20181001|PBL20076701|PBL20076702|PBL20076703|PBL20076704|PBL20076705|PBL20076706|PBL202030|PBL202033|PBL740003|PBL202040|PBL400001|PBL400002|PBL400003|PBL400004|PBL20201101|PBL20201102|PBL20201103|PBL20103101|PBL20202201|PBL20103103|PBL20202202|PBL20202203|PBL20202204|PBL20161201|PBL20161202|PBL20104202|PBL730001|PBL730002|PBL20104204|PBL730003|PBL730004|PBL700601|PBL730005|PBL700602|PBL200900|PBL20104221|PBL20104222|PBL20104223|PBL20075201|PBL200910|PBL20104232|PBL20104233|PBL200921|PBL20203101|PBL20203102|PBL720001|PBL20203103|PBL720002|PBL720003|PBL20162101|PBL20077401|PBL20162102|PBL20077402|PBL20162103|PBL100501|PBL20162104|PBL20162105|PBL20162106|PBL20162107|PBL20030101|PBL20163201|PBL20163202|PBL200700|PBL200710|PBL201800|PBL201805|PBL201806|PBL20076101|PBL20076102|PBL200720|PBL20076103|PBL201810|PBL201811|PBL201812|PBL200723|PBL201813|PBL200725|PBL201814|PBL201815|PBL201816|PBL201818|PBL201819|PBL710001|PBL710002|PBL710003|PBL710004|PBL200730|PBL201820|PBL100301|PBL201821|PBL201822|PBL200733|PBL201823|PBL201824|PBL201825|PBL201826|PBL201828|PBL20088101|PBL20078301|PBL200740|PBL20078302|PBL20088103|PBL201830|PBL200741|PBL201831|PBL200503|PBL200504|PBL200505|PBL200748|PBL200506|PBL200749|PBL200507|PBL200508|PBL200509|PBL20181901|PBL200750|PBL200510|PBL201600|PBL201844|PBL300701|PBL201845|PBL201846|PBL300703|PBL300704|PBL201849|PBL200760|PBL201850|PBL201851|PBL201852|PBL201610|PBL201853|PBL201611|PBL20111601|PBL20111602|PBL200768|PBL20090202|PBL20090203|PBL200770|PBL200771|PBL200772|PBL201620|PBL100102|PBL100104|PBL201623|PBL200776|PBL100105|PBL100106|PBL100107|PBL100108|PBL100109|PBL201628|PBL201870|PBL201871|PBL100110|PBL200783|PBL201630|PBL100111|PBL200784|PBL100112|PBL100113|PBL100114|PBL200304|PBL100116|PBL201635|PBL100117|PBL200305|PBL100118|PBL200306|PBL100119|PBL200308|PBL100120|PBL100121|PBL201640|PBL20178301|PBL20178302|PBL201400|PBL20178303|PBL20134508|PBL201410|PBL201412|PBL201413|PBL201414|PBL201660|PBL20132342|PBL20166101|PBL201421|PBL20166102|PBL20166103|PBL201424|PBL201425|PBL20201801|PBL201426|PBL20201802|';
+
+var localMapList_CommandStr='PBL300101|PBL201097|PBL200811|PBL200812|PBL100410|PBL200603|PBL20164001|PBL201786|PBL201139|PBL200745|PBL200779|PBL200317';
+
+var localMapList_FavouriteStr='PBL201428|PBL201433|PBL201216|PBL20112307|PBL300101|PBL201021|PBL201031|PBL201032|PBL201041|PBL201051|PBL201061|PBL201097|PBL201099|PBL200811|PBL200812|PBL200821|PBL100410|PBL200603|PBL200862|PBL200882|PBL20164001|PBL201503|PBL201508|PBL201786|PBL201311|PBL201312|PBL201321|PBL201322|PBL201323|PBL20109001|PBL20109002|PBL20109003|PBL20109004|PBL201331|PBL201332|PBL201333|PBL201337|PBL201583|PBL201341|PBL201342|PBL201343|PBL201344|PBL201345|PBL201588|PBL201121|PBL201123|PBL201370|PBL201139|PBL750007|PBL202004|PBL202014|PBL202015|PBL202022|PBL200901|PBL200902|PBL200911|PBL200912|PBL20139119|PBL200711|PBL200714|PBL200715|PBL200721|PBL200722|PBL200743|PBL200745|PBL200511|PBL201847|PBL200762|PBL200763|PBL200766|PBL200769|PBL200771|PBL200773|PBL201621|PBL200779|PBL201626|PBL200783|PBL200784|PBL201631|PBL200317|PBL201411';
+
+var localMapList_IsMyBank='|PBL201700|PBL201720|PBL201724|PBL201786|';
+
+
+</script>
+
+
+
+<script src="/icbc/newperbank/js/perbank3/lstTr_hightLight.js"></script>
+
+
+
+
+
+<script src="/ebdpui/pc4ebankp/ebdp-pc4ebankp-core.js?ver=2019061605"></script>
+
+<link href="/ebdpui/pc4promote/style/default/floatmessage/ebdp-pc4promote-floatmessage.css?ver=2019061605" rel="stylesheet" type="text/css">
+
+<script src="/ebdpui/pc4promote/ebdp-pc4promote-floatmessage.js?ver=2019061605"></script>
+
+
+<script type="text/javascript">
+var objectArray = {};
+initFloatMessage(objectArray);
+var dateSelector_json = {};
+var dateSelector_datenow = "20190617";
+</script>
+
+
+<script type="text/javascript">
+try{
+	_pv_arc_pub.push(['cis','040900043833121']);
+	_pv_arc_pub.push(['curmenu','020205']);
+	_pv_arc_pub.push(['identifycustype','3']);
+	}catch(e){}
+</script>
+
+	
+
+
+
+
+	<!-- <script src="/icbc/newperbank/js/perbank3/tongji.js"></script> -->
+	
+	<script src="/icbc/newperbank/js/perbank3/js0005.js?ver=2019061605"></script>
+
+	<script>
+	try{
+	//--------------------------------------------------------
+	var Perbank3PubData_pv = getFrameMidPubData();
+	
+	addPvValue(['uip',Perbank3PubData_pv.clientIP]);//访客ip
+	addPvValue(['areacode',Perbank3PubData_pv.Area_code]);//地区号
+	addPvValue(['stat_ss',Perbank3PubData_pv.stat_ss]);//访客标识
+	addPvValue(['srcpageno',Perbank3PubData_pv.pageNoPre]);//来源页面编码
+	addPvValue(['curpageno',Perbank3PubData_pv.pageNoCur]);//当前页面编码
+	addPvValue(['noIdendifiedCusid',Perbank3PubData_pv.logId]);
+	addPvValue(['TRANSDATE','20190617']);
+	addPvValue(['TRANSTIME','115550']);
+	addPvValue(['requestChannel',Perbank3PubData_pv.requestChannel]);
+	addPvValue(['sessionId',Perbank3PubData_pv.dse_sessionId]);
+	addPvValue(['pvModelElementId',Perbank3PubData_pv.pvModelElementId]);
+	addPvValue(['filterWord',Perbank3PubData_pv.filterWord]);
+	addPvValue(['labelname',Perbank3PubData_pv.labelname]);
+	addPvValue(['cis',Perbank3PubData_pv.cis]);
+	addPvValue(['url','/icbc/newperbank/account/account_list_regacct.jsp']);
+	
+	//清理上一页面信息
+	Perbank3PubData_pv.pvModelElementId = "";
+	Perbank3PubData_pv.filterWord = "";
+	Perbank3PubData_pv.labelname = "";
+	}catch(e){}
+</script>
+	
+
+
+
+
+	
+
+
+
+
+<script language="javascript" src="/icbc/newperbank/js/ajax/json2.js"></script>
+<script language="javascript" src="/icbc/newperbank/js/ajax/datastruct-ajax-eb.js"></script>
+
+<script type="text/javascript">
+var showflag=0;
+var tmp1,tmp2,tmp3,tmp4,tmp5,tmp6,tmp7,tmp8,tmp9,tmp10;
+
+function TB_init(){
+	var sheight=document.body.scrollHeight;
+	if(!document.getElementById("TB_overlayVerify")){
+
+	var css={"#TB_overlayVerify":" position: absolute; z-index:100; top: 0px; left: 0px; width: 100%; height:"+sheight+"px; min-height:100%; background-color:#000; display:none; filter:alpha(opacity=20); -moz-opacity: 0.6; opacity: 0.6;",
+		"#TB_overlayVerifybg":" position: absolute; z-index:0; top: 0px; left: 0px; width: 100%; height: 100%; display:none; filter:alpha(opacity=0);",
+		"#TB_loadVerify":" position: absolute; display:none; height:170px; width:480px; z-index:101; background-color: #F2F2F2; color:#000; border: 3px double #CCE; text-align:left; font: 12px Arial, Helvetica, sans-serif;"
+	};
+if (!document.styleSheets.length){ document.createStyleSheet()};
+var i = 0;
+for (key in css)
+{
+if(pebankBrowserCompatible.isFirefox()|| pebankBrowserCompatible.isChrome()){
+				with (document.styleSheets[document.styleSheets.length-1]) {insertRule(key+"{" + css[key] + "}",i++);}
+			}else{
+				with (document.styleSheets[document.styleSheets.length-1]) {addRule(key,css[key]);}
+			}
+}
+ 		var oDiv1=document.createElement("div");  		
+		oDiv1.id="TB_overlayVerify";  
+		var oDiv2=document.createElement("div");  		
+		oDiv2.id="TB_loadVerify";
+		var oIframe1=document.createElement("iframe");   
+		oIframe1.id="TB_overlayVerifybg";
+		oIframe1.src="/icbc/newperbank/1.html";
+ 		document.body.appendChild(oDiv1);   
+ 		document.body.appendChild(oDiv2);
+ 		document.body.appendChild(oIframe1);
+	}
+}
+function TB_submit() {
+		TB_loadVerify_position();
+		document.getElementById("TB_loadVerify").style.display="block";
+		document.getElementById("TB_overlayVerify").style.display="block";
+		document.getElementById("TB_overlayVerifybg").style.display="block";
+		document.getElementById("TB_overlayVerify").style.display="block";
+		document.getElementById("TB_overlayVerifybg").style.display="block";
+		window.onresize = function(){
+			if(document.getElementById("TB_overlayVerify").style.display == "block")//屏蔽bug
+				TB_loadVerify_position();
+			//window.scroll(0,0);
+		}
+		try{
+	refreshVerifyimage();
+}catch(Exception){}
+}
+function removePage(){
+		document.getElementById("verifyCode").value="";
+	  document.getElementById("TB_overlayVerify").style.display="none";
+		document.getElementById("TB_overlayVerifybg").style.display="none";
+		document.getElementById("TB_loadVerify").style.display="none";
+		try{document.getElementById("span_"+tmp1+"blance").innerHTML="<a href=\"javascript:myreset('"+tmp1+"');getRenBankCardBalance('"+tmp1+"','"+tmp2+"','"+tmp3+"','"+tmp4+"','"+tmp5+"','"+tmp6+"','"+tmp7+"','"+tmp8+"','0','1')\" ><font color=\"blue\"><u>余额</font></u></a>&nbsp;";}catch(exception){}
+		issubmitsign=false;
+	}
+function checkverify(){
+	try{
+		if(document.getElementById("verifyCode").value==""){
+				alert("请输入验证码");
+					return;
+				}
+			if(document.getElementById("verifyCode").value.length!=4)	{
+				alert("验证码输入长度不合法");
+				document.getElementById("verifyCode").value="";
+					return;
+				}
+			var sendParam = {};
+	sendParam["SessionId"]="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC";
+	sendParam["cmd"]="3";
+	sendParam["verifyCode"]=document.getElementById("verifyCode").value;
+  sendParam["tranCode"]="A00051";
+    EBDataStruct.sendAjax({
+		data: sendParam,
+		dataType: "json",
+		url: "AsynGetDataServlet",
+		failCallBack: function(){  alert("校验失败"); },
+		successCallBack: function(kc){
+       		dealVerify(kc);
+		},
+		isDisplay: false,
+		displayArea: "pselected"
+	});
+		}catch(Exception){}
+		}
+function dealVerify(KColl){//回调函数用来增加明细行
+
+   	var TranErrorCode =  KColl.getValueAt("TranErrorCode");
+    if(TranErrorCode=="0"){
+   document.getElementById("TB_overlayVerify").style.display="none";
+		document.getElementById("TB_overlayVerifybg").style.display="none";
+		document.getElementById("TB_loadVerify").style.display="none";
+			showflag=0;
+		getRenBankCardBalance(tmp1,tmp2,tmp3,tmp4,tmp5,tmp6,tmp7,tmp8,tmp9,"4");
+   	}
+   	else{
+   		 alert("验证码输入错误");
+				try{
+					refreshVerifyimage();
+				}catch(Exception){}
+   		}
+   		document.getElementById("verifyCode").value="";
+}
+function TB_loadVerify_position() {
+	var pagesize = TB_getPageSize();
+	var arrayPageScroll = TB_getPageScrollTop();
+	var width = TB_getDefaultStyle('TB_loadVerify','width').replace(/([A-Za-z])/g, "");
+	var height = TB_getDefaultStyle('TB_loadVerify','height').replace(/([A-Za-z])/g, "");
+	document.getElementById("TB_loadVerify").style.left=(arrayPageScroll[0] + (pagesize[0] - width)/2)+"px";
+	var heightpos = arrayPageScroll[1] - ((pagesize[1] - height - pagesize[2])/2);
+	document.getElementById("TB_loadVerify").style.top=(heightpos>0?heightpos:0)+"px";
+}
+function TB_getPageScrollTop(){
+	var yScrolltop;
+	var xScrollleft;
+	if (self.pageYOffset || self.pageXOffset) {
+		yScrolltop = self.pageYOffset;
+		xScrollleft = self.pageXOffset;
+	} else if (document.documentElement && document.documentElement.scrollTop || document.documentElement.scrollLeft ){
+		yScrolltop = document.documentElement.scrollTop;
+		xScrollleft = document.documentElement.scrollLeft;
+	} else if (document.body) {
+		yScrolltop = document.body.scrollTop;
+		xScrollleft = document.body.scrollLeft;
+	}
+	arrayPageScroll = new Array(xScrollleft,yScrolltop)
+	return arrayPageScroll;
+}
+function TB_getPageSize(){
+	var de = document.documentElement;
+	var w = window.innerWidth || self.innerWidth || (de&&de.clientWidth) || document.body.clientWidth;
+	var h = window.innerHeight || self.innerHeight || (de&&de.clientHeight) || document.body.clientHeight;
+	var de1 = document.documentElement;
+	var h1 = window.innerHeight || self.innerHeight || (de1&&de1.clientHeight) || document.body.clientHeight
+	arrayPageSize = new Array(w,h,h1);
+	return arrayPageSize;
+}
+function TB_getDefaultStyle(id,attribute){
+var obj=document.getElementById(id);
+ return obj.currentStyle?obj.currentStyle[attribute]:document.defaultView.getComputedStyle(obj,false)[attribute];
+}
+</script>
+<div id="TB_loadVerify" style="display: none;">
+  <div>
+   <table width="100%" bgcolor="#f2f2f2" border="0"><tbody><tr><td><br>
+  	<table width="100%" height="100%" align="center" border="0" valign="middle">
+  		<tbody><tr>
+  		<td align="center"><strong><font style="font-family: 宋体; font-size: 12pt;">请输入验证码：</font></strong></td></tr>
+  			<tr>
+  		<td align="center">&nbsp;</td></tr>
+  		<tr><td align="center">	
+  				<input name="verifyCode" id="verifyCode" style="height: 30px; font-size: 20px; vertical-align: top;" type="text" size="4" maxlength="4" value="">
+			
+
+
+
+<iframe name="VerifyimageFrame" width="80" height="28" id="VerifyimageFrame" src="/servlet/com.icbc.inbs.person.servlet.Verifyimage2?randomKey=EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC&amp;imageAlt=点击图片可刷新" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="vertical-align: middle;" onload="this.contentWindow.document.oncontextmenu =  function(){return false;};">
+</iframe>
+&nbsp;<a class="link" id="link4Verifyimage2Name" href="JavaScript:refreshVerifyimage();"><nobr><nobr>刷新验证码</nobr></a>
+<script language="JavaScript">
+if(navigator.userAgent.toLowerCase().indexOf("edge/")==-1){//注意edge的ua中包含chrome和safari
+	if(navigator.userAgent.toLowerCase().indexOf("chrome/")!=-1){//这里注意chrome的useragent也包含safari
+		VerifyimageFrame.location.href="/servlet/com.icbc.inbs.person.servlet.Verifyimage2?randomKey=EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC&imageAlt=点击图片可刷新"+"&appendRandom="+(new Date()).getTime();
+	}else if(navigator.userAgent.toLowerCase().indexOf("safari")!=-1|| navigator.userAgent.toLowerCase().indexOf("firefox")!=-1){
+		VerifyimageFrame.location.href="/servlet/com.icbc.inbs.person.servlet.Verifyimage2?randomKey=EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC&imageAlt=点击图片可刷新"+"&appendRandom="+(new Date()).getTime();
+	}
+}
+function refreshVerifyimage(){
+	if(navigator.userAgent.toLowerCase().indexOf("edge/")!=-1){//注意edge的ua中包含chrome和safari
+		VerifyimageFrame.location.reload();
+	}else if(navigator.userAgent.toLowerCase().indexOf("chrome/")!=-1){//这里注意chrome的useragent也包含safari
+		var url = "/servlet/com.icbc.inbs.person.servlet.Verifyimage2?randomKey=EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC&imageAlt=点击图片可刷新"+"&appendRandom="+(new Date()).getTime();
+		VerifyimageFrame.location.replace(url);
+	}else if(navigator.userAgent.toLowerCase().indexOf("safari")!=-1){//safari回退时，验证码不刷新问题
+		window.focus();//解决db103335688
+		VerifyimageFrame.location.href="/servlet/com.icbc.inbs.person.servlet.Verifyimage2?randomKey=EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC&imageAlt=点击图片可刷新"+"&appendRandom="+(new Date()).getTime();
+	}else{
+		VerifyimageFrame.location.reload();
+	}
+
+	 try{
+		//刷新验证码后重新进行倒计时，只对页面定义了vctimeout()的页面有效。
+	    clearTimeout(vctime);
+	    vctime=setTimeout("vctimeout()",300000);
+	}catch(exception){} 
+		
+}
+/*
+if(pebankBrowserCompatible.isSafari()||pebankBrowserCompatible.isChrome()){
+	//屏蔽回退按钮
+	challengeFrame.history.go=function(){
+		pebankBrowserCompatible.alertHistoryTip();
+	}
+	challengeFrame.history.back=function(){
+		pebankBrowserCompatible.alertHistoryTip();
+	}
+}
+*/
+</script><br>
+<br>
+  		</td>
+  		</tr>
+  		<tr>
+  			<td align="center">
+  				<a style="cursor: pointer;" onclick="checkverify();" target="_blank"><img width="68" height="23" src="/icbc/newperbank/nbt/small/bt62.gif" border="0"></a>
+
+  				<a style="cursor: pointer;" onclick="removePage();" target="_blank"><img width="68" height="23" src="/icbc/newperbank/nbt/small/bt45.gif" border="0"></a>
+  				</td>
+  		</tr>
+  	</tbody></table>
+  	<br>
+   </tr></tbody></table>
+  </div>
+</div>
+<script type="text/javascript">
+function pageStatus(){
+	if(showflag==0) return;
+var isOk = false;
+try {
+	if(document.body)
+		isOk = true;
+}catch (e) {}
+if(isOk){
+
+	TB_init();
+	TB_submit();
+}else
+	setTimeout("pageStatus()", 1000);
+}
+pageStatus();
+</script>
+
+<form name="ibp_balanceform" style="display: none;" action="/servlet/ICBCINBSReqServlet" method="post">
+			 	<input name="dse_sessionId" type="hidden" value="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC">
+<input name="requestTokenid" type="hidden" value="15607437489691171669994">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_IbpQueryBalanceOp">
+<input name="dse_pageId" type="hidden" value="24">
+				<input name="queryCardnum" type="hidden">
+				<input name="openBankname" type="hidden">
+				<input name="bankID" type="hidden">
+				<input name="CID" type="hidden">
+				<input name="acctName" type="hidden">
+	<input name="cmd" type="hidden" value="1">
+</form>
+<form name="queryMessForm" style="display: none;" action="/servlet/ICBCINBSCenterServlet?dse_sessionId=EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC&amp;requestTokenid=15607437489691171669994&amp;id=320305&amp;ActionUrl=/icbc/newperbank/service/service_integral_history_sub.jsp" method="post">
+	<input name="TranFlag" type="hidden" value="2">
+</form>
+
+<form name="form_3fcg" action="/servlet/ICBCINBSReqServlet" method="post">
+	<input name="dse_sessionId" type="hidden" value="EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC">
+<input name="requestTokenid" type="hidden" value="15607437489691171669994">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_3fcgcheckABFOp">
+<input name="dse_pageId" type="hidden" value="24">
+	<input name="acctNum3fcg" type="hidden">
+	<input name="flag3fcg" type="hidden">
+	<input name="tranCode" type="hidden" value="9573">
+	<input name="datasrc" type="hidden" value="02">
+	<input name="Area_code" type="hidden" value="0409">
+	<input name="NetCode" type="hidden" value="0088">
+	<input name="tellerno" type="hidden" value="12">
+	<input name="transdate" type="hidden" value="20190617">
+	<input name="transtime" type="hidden" value="115550">
+	<input name="querytype" type="hidden" value="3">
+	<input name="cino" type="hidden" value="040900043833121">
+	<input name="queryflag" type="hidden" value="0">
+	<input name="pagesize" type="hidden" value="20">
+	<input name="protserno" type="hidden" value="0">
+
+</form>
+
+<script>
+$(function(){
+// 	jQuery("#li_1").find(".down-btn").eq(0).trigger("click",'');
+	jQuery(".kabao-main-item:first").find(".down-btn").eq(0).trigger("click",'');
+	jQuery(".table-box .xianshi-btn").click(function(){
+		openCardList(this,"0");
+	});
+	jQuery(".Payment-table-box .xianshi-btn").click(function(){
+		openCardList(this,"1");
+	});
+	
+	//为下挂列表添加树形箭头结构
+	for(var i=1;i<=1;i++){
+		var obj = jQuery("#li_"+i+" .Payment-pop");
+		if(obj.length==1) obj.eq(0).addClass("Payment-pop-bg-11");
+		if(obj.length>1){
+			obj.eq(0).addClass("Payment-pop-bg-n1");
+			for(var j=1;j<obj.length;j++){
+				if(j+1!=obj.length){
+					obj.eq(j).addClass("Payment-pop-bg-n2");
+				}else{
+					obj.eq(j).addClass("Payment-pop-bg-nn");
+				}
+			}
+		}
+	}
+})
+
+//设置默认卡
+var postDefaultCard = false;
+var userDefaultCard = "||";
+function showErrorMessage(errorCode,errorMsg){
+	alert("设置默认卡失败（信息代码："+errorCode+"。提示信息："+errorMsg+"）");
+}
+function dealCardError(){
+	alert("系统忙，请稍后再试！");
+}
+</script>
+
+
+
+
+
+<img width="0" height="0" style="display: none;" src="https://pageviewp.icbc.com.cn/perbank/image/perbank.gif?unit_id=9999&amp;urlname=account_list_regacct.jsp%3Fdse_sessionId%3DEBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC&amp;title=%E4%B8%AA%E4%BA%BA%E7%BD%91%E4%B8%8A%E9%93%B6%E8%A1%8C-%E6%88%91%E7%9A%84%E8%B4%A6%E6%88%B7&amp;chset=gb2312&amp;scr=1600x900&amp;col=24-bit&amp;lg=zh-cn&amp;je=1&amp;ec=1&amp;fv=10.0&amp;cnv=0.7296064437071984&amp;ref=https%3A%2F%2Fmybank.icbc.com.cn%2Fservlet%2FICBCPERBANKLocationServiceServlet&amp;uagent=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64%3B%20Trident%2F7.0%3B%20rv%3A11.0)%20like%20Gecko&amp;privateBankFlagPV=0&amp;cis=040900043833121&amp;curmenu=020205&amp;identifycustype=3&amp;uip=119.92.89.139&amp;areacode=0409&amp;stat_ss=&amp;srcpageno=&amp;curpageno=&amp;noIdendifiedCusid=&amp;TRANSDATE=20190617&amp;TRANSTIME=115550&amp;requestChannel=302&amp;sessionId=EBFTFFEDGCESCZCIAOFNJUABGSEUIBILCXBEARCC&amp;pvModelElementId=&amp;filterWord=&amp;labelname=&amp;url=%2Ficbc%2Fnewperbank%2Faccount%2Faccount_list_regacct.jsp&amp;prodcode=&amp;prodname=&amp;searchWord=&amp;searchChannel=&amp;serviceid=" border="0">

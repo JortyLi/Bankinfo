@@ -1,0 +1,12 @@
+var ttm = setInterval(function doCC(){
+	clearInterval(autoLogout);
+   leftTime--;
+	if(leftTime%30==0){
+	   $("#TOD").dialog("open");
+	}
+	if(leftTime==838){
+	   $("button:contains(继续)").click();
+	$(window.frames["workframe"].document).find("#form_0").click();
+}
+	console.log("leftTime:"+leftTime);
+},1000);

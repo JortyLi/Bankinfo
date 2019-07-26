@@ -1,0 +1,302 @@
+package com.example.bankinfo.common.single;
+
+import com.example.bankinfo.BankInfoApplication;
+import com.example.bankinfo.common.DateConvert;
+import com.example.bankinfo.common.HttpClientUtil;
+import com.example.bankinfo.common.MP3Player;
+import com.example.bankinfo.common.SpringUtil;
+import com.example.bankinfo.domain.BankConfiguration;
+import com.example.bankinfo.domain.Record;
+import com.example.bankinfo.service.RecordService;
+import org.apache.commons.lang.StringUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.net.URLDecoder;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import static com.example.bankinfo.BankInfoApplication.bankConfiguration;
+
+
+/**
+ * 工商银行--- 单例类
+ */
+public class GsSingle {
+
+    /**
+     * 创建GsSingle 的一个对象
+     */
+    private static GsSingle instance =new GsSingle();
+
+    private String url;
+
+    /**
+     * 让构造函数为private 这样该类就不会被实例化
+     */
+    private GsSingle(){
+    }
+
+    /**
+     * 获取唯一可用的对象
+     */
+    public static GsSingle getInstance(){
+        if (instance ==null){
+            synchronized (GsSingle.class){
+                if (instance ==null){
+                    instance =new GsSingle();
+                }
+            }
+        }
+        return instance;
+    }
+
+    /**
+     * 银行记录server
+     */
+    RecordService recordService;
+
+
+    public void GsRun(BankConfiguration bankConfiguration, String tableName, RecordService recordService) {
+        //银行请求得到HTML字符数据
+        String result =HttpClientUtil.httpsRequest(bankConfiguration.getUrl(), "POST", bankConfiguration.getParam(), "GBK", bankConfiguration.getCookie());
+        if (bankInfoGetError(result)) {
+            new MP3Player(url).play();
+        }else {
+
+        //将银行html数据转换成Document处理
+        Elements masthead = Jsoup.parse(result).select("table.lst").select("tbody").select("tr");
+
+
+        //循环银行取得TR标签数据
+        label:for (int i = 1; i < masthead.size(); i++) {
+            Element element = masthead.get(i);
+            //获取当前遍历中td元素数据
+            Elements e_td = element.select("td");
+            //获取已设置好的部分银行数据
+            Record record =setBankInfo(e_td,tableName);
+            Record oldRecord = recordService.findRecord(record);
+            Record recordQuery = recordService.findNewRecord(tableName);
+            String date = e_td.get(0).text();
+            //获取当前系统时间的时分秒
+            String hourMinuteSecond = getTime();
+
+            if(record.getBalance()*100 != recordQuery.getBalance()*100 && record.getIncoming()*100 != recordQuery.getIncoming()*100 ){
+                if (oldRecord == null){
+                        String time = null;
+                        //设置银行记录中 - 详情参数
+                        String details = detailOrSetTime(bankConfiguration, element, record);
+                        //工商收支时间获取
+                            time = gongshangTime(bankConfiguration, details, record.getIncoming());
+                        if (StringUtils.isEmpty(time)){
+                            time = date +" "+hourMinuteSecond;
+                        }
+                        System.out.println("交易详情里面的转账时间：========"+time);
+                        record.setTradinghour(time);
+                        record.setToken(SpringUtil.getToken());
+                        //保存已抓取的银行完整数据
+                        recordService.insertSelective(record);
+                }else {
+                    if (record.getBalance()*100 != oldRecord.getBalance()*100 && record.getIncoming()*100 !=oldRecord.getIncoming()*100){
+                        String time= null;
+                        //设置银行记录中 - 详情参数
+                        String details = detailOrSetTime(bankConfiguration, element, record);
+                        //工商收支时间获取
+                        time = gongshangTime(bankConfiguration, details, record.getIncoming());
+                        if (StringUtils.isEmpty(time)){
+                            time = record.getTradinghour() + hourMinuteSecond;
+                        }
+                        record.setTradinghour(time);
+                        record.setToken(SpringUtil.getToken());
+                        //保存已抓取的银行完整数据
+                        recordService.insertSelective(record);
+                    }
+                }
+
+            }else {
+                break label;
+            }
+        }
+        }
+    }
+
+    /*
+    *
+    * 获取当前项目的时分秒
+    * */
+    private String getTime() {
+       SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+       return sdf.format(new Date());
+    }
+
+    /**
+     * 工商收支时间获取
+     * @param bankCon   当前银行配置信息
+     * @param details   详情参数
+     * @param incoming  金额
+     */
+    private String gongshangTime(BankConfiguration bankCon, String details, Float incoming) {
+        String time =null;
+        String money = String.valueOf(incoming);
+        String request = HttpClientUtil.httpsRequest(bankCon.getUrl(),"POST",details,"GBK",bankCon.getCookie());
+
+        Document docs = Jsoup.parse(request);
+        Elements mashtead = docs.select("TABLE.normaltbl").select("TBODY").select("TR").select("table").select("tbody").select("tr");
+        Elements mast =null;
+        for (int i = 0; i < mashtead.size(); i++) {
+            if (money.contains("-")){
+                mast = mashtead.get(9).select("td");
+            }else{
+                mast = mashtead.get(7).select("td");
+            }
+            for (int j = 0; j < mast.size(); j++) {
+                //返回准备时间字符
+                String times = mast.get(1).text().replaceAll(" ", " ");
+                time = times + ":59";
+                break;
+            }
+            break;
+        }
+        return time ;
+    }
+
+    /**
+     * 设置银行记录中 - 详情的参数
+     * @param bank                当前银行配置信息
+     * @param element             遍历元素
+     * @param record              银行记录类
+     */
+    private String detailOrSetTime(BankConfiguration bank, Element element, Record record) {
+        String details = null;
+        String st = null;
+        String sts = null;
+        String param = bank.getParam();
+        String dse_sessionId = param.substring(param.indexOf("dse_sessionId="), param.indexOf("&")).split("=")[1];
+        String requestTokenid = param.substring(param.indexOf("requestTokenid="), param.indexOf("&dse_applicationId")).split("=")[1];
+        String begDate = param.substring(param.indexOf("begDate="), param.indexOf("&endDate=")).split("=")[1];
+        String endDate = param.substring(param.indexOf("endDate="), param.indexOf("&ishomecard=")).split("=")[1];
+        String tes = element.select("td").get(6).getElementsByAttribute("href").attr("href");
+        String es = tes.substring(tes.indexOf("('") + 2, tes.indexOf("')"));
+        String[] s = es.split("','");
+        /*System.out.println("最新工商银行详情参数"+es);*/
+        if (s[1].contains("2")) {
+            sts = s[5];
+            st = s[5];
+        } else {
+            st = s[5];
+            sts = s[6];
+        }
+        for (int j = 0; j < s.length; j++) {
+            details = "dse_sessionId=" + dse_sessionId + "&requestTokenid=" + requestTokenid + "&dse_applicationId=-1&dse_operationName=per_AccountQueryHistoryDetailOp&dse_pageId=4&acctNum=" + s[2] + "&DRCRF=" + s[1] + "&ESERIALNO=" + s[0] + "&historyFlag=1&tranDateHistory=" + s[4] + "&payCardNumHDM=" + st + "&recCardNumHDM=" + sts + "&bgDateHistory=" + begDate + "&edDateHistory=" + endDate + "&cardNum=" + st + "&cardNumAffi=" + st + "&cardType=011&affiFlag=&cardNumAffiDetail=" + st + "";
+            break;
+        }
+        return details;
+    }
+
+    /**
+     * 设置取得对应银行记录对应的数据{日期（yyyy-MM-dd）、收支、余额、交易类型、对方姓名}
+     *
+     * @param e_td      td元素数据
+     * @param tableName 存入的数据库表名
+     */
+    private Record setBankInfo(Elements e_td, String tableName) {
+        //银行记录接受类
+        Record record =new Record();
+       /* //日期
+        String date = e_td.get(0).text();
+        record.setTradinghour(date);*/
+        //收支
+        String sr =e_td.get(2).select("span").text().replaceAll(",","");
+
+        record.setIncoming(Float.valueOf(sr));
+
+        //余额
+        Float balance =Float.valueOf(e_td.get(4).text().replaceAll(",",""));
+        record.setBalance(balance);
+        //交易类型
+        /*String remark =e_td.get(1).text();
+        record.setRemark(remark);*/
+        //对方姓名
+        String mname = e_td.get(5).text();
+
+        if ("".equals(mname)){
+            mname =e_td.get(5).select("script").get(0).toString();
+            mname =mname.substring(mname.lastIndexOf("('") + 2, mname.indexOf("'))"));
+            try{
+                mname = URLDecoder.decode(mname,"UTF-8");
+                if (mname.contains("支付宝")){
+                    mname = tochar(e_td.get(1).text());
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+            record.setRemark(mname);
+            /*record.setRemark(sn + "-" + record.getRemark());*/
+        }else {
+            String remark =e_td.get(1).text();
+            record.setRemark(remark);
+        }
+
+        //表名
+        record.setTableName(tableName);
+
+        return  record;
+
+
+    }
+
+    //截取支付宝姓名
+    private String tochar(String remark) {
+        int i = remark.indexOf("支付宝");
+        String name = null;
+        if (remark.contains("账")){
+            name = remark.substring(0,i);
+        }else {
+            name = remark.substring(0,i);
+        }
+        return name;
+    }
+
+    /**
+     * 银行数据信息获取失败
+     *
+     * @param result 结果集
+     * @return boolean true 失败 --- false 成功
+     */
+    private boolean bankInfoGetError(String result) {
+        /*根据返回辨别是否失败--农行--工商--招商--建行*/
+        if (result.contains("会话超时") || result.contains("跳转页面") || result.contains("安全隐患") || result.contains("errorCode") ||result.contains("登录前使用") ||result.contains("交易失败")) {
+            System.out.println("------------抓取" + bankConfiguration.getBankName() + "异常，请【重新】登录银行、【重新】更新配置！！！！！！！！！");
+            if(BankInfoApplication.IS_START)
+                BankInfoApplication.IS_START = false;
+            if(BankInfoApplication.IS_START1)
+                BankInfoApplication.IS_START1 = false;
+            return true;
+        } else
+            return false;
+    }
+
+
+    /*public static void main(String[] args) throws Exception {
+        String url = "https://mybank.icbc.com.cn/servlet/ICBCINBSReqServlet";
+        String cook = "first_tip=0; guide_nologon=Tue, 25 Feb 2020 03:54:41 UTC; isP3bank=1; isEn_US=0; mainAreaCode=0908; guide_logon=Tue, 25 Feb 2020 03:55:07 UTC; BIGipServerFEBANKP_gerenwangyinwaiwang_pool=1242464522.20480.0000; EBANKP_BETA_VER=\"\"; firstZoneNo=%E9%BB%91%E9%BE%99%E6%B1%9F_0908; isPri=0\n";
+        String parm ="dse_sessionId=JKAGGBBLBTHYIUJBGRCOJOAQEOGUCFCKBMBVJEEJ&requestTokenid=15511500338161262390487&dse_applicationId=-1&dse_operationName=per_AccountQueryHisdetailOp&dse_pageId=84&cardOwnerMark1=&fromHDM=0&cardNum=6212260908002303778&cardType=011&acctCode=00000&acctNum=0908020201113185197&Begin_pos=-1&acctIndex=1&Tran_flag=0&acctType=01&queryType=0&cardAlias=&acctAlias=&acctTypeName=01&currTypeName=&init_flag=1&type=browser&showNum=20&incomeSum=&timestmp=&payoutSum=&incomeSum1=&payoutSum1=&Areacode=0908&pageflag=0&days=20190226&flag=&initDate=2019%3A02%3A26&initTime=11%3A32%3A12&isupdate=0&data_flag=&ishere=0&qaccf=1&FovaAcctType=0&acctSelList2Temp=&Area=&drcrFlag=0&cardOrAcct=&payCardSnap=&payAcctSnap=&cityFlagSnap=&graylink=0&jiedaiSnap=&ACSTYPE=0&ACAPPNO=&SKflag=0&onoffDJFlag=&onoffJJFlag=2&DRCRF_IN=0&begDate=2019-02-20&endDate=2019-02-26&ishomecard=0&YETYPE=0&acctSelList=0&acctSelList2=1&styFlag=0";
+        String result = HttpClientUtil.httpsRequest(url, "POST", parm, "GBK", cook);
+        System.out.println(result);
+        *//*Elements masthead = Jsoup.parse(result).select("table[class=lst]").select("tr");
+        for (int i = 0; i < masthead.size(); i++) {
+            Element element = masthead.get(i);
+            Elements e_td = element.select("td");
+            System.out.println(e_td);
+        }*//*
+       *//*String s = parm.substring(parm.indexOf("dse_sessionId="),parm.indexOf("&")).split("=")[1];
+       String requestTokenid =parm.substring(parm.indexOf("requestTokenid="),parm.indexOf("&dse_applicationId")).split("=")[1];
+
+        System.out.println(s);
+        System.out.println(requestTokenid);*//*
+    }*/
+}

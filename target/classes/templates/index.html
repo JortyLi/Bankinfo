@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="copyright" content="All Rights Reserved, Copyright (C) 2013, Wuyeguo, Ltd."/>
+    <title>自动加币系统</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/easyui/themes/default/easyui.css}" href="../static/easyui/themes/default/easyui.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/wu.css}" href="../static/css/wu.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/icon.css}" href="../static/css/icon.css"/>
+    <script type="text/javascript" th:src="@{/easyui/jquery.min.js}" src="../static/easyui/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{/easyui/jquery.easyui.min.js}" src="../static/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" th:src="@{/easyui/locale/easyui-lang-zh_CN.js}" src="../static/easyui/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<body class="easyui-layout">
+<div id="tab" class="easyui-tabs" style="width:100%;height: 100%" data-options="justified:true,fit:true">
+    <div title="银行配置">
+        <!--<iframe th:src='@{/bankConfig}' src='/bankConfig' width='99.5%' height='99%'></iframe>-->
+    </div>
+    <div title="银行收支记录">
+        <!--<iframe th:src="@{/recordList}" src="/recordList" width="99.5%" height="99%"></iframe>-->
+    </div>
+</div>
+</body>
+<script>
+    $('#tab').tabs({
+        onSelect:function(title,index){
+            switch (index){
+                case 0:
+                    updateContent('<iframe th:src="@{/bankConfig}" src="/bankConfig" width="99.5%" height="99%"></iframe>');
+                    break;
+                case 1:
+                    updateContent('<iframe th:src="@{/recordList}" src="/recordList" width="99.5%" height="99%"></iframe>');
+                    break;
+            }
+        }
+    })
+
+    function updateContent(iframedata){
+        // 更新选择的面板的新标题和内容
+        var tab = $('#tab').tabs('getSelected');  // 获取选择的面板
+        $('#tab').tabs('update', {
+            tab: tab,
+            options: {
+                content: iframedata
+            }
+        });
+        tab.panel('refresh');
+    }
+
+</script>
+</html>

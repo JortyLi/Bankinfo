@@ -1,0 +1,19 @@
+var times = 0;
+var timt = setInterval(function doCC(){
+	times++;
+	$("#yesBtn").click();
+console.log("times:"+times);
+},1000);
+
+
+
+
+
+
+工商页面js按钮地点击
+var times = 0;
+var timeObj = setInterval(function queryDetials(){
+	times++;
+	$("#chaxun").click();
+console.log("times:"+times);
+},3000);

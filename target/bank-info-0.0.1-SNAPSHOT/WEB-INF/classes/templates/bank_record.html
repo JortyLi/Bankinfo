@@ -1,0 +1,538 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <meta name="copyright" content="All Rights Reserved, Copyright (C) 2013, Wuyeguo, Ltd."></meta>
+    <title>银行信息配置</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/easyui/themes/default/easyui.css}"
+          href="../static/easyui/themes/default/easyui.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/wu.css}" href="../static/css/wu.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/icon.css}" href="../static/css/icon.css"/>
+    <script type="text/javascript" th:src="@{/easyui/jquery.min.js}" src="../static/easyui/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{/easyui/jquery.easyui.min.js}"
+            src="../static/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" th:src="@{/easyui/locale/easyui-lang-zh_CN.js}"
+            src="../static/easyui/locale/easyui-lang-zh_CN.js"></script>
+</head>
+<style type="text/css">
+    /*.panel-title {*/
+    /*font-size: 40px;*/
+    /*font-weight: bold;*/
+    /*color: red;*/
+    /*height: 35px;*/
+    /*line-height: 29px;*/
+    /*text-align: center;*/
+    /*}*/
+
+    /*.datagrid-cell {*/
+    /*margin: 0;*/
+    /*padding: 0 4px;*/
+    /*white-space: nowrap;*/
+    /*word-wrap: normal;*/
+    /*overflow: hidden;*/
+    /*height: 15px;*/
+    /*line-height: 40px;*/
+    /*font-size: 20px;*/
+    /*}*/
+    .datagrid-row {
+        height: 40px;
+    }
+</style>
+<body class="easyui-layout">
+<div region="center" title="未开启" th:title="${bankName}==null ? '未开启' : ${bankName}" resizable="true"
+     headerCls="panel-title" style="width:50%;height:100%;top:4px">
+    <table id="record1" data-options="toolbar:'#record1-tb'" class="easyui-datagrid" style="width:100%;height:100%;"
+           bodyCls="datagrid-row"></table>
+    <div id="record1-tb" style="height: 100px;font-size: 12px">
+        <h1 style="font-size: 25px;">
+            <font style="color: #ff89a4" id="h1textShowMoney"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <font style="color: #ff34a0" id="h1textdaySum"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <font style="color: #ff2634" id="h1textSum"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <font style="color: #990dff" id="h1textBan"/>
+        </h1>
+        <input id="name1" class="easyui-textbox" style="width:110px" prompt="姓名"/>
+        <input id="date1" class="easyui-datetimebox" style="width:155px" prompt="日期时间"/>
+        <select id="status1" class="easyui-combobox" panelHeight="auto" style="width:100px" editable="false">
+            <option value="">状态(全部)</option>
+            <option value="0">未加币</option>
+            <option value="1">已加币</option>
+            <option value="2">保留未加币</option>
+            <option value="3">转出</option>
+            <option value="4">已处理</option>
+        </select>&nbsp;&nbsp;
+        <a href="#" id="search1" class="easyui-linkbutton" iconCls="icon-search">搜索</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" id="back1" class="easyui-linkbutton" data-options="iconCls:'icon-back'">返回</a>&nbsp;&nbsp;
+        <a href="#" id="edit1" class="easyui-linkbutton" data-options="iconCls:'icon-edit'">已处理</a>&nbsp;&nbsp;
+        <a href="#" id="redo1" class="easyui-linkbutton" data-options="iconCls:'icon-redo'">已换盾</a>&nbsp;&nbsp;
+        <input id="stop1" class="easyui-switchbutton" data-options="onText:'继续',offText:'暂停'"/>
+        <div style="float: right">
+            <input id="statrDate1" class="easyui-datetimebox" style="width:155px" prompt="日期时间"
+                   th:value="${startDate}"/>
+            <a href="#" id="statrDatea1" class="easyui-linkbutton" data-options="iconCls:'icon-time-go'">开启</a>
+        </div>
+    </div>
+</div>
+<div region="east" hideCollapsedContent="false" collapsed="true" th:title="${bankName1}==null ? '未开启' : ${bankName1}"
+     resizable="true" headerCls="panel-title"
+     style="width:50%;height:100%;; top: 4px;">
+    <table id="record2" data-options="toolbar:'#record2-tb'" class="easyui-datagrid" style="width:100%;height:100%;"
+           bodyCls="datagrid-row"></table>
+</div>
+<div id="record2-tb" style="height: 100px;font-size: 12px">
+    <h1 style="font-size: 40px;text-align: center">
+        <font style="color: #ff89a4" id="h1textShowMoney1"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font style="color: #ff34a0" id="h1textdaySum1"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font style="color: #ff2634" id="h1textSum1"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font style="color: #990dff" id="h1textBan1"/>
+    </h1>
+    <input id="name2" class="easyui-textbox" style="width:110px" prompt="姓名"/>
+    <input id="date2" class="easyui-datetimebox" style="width:155px" prompt="日期时间"/>
+    <select id="status2" class="easyui-combobox" panelHeight="auto" style="width:100px" editable="false">
+        <option value="">状态(全部)</option>
+        <option value="0">未加币</option>
+        <option value="1">已加币</option>
+        <option value="2">保留未加币</option>
+        <option value="3">转出</option>
+        <option value="4">已处理</option>
+    </select>&nbsp;&nbsp;
+    <a href="#" id="search2" class="easyui-linkbutton" iconCls="icon-search">搜索</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" id="back2" class="easyui-linkbutton" data-options="iconCls:'icon-back'">返回</a>&nbsp;&nbsp;
+    <a href="#" id="edit2" class="easyui-linkbutton" data-options="iconCls:'icon-edit'">已处理</a>&nbsp;&nbsp;
+    <a href="#" id="redo2" class="easyui-linkbutton" data-options="iconCls:'icon-redo'">已换盾</a>
+    <div style="float: right">
+        <input id="statrDate2" class="easyui-datetimebox" style="width:155px" prompt="日期时间" th:value="${startDate1}"/>
+        <a href="#" id="statrDatea2" class="easyui-linkbutton" data-options="iconCls:'icon-time-go'">开启</a>
+    </div>
+</div>
+<div id="playSound" style="display:none;"/>
+
+</body>
+<script th:inline="javascript">
+    var nowdata, curtdate, dates;
+    var incoming;
+    var number;
+    var plays, audio;
+    var hours = new Date().getHours();
+    /*<![CDATA[*/
+    if (hours >= 8 || hours <= 2) {
+        number = 20;
+    } else if (hours >= 3 || hours <= 7) {
+        number = 40;
+    }
+
+    var musicStart;
+    var newMoneOk;
+    $(function () {
+        window.setInterval(function () {
+            if (musicStart == "yes") {
+                $("#playSound").append('<bgsound src="/messages.mp3" loop="1"/>');
+                $("#playSound").append('<audio src="/messages.mp3" autoplay="true" playcount="1"></audio>');
+            }else if (newMoneOk == "yes") {
+                $("#playSound").append('<bgsound src="/haohaiyo.mp3" loop="1"/>');
+                $("#playSound").append('<audio src="/haohaiyo.mp3" autoplay="true" playcount="1"></audio>');
+            }
+            $('#record1').datagrid("load", getParam("name1", "date1", "status1", 1));
+            $('#record2').datagrid("load", getParam("name2", "date2", "status2", 2));
+            if(!newMoneOk){
+                dates = differDate(nowdata);
+                if (dates == number) {
+                    myaudio();
+                }
+            }
+        }, 20000);
+    });
+    /*]]>*/
+
+    /*<![CDATA[*/
+    $(function () {
+        window.setInterval(function () {
+            closeAudio();
+        }, 3000);
+    });
+
+    /*]]>*/
+
+    function myaudio() {
+        audio = $('#music1')[0];
+        if (audio == null) {
+            curtdate = getNowFormatDate(new Date());
+            $('body').append('<div id="playmp3" style="display:none;"></div>');
+            plays = $("#playmp3").append('<audio id="music1" src="/solo.mpeg" loop="loop" autoplay="autoplay"></audio>');
+            $.messager.show({
+                msg: '<div style="text-align: center;width: 300px;height: 300px">' +
+                '<span style="color: #ff0c40;font-size: 20px">' + nowdata + '</span>' +
+                '<br/><br/><br/><br/><br/>' +
+                '<input type="button" style="width:80px" class="easyui-linkbutton" data-options="iconCls:\'icon-ok\'" value="确定"  id="okSendSms"/>' +
+                '<img src="/c606.gif"/></div>',
+                height: '550px',
+                width: '350px',
+                timeout: 0,
+                showType: 'fade',
+                style: {
+                    align: 'center',
+                }
+            });
+        }
+
+        $("#okSendSms").click(function () {
+            $(".messager-body").window('close');
+            //audio.play(); // 播放
+            //audio.pause();// 暂停
+            $(plays).remove();
+        });
+    }
+
+
+    function closeAudio() {
+        if (audio != null) {
+            if (number > dates) {
+                $(".messager-body").window('close');
+                $(plays).remove();
+            }
+        }
+    }
+
+    /*<![CDATA[*/
+    function differDate(vadate) {
+        var date1 = vadate;  //开始时间
+        var date2 = new Date();    //结束时间
+        var date3 = date2.getTime() - new Date(date1).getTime();
+        var leave1 = date3 % (24 * 3600 * 1000);
+        //计算相差分钟数
+        var leave2 = leave1 % (3600 * 1000);        //计算小时数后剩余的毫秒数
+        var minutes = Math.floor(leave2 / (60 * 1000));
+        return minutes;
+    }
+
+
+    function timestampToTime(timestamp) {
+        var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        Y = date.getFullYear() + '-';
+        M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+        D = date.getDate() + ' ';
+        h = date.getHours() + ':';
+        m = date.getMinutes() + ':';
+        s = date.getSeconds();
+        return Y + M + D + h + m + s;
+    }
+
+    /*]]>*/
+
+
+    //获取当前系统时间yyyy-MM-dd HH:MM:SS
+    /*<![CDATA[*/
+    function getNowFormatDate(nDate) {
+        var date = nDate;
+        var seperator1 = "-";
+        var seperator2 = ":";
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        var strSeconds = date.getSeconds();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        if (strSeconds >= 0 && strSeconds <= 9) {
+            strSeconds = "0" + strSeconds;
+        }
+        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+            + " " + date.getHours() + seperator2 + date.getMinutes()
+            + seperator2 + strSeconds;
+        return currentdate;
+    }
+
+    /*]]>*/
+
+
+    /**
+     * Name 载入数据
+     */
+    $('#record1').datagrid(getPages(1));
+    /**
+     * Name 载入数据
+     */
+    $('#record2').datagrid(getPages(2));
+
+    function getPages(index) {
+        return {
+            url: '/recordPages',
+            pageSize: 25,
+            pageList: [25, 50, 100, 150],
+            singleSelect: true,
+            pagination: true,
+            fitColumns: true,
+            fit: true,
+            striped: true,
+            queryParams: {index: index},
+            rowStyler: function (index, row) {
+                return getIshandleStyle(row.ishandle);
+            },
+            onDblClickRow: function (index, row) {
+                $.messager.alert("", '<font style="font-size: 45px;">' + row.tradinghour.split(" ")[1] + '</font>');
+            },
+            loadFilter: function (data) {
+                nowdata = data.rows[0].tradinghour;
+                incoming = data.rows[0].incoming;
+
+                if (data.sumMoney >= 200000 || data.sumMoney1 >= 200000)
+                    musicStart = "yes";
+                else
+                    musicStart = "no";
+                if (data.station == '秀场9站')
+                    if (data.balance >= 1000 || data.balance1 >= 1000)
+                        newMoneOk = "yes";
+                    else
+                        newMoneOk = "no";
+
+                $("#h1textShowMoney").text(data.station + '总额：' + data.showMoney);
+                $("#h1textdaySum").text('当天总额:' + data.daySum);
+                $("#h1textSum").text('总:' + data.sumMoney);
+                $("#h1textBan").text('余:' + data.balance);
+                $("#h1textShowMoney1").text('秀场总额：' + data.showMoney1);
+                $("#h1textdaySum1").text('当天总额:' + data.daySum1);
+                $("#h1textSum1").text('总:' + data.sumMoney1);
+                $("#h1textBan1").text('余:' + data.balance1);
+                if (data.msg != null) {
+                    $.messager.show({
+                        msg: '<span style="font-size: 20px">' + data.msg + '</span>',
+                        height: '300',
+                        width: '300',
+                        timeout: 10000,
+                        showType: 'fade'
+                    });
+                }
+                return data;
+            },
+            columns: [[
+                {field: 'id', checkbox: true},
+                {
+                    field: 'tradinghour', title: '交易时间', formatter: function (value, row, index) {
+                        return '<font style="font-size: 20px">' + value + '</font>'
+                    }
+                },
+                {
+                    field: 'incoming', title: '收支', align: 'center', formatter: function (value, row, index) {
+                        return '<font style="font-size: 20px">' + value + '</font>'
+                    }
+                },
+                {
+                    field: 'balance', title: '余额', align: 'center', formatter: function (value, row, index) {
+                        return '<font style="font-size: 20px">' + value + '</font>'
+                    }
+                },
+                {
+                    field: 'ishandle', title: '类型', formatter: function (value, row, index) {
+                        return '<font style="font-size: 20px">' + getIsjamdle(value, row) + '</font>';
+                    }
+                },
+                {
+                    field: 'remark', title: '详情', formatter: function (value, row, index) {
+                        return '<font style="font-size: 20px">' + value + '</font>'
+                    }
+                },
+                {
+                    field: 'bname', title: '收款信息', formatter: function (value, row, index) {
+                        return '<font style="font-size: 20px">' + value + '</font>'
+                    }
+                }
+            ]]
+        }
+    }
+
+    /*搜索1*/
+    $("#search1").bind("click", function () {
+        $('#record1').datagrid("load", getParam("name1", "date1", "status1", 1));
+    })
+    /*搜索2*/
+    $("#search2").bind("click", function () {
+        $('#record2').datagrid("load", getParam("name2", "date2", "status2", 2));
+    })
+    /*换盾1*/
+    $("#redo1").bind("click", function () {
+        redoUpdate(1);
+    })
+    /*换盾2*/
+    $("#redo2").bind("click", function () {
+        redoUpdate(2);
+    })
+
+    /*返回1*/
+    $("#back1").bind("click", function () {
+        upStatus(1);
+    })
+    /*返回2*/
+    $("#back2").bind("click", function () {
+        upStatus(2);
+    })
+    /*已处理1*/
+    $("#edit1").bind("click", function () {
+        editUpdate(1);
+    })
+    /*已处理2*/
+    $("#edit2").bind("click", function () {
+        editUpdate(2);
+    })
+    /*开启1*/
+    $("#statrDatea1").bind("click", function () {
+        statrDate(1);
+    })
+    /*开启2*/
+    $("#statrDatea2").bind("click", function () {
+        statrDate(2);
+    })
+
+    /*获取搜索参数*/
+    function getParam(name, date, status, index) {
+        var param = {};
+        if ($("#" + name).textbox("getValue"))
+            param.remark = $("#" + name).textbox("getValue");
+        if ($("#" + date).textbox("getValue"))
+            param.tradinghour = $("#" + date).textbox("getValue");
+        if ($("#" + status).combobox("getValue"))
+            param.ishandle = $("#" + status).combobox("getValue");
+        param.index = index;
+        return param;
+    }
+
+    /*换盾*/
+    function redoUpdate(index) {
+        $.ajax({
+            url: "/upChangeTime",
+            type: 'post',
+            data: {index: index},
+            success: function (res) {
+                $.messager.alert("", res, "info");
+            }
+        });
+    }
+
+    $("#stop1").switchbutton({
+        onChange: function (checked) {
+            if (checked == true) {
+                stopUpdate(1);
+            }else{
+                stopUpdate(0);
+            }
+        }
+    })
+
+    /*停止转账*/
+    function stopUpdate(number1) {
+        $.ajax({
+            url: "/upStop",
+            type: 'post',
+            data: {index: number1},
+            success: function (res) {
+                $.messager.alert("信息", res, "info");
+            }
+        });
+    }
+
+    /*返回*/
+    function upStatus(index) {
+        var param = $('#record' + index).datagrid('getSelected');
+        if (!param) return $.messager.alert("", "请选择需要返回项！");
+        $.messager.confirm('', '您想要返回为未加币吗？', function (r) {
+            if (r) {
+                $.ajax({
+                    url: "/upStatus",
+                    type: 'post',
+                    data: {id: param.id, index: index},
+                    success: function (res) {
+                        $.messager.show({msg: res, timeout: 3000, showType: 'slide'});
+                        $('#record' + index).datagrid("load", getParam("name1", "date1", "status1", index));
+                    }
+                });
+            }
+        });
+    }
+
+    function editUpdate(index) {
+        var param = $('#record' + index).datagrid('getSelected');
+        if (!param) return $.messager.alert("", "请选择需要返回项！");
+        $.messager.confirm('', '您确定已加币吗？', function (r) {
+            if (r) {
+                $.ajax({
+                    url: "/redoUpdate",
+                    type: 'post',
+                    data: {id: param.id, index: index},
+                    success: function (res) {
+                        $.messager.show({msg: res, timeout: 3000, showType: 'slide'});
+                        $('#record' + index).datagrid("load", getParam("name1", "date1", "status1", index));
+                    }
+                });
+            }
+        });
+    }
+
+    function statrDate(index) {
+        $.ajax({
+            url: "/setDate",
+            type: 'post',
+            data: {index: index, startDate: $("#statrDate" + index).datetimebox('getValue')},
+            success: function (res) {
+                $.messager.show({msg: res, timeout: 3000, showType: 'slide'});
+                $('#record' + index).datagrid("load", getParam("name1", "date1", "status1", index));
+
+            }
+        });
+    }
+
+    // function startPrompt() {
+    //     window.setInterval(function () {
+    //         debugger;
+    //         $.ajax({
+    //             type: "POST",
+    //             dataType: "json",
+    //             url: "/promptMessage",
+    //             success: function (data) {
+    //                 if (data.msg != null) {
+    //                     $.messager.show({
+    //                         msg: '<span style="font-size: 20px">' + data.msg + '</span>',
+    //                         height: '300',
+    //                         width: '300',
+    //                         timeout: 10000,
+    //                         showType: 'fade'
+    //                     });
+    //                 }
+    //             }
+    //         });
+    //     }, 10000);
+    // }
+    function getIsjamdle(value, row) {
+        switch (value) {
+            case 0:
+                return "未加币";
+            case 1:
+                return row.station + "_" + row.uid + "已加币";
+            case 2:
+                return "保留未加币";
+            case 3:
+                return "转出";
+            case 4:
+                return "人工处理";
+            case 100:
+                return "重复记录";
+        }
+    }
+
+    function getIshandleStyle(value) {
+        switch (value) {
+            case 0:
+                return 'background-color:#FF252A;color: #fff6fc;';
+            case 1:
+                return 'background-color:#098703;color: #fff6fc;';
+            case 2:
+                return 'background-color:#143CFF;color: #fff6fc;';
+            case 3:
+                return 'background-color:#098703;color: #fff6fc;';
+            case 4:
+                return 'background-color:#098703;color: #fff6fc;';
+            case 100:
+                return 'background-color:#FD00FF;color: #040001;';
+        }
+    }
+</script>
+
+</html>

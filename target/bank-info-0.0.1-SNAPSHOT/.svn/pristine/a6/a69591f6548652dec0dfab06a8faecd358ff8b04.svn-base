@@ -1,0 +1,1725 @@
+2019年06月16日 09时56分40秒select id from `record` where `token` = '54A0F3CA7C8C1EE7D44185BB748F4422' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '040604099664009902124146949' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = 'F08BEE8023466E0058CC88D7E34211DF' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '040604099663009502116413068' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '99189DB332F8D80EEC4D5152778C98AA' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '040404099149901034501474045' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '030204099649100169813242088' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '030205109649100169813241499' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '030204099649100169813235439' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '030204099649100169813231966' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '040604099649009801966804568' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '030202009649100169813229930' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '040604099649009851955574146' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '040604099649009451955903723' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '040404099149901034531474031' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '040404099149901034531474031' 
+2019年06月16日 09时56分40秒select id from `record` where `token` = '050204099149601003534466702' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '040404099149901034691474037' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月16日 09时56分40秒select id from `record` where `token` = '040404099149901034691474037' 
+2019年06月16日 09时56分40秒select id from `record` where `token` = '030235009649100169807362390' 
+2019年06月16日 09时56分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '54A0F3CA7C8C1EE7D44185BB748F4422' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '040604099664009902124146949' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = 'F08BEE8023466E0058CC88D7E34211DF' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '040604099663009502116413068' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '99189DB332F8D80EEC4D5152778C98AA' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '040404099149901034501474045' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '030204099649100169813242088' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '030205109649100169813241499' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '030204099649100169813235439' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '030204099649100169813231966' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '040604099649009801966804568' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '030202009649100169813229930' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '040604099649009851955574146' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '040604099649009451955903723' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '040404099149901034531474031' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '040404099149901034531474031' 
+2019年06月17日 11时54分56秒select id from `record` where `token` = '050204099149601003534466702' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '040404099149901034691474037' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 11时54分56秒select id from `record` where `token` = '040404099149901034691474037' 
+2019年06月17日 11时54分56秒select id from `record` where `token` = '030235009649100169807362390' 
+2019年06月17日 11时54分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '030202009668100172047085656' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '040746009668141543193106642' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '040746009668135753859129055' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '040402009168901043586030716' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '040402009168901043586030716' 
+2019年06月17日 14时37分21秒select id from `record` where `token` = '040746009668135213854131457' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '040402009668896241260278207' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '040602009668009752157192153' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '040746009668133853159776647' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '030202009668100172043460051' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '030202009668100172017802825' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '030202009668100172014270356' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '030202009668100172014263567' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '030202009668100172010967591' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分21秒select id from `record` where `token` = '040402009168901043266232012' 
+2019年06月17日 14时37分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分22秒select id from `record` where `token` = '040602009668009102163356343' 
+2019年06月17日 14时37分22秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分22秒select id from `record` where `token` = '030202009668100172003605257' 
+2019年06月17日 14时37分22秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分22秒select id from `record` where `token` = '040602009668009602164475670' 
+2019年06月17日 14时37分22秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分22秒select id from `record` where `token` = '030202009668100172000330412' 
+2019年06月17日 14时37分22秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时37分22秒select id from `record` where `token` = '030202009668102163839538927' 
+2019年06月17日 14时37分22秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '030202009668100172047085656' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '040746009668141543193106642' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '040746009668135753859129055' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '040402009168901043586030716' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '040402009168901043586030716' 
+2019年06月17日 14时45分27秒select id from `record` where `token` = '040746009668135213854131457' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '040402009668896241260278207' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '040602009668009752157192153' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '040746009668133853159776647' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '030202009668100172043460051' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '030202009668100172017802825' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '030202009668100172014270356' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '030202009668100172014263567' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '030202009668100172010967591' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '040402009168901043266232012' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '040602009668009102163356343' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '030202009668100172003605257' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '040602009668009602164475670' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '030202009668100172000330412' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时45分27秒select id from `record` where `token` = '030202009668102163839538927' 
+2019年06月17日 14时45分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 14时46分34秒select id from `record` where `token` = '030202009668100172047085656' 
+2019年06月17日 14时46分34秒select id from `record` where `token` = '040746009668141543193106642' 
+2019年06月17日 14时46分34秒select id from `record` where `token` = '040746009668135753859129055' 
+2019年06月17日 14时46分34秒select id from `record` where `token` = '040402009168901043586030716' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '040402009168901043586030716' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '040746009668135213854131457' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '040402009668896241260278207' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '040602009668009752157192153' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '040746009668133853159776647' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '030202009668100172043460051' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '030202009668100172017802825' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '030202009668100172014270356' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '030202009668100172014263567' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '030202009668100172010967591' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '040402009168901043266232012' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '040602009668009102163356343' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '030202009668100172003605257' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '040602009668009602164475670' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '030202009668100172000330412' 
+2019年06月17日 14时46分35秒select id from `record` where `token` = '030202009668102163839538927' 
+2019年06月17日 17时17分42秒select id from `record` where `token` = '040746009660192953005439658' 
+2019年06月17日 17时17分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分42秒select id from `record` where `token` = '040409019660565233667080781' 
+2019年06月17日 17时17分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分42秒select id from `record` where `token` = '030202009660101197931313688' 
+2019年06月17日 17时17分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分42秒select id from `record` where `token` = '040746009659011502437170356' 
+2019年06月17日 17时17分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分42秒select id from `record` where `token` = '040746009659011223436637754' 
+2019年06月17日 17时17分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分42秒select id from `record` where `token` = '030209089658103187508959104' 
+2019年06月17日 17时17分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分42秒select id from `record` where `token` = '040609089657009302062324886' 
+2019年06月17日 17时17分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分42秒select id from `record` where `token` = '040609089657009052052161647' 
+2019年06月17日 17时17分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分42秒select id from `record` where `token` = '030209089657100170831847399' 
+2019年06月17日 17时17分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分42秒select id from `record` where `token` = '040609089657009702062076404' 
+2019年06月17日 17时17分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分42秒select id from `record` where `token` = '040409089157901054810718019' 
+2019年06月17日 17时17分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分43秒select id from `record` where `token` = '040409089157901054300718024' 
+2019年06月17日 17时17分43秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分43秒select id from `record` where `token` = '040609089657009252051372894' 
+2019年06月17日 17时17分43秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分43秒select id from `record` where `token` = '040409089157901054840718013' 
+2019年06月17日 17时17分43秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分43秒select id from `record` where `token` = '040409089157901054640718015' 
+2019年06月17日 17时17分43秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分43秒select id from `record` where `token` = '040409089157901054800714010' 
+2019年06月17日 17时17分43秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分43秒select id from `record` where `token` = '040609089657009252051470987' 
+2019年06月17日 17时17分43秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分43秒select id from `record` where `token` = '040409089157901054630714016' 
+2019年06月17日 17时17分43秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分43秒select id from `record` where `token` = '040609089657009152051061564' 
+2019年06月17日 17时17分43秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 17时17分43秒select id from `record` where `token` = '030202009657100170831815570' 
+2019年06月17日 17时17分43秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分36秒select id from `record` where `token` = '040746009660192953005439658' 
+2019年06月17日 19时06分36秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分38秒select id from `record` where `token` = '040409019660565233667080781' 
+2019年06月17日 19时06分38秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分39秒select id from `record` where `token` = '030202009660101197931313688' 
+2019年06月17日 19时06分39秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分40秒select id from `record` where `token` = '040746009659011502437170356' 
+2019年06月17日 19时06分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分41秒select id from `record` where `token` = '040746009659011223436637754' 
+2019年06月17日 19时06分41秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分42秒select id from `record` where `token` = '030209089658103187508959104' 
+2019年06月17日 19时06分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分43秒select id from `record` where `token` = '040609089657009302062324886' 
+2019年06月17日 19时06分43秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分44秒select id from `record` where `token` = '040609089657009052052161647' 
+2019年06月17日 19时06分44秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分45秒select id from `record` where `token` = '030209089657100170831847399' 
+2019年06月17日 19时06分45秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分46秒select id from `record` where `token` = '040609089657009702062076404' 
+2019年06月17日 19时06分46秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分47秒select id from `record` where `token` = '040409089157901054810718019' 
+2019年06月17日 19时06分47秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分48秒select id from `record` where `token` = '040409089157901054300718024' 
+2019年06月17日 19时06分48秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分49秒select id from `record` where `token` = '040609089657009252051372894' 
+2019年06月17日 19时06分49秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分51秒select id from `record` where `token` = '040409089157901054840718013' 
+2019年06月17日 19时06分51秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分52秒select id from `record` where `token` = '040409089157901054640718015' 
+2019年06月17日 19时06分52秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分53秒select id from `record` where `token` = '040409089157901054800714010' 
+2019年06月17日 19时06分53秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分54秒select id from `record` where `token` = '040609089657009252051470987' 
+2019年06月17日 19时06分54秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分55秒select id from `record` where `token` = '040409089157901054630714016' 
+2019年06月17日 19时06分55秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分56秒select id from `record` where `token` = '040609089657009152051061564' 
+2019年06月17日 19时06分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时06分57秒select id from `record` where `token` = '030202009657100170831815570' 
+2019年06月17日 19时06分57秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时36分50秒select id from `record` where `token` = '030202009668100172084865325' 
+2019年06月17日 19时36分50秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时36分51秒select id from `record` where `token` = '030202009656103187321230200' 
+2019年06月17日 19时36分51秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时36分52秒select id from `record` where `token` = '030202009656103187321229475' 
+2019年06月17日 19时36分52秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时36分53秒select id from `record` where `token` = '040602009656009552026969268' 
+2019年06月17日 19时36分53秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时36分54秒select id from `record` where `token` = '030202009656103187321229079' 
+2019年06月17日 19时36分54秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时36分55秒select id from `record` where `token` = '040602009656009152027625512' 
+2019年06月17日 19时36分55秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时36分56秒select id from `record` where `token` = '030202009656103187321228667' 
+2019年06月17日 19时36分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时36分57秒select id from `record` where `token` = '040602009656009402038012500' 
+2019年06月17日 19时36分57秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时36分58秒select id from `record` where `token` = '030202009656100170590694408' 
+2019年06月17日 19时36分58秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时36分59秒select id from `record` where `token` = '030202009656103187321225291' 
+2019年06月17日 19时36分59秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时37分00秒select id from `record` where `token` = '040402009150901048775035077' 
+2019年06月17日 19时37分00秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时37分02秒select id from `record` where `token` = '040402009150901048045025098' 
+2019年06月17日 19时37分02秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时37分03秒select id from `record` where `token` = '040402009150901048045025098' 
+2019年06月17日 19时37分04秒select id from `record` where `token` = '040602009650009251966343632' 
+2019年06月17日 19时37分04秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时37分05秒select id from `record` where `token` = '040402009150901048215025100' 
+2019年06月17日 19时37分05秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时37分06秒select id from `record` where `token` = '040402009150901048215025100' 
+2019年06月17日 19时37分07秒select id from `record` where `token` = '050202009150601003574071025' 
+2019年06月17日 19时37分07秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时37分08秒select id from `record` where `token` = '030202009650100169928421859' 
+2019年06月17日 19时37分08秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时37分09秒select id from `record` where `token` = '040402009150901048654774655' 
+2019年06月17日 19时37分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时37分10秒select id from `record` where `token` = '040402009150901048654774655' 
+2019年06月17日 19时47分29秒select id from `record` where `token` = '030202009668100172084879680' 
+2019年06月17日 19时47分29秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时47分30秒select id from `record` where `token` = '030202009668100172084865325' 
+2019年06月17日 19时47分31秒select id from `record` where `token` = '030202009656103187321230200' 
+2019年06月17日 19时47分32秒select id from `record` where `token` = '030202009656103187321229475' 
+2019年06月17日 19时47分33秒select id from `record` where `token` = '040602009656009552026969268' 
+2019年06月17日 19时47分34秒select id from `record` where `token` = '030202009656103187321229079' 
+2019年06月17日 19时47分35秒select id from `record` where `token` = '040602009656009152027625512' 
+2019年06月17日 19时47分36秒select id from `record` where `token` = '030202009656103187321228667' 
+2019年06月17日 19时47分37秒select id from `record` where `token` = '040602009656009402038012500' 
+2019年06月17日 19时47分38秒select id from `record` where `token` = '030202009656100170590694408' 
+2019年06月17日 19时47分39秒select id from `record` where `token` = '030202009656103187321225291' 
+2019年06月17日 19时47分40秒select id from `record` where `token` = '040402009150901048775035077' 
+2019年06月17日 19时47分41秒select id from `record` where `token` = '040402009150901048045025098' 
+2019年06月17日 19时47分42秒select id from `record` where `token` = '040402009150901048045025098' 
+2019年06月17日 19时47分43秒select id from `record` where `token` = '040602009650009251966343632' 
+2019年06月17日 19时47分44秒select id from `record` where `token` = '040402009150901048215025100' 
+2019年06月17日 19时47分45秒select id from `record` where `token` = '040402009150901048215025100' 
+2019年06月17日 19时47分46秒select id from `record` where `token` = '050202009150601003574071025' 
+2019年06月17日 19时47分47秒select id from `record` where `token` = '030202009650100169928421859' 
+2019年06月17日 19时47分48秒select id from `record` where `token` = '040402009150901048654774655' 
+2019年06月17日 19时50分28秒select id from `record` where `token` = '030202009668102163912764515' 
+2019年06月17日 19时50分28秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时50分30秒select id from `record` where `token` = '030202009668100172084879680' 
+2019年06月17日 19时50分31秒select id from `record` where `token` = '030202009668100172084865325' 
+2019年06月17日 19时50分32秒select id from `record` where `token` = '030202009656103187321230200' 
+2019年06月17日 19时50分33秒select id from `record` where `token` = '030202009656103187321229475' 
+2019年06月17日 19时50分34秒select id from `record` where `token` = '040602009656009552026969268' 
+2019年06月17日 19时50分35秒select id from `record` where `token` = '030202009656103187321229079' 
+2019年06月17日 19时50分36秒select id from `record` where `token` = '040602009656009152027625512' 
+2019年06月17日 19时50分37秒select id from `record` where `token` = '030202009656103187321228667' 
+2019年06月17日 19时50分38秒select id from `record` where `token` = '040602009656009402038012500' 
+2019年06月17日 19时50分39秒select id from `record` where `token` = '030202009656100170590694408' 
+2019年06月17日 19时50分40秒select id from `record` where `token` = '030202009656103187321225291' 
+2019年06月17日 19时50分41秒select id from `record` where `token` = '040402009150901048775035077' 
+2019年06月17日 19时50分42秒select id from `record` where `token` = '040402009150901048045025098' 
+2019年06月17日 19时50分43秒select id from `record` where `token` = '040402009150901048045025098' 
+2019年06月17日 19时50分44秒select id from `record` where `token` = '040602009650009251966343632' 
+2019年06月17日 19时50分45秒select id from `record` where `token` = '040402009150901048215025100' 
+2019年06月17日 19时50分46秒select id from `record` where `token` = '040402009150901048215025100' 
+2019年06月17日 19时50分47秒select id from `record` where `token` = '050202009150601003574071025' 
+2019年06月17日 19时50分48秒select id from `record` where `token` = '030202009650100169928421859' 
+2019年06月17日 19时57分05秒select id from `record` where `token` = '030331009668100584569620933' 
+2019年06月17日 19时57分05秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 19时58分35秒select id from `record` where `token` = '040402009668743240621850030' 
+2019年06月17日 19时58分35秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 20时16分31秒select id from `record` where `token` = '040402009668403241950341659' 
+2019年06月17日 20时16分31秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 20时27分59秒select id from `record` where `token` = '040402009668812239263784867' 
+2019年06月17日 20时27分59秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 20时29分25秒select id from `record` where `token` = '040402009668615241950535973' 
+2019年06月17日 20时29分25秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 20时30分28秒select id from `record` where `token` = '040402009668757239351984269' 
+2019年06月17日 20时30分28秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 20时47分26秒select id from `record` where `token` = '040402009668846239860437190' 
+2019年06月17日 20时47分26秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 20时54分43秒select id from `record` where `token` = '040402009668846239860437190' 
+2019年06月17日 20时54分44秒select id from `record` where `token` = '040402009668757239351984269' 
+2019年06月17日 20时54分45秒select id from `record` where `token` = '040402009668615241950535973' 
+2019年06月17日 20时54分46秒select id from `record` where `token` = '040402009668812239263784867' 
+2019年06月17日 20时54分47秒select id from `record` where `token` = '040402009668403241950341659' 
+2019年06月17日 20时54分48秒select id from `record` where `token` = '040402009668743240621850030' 
+2019年06月17日 20时54分49秒select id from `record` where `token` = '030331009668100584569620933' 
+2019年06月17日 20时54分50秒select id from `record` where `token` = '030202009668102163912764515' 
+2019年06月17日 20时54分51秒select id from `record` where `token` = '030202009668100172084879680' 
+2019年06月17日 20时54分52秒select id from `record` where `token` = '030202009668100172084865325' 
+2019年06月17日 20时54分53秒select id from `record` where `token` = '030202009656103187321230200' 
+2019年06月17日 20时54分54秒select id from `record` where `token` = '030202009656103187321229475' 
+2019年06月17日 20时54分55秒select id from `record` where `token` = '040602009656009552026969268' 
+2019年06月17日 20时54分56秒select id from `record` where `token` = '030202009656103187321229079' 
+2019年06月17日 20时54分57秒select id from `record` where `token` = '040602009656009152027625512' 
+2019年06月17日 20时54分58秒select id from `record` where `token` = '030202009656103187321228667' 
+2019年06月17日 20时54分59秒select id from `record` where `token` = '040602009656009402038012500' 
+2019年06月17日 20时55分00秒select id from `record` where `token` = '030202009656100170590694408' 
+2019年06月17日 20时55分01秒select id from `record` where `token` = '030202009656103187321225291' 
+2019年06月17日 20时55分02秒select id from `record` where `token` = '040402009150901048775035077' 
+2019年06月17日 20时57分29秒select id from `record` where `token` = '040402009668893239581668166' 
+2019年06月17日 20时57分29秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 21时03分28秒select id from `record` where `token` = '040402009668456240860546775' 
+2019年06月17日 21时03分28秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 21时03分29秒select id from `record` where `token` = '040402009668656240468913771' 
+2019年06月17日 21时03分29秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 21时11分26秒select id from `record` where `token` = '040402009668825239352507901' 
+2019年06月17日 21时11分26秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 21时16分53秒select id from `record` where `token` = '030202009668100172092384830' 
+2019年06月17日 21时16分53秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 21时16分54秒select id from `record` where `token` = '040402009668825239352507901' 
+2019年06月17日 21时16分55秒select id from `record` where `token` = '040402009668456240860546775' 
+2019年06月17日 21时16分56秒select id from `record` where `token` = '040402009668656240468913771' 
+2019年06月17日 21时16分57秒select id from `record` where `token` = '040402009668893239581668166' 
+2019年06月17日 21时16分58秒select id from `record` where `token` = '040402009668846239860437190' 
+2019年06月17日 21时16分59秒select id from `record` where `token` = '040402009668757239351984269' 
+2019年06月17日 21时17分00秒select id from `record` where `token` = '040402009668615241950535973' 
+2019年06月17日 21时17分01秒select id from `record` where `token` = '040402009668812239263784867' 
+2019年06月17日 21时17分02秒select id from `record` where `token` = '040402009668403241950341659' 
+2019年06月17日 21时17分03秒select id from `record` where `token` = '040402009668743240621850030' 
+2019年06月17日 21时17分04秒select id from `record` where `token` = '030331009668100584569620933' 
+2019年06月17日 21时17分05秒select id from `record` where `token` = '030202009668102163912764515' 
+2019年06月17日 21时17分06秒select id from `record` where `token` = '030202009668100172084879680' 
+2019年06月17日 21时17分07秒select id from `record` where `token` = '030202009668100172084865325' 
+2019年06月17日 21时17分08秒select id from `record` where `token` = '030202009656103187321230200' 
+2019年06月17日 21时17分09秒select id from `record` where `token` = '030202009656103187321229475' 
+2019年06月17日 21时17分10秒select id from `record` where `token` = '040602009656009552026969268' 
+2019年06月17日 21时17分11秒select id from `record` where `token` = '030202009656103187321229079' 
+2019年06月17日 21时17分12秒select id from `record` where `token` = '040602009656009152027625512' 
+2019年06月17日 21时23分51秒select id from `record` where `token` = '040602009668009852160702218' 
+2019年06月17日 21时23分51秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 21时46分38秒select id from `record` where `token` = '040402009668705239352838418' 
+2019年06月17日 21时46分38秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 21时54分57秒select id from `record` where `token` = '040402009668614233333089282' 
+2019年06月17日 21时54分57秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 21时54分58秒select id from `record` where `token` = '040402009668843233333087032' 
+2019年06月17日 21时54分58秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 21时56分21秒select id from `record` where `token` = '040402009668830228078604970' 
+2019年06月17日 21时56分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 21时56分22秒select id from `record` where `token` = '040402009668549228159532274' 
+2019年06月17日 21时56分22秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 21时57分21秒select id from `record` where `token` = '040402009668768235142570893' 
+2019年06月17日 21时57分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时00分20秒select id from `record` where `token` = '040402009668774233678934684' 
+2019年06月17日 22时00分20秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时02分19秒select id from `record` where `token` = '040746009668220129292061856' 
+2019年06月17日 22时02分19秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时03分20秒select id from `record` where `token` = '040746009668220229292631458' 
+2019年06月17日 22时03分20秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时06分42秒select id from `record` where `token` = '030202009668100172096245037' 
+2019年06月17日 22时06分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType )
+2019年06月17日 22时07分41秒select id from `record` where `token` = '040402009668786235608012297' 
+2019年06月17日 22时07分41秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时11分21秒select id from `record` where `token` = '040402009668786235608012297' 
+2019年06月17日 22时11分22秒select id from `record` where `token` = '030202009668100172096245037' 
+2019年06月17日 22时11分23秒select id from `record` where `token` = '040746009668220229292631458' 
+2019年06月17日 22时11分24秒select id from `record` where `token` = '040746009668220129292061856' 
+2019年06月17日 22时11分25秒select id from `record` where `token` = '040402009668774233678934684' 
+2019年06月17日 22时11分26秒select id from `record` where `token` = '040402009668768235142570893' 
+2019年06月17日 22时11分27秒select id from `record` where `token` = '040402009668830228078604970' 
+2019年06月17日 22时11分28秒select id from `record` where `token` = '040402009668549228159532274' 
+2019年06月17日 22时11分29秒select id from `record` where `token` = '040402009668614233333089282' 
+2019年06月17日 22时11分30秒select id from `record` where `token` = '040402009668843233333087032' 
+2019年06月17日 22时11分31秒select id from `record` where `token` = '040402009668705239352838418' 
+2019年06月17日 22时11分32秒select id from `record` where `token` = '040602009668009852160702218' 
+2019年06月17日 22时11分33秒select id from `record` where `token` = '030202009668100172092384830' 
+2019年06月17日 22时11分34秒select id from `record` where `token` = '040402009668825239352507901' 
+2019年06月17日 22时11分35秒select id from `record` where `token` = '040402009668456240860546775' 
+2019年06月17日 22时11分36秒select id from `record` where `token` = '040402009668656240468913771' 
+2019年06月17日 22时11分37秒select id from `record` where `token` = '040402009668893239581668166' 
+2019年06月17日 22时11分38秒select id from `record` where `token` = '040402009668846239860437190' 
+2019年06月17日 22时11分39秒select id from `record` where `token` = '040402009668757239351984269' 
+2019年06月17日 22时11分40秒select id from `record` where `token` = '040402009668615241950535973' 
+2019年06月17日 22时12分25秒select id from `record` where `token` = '040746009668221111297314356' 
+2019年06月17日 22时12分25秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时18分26秒select id from `record` where `token` = '040402009668609232481361532' 
+2019年06月17日 22时18分26秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时20分19秒select id from `record` where `token` = '040746009668221959301963950' 
+2019年06月17日 22时20分19秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时21分20秒select id from `record` where `token` = '040602009668009102172575190' 
+2019年06月17日 22时21分20秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时25分20秒select id from `record` where `token` = '040402009668814233430091601' 
+2019年06月17日 22时25分20秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时25分21秒select id from `record` where `token` = '040746009668222411621406244' 
+2019年06月17日 22时25分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时30分20秒select id from `record` where `token` = '040746009668222931306591358' 
+2019年06月17日 22时30分20秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时31分20秒select id from `record` where `token` = '040602009668009902172658120' 
+2019年06月17日 22时31分20秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时32分20秒select id from `record` where `token` = '040402009668697228430759571' 
+2019年06月17日 22时32分20秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时40分21秒select id from `record` where `token` = '040746009668223921311026150' 
+2019年06月17日 22时40分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时42分23秒select id from `record` where `token` = '040402009668401237871794192' 
+2019年06月17日 22时42分23秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时46分39秒select id from `record` where `token` = '030202009668100172099136373' 
+2019年06月17日 22时46分39秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时48分50秒select id from `record` where `token` = '040402009668628235255030412' 
+2019年06月17日 22时48分50秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时48分51秒select id from `record` where `token` = '040602009668009752161565576' 
+2019年06月17日 22时48分51秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时50分57秒select id from `record` where `token` = '040602009668009352161098971' 
+2019年06月17日 22时50分57秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时50分58秒select id from `record` where `token` = '040746009668224951315358852' 
+2019年06月17日 22时50分58秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时52分42秒select id from `record` where `token` = '040402009668724236872429873' 
+2019年06月17日 22时52分42秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时55分01秒select id from `record` where `token` = '040602009668009952161478030' 
+2019年06月17日 22时55分01秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时55分02秒select id from `record` where `token` = '040602009668009002173186146' 
+2019年06月17日 22时55分02秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 22时59分41秒select id from `record` where `token` = '040746009668225901318407650' 
+2019年06月17日 22时59分41秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时00分40秒select id from `record` where `token` = '030321029668106530802865190' 
+2019年06月17日 23时00分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时10分24秒select id from `record` where `token` = '040402009168901048966424041' 
+2019年06月17日 23时10分24秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时10分26秒select id from `record` where `token` = '040746009669230901321055356' 
+2019年06月17日 23时10分26秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时10分27秒select id from `record` where `token` = '040402009668779228838181445' 
+2019年06月17日 23时10分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时10分28秒select id from `record` where `token` = '030321029668106530802865190' 
+2019年06月17日 23时10分29秒select id from `record` where `token` = '040746009668225901318407650' 
+2019年06月17日 23时10分30秒select id from `record` where `token` = '040602009668009952161478030' 
+2019年06月17日 23时10分31秒select id from `record` where `token` = '040602009668009002173186146' 
+2019年06月17日 23时10分32秒select id from `record` where `token` = '040402009668724236872429873' 
+2019年06月17日 23时10分33秒select id from `record` where `token` = '040602009668009352161098971' 
+2019年06月17日 23时10分34秒select id from `record` where `token` = '040746009668224951315358852' 
+2019年06月17日 23时10分35秒select id from `record` where `token` = '040402009668628235255030412' 
+2019年06月17日 23时10分36秒select id from `record` where `token` = '040602009668009752161565576' 
+2019年06月17日 23时10分37秒select id from `record` where `token` = '030202009668100172099136373' 
+2019年06月17日 23时10分38秒select id from `record` where `token` = '040402009668401237871794192' 
+2019年06月17日 23时10分39秒select id from `record` where `token` = '040746009668223921311026150' 
+2019年06月17日 23时10分40秒select id from `record` where `token` = '040402009668697228430759571' 
+2019年06月17日 23时10分41秒select id from `record` where `token` = '040602009668009902172658120' 
+2019年06月17日 23时10分42秒select id from `record` where `token` = '040746009668222931306591358' 
+2019年06月17日 23时10分43秒select id from `record` where `token` = '040402009668814233430091601' 
+2019年06月17日 23时10分44秒select id from `record` where `token` = '040746009668222411621406244' 
+2019年06月17日 23时18分23秒select id from `record` where `token` = '040402009668779232603515977' 
+2019年06月17日 23时18分23秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时20分23秒select id from `record` where `token` = '040402009668652236931164939' 
+2019年06月17日 23时20分23秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时23分26秒select id from `record` where `token` = '040746009669232301325449259' 
+2019年06月17日 23时23分26秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时23分27秒select id from `record` where `token` = '040402009668442236718916472' 
+2019年06月17日 23时23分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时23分28秒select id from `record` where `token` = '040602009668009352161551947' 
+2019年06月17日 23时23分28秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时25分23秒select id from `record` where `token` = '040746009669232422643266447' 
+2019年06月17日 23时25分23秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时27分24秒select id from `record` where `token` = '040402009668820235143272479' 
+2019年06月17日 23时27分24秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时29分24秒select id from `record` where `token` = '040402009668678235767224718' 
+2019年06月17日 23时29分24秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时31分55秒select id from `record` where `token` = '030202009668100172102426134' 
+2019年06月17日 23时31分55秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时32分40秒select id from `record` where `token` = '040602009668009852161643395' 
+2019年06月17日 23时32分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时33分40秒select id from `record` where `token` = '040402009668760228838337097' 
+2019年06月17日 23时33分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月17日 23时52分38秒select id from `record` where `token` = '040746009669235152333413952' 
+2019年06月17日 23时52分38秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时05分14秒select id from `record` where `token` = '040746009669000351336510458' 
+2019年06月18日 00时05分14秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时05分16秒select id from `record` where `token` = '040602009669009452162575579' 
+2019年06月18日 00时05分16秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时05分17秒select id from `record` where `token` = '040746009669235152333413952' 
+2019年06月18日 00时05分18秒select id from `record` where `token` = '040402009668760228838337097' 
+2019年06月18日 00时05分19秒select id from `record` where `token` = '040602009668009852161643395' 
+2019年06月18日 00时05分20秒select id from `record` where `token` = '030202009668100172102426134' 
+2019年06月18日 00时05分21秒select id from `record` where `token` = '040402009668678235767224718' 
+2019年06月18日 00时05分22秒select id from `record` where `token` = '040402009668820235143272479' 
+2019年06月18日 00时05分23秒select id from `record` where `token` = '040746009669232422643266447' 
+2019年06月18日 00时05分24秒select id from `record` where `token` = '040746009669232301325449259' 
+2019年06月18日 00时05分25秒select id from `record` where `token` = '040402009668442236718916472' 
+2019年06月18日 00时05分26秒select id from `record` where `token` = '040602009668009352161551947' 
+2019年06月18日 00时05分27秒select id from `record` where `token` = '040402009668652236931164939' 
+2019年06月18日 00时05分28秒select id from `record` where `token` = '040402009668779232603515977' 
+2019年06月18日 00时05分29秒select id from `record` where `token` = '040402009168901048966424041' 
+2019年06月18日 00时05分30秒select id from `record` where `token` = '040746009669230901321055356' 
+2019年06月18日 00时05分31秒select id from `record` where `token` = '040402009668779228838181445' 
+2019年06月18日 00时05分32秒select id from `record` where `token` = '030321029668106530802865190' 
+2019年06月18日 00时05分33秒select id from `record` where `token` = '040746009668225901318407650' 
+2019年06月18日 00时05分34秒select id from `record` where `token` = '040602009668009952161478030' 
+2019年06月18日 00时07分55秒select id from `record` where `token` = '030202009669100172105656933' 
+2019年06月18日 00时07分55秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时14分39秒select id from `record` where `token` = '030321029669106530814336170' 
+2019年06月18日 00时14分39秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时15分38秒select id from `record` where `token` = '040746009669001443657169649' 
+2019年06月18日 00时15分38秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时20分38秒select id from `record` where `token` = '040402009669506236719203756' 
+2019年06月18日 00时20分38秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时22分40秒select id from `record` where `token` = '040402009669753233430801596' 
+2019年06月18日 00时22分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时25分38秒select id from `record` where `token` = '040402009669762228431426814' 
+2019年06月18日 00时25分38秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时27分39秒select id from `record` where `token` = '040746009669002708343317359' 
+2019年06月18日 00时27分39秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时31分51秒select id from `record` where `token` = '040746009669003101661819348' 
+2019年06月18日 00时31分51秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时35分38秒select id from `record` where `token` = '040746009669003440345332157' 
+2019年06月18日 00时35分38秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时35分39秒select id from `record` where `token` = '040602009669009902173492568' 
+2019年06月18日 00时35分39秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时40分37秒select id from `record` where `token` = '040602009669009052162609250' 
+2019年06月18日 00时40分37秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType )
+2019年06月18日 00时46分38秒select id from `record` where `token` = '040402009669473228079685762' 
+2019年06月18日 00时46分38秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时48分37秒select id from `record` where `token` = '040402009669592232287030585' 
+2019年06月18日 00时48分37秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时49分39秒select id from `record` where `token` = '040402009669689228990768465' 
+2019年06月18日 00时49分39秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 00时57分53秒select id from `record` where `token` = '040402009669689228990768465' 
+2019年06月18日 00时57分54秒select id from `record` where `token` = '040402009669592232287030585' 
+2019年06月18日 00时57分55秒select id from `record` where `token` = '040402009669473228079685762' 
+2019年06月18日 00时57分56秒select id from `record` where `token` = '040602009669009052162609250' 
+2019年06月18日 00时57分57秒select id from `record` where `token` = '040746009669003440345332157' 
+2019年06月18日 00时57分59秒select id from `record` where `token` = '040602009669009902173492568' 
+2019年06月18日 00时58分00秒select id from `record` where `token` = '040746009669003101661819348' 
+2019年06月18日 00时58分01秒select id from `record` where `token` = '040746009669002708343317359' 
+2019年06月18日 00时58分02秒select id from `record` where `token` = '040402009669762228431426814' 
+2019年06月18日 00时58分03秒select id from `record` where `token` = '040402009669753233430801596' 
+2019年06月18日 00时58分04秒select id from `record` where `token` = '040402009669506236719203756' 
+2019年06月18日 00时58分05秒select id from `record` where `token` = '040746009669001443657169649' 
+2019年06月18日 00时58分06秒select id from `record` where `token` = '030321029669106530814336170' 
+2019年06月18日 00时58分07秒select id from `record` where `token` = '030202009669100172105656933' 
+2019年06月18日 00时58分08秒select id from `record` where `token` = '040746009669000351336510458' 
+2019年06月18日 00时58分09秒select id from `record` where `token` = '040602009669009452162575579' 
+2019年06月18日 00时58分10秒select id from `record` where `token` = '040746009669235152333413952' 
+2019年06月18日 00时58分11秒select id from `record` where `token` = '040402009668760228838337097' 
+2019年06月18日 00时58分12秒select id from `record` where `token` = '040602009668009852161643395' 
+2019年06月18日 00时58分13秒select id from `record` where `token` = '030202009668100172102426134' 
+2019年06月18日 01时02分05秒select id from `record` where `token` = '040402009669493235383258687' 
+2019年06月18日 01时02分05秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时02分06秒select id from `record` where `token` = '040402009669689228990768465' 
+2019年06月18日 01时02分07秒select id from `record` where `token` = '040402009669592232287030585' 
+2019年06月18日 01时02分08秒select id from `record` where `token` = '040402009669473228079685762' 
+2019年06月18日 01时02分09秒select id from `record` where `token` = '040602009669009052162609250' 
+2019年06月18日 01时02分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时02分10秒select id from `record` where `token` = '040746009669003440345332157' 
+2019年06月18日 01时02分11秒select id from `record` where `token` = '040602009669009902173492568' 
+2019年06月18日 01时02分12秒select id from `record` where `token` = '040746009669003101661819348' 
+2019年06月18日 01时02分13秒select id from `record` where `token` = '040746009669002708343317359' 
+2019年06月18日 01时02分14秒select id from `record` where `token` = '040402009669762228431426814' 
+2019年06月18日 01时02分15秒select id from `record` where `token` = '040402009669753233430801596' 
+2019年06月18日 01时02分16秒select id from `record` where `token` = '040402009669506236719203756' 
+2019年06月18日 01时02分17秒select id from `record` where `token` = '040746009669001443657169649' 
+2019年06月18日 01时02分18秒select id from `record` where `token` = '030321029669106530814336170' 
+2019年06月18日 01时02分19秒select id from `record` where `token` = '030202009669100172105656933' 
+2019年06月18日 01时02分20秒select id from `record` where `token` = '040746009669000351336510458' 
+2019年06月18日 01时02分21秒select id from `record` where `token` = '040602009669009452162575579' 
+2019年06月18日 01时02分22秒select id from `record` where `token` = '040746009669235152333413952' 
+2019年06月18日 01时02分23秒select id from `record` where `token` = '040402009668760228838337097' 
+2019年06月18日 01时02分24秒select id from `record` where `token` = '040602009668009852161643395' 
+2019年06月18日 01时09分01秒select id from `record` where `token` = '030202009669100172108154621' 
+2019年06月18日 01时09分01秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时12分59秒select id from `record` where `token` = '040746009669011200354432250' 
+2019年06月18日 01时12分59秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时14分00秒select id from `record` where `token` = '040402009669690232533587868' 
+2019年06月18日 01时14分00秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时19分58秒select id from `record` where `token` = '040746009669011912673254542' 
+2019年06月18日 01时19分58秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时22分59秒select id from `record` where `token` = '040402009669813228334153290' 
+2019年06月18日 01时22分59秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时27分57秒select id from `record` where `token` = '040746009669012651357310258' 
+2019年06月18日 01时27分57秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时32分09秒select id from `record` where `token` = '040602009669009452162461232' 
+2019年06月18日 01时32分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时32分10秒select id from `record` where `token` = '040746009669013112675511142' 
+2019年06月18日 01时32分10秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时42分08秒select id from `record` where `token` = '040602009669009002173552999' 
+2019年06月18日 01时42分08秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时42分09秒select id from `record` where `token` = '040746009669014111677368641' 
+2019年06月18日 01时42分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 01时45分56秒select id from `record` where `token` = '030202009669100172108179891' 
+2019年06月18日 01时45分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType )
+2019年06月18日 01时50分26秒select id from `record` where `token` = '030202009669100172108179891' 
+2019年06月18日 01时50分27秒select id from `record` where `token` = '040602009669009002173552999' 
+2019年06月18日 01时50分28秒select id from `record` where `token` = '040746009669014111677368641' 
+2019年06月18日 01时50分29秒select id from `record` where `token` = '040602009669009452162461232' 
+2019年06月18日 01时50分30秒select id from `record` where `token` = '040746009669013112675511142' 
+2019年06月18日 01时50分31秒select id from `record` where `token` = '040746009669012651357310258' 
+2019年06月18日 01时50分32秒select id from `record` where `token` = '040402009669813228334153290' 
+2019年06月18日 01时50分33秒select id from `record` where `token` = '040746009669011912673254542' 
+2019年06月18日 01时50分34秒select id from `record` where `token` = '040402009669690232533587868' 
+2019年06月18日 01时50分35秒select id from `record` where `token` = '040746009669011200354432250' 
+2019年06月18日 01时50分36秒select id from `record` where `token` = '030202009669100172108154621' 
+2019年06月18日 01时50分37秒select id from `record` where `token` = '040402009669493235383258687' 
+2019年06月18日 01时50分38秒select id from `record` where `token` = '040402009669689228990768465' 
+2019年06月18日 01时50分39秒select id from `record` where `token` = '040402009669592232287030585' 
+2019年06月18日 01时50分40秒select id from `record` where `token` = '040402009669473228079685762' 
+2019年06月18日 01时50分41秒select id from `record` where `token` = '040602009669009052162609250' 
+2019年06月18日 01时50分42秒select id from `record` where `token` = '040746009669003440345332157' 
+2019年06月18日 01时50分43秒select id from `record` where `token` = '040602009669009902173492568' 
+2019年06月18日 01时50分44秒select id from `record` where `token` = '040746009669003101661819348' 
+2019年06月18日 01时50分45秒select id from `record` where `token` = '040746009669002708343317359' 
+2019年06月18日 01时57分48秒select id from `record` where `token` = '030202009669100172108179891' 
+2019年06月18日 01时57分49秒select id from `record` where `token` = '040602009669009002173552999' 
+2019年06月18日 01时57分50秒select id from `record` where `token` = '040746009669014111677368641' 
+2019年06月18日 01时57分51秒select id from `record` where `token` = '040602009669009452162461232' 
+2019年06月18日 01时57分52秒select id from `record` where `token` = '040746009669013112675511142' 
+2019年06月18日 01时57分53秒select id from `record` where `token` = '040746009669012651357310258' 
+2019年06月18日 01时57分54秒select id from `record` where `token` = '040402009669813228334153290' 
+2019年06月18日 01时57分55秒select id from `record` where `token` = '040746009669011912673254542' 
+2019年06月18日 01时57分56秒select id from `record` where `token` = '040402009669690232533587868' 
+2019年06月18日 01时57分57秒select id from `record` where `token` = '040746009669011200354432250' 
+2019年06月18日 01时57分58秒select id from `record` where `token` = '030202009669100172108154621' 
+2019年06月18日 01时57分59秒select id from `record` where `token` = '040402009669493235383258687' 
+2019年06月18日 01时58分00秒select id from `record` where `token` = '040402009669689228990768465' 
+2019年06月18日 01时58分01秒select id from `record` where `token` = '040402009669592232287030585' 
+2019年06月18日 01时58分02秒select id from `record` where `token` = '040402009669473228079685762' 
+2019年06月18日 01时58分03秒select id from `record` where `token` = '040602009669009052162609250' 
+2019年06月18日 01时58分04秒select id from `record` where `token` = '040746009669003440345332157' 
+2019年06月18日 01时58分05秒select id from `record` where `token` = '040602009669009902173492568' 
+2019年06月18日 01时58分06秒select id from `record` where `token` = '040746009669003101661819348' 
+2019年06月18日 01时58分07秒select id from `record` where `token` = '040746009669002708343317359' 
+2019年06月18日 02时00分39秒select id from `record` where `token` = '040402009669460235255831198' 
+2019年06月18日 02时00分39秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 02时00分41秒select id from `record` where `token` = '030202009669100172108179891' 
+2019年06月18日 02时00分42秒select id from `record` where `token` = '040602009669009002173552999' 
+2019年06月18日 02时00分43秒select id from `record` where `token` = '040746009669014111677368641' 
+2019年06月18日 02时00分44秒select id from `record` where `token` = '040602009669009452162461232' 
+2019年06月18日 02时00分45秒select id from `record` where `token` = '040746009669013112675511142' 
+2019年06月18日 02时00分46秒select id from `record` where `token` = '040746009669012651357310258' 
+2019年06月18日 02时00分47秒select id from `record` where `token` = '040402009669813228334153290' 
+2019年06月18日 02时00分48秒select id from `record` where `token` = '040746009669011912673254542' 
+2019年06月18日 02时00分49秒select id from `record` where `token` = '040402009669690232533587868' 
+2019年06月18日 02时00分50秒select id from `record` where `token` = '040746009669011200354432250' 
+2019年06月18日 02时00分51秒select id from `record` where `token` = '030202009669100172108154621' 
+2019年06月18日 02时00分52秒select id from `record` where `token` = '040402009669493235383258687' 
+2019年06月18日 02时00分53秒select id from `record` where `token` = '040402009669689228990768465' 
+2019年06月18日 02时00分54秒select id from `record` where `token` = '040402009669592232287030585' 
+2019年06月18日 02时00分55秒select id from `record` where `token` = '040402009669473228079685762' 
+2019年06月18日 02时00分56秒select id from `record` where `token` = '040602009669009052162609250' 
+2019年06月18日 02时00分57秒select id from `record` where `token` = '040746009669003440345332157' 
+2019年06月18日 02时00分58秒select id from `record` where `token` = '040602009669009902173492568' 
+2019年06月18日 02时00分59秒select id from `record` where `token` = '040746009669003101661819348' 
+2019年06月18日 02时07分39秒select id from `record` where `token` = '040746009669020642681863245' 
+2019年06月18日 02时07分39秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 02时41分39秒select id from `record` where `token` = '040402009669455236194461144' 
+2019年06月18日 02时41分39秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 02时54分11秒select id from `record` where `token` = '040402009669455236194461144' 
+2019年06月18日 02时54分12秒select id from `record` where `token` = '040746009669020642681863245' 
+2019年06月18日 02时54分13秒select id from `record` where `token` = '040402009669460235255831198' 
+2019年06月18日 02时54分14秒select id from `record` where `token` = '030202009669100172108179891' 
+2019年06月18日 02时54分15秒select id from `record` where `token` = '040602009669009002173552999' 
+2019年06月18日 02时54分16秒select id from `record` where `token` = '040746009669014111677368641' 
+2019年06月18日 02时54分17秒select id from `record` where `token` = '040602009669009452162461232' 
+2019年06月18日 02时54分18秒select id from `record` where `token` = '040746009669013112675511142' 
+2019年06月18日 02时54分19秒select id from `record` where `token` = '040746009669012651357310258' 
+2019年06月18日 02时54分20秒select id from `record` where `token` = '040402009669813228334153290' 
+2019年06月18日 02时54分21秒select id from `record` where `token` = '040746009669011912673254542' 
+2019年06月18日 02时54分22秒select id from `record` where `token` = '040402009669690232533587868' 
+2019年06月18日 02时54分23秒select id from `record` where `token` = '040746009669011200354432250' 
+2019年06月18日 02时54分24秒select id from `record` where `token` = '030202009669100172108154621' 
+2019年06月18日 02时54分25秒select id from `record` where `token` = '040402009669493235383258687' 
+2019年06月18日 02时54分26秒select id from `record` where `token` = '040402009669689228990768465' 
+2019年06月18日 02时54分27秒select id from `record` where `token` = '040402009669592232287030585' 
+2019年06月18日 02时54分28秒select id from `record` where `token` = '040402009669473228079685762' 
+2019年06月18日 02时54分29秒select id from `record` where `token` = '040602009669009052162609250' 
+2019年06月18日 02时54分30秒select id from `record` where `token` = '040746009669003440345332157' 
+2019年06月18日 03时11分11秒select id from `record` where `token` = '040402009669815232533780935' 
+2019年06月18日 03时11分11秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时12分09秒select id from `record` where `token` = '040402009669824235383489225' 
+2019年06月18日 03时12分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时14分10秒select id from `record` where `token` = '040402009669543237932728152' 
+2019年06月18日 03时14分10秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时15分09秒select id from `record` where `token` = '040746009669031413374127158' 
+2019年06月18日 03时15分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时17分08秒select id from `record` where `token` = '040746009669031601374250455' 
+2019年06月18日 03时17分08秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时36分09秒select id from `record` where `token` = '040402009669455236194518471' 
+2019年06月18日 03时36分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时41分09秒select id from `record` where `token` = '040746009669034002693474149' 
+2019年06月18日 03时41分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时45分32秒select id from `record` where `token` = '040746009669034002693474149' 
+2019年06月18日 03时45分33秒select id from `record` where `token` = '040402009669455236194518471' 
+2019年06月18日 03时45分34秒select id from `record` where `token` = '040746009669031601374250455' 
+2019年06月18日 03时45分35秒select id from `record` where `token` = '040746009669031413374127158' 
+2019年06月18日 03时45分36秒select id from `record` where `token` = '040402009669543237932728152' 
+2019年06月18日 03时45分37秒select id from `record` where `token` = '040402009669824235383489225' 
+2019年06月18日 03时45分38秒select id from `record` where `token` = '040402009669815232533780935' 
+2019年06月18日 03时45分39秒select id from `record` where `token` = '040402009669455236194461144' 
+2019年06月18日 03时45分40秒select id from `record` where `token` = '040746009669020642681863245' 
+2019年06月18日 03时45分41秒select id from `record` where `token` = '040402009669460235255831198' 
+2019年06月18日 03时45分42秒select id from `record` where `token` = '030202009669100172108179891' 
+2019年06月18日 03时45分43秒select id from `record` where `token` = '040602009669009002173552999' 
+2019年06月18日 03时45分44秒select id from `record` where `token` = '040746009669014111677368641' 
+2019年06月18日 03时45分45秒select id from `record` where `token` = '040602009669009452162461232' 
+2019年06月18日 03时45分46秒select id from `record` where `token` = '040746009669013112675511142' 
+2019年06月18日 03时45分47秒select id from `record` where `token` = '040746009669012651357310258' 
+2019年06月18日 03时45分48秒select id from `record` where `token` = '040402009669813228334153290' 
+2019年06月18日 03时45分49秒select id from `record` where `token` = '040746009669011912673254542' 
+2019年06月18日 03时45分50秒select id from `record` where `token` = '040402009669690232533587868' 
+2019年06月18日 03时45分51秒select id from `record` where `token` = '040746009669011200354432250' 
+2019年06月18日 03时49分32秒select id from `record` where `token` = '040746009669034921376555454' 
+2019年06月18日 03时49分32秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时52分32秒select id from `record` where `token` = '040746009669035211694229548' 
+2019年06月18日 03时52分32秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时52分33秒select id from `record` where `token` = '040402009669746228838979119' 
+2019年06月18日 03时52分33秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时54分31秒select id from `record` where `token` = '040402009669658239760350589' 
+2019年06月18日 03时54分31秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时57分47秒select id from `record` where `token` = '030202009669100172112562975' 
+2019年06月18日 03时57分47秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 03时59分45秒select id from `record` where `token` = '040402009669513228080011596' 
+2019年06月18日 03时59分45秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 04时03分44秒select id from `record` where `token` = '040402009669736235422893152' 
+2019年06月18日 04时03分44秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 04时11分44秒select id from `record` where `token` = '040746009669041122377982059' 
+2019年06月18日 04时11分44秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 04时12分44秒select id from `record` where `token` = '040402009669453235143965488' 
+2019年06月18日 04时12分44秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 04时17分44秒select id from `record` where `token` = '040746009669041651695966444' 
+2019年06月18日 04时17分44秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 04时20分41秒select id from `record` where `token` = '040402009669816228160967802' 
+2019年06月18日 04时20分41秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 04时39分15秒select id from `record` where `token` = '040402009669816228160967802' 
+2019年06月18日 04时39分16秒select id from `record` where `token` = '040746009669041651695966444' 
+2019年06月18日 04时39分17秒select id from `record` where `token` = '040402009669453235143965488' 
+2019年06月18日 04时39分18秒select id from `record` where `token` = '040746009669041122377982059' 
+2019年06月18日 04时39分19秒select id from `record` where `token` = '040402009669736235422893152' 
+2019年06月18日 04时39分20秒select id from `record` where `token` = '040402009669513228080011596' 
+2019年06月18日 04时39分21秒select id from `record` where `token` = '030202009669100172112562975' 
+2019年06月18日 04时39分22秒select id from `record` where `token` = '040402009669658239760350589' 
+2019年06月18日 04时39分23秒select id from `record` where `token` = '040746009669035211694229548' 
+2019年06月18日 04时39分24秒select id from `record` where `token` = '040402009669746228838979119' 
+2019年06月18日 04时39分25秒select id from `record` where `token` = '040746009669034921376555454' 
+2019年06月18日 04时39分26秒select id from `record` where `token` = '040746009669034002693474149' 
+2019年06月18日 04时39分27秒select id from `record` where `token` = '040402009669455236194518471' 
+2019年06月18日 04时39分28秒select id from `record` where `token` = '040746009669031601374250455' 
+2019年06月18日 04时39分29秒select id from `record` where `token` = '040746009669031413374127158' 
+2019年06月18日 04时39分30秒select id from `record` where `token` = '040402009669543237932728152' 
+2019年06月18日 04时39分31秒select id from `record` where `token` = '040402009669824235383489225' 
+2019年06月18日 04时39分32秒select id from `record` where `token` = '040402009669815232533780935' 
+2019年06月18日 04时39分33秒select id from `record` where `token` = '040402009669455236194461144' 
+2019年06月18日 04时39分34秒select id from `record` where `token` = '040746009669020642681863245' 
+2019年06月18日 04时58分15秒select id from `record` where `token` = '040402009669666235821916392' 
+2019年06月18日 04时58分15秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时18分13秒select id from `record` where `token` = '040402009669434235422978461' 
+2019年06月18日 05时18分13秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分08秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 05时20分08秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分09秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 05时20分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分10秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 05时20分11秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 05时20分11秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分12秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 05时20分13秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 05时20分13秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分14秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 05时20分14秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分15秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 05时20分15秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分16秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 05时20分16秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分17秒select id from `record` where `token` = '050204039166601003355646785' 
+2019年06月18日 05时20分17秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分18秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 05时20分18秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分19秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 05时20分20秒select id from `record` where `token` = '040604039666009202149485383' 
+2019年06月18日 05时20分20秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分21秒select id from `record` where `token` = '030235009666100171846281445' 
+2019年06月18日 05时20分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分22秒select id from `record` where `token` = '040404039166901062961677044' 
+2019年06月18日 05时20分22秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分23秒select id from `record` where `token` = '040404039166901062961677044' 
+2019年06月18日 05时20分24秒select id from `record` where `token` = '040604039666009502150489245' 
+2019年06月18日 05时20分24秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分25秒select id from `record` where `token` = '030202009666100171844299944' 
+2019年06月18日 05时20分25秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分26秒select id from `record` where `token` = '040404039166901062201677028' 
+2019年06月18日 05时20分26秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 05时20分27秒select id from `record` where `token` = '040404039166901062201677028' 
+2019年06月18日 06时04分19秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 06时04分20秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 06时04分21秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 06时04分22秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 06时04分23秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 06时04分24秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 06时04分25秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 06时04分26秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 06时04分27秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 06时04分28秒select id from `record` where `token` = '050204039166601003355646785' 
+2019年06月18日 06时04分29秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 06时04分30秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 06时04分31秒select id from `record` where `token` = '040604039666009202149485383' 
+2019年06月18日 06时04分32秒select id from `record` where `token` = '030235009666100171846281445' 
+2019年06月18日 06时04分33秒select id from `record` where `token` = '040404039166901062961677044' 
+2019年06月18日 06时04分34秒select id from `record` where `token` = '040404039166901062961677044' 
+2019年06月18日 06时04分35秒select id from `record` where `token` = '040604039666009502150489245' 
+2019年06月18日 06时04分36秒select id from `record` where `token` = '030202009666100171844299944' 
+2019年06月18日 06时04分37秒select id from `record` where `token` = '040404039166901062201677028' 
+2019年06月18日 06时04分38秒select id from `record` where `token` = '040404039166901062201677028' 
+2019年06月18日 06时34分15秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 06时34分15秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType )
+2019年06月18日 06时36分41秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 06时36分42秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 06时36分43秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 06时36分44秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 06时36分45秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 06时36分46秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 06时36分47秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 06时36分48秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 06时36分49秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 06时36分50秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 06时36分51秒select id from `record` where `token` = '050204039166601003355646785' 
+2019年06月18日 06时36分52秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 06时36分53秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 06时36分54秒select id from `record` where `token` = '040604039666009202149485383' 
+2019年06月18日 06时36分55秒select id from `record` where `token` = '030235009666100171846281445' 
+2019年06月18日 06时36分56秒select id from `record` where `token` = '040404039166901062961677044' 
+2019年06月18日 06时36分57秒select id from `record` where `token` = '040404039166901062961677044' 
+2019年06月18日 06时36分58秒select id from `record` where `token` = '040604039666009502150489245' 
+2019年06月18日 06时36分59秒select id from `record` where `token` = '030202009666100171844299944' 
+2019年06月18日 06时37分00秒select id from `record` where `token` = '040404039166901062201677028' 
+2019年06月18日 06时37分37秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 06时37分37秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 06时38分57秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 06时38分58秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 06时38分59秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 06时39分00秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 06时39分01秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 06时39分02秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 06时39分03秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 06时39分04秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 06时39分05秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 06时39分06秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 06时39分07秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 06时39分08秒select id from `record` where `token` = '050204039166601003355646785' 
+2019年06月18日 06时39分09秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 06时39分10秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 06时39分11秒select id from `record` where `token` = '040604039666009202149485383' 
+2019年06月18日 06时39分12秒select id from `record` where `token` = '030235009666100171846281445' 
+2019年06月18日 06时39分13秒select id from `record` where `token` = '040404039166901062961677044' 
+2019年06月18日 06时39分14秒select id from `record` where `token` = '040404039166901062961677044' 
+2019年06月18日 06时39分15秒select id from `record` where `token` = '040604039666009502150489245' 
+2019年06月18日 06时39分16秒select id from `record` where `token` = '030202009666100171844299944' 
+2019年06月18日 06时55分59秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 06时55分59秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 07时08分06秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 07时08分06秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 07时08分07秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 07时08分07秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 07时08分08秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 07时08分10秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 07时08分11秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 07时08分12秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 07时08分13秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 07时08分14秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 07时08分15秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 07时08分16秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 07时08分17秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 07时08分18秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 07时08分19秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 07时08分20秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 07时08分21秒select id from `record` where `token` = '050204039166601003355646785' 
+2019年06月18日 07时08分22秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 07时08分23秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 07时08分24秒select id from `record` where `token` = '040604039666009202149485383' 
+2019年06月18日 07时08分25秒select id from `record` where `token` = '030235009666100171846281445' 
+2019年06月18日 07时08分26秒select id from `record` where `token` = '040404039166901062961677044' 
+2019年06月18日 07时21分18秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 07时21分18秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 07时25分44秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 07时25分44秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 07时25分45秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 07时25分46秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 07时25分47秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 07时25分48秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 07时25分49秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 07时25分50秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 07时25分51秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 07时25分52秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 07时25分53秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 07时25分54秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 07时25分55秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 07时25分56秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 07时25分57秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 07时25分58秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 07时25分59秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 07时26分00秒select id from `record` where `token` = '050204039166601003355646785' 
+2019年06月18日 07时26分01秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 07时26分02秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 07时26分03秒select id from `record` where `token` = '040604039666009202149485383' 
+2019年06月18日 07时56分10秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 07时56分11秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 07时56分12秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 07时56分13秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 07时56分14秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 07时56分15秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 07时56分16秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 07时56分17秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 07时56分18秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 07时56分19秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 07时56分20秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 07时56分21秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 07时56分22秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 07时56分23秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 07时56分24秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 07时56分25秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 07时56分27秒select id from `record` where `token` = '050204039166601003355646785' 
+2019年06月18日 07时56分28秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 07时56分29秒select id from `record` where `token` = '040404039166901062241678028' 
+2019年06月18日 07时56分30秒select id from `record` where `token` = '040604039666009202149485383' 
+2019年06月18日 08时18分04秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时18分04秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 08时22分09秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时22分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType )
+2019年06月18日 08时29分37秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时29分37秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 08时35分45秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时35分46秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时35分47秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时35分48秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时35分49秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时35分50秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时35分51秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时35分52秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时35分53秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时35分54秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时35分55秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时35分56秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时35分57秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时35分58秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时35分59秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时36分00秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时36分01秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时36分02秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 08时36分03秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 08时36分04秒select id from `record` where `token` = '050204039166601003355646785' 
+2019年06月18日 08时40分33秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时40分33秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 08时40分34秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时40分35秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时40分36秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时40分37秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时40分38秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时40分39秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时40分40秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时40分41秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时40分42秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时40分43秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时40分44秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时40分45秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时40分46秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时40分47秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时40分48秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时40分49秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时40分50秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 08时40分51秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 08时40分52秒select id from `record` where `token` = '050204039166601003355646785' 
+2019年06月18日 08时43分07秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时43分08秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时43分09秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时43分10秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时43分11秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时43分12秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时43分13秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时43分14秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时43分15秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时43分16秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时43分17秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时43分18秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时43分19秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时43分20秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时43分21秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时43分22秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时43分23秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时43分24秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 08时43分25秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 08时43分26秒select id from `record` where `token` = '050204039166601003355646785' 
+2019年06月18日 08时44分41秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时44分42秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时44分43秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时44分45秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时44分46秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时44分47秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时44分48秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时44分49秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时44分50秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时44分51秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时44分52秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时44分53秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时44分54秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时44分55秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时44分56秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时44分57秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时44分58秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时44分59秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 08时45分00秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 08时45分01秒select id from `record` where `token` = '050204039166601003355646785' 
+2019年06月18日 08时47分04秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 08时47分05秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 08时47分06秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时47分07秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时47分08秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时47分09秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时47分10秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时47分11秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时47分12秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时47分13秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时47分14秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时47分15秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时47分16秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时47分17秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时47分18秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时47分19秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时47分20秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时47分21秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时47分22秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时47分23秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 08时47分24秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 08时48分44秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 08时48分45秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时48分46秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时48分47秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时48分48秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时48分49秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时48分50秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时48分51秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时48分52秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时48分54秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时48分55秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时48分56秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时48分57秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时48分58秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时48分59秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时49分00秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时49分01秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时49分02秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时49分03秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 08时49分04秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 08时49分38秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 08时49分39秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时49分40秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时49分41秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时49分42秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时49分44秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时49分45秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时49分46秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时49分47秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时49分48秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时49分49秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时49分50秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时49分51秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时49分52秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时49分53秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时49分54秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时49分55秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时49分56秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时49分57秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 08时49分58秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 08时50分35秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 08时50分36秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时50分37秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时50分38秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时50分39秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时50分40秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时50分41秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时50分42秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时50分43秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时50分44秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时50分45秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时50分46秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时50分47秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时50分48秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时50分49秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时50分50秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时50分51秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时50分52秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时50分53秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 08时50分54秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 08时52分10秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 08时52分11秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时52分12秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时52分13秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时52分14秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时52分15秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时52分16秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时52分17秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时52分18秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时52分19秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时52分20秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时52分21秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时52分22秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时52分23秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时52分24秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时52分25秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时52分26秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时52分27秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时52分28秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 08时52分29秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 08时53分38秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 08时53分39秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时53分40秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时53分41秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时53分42秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时53分43秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时53分44秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时53分45秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时53分46秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时53分48秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时53分49秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时53分50秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时53分51秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时53分52秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时53分53秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时53分54秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时53分55秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时53分56秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时53分57秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 08时53分58秒select id from `record` where `token` = '030202009666100171846291626' 
+2019年06月18日 08时54分38秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 08时54分38秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 08时54分39秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 08时54分40秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时54分41秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时54分42秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时54分43秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时54分44秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时54分45秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时54分46秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时54分47秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时54分48秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时54分49秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时54分50秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时54分51秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时54分52秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时54分53秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时54分54秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时54分55秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时54分56秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时54分57秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 08时56分36秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 08时56分37秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 08时56分38秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 08时56分39秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 08时56分40秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 08时56分41秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 08时56分42秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 08时56分43秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 08时56分44秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 08时56分45秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 08时56分46秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 08时56分47秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 08时56分48秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 08时56分49秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时56分50秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 08时56分51秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时56分52秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 08时56分53秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 08时56分54秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 08时56分55秒select id from `record` where `token` = '030204039666100171846291972' 
+2019年06月18日 09时15分06秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时15分06秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 09时15分07秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时15分08秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时15分09秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时15分10秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时15分11秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时15分12秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时15分13秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时15分14秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时15分15秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时15分16秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时15分17秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时15分18秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时15分19秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时15分20秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时15分21秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时15分22秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时15分23秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时15分24秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 09时15分25秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 09时15分58秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时15分59秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时16分00秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时16分01秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时16分02秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时16分03秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时16分04秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时16分05秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时16分06秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时16分07秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时16分08秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时16分09秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时16分10秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时16分11秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时16分12秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时16分13秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时16分14秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时16分15秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时16分16秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 09时16分17秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 09时16分57秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时16分58秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时16分59秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时17分00秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时17分01秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时17分02秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时17分03秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时17分04秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时17分05秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时17分06秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时17分07秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时17分08秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时17分09秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时17分10秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时17分11秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时17分12秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时17分13秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时17分14秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时17分15秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 09时17分16秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 09时20分26秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时20分27秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时20分28秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时20分29秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时20分30秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时20分31秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时20分32秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时20分33秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时20分34秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时20分35秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时20分36秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时20分37秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时20分39秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时20分40秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时20分41秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时20分42秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时20分43秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时20分44秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时20分45秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 09时20分46秒select id from `record` where `token` = '040604039666009702149914992' 
+2019年06月18日 09时29分56秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时29分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 09时29分57秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时29分58秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时29分59秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时30分00秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时30分01秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时30分02秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时30分04秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时30分05秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时30分06秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时30分07秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时30分08秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时30分09秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时30分10秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时30分11秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时30分12秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时30分13秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时30分14秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时30分15秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时30分16秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 09时31分19秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时31分20秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时31分21秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时31分22秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时31分23秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时31分24秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时31分25秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时31分26秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时31分27秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时31分28秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时31分29秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时31分30秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时31分31秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时31分32秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时31分33秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时31分34秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时31分35秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时31分36秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时31分37秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时31分38秒select id from `record` where `token` = '030204039666100171851715881' 
+2019年06月18日 09时32分50秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 09时32分50秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 09时32分51秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 09时32分51秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 09时32分52秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时32分53秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时32分54秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时32分55秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时32分56秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时32分57秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时32分58秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时32分59秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时33分00秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时33分01秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时33分02秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时33分03秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时33分04秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时33分05秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时33分06秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时33分07秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时33分08秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时33分09秒select id from `record` where `token` = '040404039166901062181678020' 
+2019年06月18日 09时34分13秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 09时34分13秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 09时34分14秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 09时34分15秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 09时34分16秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时34分17秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时34分18秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时34分19秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时34分20秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时34分21秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时34分22秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时34分23秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时34分24秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时34分25秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时34分26秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时34分27秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时34分28秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时34分29秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时34分30秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时34分31秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时34分32秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时37分58秒select id from `record` where `token` = '040404039169901062491835017' 
+2019年06月18日 09时37分58秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 09时37分59秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 09时38分00秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 09时38分01秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 09时38分02秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时38分03秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时38分04秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时38分05秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时38分06秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时38分07秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时38分08秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时38分09秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时38分10秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时38分11秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时38分12秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时38分13秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时38分14秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时38分15秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时38分16秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时38分17秒select id from `record` where `token` = '040404039166901062151678034' 
+2019年06月18日 09时39分00秒select id from `record` where `token` = '040604039669009352164237252' 
+2019年06月18日 09时39分00秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 09时39分01秒select id from `record` where `token` = '040404039169901062491835017' 
+2019年06月18日 09时39分02秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 09时39分03秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 09时39分04秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 09时39分05秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时39分06秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时39分07秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时39分08秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时39分09秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时39分10秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时39分11秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时39分12秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时39分13秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时39分14秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时39分15秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时39分16秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时39分17秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时39分18秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时39分19秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时39分58秒select id from `record` where `token` = '040604039669009352164237252' 
+2019年06月18日 09时39分59秒select id from `record` where `token` = '040404039169901062491835017' 
+2019年06月18日 09时40分00秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 09时40分01秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 09时40分02秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 09时40分03秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时40分04秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时40分05秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时40分06秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时40分07秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时40分08秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时40分09秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时40分10秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时40分11秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时40分12秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时40分13秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时40分14秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时40分15秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时40分16秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时40分17秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时40分58秒select id from `record` where `token` = '040604039669009352164237252' 
+2019年06月18日 09时40分59秒select id from `record` where `token` = '040404039169901062491835017' 
+2019年06月18日 09时41分00秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 09时41分01秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 09时41分02秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 09时41分03秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时41分04秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时41分05秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时41分06秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时41分07秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时41分08秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时41分09秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时41分10秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时41分11秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时41分12秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时41分13秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时41分14秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时41分15秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时41分16秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时41分17秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时41分58秒select id from `record` where `token` = '040604039669009352164237252' 
+2019年06月18日 09时41分59秒select id from `record` where `token` = '040404039169901062491835017' 
+2019年06月18日 09时42分00秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 09时42分01秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 09时42分02秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 09时42分03秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时42分04秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时42分05秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时42分06秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时42分07秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时42分08秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时42分09秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时42分10秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时42分11秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时42分12秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时42分13秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时42分14秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时42分15秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时42分16秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时42分17秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时42分58秒select id from `record` where `token` = '040604039669009352164237252' 
+2019年06月18日 09时42分59秒select id from `record` where `token` = '040404039169901062491835017' 
+2019年06月18日 09时43分00秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 09时43分01秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 09时43分02秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 09时43分03秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时43分04秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时43分05秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时43分06秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时43分07秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时43分08秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时43分09秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时43分10秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时43分11秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时43分12秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时43分13秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时43分14秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时43分15秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时43分16秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时43分17秒select id from `record` where `token` = '030204039669102163935600322' 
+2019年06月18日 09时44分16秒select id from `record` where `token` = '040404019669834235983111437' 
+2019年06月18日 09时44分16秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 09时44分17秒select id from `record` where `token` = '040604039669009352164237252' 
+2019年06月18日 09时44分18秒select id from `record` where `token` = '040404039169901062491835017' 
+2019年06月18日 09时44分19秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 09时44分20秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 09时44分21秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 09时44分22秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时44分23秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时44分24秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时44分25秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时44分26秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时44分27秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时44分28秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时44分29秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时44分30秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时44分31秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时44分32秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时44分33秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时44分34秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时44分35秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 09时45分12秒select id from `record` where `token` = '040404019669834235983111437' 
+2019年06月18日 09时45分13秒select id from `record` where `token` = '040604039669009352164237252' 
+2019年06月18日 09时45分14秒select id from `record` where `token` = '040404039169901062491835017' 
+2019年06月18日 09时45分15秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 09时45分16秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 09时45分17秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 09时45分18秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 09时45分19秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 09时45分20秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 09时45分21秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 09时45分22秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 09时45分23秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 09时45分24秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 09时45分25秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 09时45分26秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 09时45分27秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 09时45分28秒select id from `record` where `token` = '040404019669875236932310260' 
+2019年06月18日 09时45分29秒select id from `record` where `token` = '040404019669659235062824225' 
+2019年06月18日 09时45分30秒select id from `record` where `token` = '040404019669636228080288968' 
+2019年06月18日 09时45分31秒select id from `record` where `token` = '030228069669102163937204372' 
+2019年06月18日 10时00分17秒select id from `record` where `token` = '040404019669795236196779108' 
+2019年06月18日 10时00分17秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分18秒select id from `record` where `token` = '040746009669095700848569145' 
+2019年06月18日 10时00分18秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分19秒select id from `record` where `token` = '040404019669689228163090022' 
+2019年06月18日 10时00分19秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分20秒select id from `record` where `token` = '040604039669009752165670155' 
+2019年06月18日 10时00分20秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分21秒select id from `record` where `token` = '040404019669834235983111437' 
+2019年06月18日 10时00分21秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分22秒select id from `record` where `token` = '040604039669009352164237252' 
+2019年06月18日 10时00分22秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分24秒select id from `record` where `token` = '040404039169901062491835017' 
+2019年06月18日 10时00分24秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分25秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 10时00分25秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分26秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 10时00分26秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分27秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 10时00分27秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分28秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 10时00分28秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分29秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 10时00分29秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分30秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 10时00分30秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分31秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 10时00分31秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分32秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 10时00分32秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分33秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 10时00分33秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时00分34秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 10时00分35秒select id from `record` where `token` = '040404039169901062471835011' 
+2019年06月18日 10时00分36秒select id from `record` where `token` = '040404019669593233516118855' 
+2019年06月18日 10时00分37秒select id from `record` where `token` = '030204039669100172116874582' 
+2019年06月18日 10时01分55秒select id from `record` where `token` = '040404019669500228336672521' 
+2019年06月18日 10时01分55秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时03分20秒select id from `record` where `token` = '040746009669100151853707449' 
+2019年06月18日 10时03分20秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时09分30秒select id from `record` where `token` = '040404019669820228841339494' 
+2019年06月18日 10时09分30秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时09分31秒select id from `record` where `token` = '040746009669100151853707449' 
+2019年06月18日 10时09分32秒select id from `record` where `token` = '040404019669500228336672521' 
+2019年06月18日 10时09分33秒select id from `record` where `token` = '040404019669795236196779108' 
+2019年06月18日 10时09分34秒select id from `record` where `token` = '040746009669095700848569145' 
+2019年06月18日 10时09分35秒select id from `record` where `token` = '040404019669689228163090022' 
+2019年06月18日 10时09分36秒select id from `record` where `token` = '040604039669009752165670155' 
+2019年06月18日 10时09分37秒select id from `record` where `token` = '040404019669834235983111437' 
+2019年06月18日 10时09分38秒select id from `record` where `token` = '040604039669009352164237252' 
+2019年06月18日 10时09分39秒select id from `record` where `token` = '040404039169901062491835017' 
+2019年06月18日 10时09分40秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 10时09分41秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 10时09分42秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 10时09分43秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 10时09分44秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 10时09分45秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 10时09分46秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 10时09分47秒select id from `record` where `token` = '040746009669082801450163451' 
+2019年06月18日 10时09分48秒select id from `record` where `token` = '040604039669009552163802564' 
+2019年06月18日 10时09分49秒select id from `record` where `token` = '040404019669586236932947251' 
+2019年06月18日 10时15分23秒select id from `record` where `token` = '040404039169901062541833020' 
+2019年06月18日 10时15分23秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 10时37分18秒select id from `record` where `token` = '040746009669103611576907656' 
+2019年06月18日 10时37分18秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 11时04分25秒select id from `record` where `token` = '040404019669811239864479258' 
+2019年06月18日 11时04分25秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 11时04分26秒select id from `record` where `token` = '040746009669103611576907656' 
+2019年06月18日 11时04分27秒select id from `record` where `token` = '040404039169901062541833020' 
+2019年06月18日 11时04分28秒select id from `record` where `token` = '040404019669820228841339494' 
+2019年06月18日 11时04分29秒select id from `record` where `token` = '040746009669100151853707449' 
+2019年06月18日 11时04分30秒select id from `record` where `token` = '040404019669500228336672521' 
+2019年06月18日 11时04分31秒select id from `record` where `token` = '040404019669795236196779108' 
+2019年06月18日 11时04分32秒select id from `record` where `token` = '040746009669095700848569145' 
+2019年06月18日 11时04分33秒select id from `record` where `token` = '040404019669689228163090022' 
+2019年06月18日 11时04分34秒select id from `record` where `token` = '040604039669009752165670155' 
+2019年06月18日 11时04分35秒select id from `record` where `token` = '040404019669834235983111437' 
+2019年06月18日 11时04分36秒select id from `record` where `token` = '040604039669009352164237252' 
+2019年06月18日 11时04分37秒select id from `record` where `token` = '040404039169901062491835017' 
+2019年06月18日 11时04分38秒select id from `record` where `token` = '040404019669795235257917219' 
+2019年06月18日 11时04分39秒select id from `record` where `token` = '040404019669639232289257698' 
+2019年06月18日 11时04分40秒select id from `record` where `token` = '040404019669458236196448454' 
+2019年06月18日 11时04分41秒select id from `record` where `token` = '040404019669699228992954743' 
+2019年06月18日 11时04分42秒select id from `record` where `token` = '040404039169901062801835012' 
+2019年06月18日 11时04分43秒select id from `record` where `token` = '040604039669009302176130234' 
+2019年06月18日 11时04分44秒select id from `record` where `token` = '040404039169901062891835013' 
+2019年06月18日 11时07分35秒select id from `record` where `token` = '040404039169901062421835038' 
+2019年06月18日 11时07分35秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 11时14分33秒select id from `record` where `token` = '040404019669743228337636100' 
+2019年06月18日 11时14分33秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 11时40分40秒select id from `record` where `token` = '040746009669114011964484144' 
+2019年06月18日 11时40分40秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月18日 11时51分31秒select id from `record` where `token` = '040404019669588228083804504' 
+2019年06月18日 11时51分31秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分03秒select id from `record` where `token` = '040746009660192953005439658' 
+2019年06月19日 15时21分03秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分03秒select id from `record` where `token` = '040409019660565233667080781' 
+2019年06月19日 15时21分03秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分03秒select id from `record` where `token` = '030202009660101197931313688' 
+2019年06月19日 15时21分03秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分04秒select id from `record` where `token` = '040746009659011502437170356' 
+2019年06月19日 15时21分04秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分04秒select id from `record` where `token` = '040746009659011223436637754' 
+2019年06月19日 15时21分04秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分04秒select id from `record` where `token` = '030209089658103187508959104' 
+2019年06月19日 15时21分04秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分04秒select id from `record` where `token` = '040609089657009302062324886' 
+2019年06月19日 15时21分04秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分05秒select id from `record` where `token` = '040609089657009052052161647' 
+2019年06月19日 15时21分05秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分05秒select id from `record` where `token` = '030209089657100170831847399' 
+2019年06月19日 15时21分05秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分06秒select id from `record` where `token` = '040609089657009702062076404' 
+2019年06月19日 15时21分06秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分06秒select id from `record` where `token` = '040409089157901054810718019' 
+2019年06月19日 15时21分06秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分06秒select id from `record` where `token` = '040409089157901054300718024' 
+2019年06月19日 15时21分06秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分07秒select id from `record` where `token` = '040609089657009252051372894' 
+2019年06月19日 15时21分07秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分07秒select id from `record` where `token` = '040409089157901054840718013' 
+2019年06月19日 15时21分07秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分07秒select id from `record` where `token` = '040409089157901054640718015' 
+2019年06月19日 15时21分07秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分08秒select id from `record` where `token` = '040409089157901054800714010' 
+2019年06月19日 15时21分08秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分08秒select id from `record` where `token` = '040609089657009252051470987' 
+2019年06月19日 15时21分08秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分08秒select id from `record` where `token` = '040409089157901054630714016' 
+2019年06月19日 15时21分08秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分09秒select id from `record` where `token` = '040609089657009152051061564' 
+2019年06月19日 15时21分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 15时21分09秒select id from `record` where `token` = '030202009657100170831815570' 
+2019年06月19日 15时21分09秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分53秒select id from `record` where `token` = '040746009660192953005439658' 
+2019年06月19日 16时19分53秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分53秒select id from `record` where `token` = '040409019660565233667080781' 
+2019年06月19日 16时19分53秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分53秒select id from `record` where `token` = '030202009660101197931313688' 
+2019年06月19日 16时19分53秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分54秒select id from `record` where `token` = '040746009659011502437170356' 
+2019年06月19日 16时19分54秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分54秒select id from `record` where `token` = '040746009659011223436637754' 
+2019年06月19日 16时19分54秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分54秒select id from `record` where `token` = '030209089658103187508959104' 
+2019年06月19日 16时19分54秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分54秒select id from `record` where `token` = '040609089657009302062324886' 
+2019年06月19日 16时19分54秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分55秒select id from `record` where `token` = '040609089657009052052161647' 
+2019年06月19日 16时19分55秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分55秒select id from `record` where `token` = '030209089657100170831847399' 
+2019年06月19日 16时19分55秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分55秒select id from `record` where `token` = '040609089657009702062076404' 
+2019年06月19日 16时19分55秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分55秒select id from `record` where `token` = '040409089157901054810718019' 
+2019年06月19日 16时19分55秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分56秒select id from `record` where `token` = '040409089157901054300718024' 
+2019年06月19日 16时19分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分56秒select id from `record` where `token` = '040609089657009252051372894' 
+2019年06月19日 16时19分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分56秒select id from `record` where `token` = '040409089157901054840718013' 
+2019年06月19日 16时19分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分56秒select id from `record` where `token` = '040409089157901054640718015' 
+2019年06月19日 16时19分56秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分57秒select id from `record` where `token` = '040409089157901054800714010' 
+2019年06月19日 16时19分57秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分57秒select id from `record` where `token` = '040609089657009252051470987' 
+2019年06月19日 16时19分57秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分57秒select id from `record` where `token` = '040409089157901054630714016' 
+2019年06月19日 16时19分57秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分57秒select id from `record` where `token` = '040609089657009152051061564' 
+2019年06月19日 16时19分57秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )
+2019年06月19日 16时19分58秒select id from `record` where `token` = '030202009657100170831815570' 
+2019年06月19日 16时19分58秒INSERT INTO `record` (`balance` ,`incoming` ,`remark` ,`token` ,`tradeType` ,`tradingHour` )  VALUES(@balance ,@incoming ,@remark ,@token ,@tradeType ,@tradingHour )

@@ -1,0 +1,3790 @@
+
+
+
+
+
+
+
+
+ <script>
+	try{
+		if(isNaN('icbc.com.cn'.replace(/\./g,""))){
+			document.domain='icbc.com.cn';}
+	}catch(e){
+		
+	}
+ </script>
+<script src="/icbc/newperbank/js/perbank3/js0011.js?ver=2019061605"></script>
+
+<script>
+ CrossDomain.parentHost =  'https://mybank.icbc.com.cn';
+ CrossDomain.perbankHost =  'https://mybank.icbc.com.cn';
+ CrossDomain.crossHost = 'icbc.com.cn';
+ CrossDomain.icbcDomain="*.icbc.com.cn";//添加父域名
+ CrossDomain.clientIP = '134.159.206.51';
+</script>
+
+
+
+
+
+
+<script src="/icbc/newperbank/js/blockui/JQuery.BlockUI.min.2.39.js"></script>
+
+<script>
+        	var date = new Date();
+		 	date.setTime(date.getTime()+365*24*3600*1000);
+	        var name="first_tip";
+			var path = "/";
+	        var cookieString2 =name+"=0;path="+path;
+	        cookieString2 = cookieString2+";expires="+date.toGMTString();
+	        document.cookie=cookieString2;
+</script>
+
+
+
+
+<script language="JavaScript">
+$(document).ready(function(){
+    
+	           
+});
+
+function hideBrowserDiv(){
+    $.unblockUI();
+}
+</script>
+<boby>
+ <div id="ICBC_browser_float" style="display: none;">
+	<div style="width: 461px; height: 381px;">
+	<img width="461" height="381" src="/icbc/newperbank/images/floatTip/browserTip.png" border="0" usemap="#browsermap">
+		<map name="browsermap" id="browsermap">
+			<area onclick="hideBrowserDiv();" shape="rectangle" coords="178,328,282,358">
+		</map>
+	</div>
+</div>
+
+
+
+<script src="/ebdpui/pc4promote/ebdp-pc4promote-core.js?ver=1.0.17"></script><!-- 智能导航栏  -->
+<link href="/ebdpui/pc4promote/style/default/navigationbar/ebdp-pc4promote2ebankc-navigationbar.css?ver=1.0.17" rel="stylesheet" type="text/css"><!-- 智能导航栏  -->
+<script src="/ebdpui/pc4promote/ebdp-pc4promote-navigationbar.js?ver=1.0.17"></script><!-- 智能导航栏  -->
+
+
+
+ 
+
+ 
+ <!-- 包含头部 --> 
+<script type="text/javascript">
+if( self.location == top.location ) { document.documentElement.style.display = 'block' ; } else { top.location = self.location ; }
+
+function setP3Cookie(cookiename ,value){
+				var urlcookie = window.location.href;
+    			var domaincookie = urlcookie.replace(/.*:\/\/([^:|^\/]*).*/,"$1");
+				var domain="";
+				var now = new Date();
+				var expire = new Date();
+				expire.setTime(now.getTime() + 3600000 * 24 * 1);
+				document.cookie = cookiename + '=' + encodeURI(value, "utf-8")
+				+ ';expires=' + expire.toGMTString() + ';domain=' + domaincookie
+				+ ';path=/';
+					
+}
+	
+	
+var jsBeta="true";    
+var jsLogon="true";  
+var _pv_arc_pub = [];
+var zoneNo="0908"
+var PVServerHost="https://pageviewp.icbc.com.cn";
+var dse_sessionId="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE";
+var serviceId = "PBL201786";
+var transData = "";
+var clientIP = "134.159.206.51";
+var mainCIS = "090800008250954";
+var isAutoLoad = false;
+var oratype = "1";
+var privateBankFlag = "0";
+$(function(){
+	setP3Cookie("isP3bank","1");
+	setP3Cookie("isEn_US","0");//是否是英文版,1:是、0：否
+	setP3Cookie("isPri",privateBankFlag);//私人银行,1:是、0：否
+	//搜索下拉
+	$('.search-box').hover(function(){
+		jQuery('.down-search').show();
+	},function(){
+		jQuery('.down-search').hide();
+	}); 
+	 $('.search-btn').click(function(){
+	 	 searchGo();
+	 }); 
+	 $("#search-key").bind("click keydown",function(){
+			$("#search-holder").hide();
+		}).bind("blur",function(){
+			if($("#search-key").val()==""){
+				$("#search-holder").show();
+			}
+		});
+	try{
+	//获取默认的地区号,赋值
+	var cookieName = "firstZoneNo";
+	var firstZoneNo = Utils.getCookie(cookieName);
+	if(firstZoneNo != null && firstZoneNo != "" && typeof(firstZoneNo) != "undefined"){
+			var strArray = firstZoneNo.split("_")
+			if(strArray.length == 2){
+				zoneNo = strArray[1];
+			}else{
+				zoneNo = "0200";
+			}
+	}
+	}catch(e){}
+		
+})
+
+function searchGo(){
+	var value=allTrim($("#search-key").val());
+	if(value != null && value != ""){
+		value = stripscripts(value);
+		if(value==""){
+			alert("请输入有效的检索关键字!");
+			return;
+		}
+		perbankAtomLocationTW("PBL10010101",value+"|1|7",dse_sessionId);
+	}else{
+		alert("请输入检索关键字!");
+	}	
+}
+
+function justShowSearch(){
+	var value=$("#search-key").val();
+	jQuery(".searchkey3").each(
+			function (i){
+				$this = jQuery(this);
+				$this.text(value);
+			}
+	);
+}
+//过滤特殊字符，仅留中文英文和数字
+function stripscripts(s){
+	return s.replace(/[^\a-zA-Z0-9\u4E00-\u9FA5]/g,'');
+}
+//去字符串所有空格
+function allTrim(str){
+	//return str.replace(/(^\s*)|(\s*$)/g,'');//去两端空格
+	return str.replace(/\s+/g,'');
+}
+function justShowSearchGo(searchWay){
+	//隐藏显示搜索面板
+	//jQuery('.ICBC_ac_results').hide();
+	
+	var value=allTrim($("#search-key").val());
+	//searchkey|channaltype|searchWay|defaultType
+	if(value != null && value != ""){
+		//过滤特殊字符
+		value = stripscripts(value);
+		if(value==""){
+			alert("请输入有效的检索关键字!");
+			return;
+		}
+		if(searchWay=="10"){//搜e缴费
+			perbankAtomLocationTW("PBL300103","10|"+value,dse_sessionId);
+			return;
+		}
+		var defaultType="";
+		if(searchWay=="0")defaultType="0";//融e购
+		/**if(searchWay=="1")defaultType="3";//搜频道
+		if(searchWay=="2")defaultType="7";//搜产品
+		if(searchWay=="3")defaultType="3";//搜所有**/
+		if(searchWay=="1")defaultType="7";//搜服务（菜单）
+		if(searchWay=="2")defaultType="0";//搜产品（defaultType：0理财、1基金、2保险）
+		var datav=value+"|"+searchWay+"|"+defaultType;
+		perbankAtomLocationTW("PBL100101",datav,dse_sessionId);
+	}else{
+		if(searchWay=="10"){//搜e缴费
+			perbankAtomLocationTW("PBL300103","1|",dse_sessionId);
+			return;
+		}else{
+			alert("请输入检索关键字!");
+		}
+	}
+}
+	 
+var frame_index_scroll_flag = "1";//页面标志
+	//应用iframe取页面的滚动距离
+function topFrame_getScrollTop()
+{
+	return jQuery(window).scrollTop();
+}
+//三组用，取浏览器可见区域高度
+function topFrame_getHeight()
+{
+	if(window.innerHeight)
+	{
+		//alert(window.innerHeight);
+		return window.innerHeight;
+	}
+	else{
+		//alert(document.body.clientHeight);
+		return document.body.clientHeight;
+	}
+}
+
+Array.prototype.contains = function(needle) {
+	for(i in this){
+		if(this[i] == needle) return true;
+	}
+	return false;
+}
+
+
+function getAtomService(){
+	
+	var hisAtomService = window.sessionStorage.getItem(dse_sessionId); 
+	var id1;
+	var id3;
+	var name2;
+	var name3;
+	var menuData = new Array();
+	var num = 0;
+	var Sys={};
+    var ua = window.navigator.userAgent.toLowerCase();
+    var s;
+    try{
+    	(s = ua.match(/msie ([\d.]+)/))?Sys.ie = s[1]:(s = ua.match(/firefox\/([\d.]+)/))?Sys.firefox = s[1]:(s = ua.match(/chrome\/([\d.]+)/))?Sys.chrome = s[1]:(s = ua.match(/opera.([\d.]+)/))?Sys.opera = s[1]:(s = ua.match(/version\/([\d.]+).*safari/))?Sys.safari = s[1]:0;
+	}catch(e){
+		//无需处理
+	}
+	if(hisAtomService!=null&&hisAtomService!=""&&hisAtomService!="undefined"){
+		try{
+		
+			menuData[0] = "id=PBL200700name=nullurl=nullid=PBL200710name=nullurl=nullid=PBL100410name=nullurl=nullid=PBL200711name=nullurl=nullid=PBL200712name=nullurl=nullid=PBL200713name=nullurl=nullid=PBL200714name=nullurl=nullid=PBL200783name=nullurl=nullid=PBL200715name=nullurl=nullid=PBL200716name=nullurl=nullid=PBL200743name=nullurl=nullid=PBL200742name=nullurl=nullid=PBL200744name=nullurl=nullid=PBL200771name=nullurl=nullid=PBL200772name=nullurl=nullid=PBL200773name=nullurl=nullid=PBL200733name=nullurl=nullid=PBL200750name=nullurl=nullid=PBL200721name=nullurl=nullid=PBL200751name=nullurl=nullid=PBL200752name=nullurl=null";
+		
+			menuData[1] = "id=PBL200800name=nullurl=nullid=PBL200809name=nullurl=nullid=PBL200811name=nullurl=nullid=PBL200862name=nullurl=nullid=PBL200821name=nullurl=nullid=PBL200822name=nullurl=nullid=PBL200812name=nullurl=nullid=PBL200881name=nullurl=nullid=PBL200882name=nullurl=nullid=PBL200912name=nullurl=nullid=PBL200911name=nullurl=nullid=PBL200830name=nullurl=nullid=PBL200831name=nullurl=nullid=PBL200832name=nullurl=nullid=PBL200840name=nullurl=nullid=PBL200921name=nullurl=nullid=PBL200900name=nullurl=nullid=PBL200901name=nullurl=nullid=PBL200902name=nullurl=nullid=PBL200890name=nullurl=nullid=PBL200745name=nullurl=null";
+		
+			menuData[2] = "id=PBL200760name=nullurl=nullid=PBL20076010name=nullurl=nullid=PBL200779name=nullurl=nullid=PBL200761name=nullurl=nullid=PBL200762name=nullurl=nullid=PBL200763name=nullurl=nullid=PBL200764name=nullurl=nullid=PBL20076011name=nullurl=nullid=PBL200722name=nullurl=nullid=PBL200725name=nullurl=nullid=PBL200769name=nullurl=nullid=PBL200724name=nullurl=nullid=PBL20076012name=nullurl=nullid=PBL200775name=nullurl=nullid=PBL20076002name=nullurl=nullid=PBL20076013name=nullurl=nullid=PBL200767name=nullurl=nullid=PBL200768name=nullurl=nullid=PBL200766name=nullurl=null";
+		
+			menuData[3] = "id=PBL201000name=nullurl=nullid=PBL201010name=nullurl=nullid=PBL201011name=nullurl=nullid=PBL201021name=nullurl=nullid=PBL201025name=nullurl=nullid=PBL201031name=nullurl=nullid=PBL201032name=nullurl=nullid=PBL201033name=nullurl=nullid=PBL201034name=nullurl=nullid=PBL201040name=nullurl=nullid=PBL201099name=nullurl=nullid=PBL201041name=nullurl=nullid=PBL201051name=nullurl=nullid=PBL20109002name=nullurl=nullid=PBL20109004name=nullurl=nullid=PBL20109001name=nullurl=nullid=PBL201061name=nullurl=nullid=PBL201092name=nullurl=nullid=PBL201096name=nullurl=nullid=PBL201043name=nullurl=null";
+		
+			menuData[4] = "id=PBL201100name=nullurl=nullid=PBL201110name=nullurl=nullid=PBL20111002name=nullurl=nullid=PBL20111003name=nullurl=nullid=PBL201111name=nullurl=nullid=PBL201113name=nullurl=nullid=PBL201112name=nullurl=nullid=PBL201117name=nullurl=nullid=PBL201114name=nullurl=nullid=PBL20111004name=nullurl=nullid=PBL201115name=nullurl=nullid=PBL201140name=nullurl=nullid=PBL201142name=nullurl=nullid=PBL201143name=nullurl=nullid=PBL201120name=nullurl=nullid=PBL201121name=nullurl=nullid=PBL20112116name=nullurl=nullid=PBL20112115name=nullurl=nullid=PBL201123name=nullurl=nullid=PBL20112308name=nullurl=null";
+		
+			menuData[5] = "id=PBL201200name=nullurl=nullid=PBL201217name=nullurl=nullid=PBL201210name=nullurl=nullid=PBL20031201name=nullurl=nullid=PBL201212name=nullurl=nullid=PBL201213name=nullurl=nullid=PBL201214name=nullurl=nullid=PBL201215name=nullurl=nullid=PBL201216name=nullurl=nullid=PBL202010name=nullurl=nullid=PBL202013name=nullurl=nullid=PBL202014name=nullurl=nullid=PBL202015name=nullurl=nullid=PBL202016name=nullurl=nullid=PBL202017name=nullurl=nullid=PBL202018name=nullurl=nullid=PBL202019name=nullurl=nullid=PBL202001name=nullurl=nullid=PBL202002name=nullurl=nullid=PBL202003name=nullurl=nullid=PBL202004name=nullurl=nullid=PBL202005name=nullurl=nullid=PBL202020name=nullurl=nullid=PBL202021name=nullurl=nullid=PBL202022name=nullurl=nullid=PBL202023name=nullurl=nullid=PBL202030name=nullurl=nullid=PBL202031name=nullurl=nullid=PBL202032name=nullurl=nullid=PBL202033name=nullurl=null";
+		
+			menuData[6] = "id=PBL201300name=nullurl=nullid=PBL201310name=nullurl=nullid=PBL201311name=nullurl=nullid=PBL201312name=nullurl=nullid=PBL201351name=nullurl=nullid=PBL201330name=nullurl=nullid=PBL201333name=nullurl=nullid=PBL201332name=nullurl=nullid=PBL201337name=nullurl=nullid=PBL201331name=nullurl=nullid=PBL201340name=nullurl=nullid=PBL201342name=nullurl=nullid=PBL201341name=nullurl=nullid=PBL201343name=nullurl=nullid=PBL201345name=nullurl=nullid=PBL201320name=nullurl=nullid=PBL201321name=nullurl=nullid=PBL201322name=nullurl=nullid=PBL201323name=nullurl=nullid=PBL201390name=nullurl=nullid=PBL201392name=nullurl=nullid=PBL201391name=nullurl=nullid=PBL201393name=nullurl=nullid=PBL201394name=nullurl=nullid=PBL201395name=nullurl=nullid=PBL201396name=nullurl=nullid=PBL201397name=nullurl=null";
+		
+			menuData[7] = "id=PBL202000name=nullurl=nullid=PBL201220name=nullurl=nullid=PBL201230name=nullurl=nullid=PBL201231name=nullurl=nullid=PBL201226name=nullurl=nullid=PBL201227name=nullurl=nullid=PBL201228name=nullurl=nullid=PBL201229name=nullurl=nullid=PBL202040name=nullurl=nullid=PBL201626name=nullurl=nullid=PBL201625name=nullurl=nullid=PBL201624name=nullurl=null";
+		
+			menuData[8] = "id=PBL201400name=nullurl=nullid=PBL201410name=nullurl=nullid=PBL2007461name=nullurl=nullid=PBL201411name=nullurl=nullid=PBL201412name=nullurl=nullid=PBL201413name=nullurl=nullid=PBL201415name=nullurl=nullid=PBL201420name=nullurl=nullid=PBL201601name=nullurl=nullid=PBL201422name=nullurl=nullid=PBL201423name=nullurl=nullid=PBL201433name=nullurl=nullid=PBL201602name=nullurl=nullid=PBL201603name=nullurl=nullid=PBL201430name=nullurl=null";
+		
+			menuData[9] = "id=PBL201500name=nullurl=nullid=PBL201501name=nullurl=nullid=PBL201545name=nullurl=nullid=PBL201503name=nullurl=nullid=PBL201578name=nullurl=nullid=PBL201232name=nullurl=nullid=PBL201508name=nullurl=nullid=PBL201579name=nullurl=nullid=PBL201588name=nullurl=nullid=PBL201547name=nullurl=nullid=PBL201550name=nullurl=nullid=PBL201577name=nullurl=nullid=PBL201119name=nullurl=nullid=PBL201571name=nullurl=nullid=PBL201502name=nullurl=nullid=PBL201551name=nullurl=nullid=PBL201552name=nullurl=nullid=PBL201553name=nullurl=nullid=PBL201580name=nullurl=nullid=PBL201581name=nullurl=nullid=PBL201582name=nullurl=null";
+		
+			menuData[10] = "id=PBL201600name=nullurl=nullid=PBL201620name=nullurl=nullid=PBL300101name=nullurl=nullid=PBL201611name=nullurl=nullid=PBL201612name=nullurl=nullid=PBL201621name=nullurl=nullid=PBL201622name=nullurl=nullid=PBL201623name=nullurl=nullid=PBL201670name=nullurl=nullid=PBL20167001name=nullurl=nullid=PBL20167002name=nullurl=nullid=PBL201630name=nullurl=nullid=PBL201631name=nullurl=nullid=PBL201632name=nullurl=nullid=PBL201661name=nullurl=nullid=PBL201635name=nullurl=nullid=PBL201640name=nullurl=nullid=PBL20164001name=nullurl=null";
+		
+			menuData[11] = "id=PBL203001name=nullurl=nullid=PBL20300101name=nullurl=nullid=PBL200780name=nullurl=nullid=PBL200781name=nullurl=nullid=PBL200782name=nullurl=null";
+		
+			menuData[12] = "id=PBL201700name=nullurl=nullid=PBL201786name=nullurl=null";
+		 
+		var mLength = menuData.length;
+		var hisAtomServiceArray = hisAtomService.split("&");
+		var size=hisAtomServiceArray.length;
+		if(size > 0){	
+			for(var m = 0; m < mLength; m ++){
+				var hrefData = new Array();
+				menuDataTmp = menuData[m];
+				var count = 0;
+				$("#div_"+menuDataTmp.substring(menuDataTmp.indexOf('P'),menuDataTmp.indexOf('n'))+"_right").html("");
+				for(var index=0;index<size;index++){
+					var setInfo = hisAtomServiceArray[index];
+					var setInfoArray = setInfo.split("|");
+					id1 = setInfoArray[1];
+					id3 = setInfoArray[0];
+					name2 = setInfoArray[2];
+					name3 = setInfoArray[3];
+					url = setInfoArray[4];
+					if($("#div_"+menuDataTmp.substring(menuDataTmp.indexOf('P'),menuDataTmp.indexOf('n'))+"_right").find('a').length>=2){
+				        		break;
+				        }
+			        if(menuDataTmp.indexOf(id1)>0&&menuDataTmp.indexOf(id3)>0&&!hrefData.contains(id3)){
+			        	$("#div_"+id1).append("<div id='div_"+id1+"_right'>");
+			        	$("#div_"+id1+"_right").append("<ul style='width: 10px; color: rgb(136, 136, 137); margin-right: 10px;float: left;'>|</ul>");
+			        	$("#div_"+id1+"_right").append("<ul style='width: auto; color: rgb(136, 136, 137); margin-right: 10px;float: left;'>"+name2+"</ul>");
+			        	$("#div_"+id1+"_right").append("<ul style='float: left;'>"+"-"+"&nbsp;&nbsp;&nbsp;"+"</ul>");
+			        	if("PBL201635"==id3||"PBL20167001"==id3||"PBL20167002"==id3){
+			        		$("#div_"+id1+"_right").append("<a id='atom"+id3+"'href='javascript:perbankAtomLocationTW(&#39;"+id3+"&#39;,&#39;"+url+"&#39;,dse_sessionId);historyViewSet(&#39;"+id3+"&#39;,&#39;"+id1+"&#39;,&#39;"+name2+"&#39;,&#39;"+name3+"&#39;,dse_sessionId,&#39;"+url+"&#39;);'style='color: #00A0E9;float: left;margin-right: 10px;' >"+name3+"</a>");
+			        	}else{
+			        		$("#div_"+id1+"_right").append("<a id='atom"+id3+"'href='javascript:perbankAtomLocationTW(&#39;"+id3+"&#39;,&#39;&#39;,dse_sessionId);historyViewSet(&#39;"+id3+"&#39;,&#39;"+id1+"&#39;,&#39;"+name2+"&#39;,&#39;"+name3+"&#39;,dse_sessionId,&#39;&#39;);'style='color: #00A0E9;float: left;margin-right: 10px;' >"+name3+"</a>");
+			        	}
+			        	$("#div_"+id1+"_right").append("</div>");
+			        	hrefData[num++] = id3;
+			        	if($("#div_"+id1+"_right").find('a').length<2){
+			        		$("#atom"+id3).css("width","50%");
+			        	}else{
+			        		$("#div_"+id1+"_right").find('a').css("width","auto");
+			        		var alist = new Array();
+			        		alist = $("#div_"+id1+"_right a");
+			        		$(alist[1]).css("width","25%");
+			        		if(parseInt(Sys.ie)==9&&window.screen.width<=1440){
+			        			$("#div_"+id1+"_right").css("width","800px"); 
+			        		}else{
+			        			$("#div_"+id1+"_right").css("width","1000px"); 
+			        		}
+			        	}
+			        	count++;
+			        }
+			        $("#div_"+id1).next().children().css("margin-top","4px");//调整菜单区域间距，防止被挤出浮动展示框
+			        $("#div_"+id1).show();
+			        if(count >= 2){
+			        	break;
+			        }
+	        	}
+			}
+		}
+	}catch(e){
+		//避免空catch
+		}
+	}	
+	
+}
+
+</script>
+
+
+<div id="fillHeaderDiv" style="height: 230px; display: none;"></div><!-- 当滚动页面频道浮动时显示已站位，避免页面猛进 -->
+<div class="header-box header-bg">
+  <div class="header width">
+    <div class="logo-box" onclick="javascript:logPV('PBL200202');perbankAtomLocationBW('PBL200202','',dse_sessionId);">
+    
+  		<img class="logo fl" src="/icbc/newperbank/perbank3/css/frame/images/logo.png">
+  	
+    </div>
+    <div class="header-menu">
+      <ul class="fl">
+		
+		    	
+
+<script src="/icbc/newperbank/js/includes/selectArea.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+	 <li>
+          <a class="icon-1">
+          	<i>双鸭山</i>
+          </a>
+
+<iframe name="areaChangeIframe" style="display: none;"></iframe>
+<form name="formArea" action="/servlet/ICBCINBSReqServlet" method="post" target="areaChangeIframe">
+<input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_ChangeAreaNewOp">
+<input name="dse_pageId" type="hidden" value="24">
+
+<input name="cardNum" type="hidden" value="">
+<input name="ids" type="hidden" value="">
+</form>
+
+</li>
+<script language="JavaScript">
+
+	$(function() {
+		$(".area-li .icon-1").mouseover(function() {
+			$(".down-area").show();
+		})
+		$(".down-area ol li").click(function() {
+			$(".down-area").hide();
+			document.formArea.cardNum.value = $(this).children('input')[0].value;
+			document.formArea.ids.value = "myReload";
+			document.formArea.submit();
+		});
+		$(".area-li").mouseleave(function() {
+			$(".down-area").hide();
+		})
+		
+	});
+	
+	setAreaCodeCookie('黑龙江','0908');
+	
+	function getCurrentDomain(){
+    	var url = window.location.href;
+    	var domain = url.replace(/.*:\/\/([^:|^\/]*).*/,"$1");
+    	return domain;
+	}
+	function setAreaCodeCookie(pName,cCode){//把当前业务地记录cookie
+		var areaCodeParam = pName+"_"+cCode;
+		Utils.clearCookie("firstZoneNo", getCurrentDomain());
+		Utils.setCookie("firstZoneNo", areaCodeParam, 7, getCurrentDomain());	
+	}
+	function removeAreaSelectClick(){//删除绑定卡成功页account_delregcard_ok.jsp调用，以防止用户因删除绑定卡而删除了该地区，再切换会跳网银
+		$(".down-area ol li").unbind('click');
+	}
+</script>
+
+		  	
+			<li><a class="icon-2" href="/icbc/Emall/main/forward.jsp?dse_sessionId=GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE" target="_blank">融e购</a></li>
+		 
+        		
+        		<li><a class="icon-3" href="javascript:perbankAtomLocationTW('PBL20170816','',dse_sessionId);">消息中心</a></li>
+         
+	   
+    	
+
+
+
+
+
+
+
+
+    <li id="myname">
+          <a class="icon-4">
+          	<i id="custName_id2">欢迎您，刘洪德</i>
+          </a>
+ 
+<iframe name="userChangeIframe" style="display: none;"></iframe>
+<form name="form1" action="/servlet/ICBCINBSReqServlet" method="post" target="userChangeIframe">
+<input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_ChangeUserNewOp">
+<input name="dse_pageId" type="hidden" value="24">
+
+<input name="cardNum" type="hidden" value="">
+<input name="ids" type="hidden" value="">
+</form>
+
+</li>     
+<script language="JavaScript">
+//登录切换
+$(function(){
+	$(".user-li .icon-4").mouseover(function(){
+		$(".down-user").show();
+		})
+	$(".down-user ol li").click(function(){
+		$(".down-user").hide();
+		document.form1.cardNum.value = $(this).children('input')[0].value;
+		document.form1.ids.value = "myReload";
+		document.form1.submit();
+		});
+	$(".user-li").mouseleave(function(){
+		$(".down-user").hide();
+		})			
+});
+</script>
+
+
+
+  	 
+	
+		
+	<li><a class="icon-5" href="javascript:perbankAtomLocationBW('PBL100107','',dse_sessionId)">退出</a></li>
+	
+      </ul>
+     
+     	<div class="search-box fl">
+     	<label class="search-holder" id="search-holder" for="search-key">找功能，找产品，点我！</label>
+        <input id="search-key" onkeydown="javascript:if(event.keyCode==13){searchGo();}else{justShowSearch();};" onkeyup="javascript:justShowSearch();" type="text" maxlength="16" value="">
+        <b class="search-btn"></b> 
+        <div class="down-search">
+        	<div class="search-left"></div>
+       		<div class="search-center">
+	            <p><a href="javascript:justShowSearchGo('2')">在产品中搜索"<span class="searchkey3"></span>"</a></p>
+	            <p style="margin-top: -8px;"><a href="javascript:justShowSearchGo('10')">在缴费中搜索"<span class="searchkey3"></span>"</a></p>
+	        </div>  
+            <div class="search-right"></div>
+        </div> 	  
+      </div>
+     
+    </div>
+  </div>
+  <!--header end-->
+  <div class="menu-box width">
+    <div class="choose-box" id="choose-box">
+     	<!-- <a href="javascript:showMyQuickFucDiv();" class="zuiai " id="zuiai" name="zuiai">最爱<span></span></a>  -->
+     	<a class="quanbu" id="quanbu" onmouseover="javascript:getAtomService();" href="javascript:perbankAtomLocationTW('PBL200204','',dse_sessionId);">全部</a> 
+    	<div class="choose-pop" style="display: none;">
+        	<div class="choose-1" id="choose-1" style="display: none;">
+        	<div class="choose-zuiai" id="choose-zuiai">
+            </div> 
+            </div>
+            <div class="choose-2" id="choose-2">
+            <div class="choose-quanbu" id="choose-quanbu">
+                <ol>
+                <li><h5><a href="javascript:perbankAtomLocationTW('PBL200204','true|PBL200700',dse_sessionId);">银行卡.账户<span>&gt;</span></a></h5><div class="down-right-nemu"><div class="down-right-nemu-list" id="div_PBL200700" style="width: 756px; height: 35px; font-size: 14px; display: none; background-color: rgb(247, 247, 247);"><div id="div_PBL200700_left"><ul style="width: auto; color: rgb(136, 136, 137); margin-right: 20px; margin-left: 20px; float: left;"><img style="margin-right: 5px; vertical-align: text-bottom;" src="/icbc/newperbank/perbank3/style/style_default/images/zjsy.png">最近使用</ul></div></div><div class="down-right-nemu-box"><div class="down-right-nemu-list"><h6>账户服务</h6><ul><li><a href="javascript:logPV('PBL100410');perbankAtomLocationTW('PBL100410','',dse_sessionId);historyViewSet('PBL100410','PBL200700','账户服务','账户申请',dse_sessionId,'');">账户申请</a></li><li><a href="javascript:logPV('PBL200711');perbankAtomLocationTW('PBL200711','',dse_sessionId);historyViewSet('PBL200711','PBL200700','账户服务','明细查询',dse_sessionId,'');">明细查询</a></li><li><a href="javascript:logPV('PBL200712');perbankAtomLocationTW('PBL200712','',dse_sessionId);historyViewSet('PBL200712','PBL200700','账户服务','余额查询',dse_sessionId,'');">余额查询</a></li><li><a href="javascript:logPV('PBL200713');perbankAtomLocationTW('PBL200713','',dse_sessionId);historyViewSet('PBL200713','PBL200700','账户服务','电子对账单',dse_sessionId,'');">电子对账单</a></li><li><a href="javascript:logPV('PBL200714');perbankAtomLocationTW('PBL200714','',dse_sessionId);historyViewSet('PBL200714','PBL200700','账户服务','电子回单',dse_sessionId,'');">电子回单</a></li></ul><ul><li><a href="javascript:logPV('PBL200783');perbankAtomLocationTW('PBL200783','',dse_sessionId);historyViewSet('PBL200783','PBL200700','账户服务','资信证明',dse_sessionId,'');">资信证明</a></li><li><a href="javascript:logPV('PBL200715');perbankAtomLocationTW('PBL200715','',dse_sessionId);historyViewSet('PBL200715','PBL200700','账户服务','电子工资单',dse_sessionId,'');">电子工资单</a></li><li><a href="javascript:logPV('PBL200716');perbankAtomLocationTW('PBL200716','',dse_sessionId);historyViewSet('PBL200716','PBL200700','账户服务','支付明细查询',dse_sessionId,'');">支付明细查询</a></li><li><a href="javascript:logPV('PBL200743');perbankAtomLocationTW('PBL200743','',dse_sessionId);historyViewSet('PBL200743','PBL200700','账户服务','网银互联',dse_sessionId,'');">网银互联</a></li><li><a href="javascript:logPV('PBL200742');perbankAtomLocationTW('PBL200742','',dse_sessionId);historyViewSet('PBL200742','PBL200700','账户服务','联名账户',dse_sessionId,'');">联名账户</a></li></ul><ul class="last"><li><a href="javascript:logPV('PBL200744');perbankAtomLocationTW('PBL200744','',dse_sessionId);historyViewSet('PBL200744','PBL200700','账户服务','工行全球账户',dse_sessionId,'');">工行全球账户</a></li><li><a href="javascript:logPV('PBL200771');perbankAtomLocationTW('PBL200771','',dse_sessionId);historyViewSet('PBL200771','PBL200700','账户服务','开户网点查询',dse_sessionId,'');">开户网点查询</a></li><li><a href="javascript:logPV('PBL200772');perbankAtomLocationTW('PBL200772','',dse_sessionId);historyViewSet('PBL200772','PBL200700','账户服务','小额账户销户',dse_sessionId,'');">小额账户销户</a></li><li><a href="javascript:logPV('PBL200773');perbankAtomLocationTW('PBL200773','',dse_sessionId);historyViewSet('PBL200773','PBL200700','账户服务','挂失',dse_sessionId,'');">挂失</a></li><li><a href="javascript:logPV('PBL200733');perbankAtomLocationTW('PBL200733','',dse_sessionId);historyViewSet('PBL200733','PBL200700','账户服务','工资明细',dse_sessionId,'');">工资明细</a></li></ul></div><div class="down-right-nemu-list"><h6>借记卡服务</h6><ul class="last"><li><a href="javascript:logPV('PBL200721');perbankAtomLocationTW('PBL200721','',dse_sessionId);historyViewSet('PBL200721','PBL200700','借记卡服务','借记卡申请',dse_sessionId,'');">借记卡申请</a></li><li><a href="javascript:logPV('PBL200751');perbankAtomLocationTW('PBL200751','',dse_sessionId);historyViewSet('PBL200751','PBL200700','借记卡服务','卡片限额设置',dse_sessionId,'');">卡片限额设置</a></li><li><a href="javascript:logPV('PBL200752');perbankAtomLocationTW('PBL200752','',dse_sessionId);historyViewSet('PBL200752','PBL200700','借记卡服务','换卡不换号办理',dse_sessionId,'');">换卡不换号办理</a></li></ul></div></div></div></li><li><h5><a href="javascript:perbankAtomLocationTW('PBL200204','true|PBL200800',dse_sessionId);">汇款<span>&gt;</span></a></h5><div class="down-right-nemu"><div class="down-right-nemu-list" id="div_PBL200800" style="width: 756px; height: 35px; font-size: 14px; display: none; background-color: rgb(247, 247, 247);"><div id="div_PBL200800_left"><ul style="width: auto; color: rgb(136, 136, 137); margin-right: 20px; margin-left: 20px; float: left;"><img style="margin-right: 5px; vertical-align: text-bottom;" src="/icbc/newperbank/perbank3/style/style_default/images/zjsy.png">最近使用</ul></div></div><div class="down-right-nemu-box"><div class="down-right-nemu-list"><h6>转账汇款</h6><ul><li><a href="javascript:logPV('PBL200811');perbankAtomLocationTW('PBL200811','',dse_sessionId);historyViewSet('PBL200811','PBL200800','转账汇款','境内汇款',dse_sessionId,'');">境内汇款</a></li><li><a href="javascript:logPV('PBL200862');perbankAtomLocationTW('PBL200862','',dse_sessionId);historyViewSet('PBL200862','PBL200800','转账汇款','批量汇款',dse_sessionId,'');">批量汇款</a></li><li><a href="javascript:logPV('PBL200821');perbankAtomLocationTW('PBL200821','',dse_sessionId);historyViewSet('PBL200821','PBL200800','转账汇款','向境外银行汇款',dse_sessionId,'');">向境外银行汇款</a></li><li><a href="javascript:logPV('PBL200812');perbankAtomLocationTW('PBL200812','',dse_sessionId);historyViewSet('PBL200812','PBL200800','转账汇款','注册账户转账',dse_sessionId,'');">注册账户转账</a></li></ul><ul class="last"><li><a href="javascript:logPV('PBL200881');perbankAtomLocationTW('PBL200881','',dse_sessionId);historyViewSet('PBL200881','PBL200800','转账汇款','预约汇款',dse_sessionId,'');">预约汇款</a></li><li><a href="javascript:logPV('PBL200882');perbankAtomLocationTW('PBL200882','',dse_sessionId);historyViewSet('PBL200882','PBL200800','转账汇款','资金自动归集',dse_sessionId,'');">资金自动归集</a></li><li><a href="javascript:logPV('PBL200912');perbankAtomLocationTW('PBL200912','',dse_sessionId);historyViewSet('PBL200912','PBL200800','转账汇款','AA收款',dse_sessionId,'');">AA收款</a></li><li><a href="javascript:logPV('PBL200911');perbankAtomLocationTW('PBL200911','',dse_sessionId);historyViewSet('PBL200911','PBL200800','转账汇款','电子收付款账单',dse_sessionId,'');">电子收付款账单</a></li></ul></div><div class="down-right-nemu-list"><h6>收款绑定</h6><ul class="last"><li><a href="javascript:logPV('PBL200831');perbankAtomLocationTW('PBL200831','',dse_sessionId);historyViewSet('PBL200831','PBL200800','收款绑定','手机号收款绑定',dse_sessionId,'');">手机号收款绑定</a></li><li><a href="javascript:logPV('PBL200832');perbankAtomLocationTW('PBL200832','',dse_sessionId);historyViewSet('PBL200832','PBL200800','收款绑定','E-mail收款绑定',dse_sessionId,'');">E-mail收款绑定</a></li></ul></div><div class="down-right-nemu-list"><h6>投标保证金</h6><ul class="last"><li><a href="javascript:logPV('PBL200921');perbankAtomLocationTW('PBL200921','',dse_sessionId);historyViewSet('PBL200921','PBL200800','投标保证金','投标保证金',dse_sessionId,'');">投标保证金</a></li></ul></div><div class="down-right-nemu-list"><h6>结算套餐</h6><ul class="last"><li><a href="javascript:logPV('PBL200901');perbankAtomLocationTW('PBL200901','',dse_sessionId);historyViewSet('PBL200901','PBL200800','结算套餐','商友会员专属结算套餐',dse_sessionId,'');">商友会员专属结算套餐</a></li><li><a href="javascript:logPV('PBL200902');perbankAtomLocationTW('PBL200902','',dse_sessionId);historyViewSet('PBL200902','PBL200800','结算套餐','普通结算套餐',dse_sessionId,'');">普通结算套餐</a></li></ul></div><div class="down-right-nemu-list"><h6>工银e支付</h6><ul class="last"><li><a href="javascript:logPV('PBL200745');perbankAtomLocationTW('PBL200745','',dse_sessionId);historyViewSet('PBL200745','PBL200800','工银e支付','工银e支付',dse_sessionId,'');">工银e支付</a></li></ul></div></div></div></li><li><h5><a href="javascript:perbankAtomLocationTW('PBL200204','true|PBL200760',dse_sessionId);">信用卡<span>&gt;</span></a></h5><div class="down-right-nemu"><div class="down-right-nemu-list" id="div_PBL200760" style="width: 756px; height: 35px; font-size: 14px; display: none; background-color: rgb(247, 247, 247);"><div id="div_PBL200760_left"><ul style="width: auto; color: rgb(136, 136, 137); margin-right: 20px; margin-left: 20px; float: left;"><img style="margin-right: 5px; vertical-align: text-bottom;" src="/icbc/newperbank/perbank3/style/style_default/images/zjsy.png">最近使用</ul></div></div><div class="down-right-nemu-box"><div class="down-right-nemu-list"><h6>信用卡账户</h6><ul class="last"><li><a href="javascript:logPV('PBL200779');perbankAtomLocationTW('PBL200779','',dse_sessionId);historyViewSet('PBL200779','PBL200760','信用卡账户','我的信用卡',dse_sessionId,'');">我的信用卡</a></li><li><a href="javascript:logPV('PBL200761');perbankAtomLocationTW('PBL200761','',dse_sessionId);historyViewSet('PBL200761','PBL200760','信用卡账户','还款',dse_sessionId,'');">还款</a></li><li><a href="javascript:logPV('PBL200762');perbankAtomLocationTW('PBL200762','',dse_sessionId);historyViewSet('PBL200762','PBL200760','信用卡账户','分期付款',dse_sessionId,'');">分期付款</a></li><li><a href="javascript:logPV('PBL200763');perbankAtomLocationTW('PBL200763','',dse_sessionId);historyViewSet('PBL200763','PBL200760','信用卡账户','定制分期',dse_sessionId,'');">定制分期</a></li><li><a href="javascript:logPV('PBL200764');perbankAtomLocationTW('PBL200764','',dse_sessionId);historyViewSet('PBL200764','PBL200760','信用卡账户','现金分期',dse_sessionId,'');">现金分期</a></li></ul></div><div class="down-right-nemu-list"><h6>卡片管理</h6><ul class="last"><li><a href="javascript:logPV('PBL200722');perbankAtomLocationTW('PBL200722','',dse_sessionId);historyViewSet('PBL200722','PBL200760','卡片管理','申请及进度',dse_sessionId,'');">申请及进度</a></li><li><a href="javascript:logPV('PBL200725');perbankAtomLocationTW('PBL200725','',dse_sessionId);historyViewSet('PBL200725','PBL200760','卡片管理','申请副卡',dse_sessionId,'');">申请副卡</a></li><li><a href="javascript:logPV('PBL200769');perbankAtomLocationTW('PBL200769','',dse_sessionId);historyViewSet('PBL200769','PBL200760','卡片管理','启用',dse_sessionId,'');">启用</a></li><li><a href="javascript:logPV('PBL200724');perbankAtomLocationTW('PBL200724','',dse_sessionId);historyViewSet('PBL200724','PBL200760','卡片管理','数字信用卡申请',dse_sessionId,'');">数字信用卡申请</a></li></ul></div><div class="down-right-nemu-list"><h6>卡片操作</h6><ul class="last"><li><a href="javascript:logPV('PBL200775');perbankAtomLocationTW('PBL200775','',dse_sessionId);historyViewSet('PBL200775','PBL200760','卡片操作','额度调整',dse_sessionId,'');">额度调整</a></li><li><a href="javascript:logPV('PBL20076002');perbankAtomLocationTW('PBL20076002','',dse_sessionId);historyViewSet('PBL20076002','PBL200760','卡片操作','融e借',dse_sessionId,'');">融e借</a></li></ul></div><div class="down-right-nemu-list"><h6>服务</h6><ul class="last"><li><a href="javascript:logPV('PBL200767');perbankAtomLocationTW('PBL200767','',dse_sessionId);historyViewSet('PBL200767','PBL200760','服务','芯片卡服务',dse_sessionId,'');">芯片卡服务</a></li><li><a href="javascript:logPV('PBL200768');perbankAtomLocationTW('PBL200768','',dse_sessionId);historyViewSet('PBL200768','PBL200760','服务','牡丹基金卡服务',dse_sessionId,'');">牡丹基金卡服务</a></li><li><a href="javascript:logPV('PBL200766');perbankAtomLocationTW('PBL200766','',dse_sessionId);historyViewSet('PBL200766','PBL200760','服务','信用报告',dse_sessionId,'');">信用报告</a></li></ul></div></div></div></li><li><h5><a href="javascript:perbankAtomLocationTW('PBL200204','true|PBL201000',dse_sessionId);">存款.贷款<span>&gt;</span></a></h5><div class="down-right-nemu"><div class="down-right-nemu-list" id="div_PBL201000" style="width: 756px; height: 35px; font-size: 14px; display: none; background-color: rgb(247, 247, 247);"><div id="div_PBL201000_left"><ul style="width: auto; color: rgb(136, 136, 137); margin-right: 20px; margin-left: 20px; float: left;"><img style="margin-right: 5px; vertical-align: text-bottom;" src="/icbc/newperbank/perbank3/style/style_default/images/zjsy.png">最近使用</ul></div></div><div class="down-right-nemu-box"><div class="down-right-nemu-list"><h6>存款</h6><ul class="last"><li><a href="javascript:logPV('PBL201011');perbankAtomLocationTW('PBL201011','',dse_sessionId);historyViewSet('PBL201011','PBL201000','存款','通知存款',dse_sessionId,'');">通知存款</a></li><li><a href="javascript:logPV('PBL201021');perbankAtomLocationTW('PBL201021','',dse_sessionId);historyViewSet('PBL201021','PBL201000','存款','定期存款',dse_sessionId,'');">定期存款</a></li><li><a href="javascript:logPV('PBL201025');perbankAtomLocationTW('PBL201025','',dse_sessionId);historyViewSet('PBL201025','PBL201000','存款','大额存单',dse_sessionId,'');">大额存单</a></li><li><a href="javascript:logPV('PBL201031');perbankAtomLocationTW('PBL201031','',dse_sessionId);historyViewSet('PBL201031','PBL201000','存款','节节高',dse_sessionId,'');">节节高</a></li><li><a href="javascript:logPV('PBL201032');perbankAtomLocationTW('PBL201032','',dse_sessionId);historyViewSet('PBL201032','PBL201000','存款','定活通',dse_sessionId,'');">定活通</a></li><li><a href="javascript:logPV('PBL201033');perbankAtomLocationTW('PBL201033','',dse_sessionId);historyViewSet('PBL201033','PBL201000','存款','薪金溢',dse_sessionId,'');">薪金溢</a></li><li><a href="javascript:logPV('PBL201034');perbankAtomLocationTW('PBL201034','',dse_sessionId);historyViewSet('PBL201034','PBL201000','存款','存款增值服务协议',dse_sessionId,'');">存款增值服务协议</a></li></ul></div><div class="down-right-nemu-list"><h6>贷款</h6><ul><li><a href="javascript:logPV('PBL201099');perbankAtomLocationTW('PBL201099','',dse_sessionId);historyViewSet('PBL201099','PBL201000','贷款','我的贷款',dse_sessionId,'');">我的贷款</a></li><li><a href="javascript:logPV('PBL201041');perbankAtomLocationTW('PBL201041','',dse_sessionId);historyViewSet('PBL201041','PBL201000','贷款','融e借',dse_sessionId,'');">融e借</a></li><li><a href="javascript:logPV('PBL201051');perbankAtomLocationTW('PBL201051','',dse_sessionId);historyViewSet('PBL201051','PBL201000','贷款','质押贷款',dse_sessionId,'');">质押贷款</a></li><li><a href="javascript:logPV('PBL20109002');perbankAtomLocationTW('PBL20109002','',dse_sessionId);historyViewSet('PBL20109002','PBL201000','贷款','网贷通',dse_sessionId,'');">网贷通</a></li><li><a href="javascript:logPV('PBL20109004');perbankAtomLocationTW('PBL20109004','',dse_sessionId);historyViewSet('PBL20109004','PBL201000','贷款','e抵快贷',dse_sessionId,'');">e抵快贷</a></li></ul><ul class="last"><li><a href="javascript:logPV('PBL20109001');perbankAtomLocationTW('PBL20109001','',dse_sessionId);historyViewSet('PBL20109001','PBL201000','贷款','个人住房贷款',dse_sessionId,'');">个人住房贷款</a></li><li><a href="javascript:logPV('PBL201061');perbankAtomLocationTW('PBL201061','',dse_sessionId);historyViewSet('PBL201061','PBL201000','贷款','网络抵押贷款',dse_sessionId,'');">网络抵押贷款</a></li><li><a href="javascript:logPV('PBL201092');perbankAtomLocationTW('PBL201092','',dse_sessionId);historyViewSet('PBL201092','PBL201000','贷款','查询申请结果',dse_sessionId,'');">查询申请结果</a></li><li><a href="javascript:logPV('PBL201096');perbankAtomLocationTW('PBL201096','',dse_sessionId);historyViewSet('PBL201096','PBL201000','贷款','还款测算',dse_sessionId,'');">还款测算</a></li><li><a href="javascript:logPV('PBL201043');perbankAtomLocationTW('PBL201043','',dse_sessionId);historyViewSet('PBL201043','PBL201000','贷款','信用报告',dse_sessionId,'');">信用报告</a></li></ul></div></div></div></li><li><h5><a href="javascript:perbankAtomLocationTW('PBL200204','true|PBL201100',dse_sessionId);">理财.债券<span>&gt;</span></a></h5><div class="down-right-nemu"><div class="down-right-nemu-list" id="div_PBL201100" style="width: 756px; height: 35px; font-size: 14px; display: none; background-color: rgb(247, 247, 247);"><div id="div_PBL201100_left"><ul style="width: auto; color: rgb(136, 136, 137); margin-right: 20px; margin-left: 20px; float: left;"><img style="margin-right: 5px; vertical-align: text-bottom;" src="/icbc/newperbank/perbank3/style/style_default/images/zjsy.png">最近使用</ul></div></div><div class="down-right-nemu-box"><div class="down-right-nemu-list"><h6>理财</h6><ul><li><a href="javascript:logPV('PBL20111002');perbankAtomLocationTW('PBL20111002','',dse_sessionId);historyViewSet('PBL20111002','PBL201100','理财','理财产品',dse_sessionId,'');">理财产品</a></li><li><a href="javascript:logPV('PBL20111003');perbankAtomLocationTW('PBL20111003','',dse_sessionId);historyViewSet('PBL20111003','PBL201100','理财','我的理财',dse_sessionId,'');">我的理财</a></li><li><a href="javascript:logPV('PBL201111');perbankAtomLocationTW('PBL201111','',dse_sessionId);historyViewSet('PBL201111','PBL201100','理财','推荐产品',dse_sessionId,'');">推荐产品</a></li><li><a href="javascript:logPV('PBL201113');perbankAtomLocationTW('PBL201113','',dse_sessionId);historyViewSet('PBL201113','PBL201100','理财','精品主题',dse_sessionId,'');">精品主题</a></li><li><a href="javascript:logPV('PBL201112');perbankAtomLocationTW('PBL201112','',dse_sessionId);historyViewSet('PBL201112','PBL201100','理财','现金管理',dse_sessionId,'');">现金管理</a></li></ul><ul class="last"><li><a href="javascript:logPV('PBL201117');perbankAtomLocationTW('PBL201117','',dse_sessionId);historyViewSet('PBL201117','PBL201100','理财','优选净值',dse_sessionId,'');">优选净值</a></li><li><a href="javascript:logPV('PBL201114');perbankAtomLocationTW('PBL201114','',dse_sessionId);historyViewSet('PBL201114','PBL201100','理财','外币类',dse_sessionId,'');">外币类</a></li><li><a href="javascript:logPV('PBL20111004');perbankAtomLocationTW('PBL20111004','',dse_sessionId);historyViewSet('PBL20111004','PBL201100','理财','私人银行',dse_sessionId,'');">私人银行</a></li><li><a href="javascript:logPV('PBL201115');perbankAtomLocationTW('PBL201115','',dse_sessionId);historyViewSet('PBL201115','PBL201100','理财','新型理财',dse_sessionId,'');">新型理财</a></li></ul></div><div class="down-right-nemu-list"><h6>理财服务</h6><ul class="last"><li><a href="javascript:logPV('PBL201142');perbankAtomLocationTW('PBL201142','',dse_sessionId);historyViewSet('PBL201142','PBL201100','理财服务','我的理财服务',dse_sessionId,'');">我的理财服务</a></li><li><a href="javascript:logPV('PBL201143');perbankAtomLocationTW('PBL201143','',dse_sessionId);historyViewSet('PBL201143','PBL201100','理财服务','查询执行明细',dse_sessionId,'');">查询执行明细</a></li></ul></div><div class="down-right-nemu-list"><h6>债券</h6><ul><li><a href="javascript:logPV('PBL201121');perbankAtomLocationTW('PBL201121','',dse_sessionId);historyViewSet('PBL201121','PBL201100','债券','柜台记账式债券',dse_sessionId,'');">柜台记账式债券</a></li><li><a href="javascript:logPV('PBL20112116');perbankAtomLocationTW('PBL20112116','',dse_sessionId);historyViewSet('PBL20112116','PBL201100','债券','我的柜台记账式债券',dse_sessionId,'');">我的柜台记账式债券</a></li><li><a href="javascript:logPV('PBL20112115');perbankAtomLocationTW('PBL20112115','',dse_sessionId);historyViewSet('PBL20112115','PBL201100','债券','推荐产品',dse_sessionId,'');">推荐产品</a></li></ul><ul class="last"><li><a href="javascript:logPV('PBL201123');perbankAtomLocationTW('PBL201123','',dse_sessionId);historyViewSet('PBL201123','PBL201100','债券','储蓄国债',dse_sessionId,'');">储蓄国债</a></li><li><a href="javascript:logPV('PBL20112308');perbankAtomLocationTW('PBL20112308','',dse_sessionId);historyViewSet('PBL20112308','PBL201100','债券','我的储蓄国债',dse_sessionId,'');">我的储蓄国债</a></li></ul></div></div></div></li><li><h5><a href="javascript:perbankAtomLocationTW('PBL200204','true|PBL201200',dse_sessionId);">基金.证券.期货<span>&gt;</span></a></h5><div class="down-right-nemu"><div class="down-right-nemu-list" id="div_PBL201200" style="width: 756px; height: 35px; font-size: 14px; display: none; background-color: rgb(247, 247, 247);"><div id="div_PBL201200_left"><ul style="width: auto; color: rgb(136, 136, 137); margin-right: 20px; margin-left: 20px; float: left;"><img style="margin-right: 5px; vertical-align: text-bottom;" src="/icbc/newperbank/perbank3/style/style_default/images/zjsy.png">最近使用</ul></div></div><div class="down-right-nemu-box"><div class="down-right-nemu-list"><h6>基金</h6><ul class="last"><li><a href="javascript:logPV('PBL201210');perbankAtomLocationTW('PBL201210','',dse_sessionId);historyViewSet('PBL201210','PBL201200','基金','基金产品',dse_sessionId,'');">基金产品</a></li><li><a href="javascript:logPV('PBL20031201');perbankAtomLocationTW('PBL20031201','',dse_sessionId);historyViewSet('PBL20031201','PBL201200','基金','我的基金',dse_sessionId,'');">我的基金</a></li><li><a href="javascript:logPV('PBL201212');perbankAtomLocationTW('PBL201212','',dse_sessionId);historyViewSet('PBL201212','PBL201200','基金','货币基金',dse_sessionId,'');">货币基金</a></li><li><a href="javascript:logPV('PBL201213');perbankAtomLocationTW('PBL201213','',dse_sessionId);historyViewSet('PBL201213','PBL201200','基金','股票基金',dse_sessionId,'');">股票基金</a></li><li><a href="javascript:logPV('PBL201214');perbankAtomLocationTW('PBL201214','',dse_sessionId);historyViewSet('PBL201214','PBL201200','基金','债券基金',dse_sessionId,'');">债券基金</a></li><li><a href="javascript:logPV('PBL201215');perbankAtomLocationTW('PBL201215','',dse_sessionId);historyViewSet('PBL201215','PBL201200','基金','混合基金',dse_sessionId,'');">混合基金</a></li><li><a href="javascript:logPV('PBL201216');perbankAtomLocationTW('PBL201216','',dse_sessionId);historyViewSet('PBL201216','PBL201200','基金','基金定投',dse_sessionId,'');">基金定投  </a></li></ul></div><div class="down-right-nemu-list"><h6>银证</h6><ul><li><a href="javascript:logPV('PBL202013');perbankAtomLocationTW('PBL202013','',dse_sessionId);historyViewSet('PBL202013','PBL201200','银证','自助注册',dse_sessionId,'');">自助注册</a></li><li><a href="javascript:logPV('PBL202014');perbankAtomLocationTW('PBL202014','',dse_sessionId);historyViewSet('PBL202014','PBL201200','银证','我的第三方存管',dse_sessionId,'');">我的第三方存管</a></li><li><a href="javascript:logPV('PBL202015');perbankAtomLocationTW('PBL202015','',dse_sessionId);historyViewSet('PBL202015','PBL201200','银证','银证转账',dse_sessionId,'');">银证转账</a></li><li><a href="javascript:logPV('PBL202016');perbankAtomLocationTW('PBL202016','',dse_sessionId);historyViewSet('PBL202016','PBL201200','银证','融资融券',dse_sessionId,'');">融资融券</a></li><li><a href="javascript:logPV('PBL202017');perbankAtomLocationTW('PBL202017','',dse_sessionId);historyViewSet('PBL202017','PBL201200','银证','B股银证转账',dse_sessionId,'');">B股银证转账</a></li><li><a href="javascript:logPV('PBL202018');perbankAtomLocationTW('PBL202018','',dse_sessionId);historyViewSet('PBL202018','PBL201200','银证','B股证券业务',dse_sessionId,'');">B股证券业务</a></li></ul><ul class="last"><li><a href="javascript:logPV('PBL202019');perbankAtomLocationTW('PBL202019','',dse_sessionId);historyViewSet('PBL202019','PBL201200','银证','B股证券转账（深圳、上海）',dse_sessionId,'');">B股证券转账（深圳、上海）</a></li><li><a href="javascript:logPV('PBL202001');perbankAtomLocationTW('PBL202001','',dse_sessionId);historyViewSet('PBL202001','PBL201200','银证','银衍转账',dse_sessionId,'');">银衍转账</a></li><li><a href="javascript:logPV('PBL202002');perbankAtomLocationTW('PBL202002','',dse_sessionId);historyViewSet('PBL202002','PBL201200','银证','银证期三通',dse_sessionId,'');">银证期三通</a></li><li><a href="javascript:logPV('PBL202003');perbankAtomLocationTW('PBL202003','',dse_sessionId);historyViewSet('PBL202003','PBL201200','银证','网下新股申购转账',dse_sessionId,'');">网下新股申购转账</a></li><li><a href="javascript:logPV('PBL202004');perbankAtomLocationTW('PBL202004','',dse_sessionId);historyViewSet('PBL202004','PBL201200','银证','存管通',dse_sessionId,'');">存管通</a></li><li><a href="javascript:logPV('PBL202005');perbankAtomLocationTW('PBL202005','',dse_sessionId);historyViewSet('PBL202005','PBL201200','银证','银证转账预约设置',dse_sessionId,'');">银证转账预约设置</a></li></ul></div><div class="down-right-nemu-list"><h6>期货</h6><ul class="last"><li><a href="javascript:logPV('PBL202021');perbankAtomLocationTW('PBL202021','',dse_sessionId);historyViewSet('PBL202021','PBL201200','期货','集中式银期注册',dse_sessionId,'');">集中式银期注册</a></li><li><a href="javascript:logPV('PBL202022');perbankAtomLocationTW('PBL202022','',dse_sessionId);historyViewSet('PBL202022','PBL201200','期货','集中式银期转账',dse_sessionId,'');">集中式银期转账</a></li><li><a href="javascript:logPV('PBL202023');perbankAtomLocationTW('PBL202023','',dse_sessionId);historyViewSet('PBL202023','PBL201200','期货','期货开户预约',dse_sessionId,'');">期货开户预约</a></li></ul></div><div class="down-right-nemu-list"><h6>银商银权</h6><ul class="last"><li><a href="javascript:logPV('PBL202031');perbankAtomLocationTW('PBL202031','',dse_sessionId);historyViewSet('PBL202031','PBL201200','银商银权','交易市场注册',dse_sessionId,'');">交易市场注册</a></li><li><a href="javascript:logPV('PBL202032');perbankAtomLocationTW('PBL202032','',dse_sessionId);historyViewSet('PBL202032','PBL201200','银商银权','我的交易市场',dse_sessionId,'');">我的交易市场</a></li><li><a href="javascript:logPV('PBL202033');perbankAtomLocationTW('PBL202033','',dse_sessionId);historyViewSet('PBL202033','PBL201200','银商银权','查询出入金状态',dse_sessionId,'');">查询出入金状态</a></li></ul></div></div></div></li><li><h5><a href="javascript:perbankAtomLocationTW('PBL200204','true|PBL201300',dse_sessionId);">贵金属.外汇.账户商品<span>&gt;</span></a></h5><div class="down-right-nemu"><div class="down-right-nemu-list" id="div_PBL201300" style="width: 756px; height: 35px; font-size: 14px; display: none; background-color: rgb(247, 247, 247);"><div id="div_PBL201300_left"><ul style="width: auto; color: rgb(136, 136, 137); margin-right: 20px; margin-left: 20px; float: left;"><img style="margin-right: 5px; vertical-align: text-bottom;" src="/icbc/newperbank/perbank3/style/style_default/images/zjsy.png">最近使用</ul></div></div><div class="down-right-nemu-box"><div class="down-right-nemu-list"><h6>账户贵金属</h6><ul class="last"><li><a href="javascript:logPV('PBL201311');perbankAtomLocationTW('PBL201311','',dse_sessionId);historyViewSet('PBL201311','PBL201300','账户贵金属','账户贵金属',dse_sessionId,'');">账户贵金属</a></li><li><a href="javascript:logPV('PBL201312');perbankAtomLocationTW('PBL201312','',dse_sessionId);historyViewSet('PBL201312','PBL201300','账户贵金属','账户贵金属指数',dse_sessionId,'');">账户贵金属指数</a></li><li><a href="javascript:logPV('PBL201351');perbankAtomLocationTW('PBL201351','',dse_sessionId);historyViewSet('PBL201351','PBL201300','账户贵金属','账户贵金属转换',dse_sessionId,'');">账户贵金属转换</a></li></ul></div><div class="down-right-nemu-list"><h6>实物贵金属</h6><ul class="last"><li><a href="javascript:logPV('PBL201333');perbankAtomLocationTW('PBL201333','',dse_sessionId);historyViewSet('PBL201333','PBL201300','实物贵金属','代理贵金属递延',dse_sessionId,'');">代理贵金属递延</a></li><li><a href="javascript:logPV('PBL201332');perbankAtomLocationTW('PBL201332','',dse_sessionId);historyViewSet('PBL201332','PBL201300','实物贵金属','代理贵金属现货',dse_sessionId,'');">代理贵金属现货</a></li><li><a href="javascript:logPV('PBL201337');perbankAtomLocationTW('PBL201337','',dse_sessionId);historyViewSet('PBL201337','PBL201300','实物贵金属','品牌贵金属购买',dse_sessionId,'');">品牌贵金属购买</a></li><li><a href="javascript:logPV('PBL201331');perbankAtomLocationTW('PBL201331','',dse_sessionId);historyViewSet('PBL201331','PBL201300','实物贵金属','积存金',dse_sessionId,'');">积存金</a></li></ul></div><div class="down-right-nemu-list"><h6>外汇</h6><ul class="last"><li><a href="javascript:logPV('PBL201342');perbankAtomLocationTW('PBL201342','',dse_sessionId);historyViewSet('PBL201342','PBL201300','外汇','结售汇',dse_sessionId,'');">结售汇</a></li><li><a href="javascript:logPV('PBL201341');perbankAtomLocationTW('PBL201341','',dse_sessionId);historyViewSet('PBL201341','PBL201300','外汇','外汇买卖',dse_sessionId,'');">外汇买卖</a></li><li><a href="javascript:logPV('PBL201343');perbankAtomLocationTW('PBL201343','',dse_sessionId);historyViewSet('PBL201343','PBL201300','外汇','账户外汇',dse_sessionId,'');">账户外汇</a></li><li><a href="javascript:logPV('PBL201345');perbankAtomLocationTW('PBL201345','',dse_sessionId);historyViewSet('PBL201345','PBL201300','外汇','账户外汇指数',dse_sessionId,'');">账户外汇指数</a></li></ul></div><div class="down-right-nemu-list"><h6>账户商品</h6><ul class="last"><li><a href="javascript:logPV('PBL201321');perbankAtomLocationTW('PBL201321','',dse_sessionId);historyViewSet('PBL201321','PBL201300','账户商品','账户能源',dse_sessionId,'');">账户能源</a></li><li><a href="javascript:logPV('PBL201322');perbankAtomLocationTW('PBL201322','',dse_sessionId);historyViewSet('PBL201322','PBL201300','账户商品','账户农产品',dse_sessionId,'');">账户农产品 </a></li><li><a href="javascript:logPV('PBL201323');perbankAtomLocationTW('PBL201323','',dse_sessionId);historyViewSet('PBL201323','PBL201300','账户商品','账户基本金属',dse_sessionId,'');">账户基本金属</a></li></ul></div><div class="down-right-nemu-list"><h6>模拟交易</h6><ul class="last"><li><a href="javascript:logPV('PBL201392');perbankAtomLocationTW('PBL201392','',dse_sessionId);historyViewSet('PBL201392','PBL201300','模拟交易','模拟交易大赛',dse_sessionId,'');">模拟交易大赛</a></li><li><a href="javascript:logPV('PBL201391');perbankAtomLocationTW('PBL201391','',dse_sessionId);historyViewSet('PBL201391','PBL201300','模拟交易','账户贵金属(模拟)',dse_sessionId,'');">账户贵金属(模拟)</a></li><li><a href="javascript:logPV('PBL201393');perbankAtomLocationTW('PBL201393','',dse_sessionId);historyViewSet('PBL201393','PBL201300','模拟交易','账户外汇(模拟)',dse_sessionId,'');">账户外汇(模拟)</a></li><li><a href="javascript:logPV('PBL201394');perbankAtomLocationTW('PBL201394','',dse_sessionId);historyViewSet('PBL201394','PBL201300','模拟交易','账户能源(模拟)',dse_sessionId,'');">账户能源(模拟)</a></li><li><a href="javascript:logPV('PBL201395');perbankAtomLocationTW('PBL201395','',dse_sessionId);historyViewSet('PBL201395','PBL201300','模拟交易','账户农产品(模拟)',dse_sessionId,'');">账户农产品(模拟)</a></li><li><a href="javascript:logPV('PBL201396');perbankAtomLocationTW('PBL201396','',dse_sessionId);historyViewSet('PBL201396','PBL201300','模拟交易','账户基本金属(模拟)',dse_sessionId,'');">账户基本金属(模拟)</a></li><li><a href="javascript:logPV('PBL201397');perbankAtomLocationTW('PBL201397','',dse_sessionId);historyViewSet('PBL201397','PBL201300','模拟交易','账户贵金属指数(模拟)',dse_sessionId,'');">账户贵金属指数(模拟)</a></li></ul></div></div></div></li><li><h5><a href="javascript:perbankAtomLocationTW('PBL200204','true|PBL202000',dse_sessionId);">保险.养老金.社保.公积金<span>&gt;</span></a></h5><div class="down-right-nemu"><div class="down-right-nemu-list" id="div_PBL202000" style="width: 756px; height: 35px; font-size: 14px; display: none; background-color: rgb(247, 247, 247);"><div id="div_PBL202000_left"><ul style="width: auto; color: rgb(136, 136, 137); margin-right: 20px; margin-left: 20px; float: left;"><img style="margin-right: 5px; vertical-align: text-bottom;" src="/icbc/newperbank/perbank3/style/style_default/images/zjsy.png">最近使用</ul></div></div><div class="down-right-nemu-box"><div class="down-right-nemu-list"><h6>保险</h6><ul class="last"><li><a href="javascript:logPV('PBL201230');perbankAtomLocationTW('PBL201230','',dse_sessionId);historyViewSet('PBL201230','PBL202000','保险','保险产品',dse_sessionId,'');">保险产品</a></li><li><a href="javascript:logPV('PBL201231');perbankAtomLocationTW('PBL201231','',dse_sessionId);historyViewSet('PBL201231','PBL202000','保险','我的保险',dse_sessionId,'');">我的保险</a></li><li><a href="javascript:logPV('PBL201226');perbankAtomLocationTW('PBL201226','',dse_sessionId);historyViewSet('PBL201226','PBL202000','保险','稳健投资',dse_sessionId,'');">稳健投资</a></li><li><a href="javascript:logPV('PBL201227');perbankAtomLocationTW('PBL201227','',dse_sessionId);historyViewSet('PBL201227','PBL202000','保险','健康人生',dse_sessionId,'');">健康人生</a></li><li><a href="javascript:logPV('PBL201228');perbankAtomLocationTW('PBL201228','',dse_sessionId);historyViewSet('PBL201228','PBL202000','保险','安全出行',dse_sessionId,'');">安全出行</a></li><li><a href="javascript:logPV('PBL201229');perbankAtomLocationTW('PBL201229','',dse_sessionId);historyViewSet('PBL201229','PBL202000','保险','养老无忧',dse_sessionId,'');">养老无忧</a></li></ul></div><div class="down-right-nemu-list"><h6>养老金·社保·公积金</h6><ul class="last"><li><a href="javascript:logPV('PBL201626');perbankAtomLocationTW('PBL201626','',dse_sessionId);historyViewSet('PBL201626','PBL202000','养老金·社保·公积金','养老金',dse_sessionId,'');">养老金</a></li><li><a href="javascript:logPV('PBL201625');perbankAtomLocationTW('PBL201625','',dse_sessionId);historyViewSet('PBL201625','PBL202000','养老金·社保·公积金','工银e社保',dse_sessionId,'');">工银e社保</a></li><li><a href="javascript:logPV('PBL201624');perbankAtomLocationTW('PBL201624','',dse_sessionId);historyViewSet('PBL201624','PBL202000','养老金·社保·公积金','住房公积金',dse_sessionId,'');">住房公积金</a></li></ul></div></div></div></li><li><h5><a href="javascript:perbankAtomLocationTW('PBL200204','true|PBL201400',dse_sessionId);">信使.预约<span>&gt;</span></a></h5><div class="down-right-nemu"><div class="down-right-nemu-list" id="div_PBL201400" style="width: 756px; height: 35px; font-size: 14px; display: none; background-color: rgb(247, 247, 247);"><div id="div_PBL201400_left"><ul style="width: auto; color: rgb(136, 136, 137); margin-right: 20px; margin-left: 20px; float: left;"><img style="margin-right: 5px; vertical-align: text-bottom;" src="/icbc/newperbank/perbank3/style/style_default/images/zjsy.png">最近使用</ul></div></div><div class="down-right-nemu-box"><div class="down-right-nemu-list"><h6>工银信使</h6><ul class="last"><li><a href="javascript:logPV('PBL2007461');perbankAtomLocationTW('PBL2007461','',dse_sessionId);historyViewSet('PBL2007461','PBL201400','工银信使','我的工银信使',dse_sessionId,'');">我的工银信使</a></li><li><a href="javascript:logPV('PBL201411');perbankAtomLocationTW('PBL201411','',dse_sessionId);historyViewSet('PBL201411','PBL201400','工银信使','余额变动提醒',dse_sessionId,'');">余额变动提醒</a></li><li><a href="javascript:logPV('PBL201412');perbankAtomLocationTW('PBL201412','',dse_sessionId);historyViewSet('PBL201412','PBL201400','工银信使','贵金属到价提醒',dse_sessionId,'');">贵金属到价提醒</a></li><li><a href="javascript:logPV('PBL201413');perbankAtomLocationTW('PBL201413','',dse_sessionId);historyViewSet('PBL201413','PBL201400','工银信使','重要事项提醒',dse_sessionId,'');">重要事项提醒</a></li><li><a href="javascript:logPV('PBL201415');perbankAtomLocationTW('PBL201415','',dse_sessionId);historyViewSet('PBL201415','PBL201400','工银信使','其他信使',dse_sessionId,'');">其他信使</a></li></ul></div><div class="down-right-nemu-list"><h6>网点预约</h6><ul class="last"><li><a href="javascript:logPV('PBL201601');perbankAtomLocationTW('PBL201601','',dse_sessionId);historyViewSet('PBL201601','PBL201400','网点预约','预约取号',dse_sessionId,'');">预约取号</a></li><li><a href="javascript:logPV('PBL201422');perbankAtomLocationTW('PBL201422','',dse_sessionId);historyViewSet('PBL201422','PBL201400','网点预约','人民币大额现金取款',dse_sessionId,'');">人民币大额现金取款</a></li><li><a href="javascript:logPV('PBL201423');perbankAtomLocationTW('PBL201423','',dse_sessionId);historyViewSet('PBL201423','PBL201400','网点预约','外币现金取款',dse_sessionId,'');">外币现金取款</a></li><li><a href="javascript:logPV('PBL201433');perbankAtomLocationTW('PBL201433','',dse_sessionId);historyViewSet('PBL201433','PBL201400','网点预约','申请借记卡',dse_sessionId,'');">申请借记卡</a></li><li><a href="javascript:logPV('PBL201602');perbankAtomLocationTW('PBL201602','',dse_sessionId);historyViewSet('PBL201602','PBL201400','网点预约','开立资信证明',dse_sessionId,'');">开立资信证明</a></li><li><a href="javascript:logPV('PBL201603');perbankAtomLocationTW('PBL201603','',dse_sessionId);historyViewSet('PBL201603','PBL201400','网点预约','换卡不换号申请',dse_sessionId,'');">换卡不换号申请</a></li><li><a href="javascript:logPV('PBL201430');perbankAtomLocationTW('PBL201430','',dse_sessionId);historyViewSet('PBL201430','PBL201400','网点预约','我的网点预约',dse_sessionId,'');">我的网点预约</a></li></ul></div></div></div></li><li><h5><a href="javascript:perbankAtomLocationTW('PBL200204','true|PBL201500',dse_sessionId);">私人银行<span>&gt;</span></a></h5><div class="down-right-nemu"><div class="down-right-nemu-list" id="div_PBL201500" style="width: 756px; height: 35px; font-size: 14px; display: none; background-color: rgb(247, 247, 247);"><div id="div_PBL201500_left"><ul style="width: auto; color: rgb(136, 136, 137); margin-right: 20px; margin-left: 20px; float: left;"><img style="margin-right: 5px; vertical-align: text-bottom;" src="/icbc/newperbank/perbank3/style/style_default/images/zjsy.png">最近使用</ul></div></div><div class="down-right-nemu-box"><div class="down-right-nemu-list"><h6>金融服务</h6><ul><li><a href="javascript:logPV('PBL201545');perbankAtomLocationTW('PBL201545','',dse_sessionId);historyViewSet('PBL201545','PBL201500','金融服务','我的财富',dse_sessionId,'');">我的财富</a></li><li><a href="javascript:logPV('PBL201503');perbankAtomLocationTW('PBL201503','',dse_sessionId);historyViewSet('PBL201503','PBL201500','金融服务','专属理财服务',dse_sessionId,'');">专属理财服务</a></li><li><a href="javascript:logPV('PBL201578');perbankAtomLocationTW('PBL201578','',dse_sessionId);historyViewSet('PBL201578','PBL201500','金融服务','专属基金',dse_sessionId,'');">专属基金</a></li><li><a href="javascript:logPV('PBL201232');perbankAtomLocationTW('PBL201232','',dse_sessionId);historyViewSet('PBL201232','PBL201500','金融服务','专属保险',dse_sessionId,'');">专属保险</a></li><li><a href="javascript:logPV('PBL201508');perbankAtomLocationTW('PBL201508','',dse_sessionId);historyViewSet('PBL201508','PBL201500','金融服务','专属代理产品',dse_sessionId,'');">专属代理产品</a></li><li><a href="javascript:logPV('PBL201579');perbankAtomLocationTW('PBL201579','',dse_sessionId);historyViewSet('PBL201579','PBL201500','金融服务','我的预留产品',dse_sessionId,'');">我的预留产品</a></li></ul><ul class="last"><li><a href="javascript:logPV('PBL201588');perbankAtomLocationTW('PBL201588','',dse_sessionId);historyViewSet('PBL201588','PBL201500','金融服务','产品份额转让大厅',dse_sessionId,'');">产品份额转让大厅</a></li><li><a href="javascript:logPV('PBL201547');perbankAtomLocationTW('PBL201547','',dse_sessionId);historyViewSet('PBL201547','PBL201500','金融服务','资产管理',dse_sessionId,'');">资产管理</a></li><li><a href="javascript:logPV('PBL201550');perbankAtomLocationTW('PBL201550','',dse_sessionId);historyViewSet('PBL201550','PBL201500','金融服务','委托确认',dse_sessionId,'');">委托确认</a></li><li><a href="javascript:logPV('PBL201577');perbankAtomLocationTW('PBL201577','',dse_sessionId);historyViewSet('PBL201577','PBL201500','金融服务','投资账户',dse_sessionId,'');">投资账户</a></li><li><a href="javascript:logPV('PBL201119');perbankAtomLocationTW('PBL201119','',dse_sessionId);historyViewSet('PBL201119','PBL201500','金融服务','配置组合',dse_sessionId,'');">配置组合</a></li><li><a href="javascript:logPV('PBL201571');perbankAtomLocationTW('PBL201571','',dse_sessionId);historyViewSet('PBL201571','PBL201500','金融服务','新产品意向征集',dse_sessionId,'');">新产品意向征集</a></li></ul></div><div class="down-right-nemu-list"><h6>非金融服务</h6><ul class="last"><li><a href="javascript:logPV('PBL201551');perbankAtomLocationTW('PBL201551','',dse_sessionId);historyViewSet('PBL201551','PBL201500','非金融服务','增值服务',dse_sessionId,'');">增值服务</a></li><li><a href="javascript:logPV('PBL201552');perbankAtomLocationTW('PBL201552','',dse_sessionId);historyViewSet('PBL201552','PBL201500','非金融服务','资讯平台',dse_sessionId,'');">资讯平台</a></li><li><a href="javascript:logPV('PBL201553');perbankAtomLocationTW('PBL201553','',dse_sessionId);historyViewSet('PBL201553','PBL201500','非金融服务','财富顾问',dse_sessionId,'');">财富顾问</a></li></ul></div><div class="down-right-nemu-list"><h6>全球财富</h6><ul class="last"><li><a href="javascript:logPV('PBL201581');perbankAtomLocationTW('PBL201581','',dse_sessionId);historyViewSet('PBL201581','PBL201500','全球财富','境外账户',dse_sessionId,'');">境外账户</a></li><li><a href="javascript:logPV('PBL201582');perbankAtomLocationTW('PBL201582','',dse_sessionId);historyViewSet('PBL201582','PBL201500','全球财富','投资资讯',dse_sessionId,'');">投资资讯</a></li></ul></div></div></div></li><li><h5><a href="javascript:perbankAtomLocationTW('PBL200204','true|PBL201600',dse_sessionId);">生活缴费.本地特色<span>&gt;</span></a></h5><div class="down-right-nemu"><div class="down-right-nemu-list" id="div_PBL201600" style="width: 756px; height: 35px; font-size: 14px; display: none; background-color: rgb(247, 247, 247);"><div id="div_PBL201600_left"><ul style="width: auto; color: rgb(136, 136, 137); margin-right: 20px; margin-left: 20px; float: left;"><img style="margin-right: 5px; vertical-align: text-bottom;" src="/icbc/newperbank/perbank3/style/style_default/images/zjsy.png">最近使用</ul></div></div><div class="down-right-nemu-box"><div class="down-right-nemu-list"><h6>生活服务</h6><ul class="last"><li><a href="javascript:logPV('PBL300101');perbankAtomLocationTW('PBL300101','',dse_sessionId);historyViewSet('PBL300101','PBL201600','生活服务','e缴费',dse_sessionId,'');">e缴费</a></li><li><a href="javascript:logPV('PBL201611');perbankAtomLocationTW('PBL201611','',dse_sessionId);historyViewSet('PBL201611','PBL201600','生活服务','委托代扣',dse_sessionId,'');">委托代扣</a></li><li><a href="javascript:logPV('PBL201612');perbankAtomLocationTW('PBL201612','',dse_sessionId);historyViewSet('PBL201612','PBL201600','生活服务','代缴学费',dse_sessionId,'');">代缴学费</a></li><li><a href="javascript:logPV('PBL201621');perbankAtomLocationTW('PBL201621','',dse_sessionId);historyViewSet('PBL201621','PBL201600','生活服务','银医服务',dse_sessionId,'');">银医服务</a></li><li><a href="javascript:logPV('PBL201622');perbankAtomLocationTW('PBL201622','',dse_sessionId);historyViewSet('PBL201622','PBL201600','生活服务','公益捐款',dse_sessionId,'');">公益捐款</a></li><li><a href="javascript:logPV('PBL201623');perbankAtomLocationTW('PBL201623','',dse_sessionId);historyViewSet('PBL201623','PBL201600','生活服务','纳税',dse_sessionId,'');">纳税 </a></li></ul></div><div class="down-right-nemu-list"><h6>活动大厅</h6><ul class="last"><li><a href="javascript:logPV('PBL20167001');perbankAtomLocationTW('PBL20167001','5',dse_sessionId);historyViewSet('PBL20167001','PBL201600','活动大厅','热门活动',dse_sessionId,'5');">热门活动</a></li><li><a href="javascript:logPV('PBL20167002');perbankAtomLocationTW('PBL20167002','6',dse_sessionId);historyViewSet('PBL20167002','PBL201600','活动大厅','我的奖品',dse_sessionId,'6');">我的奖品</a></li></ul></div><div class="down-right-nemu-list"><h6>专属权益</h6><ul class="last"><li><a href="javascript:logPV('PBL201631');perbankAtomLocationTW('PBL201631','',dse_sessionId);historyViewSet('PBL201631','PBL201600','专属权益','积分',dse_sessionId,'');">积分</a></li><li><a href="javascript:logPV('PBL201632');perbankAtomLocationTW('PBL201632','',dse_sessionId);historyViewSet('PBL201632','PBL201600','专属权益','交易抽奖',dse_sessionId,'');">交易抽奖</a></li><li><a href="javascript:logPV('PBL201661');perbankAtomLocationTW('PBL201661','',dse_sessionId);historyViewSet('PBL201661','PBL201600','专属权益','增值服务',dse_sessionId,'');">增值服务</a></li><li><a href="javascript:logPV('PBL201635');perbankAtomLocationTW('PBL201635','7',dse_sessionId);historyViewSet('PBL201635','PBL201600','专属权益','优惠券',dse_sessionId,'7');">优惠券</a></li></ul></div><div class="down-right-nemu-list"><h6>本地特色</h6><ul class="last"><li><a href="javascript:logPV('PBL20164001');perbankAtomLocationTW('PBL20164001','',dse_sessionId);historyViewSet('PBL20164001','PBL201600','本地特色','本地特色',dse_sessionId,'');">本地特色</a></li></ul></div></div></div></li>
+                </ol>
+            </div>
+            </div>
+        </div>
+    </div>
+    <ul class="menu-ul">
+      <li><a href="javascript:logPV('PBL200202');perbankAtomLocationBW('PBL200202','',dse_sessionId);">首页</a></li>
+      
+      
+      <li id="financial">
+      	<a href="javascript:void(0);">&nbsp;财富广场</a>
+      	<div class="down-menu">
+        	<ol>
+                <li><a href="javascript:logPV('PBL201097');perbankAtomLocationTW('PBL201097','',dse_sessionId);">贷款&nbsp;&nbsp;</a></li><li><a href="javascript:logPV('PBL201139');perbankAtomLocationTW('PBL201139','',dse_sessionId);">理财&nbsp;&nbsp;</a></li><li><a href="javascript:logPV('PBL200317');perbankAtomLocationTW('PBL200317','',dse_sessionId);">基金&nbsp;&nbsp;</a></li><li><a href="javascript:logPV('PBL200603');perbankAtomLocationTW('PBL200603','',dse_sessionId);">贵金属&nbsp;&nbsp;</a></li><li><a href="javascript:logPV('PBL201344');perbankAtomLocationTW('PBL201344','',dse_sessionId);">外汇&nbsp;&nbsp;</a></li><li><a href="javascript:logPV('PBL201370');perbankAtomLocationTW('PBL201370','',dse_sessionId);">账户商品&nbsp;&nbsp;</a></li><li><a href="javascript:logPV('PBL20112307');perbankAtomLocationTW('PBL20112307','',dse_sessionId);">债券&nbsp;&nbsp;</a></li>
+            </ol>
+        </div>
+      </li>
+      
+      
+      
+      	<li><a href="javascript:logPV('PBL200203');perbankAtomLocationTW('PBL200203','',dse_sessionId);">惠生活</a></li>
+      
+      <li><a href="javascript:logPV('PBL201786');perbankAtomLocationTW('PBL201786','',dse_sessionId);">账户列表</a></li>
+      <li><a href="javascript:logPV('PBL201720');perbankAtomLocationTW('PBL201720','',dse_sessionId);">安全</a></li>
+      <li><a href="javascript:logPV('PBL201724');perbankAtomLocationTW('PBL201724','',dse_sessionId);">设置</a></li>
+    </ul>
+    <div class="E-bank active">
+    <div title="点击查看我的网银！" class="E-bank-myBank" onclick="logPV('PBL201700');perbankAtomLocationTW('PBL201700','',dse_sessionId,'',oratype);">
+    	<b class="user-img"></b><span>我的网银</span>
+    </div>
+    <div class="E-banl-down-nemu">
+    	<ul>
+    		<li onclick="logPV('PBL201700');perbankAtomLocationTW('PBL201700','4',dse_sessionId);"><a href="javascript:void(0);"><span class="jrrl-bg"></span>金融日历</a></li>
+        	<li onclick="logPV('PBL201786');perbankAtomLocationTW('PBL201786','',dse_sessionId);"><a href="javascript:void(0);"><span class="kabao-bg"></span>账户列表</a></li>
+        	<li onclick="logPV('PBL201670');perbankAtomLocationTW('PBL201670','5',dse_sessionId);"><a href="javascript:void(0);"><span class="hall-bg"></span>活动大厅</a></li>
+            <li onclick="logPV('PBL201720');perbankAtomLocationTW('PBL201720','',dse_sessionId);"><a href="javascript:void(0);"><span class="anquan-bg"></span>安全</a></li>
+            <li onclick="logPV('PBL201724');perbankAtomLocationTW('PBL201724','',dse_sessionId);"><a href="javascript:void(0);"><span class="shezhi-bg"></span>设置</a></li>
+        </ul>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="zuiai-block">
+  	<div class="zuiai-div">
+				<div class="zuiai-icon" style="cursor: pointer;" onclick="showMyQuickFucDiv();">
+					   <div class="zuiai-icon-bg"></div>
+					        <p>最爱</p>
+					        <span>
+					        </span>
+			   </div>
+			   <div class="zuiai-centent">
+					<ul class="zuiai-ul">
+					
+
+
+
+
+
+<style>
+/* .choose-zuiai-box{ height:370px;}
+.choose-zuiai-box ul{ height:370px;}
+.choose-zuiai-box ul li a{ display:block; height:64px; padding:0; margin:0;}
+.choose-zuiai-box ul li a .pic-box{ height:40px;} */
+.zuiai-ul li{ float:left; width:62px; height:40px; text-align:center; margin:0 4px;}
+.zuiai-ul li a p{ padding-top:4px; font-size:12px; color:#888889;}
+.pic-box {height:40px;background:url(/icbc/newperbank/perbank3/images/quickFunc/zuiai_add_v.png) center bottom no-repeat;}
+.pic-box1 {height:40px;background:url(/icbc/newperbank/perbank3/images/quickFunc/zuiai_add_r.png) center bottom no-repeat;}
+</style>
+
+  <div class="zuiai-centent" id="commonUseTbl">
+	<ul class="zuiai-ul"><li onclick="showLogonDiv2('PBL201786');" onmouseenter="tj('PBL201786')" onmouseleave="th('PBL201786')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL201786" src="/icbc/newperbank/perbank3/images/quickFunc/PBL201786_r.png"><p id="PBL201786r">我的账户</p></a></li><li onclick="showLogonDiv2('PBL200812');" onmouseenter="tj('PBL200812')" onmouseleave="th('PBL200812')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL200812" src="/icbc/newperbank/perbank3/images/quickFunc/PBL200812_r.png"><p id="PBL200812r">注册账户</p><p id="PBL200812n" style="padding-top: 0px;">转账</p></a></li><li onclick="showLogonDiv2('PBL200811');" onmouseenter="tj('PBL200811')" onmouseleave="th('PBL200811')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL200811" src="/icbc/newperbank/perbank3/images/quickFunc/PBL200811_r.png"><p id="PBL200811r">转账汇款</p></a></li><li onclick="showLogonDiv2('PBL200779');" onmouseenter="tj('PBL200779')" onmouseleave="th('PBL200779')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL200779" src="/icbc/newperbank/perbank3/images/quickFunc/PBL200779_r.png"><p id="PBL200779r">信用卡</p></a></li><li onclick="showLogonDiv2('PBL201097');" onmouseenter="tj('PBL201097')" onmouseleave="th('PBL201097')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL201097" src="/icbc/newperbank/perbank3/images/quickFunc/PBL201097_r.png"><p id="PBL201097r">贷款</p></a></li><li onclick="showLogonDiv2('PBL300101');" onmouseenter="tj('PBL300101')" onmouseleave="th('PBL300101')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL300101" src="/icbc/newperbank/perbank3/images/quickFunc/PBL300101_r.png"><p id="PBL300101r">e缴费</p></a></li><li onclick="showLogonDiv2('PBL201139');" onmouseenter="tj('PBL201139')" onmouseleave="th('PBL201139')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL201139" src="/icbc/newperbank/perbank3/images/quickFunc/PBL201139_r.png"><p id="PBL201139r">理财</p></a></li><li onclick="showLogonDiv2('PBL200317');" onmouseenter="tj('PBL200317')" onmouseleave="th('PBL200317')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL200317" src="/icbc/newperbank/perbank3/images/quickFunc/PBL200317_r.png"><p id="PBL200317r">基金</p></a></li><li onclick="showLogonDiv2('PBL200603');" onmouseenter="tj('PBL200603')" onmouseleave="th('PBL200603')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL200603" src="/icbc/newperbank/perbank3/images/quickFunc/PBL200603_r.png"><p id="PBL200603r">贵金属</p></a></li><li onclick="showLogonDiv2('PBL200745');" onmouseenter="tj('PBL200745')" onmouseleave="th('PBL200745')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL200745" src="/icbc/newperbank/perbank3/images/quickFunc/PBL200745_r.png"><p id="PBL200745r">工银e支付</p></a></li><li onclick="showLogonDiv2('PBL20164001');" onmouseenter="tj('PBL20164001')" onmouseleave="th('PBL20164001')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL20164001" src="/icbc/newperbank/perbank3/images/quickFunc/PBL20164001_r.png"><p id="PBL20164001r">本地特色</p></a></li><li onclick="showLogonDiv2('PBL100410');" onmouseenter="tj('PBL100410')" onmouseleave="th('PBL100410')"><a class="active" style="cursor: pointer;" href="#"><img id="PBL100410" src="/icbc/newperbank/perbank3/images/quickFunc/PBL100410_r.png"><p id="PBL100410r">账户申请</p></a></li><li onclick="showMyQuickFucDiv(); "><a class="active" style="cursor: pointer;" href="#"><img id="tj1" style="margin-top: 7px; margin-bottom: 7px;" onmouseenter="tj1(this.id)" onmouseleave="th1(this.id)" src="/icbc/newperbank/perbank3/images/quickFunc/zuiai_add_r.png"><p>调整</p></a></li></ul>
+  </div>
+<script src="/icbc/newperbank/js/ajax/json2.js"></script> 
+<script src="/icbc/newperbank/js/ajax/datastruct-ajax-eb.js"></script> 
+<script src="/icbc/newperbank/js/perbank3/ie8indexOf.js;"></script> 
+<script type="text/javascript">
+var commandname= new Array();
+commandname[0]={'isfavourit':'1','locationno':'PBL201428','chname':'网点预约'};
+commandname[1]={'isfavourit':'1','locationno':'PBL201433','chname':'申请借记卡'};
+commandname[2]={'isfavourit':'1','locationno':'PBL201216','chname':'基金定投  '};
+commandname[3]={'isfavourit':'1','locationno':'PBL20112307','chname':'债券'};
+commandname[4]={'isfavourit':'1','locationno':'PBL300101','chname':'e缴费'};
+commandname[5]={'isfavourit':'1','locationno':'PBL201021','chname':'定期存款'};
+commandname[6]={'isfavourit':'1','locationno':'PBL201031','chname':'节节高'};
+commandname[7]={'isfavourit':'1','locationno':'PBL201032','chname':'定活通'};
+commandname[8]={'isfavourit':'1','locationno':'PBL201041','chname':'融e借'};
+commandname[9]={'isfavourit':'1','locationno':'PBL201051','chname':'质押贷款'};
+commandname[10]={'isfavourit':'1','locationno':'PBL201061','chname':'抵押贷款'};
+commandname[11]={'isfavourit':'1','locationno':'PBL201097','chname':'贷款'};
+commandname[12]={'isfavourit':'1','locationno':'PBL201099','chname':'我的贷款'};
+commandname[13]={'isfavourit':'1','locationno':'PBL200811','chname':'转账汇款'};
+commandname[14]={'isfavourit':'1','locationno':'PBL200812','chname':'注册账户转账'};
+commandname[15]={'isfavourit':'1','locationno':'PBL200821','chname':'跨境汇款'};
+commandname[16]={'isfavourit':'1','locationno':'PBL100410','chname':'账户申请'};
+commandname[17]={'isfavourit':'1','locationno':'PBL200603','chname':'贵金属'};
+commandname[18]={'isfavourit':'1','locationno':'PBL200862','chname':'批量汇款'};
+commandname[19]={'isfavourit':'1','locationno':'PBL200882','chname':'资金归集'};
+commandname[20]={'isfavourit':'1','locationno':'PBL20164001','chname':'本地特色'};
+commandname[21]={'isfavourit':'1','locationno':'PBL201503','chname':'私行专属理财'};
+commandname[22]={'isfavourit':'1','locationno':'PBL201508','chname':'私行专属遴选'};
+commandname[23]={'isfavourit':'1','locationno':'PBL201786','chname':'我的账户'};
+commandname[24]={'isfavourit':'1','locationno':'PBL201311','chname':'账户贵金属'};
+commandname[25]={'isfavourit':'1','locationno':'PBL201312','chname':'账户贵金属指数'};
+commandname[26]={'isfavourit':'1','locationno':'PBL201321','chname':'账户能源'};
+commandname[27]={'isfavourit':'1','locationno':'PBL201322','chname':'账户农产品 '};
+commandname[28]={'isfavourit':'1','locationno':'PBL201323','chname':'账户基本金属'};
+commandname[29]={'isfavourit':'1','locationno':'PBL20109001','chname':'个人住房贷款'};
+commandname[30]={'isfavourit':'1','locationno':'PBL20109002','chname':'网贷通'};
+commandname[31]={'isfavourit':'1','locationno':'PBL20109003','chname':'房贷报税查询'};
+commandname[32]={'isfavourit':'1','locationno':'PBL20109004','chname':'e抵快贷'};
+commandname[33]={'isfavourit':'1','locationno':'PBL201331','chname':'积存金'};
+commandname[34]={'isfavourit':'1','locationno':'PBL201332','chname':'实物贵金属'};
+commandname[35]={'isfavourit':'1','locationno':'PBL201333','chname':'贵金属递延'};
+commandname[36]={'isfavourit':'1','locationno':'PBL201337','chname':'品牌贵金属'};
+commandname[37]={'isfavourit':'1','locationno':'PBL201583','chname':'私行境外资讯'};
+commandname[38]={'isfavourit':'1','locationno':'PBL201341','chname':'外汇买卖'};
+commandname[39]={'isfavourit':'1','locationno':'PBL201342','chname':'结售汇'};
+commandname[40]={'isfavourit':'1','locationno':'PBL201343','chname':'账户外汇'};
+commandname[41]={'isfavourit':'1','locationno':'PBL201344','chname':'外汇'};
+commandname[42]={'isfavourit':'1','locationno':'PBL201345','chname':'账户外汇指数'};
+commandname[43]={'isfavourit':'1','locationno':'PBL201588','chname':'产品份额转让大厅'};
+commandname[44]={'isfavourit':'1','locationno':'PBL201121','chname':'记账式债券'};
+commandname[45]={'isfavourit':'1','locationno':'PBL201123','chname':'储蓄国债'};
+commandname[46]={'isfavourit':'1','locationno':'PBL201370','chname':'账户商品'};
+commandname[47]={'isfavourit':'1','locationno':'PBL201139','chname':'理财'};
+commandname[48]={'isfavourit':'1','locationno':'PBL750007','chname':'融e购'};
+commandname[49]={'isfavourit':'1','locationno':'PBL202004','chname':'存管通'};
+commandname[50]={'isfavourit':'1','locationno':'PBL202014','chname':'三方存管'};
+commandname[51]={'isfavourit':'1','locationno':'PBL202015','chname':'银证转账'};
+commandname[52]={'isfavourit':'1','locationno':'PBL202022','chname':'银期转账'};
+commandname[53]={'isfavourit':'1','locationno':'PBL200901','chname':'商友结算套餐'};
+commandname[54]={'isfavourit':'1','locationno':'PBL200902','chname':'普通结算套餐'};
+commandname[55]={'isfavourit':'1','locationno':'PBL200911','chname':'收付款账单'};
+commandname[56]={'isfavourit':'1','locationno':'PBL200912','chname':'AA收款'};
+commandname[57]={'isfavourit':'1','locationno':'PBL20139119','chname':'模拟交易'};
+commandname[58]={'isfavourit':'1','locationno':'PBL200711','chname':'明细查询'};
+commandname[59]={'isfavourit':'1','locationno':'PBL200714','chname':'电子回单'};
+commandname[60]={'isfavourit':'1','locationno':'PBL200715','chname':'工资单'};
+commandname[61]={'isfavourit':'1','locationno':'PBL200721','chname':'借记卡申请'};
+commandname[62]={'isfavourit':'1','locationno':'PBL200722','chname':'信用卡申请'};
+commandname[63]={'isfavourit':'1','locationno':'PBL200743','chname':'网银互联'};
+commandname[64]={'isfavourit':'1','locationno':'PBL200745','chname':'工银e支付'};
+commandname[65]={'isfavourit':'1','locationno':'PBL200511','chname':'保险'};
+commandname[66]={'isfavourit':'1','locationno':'PBL201847','chname':'认证管理'};
+commandname[67]={'isfavourit':'1','locationno':'PBL200762','chname':'分期付款'};
+commandname[68]={'isfavourit':'1','locationno':'PBL200763','chname':'定制分期'};
+commandname[69]={'isfavourit':'1','locationno':'PBL200766','chname':'信用报告'};
+commandname[70]={'isfavourit':'1','locationno':'PBL200769','chname':'信用卡启用'};
+commandname[71]={'isfavourit':'1','locationno':'PBL200771','chname':'开户网点'};
+commandname[72]={'isfavourit':'1','locationno':'PBL200773','chname':'挂失'};
+commandname[73]={'isfavourit':'1','locationno':'PBL201621','chname':'银医服务'};
+commandname[74]={'isfavourit':'1','locationno':'PBL200779','chname':'信用卡'};
+commandname[75]={'isfavourit':'1','locationno':'PBL201626','chname':'养老金'};
+commandname[76]={'isfavourit':'1','locationno':'PBL200783','chname':'资信证明'};
+commandname[77]={'isfavourit':'1','locationno':'PBL200784','chname':'办理进度'};
+commandname[78]={'isfavourit':'1','locationno':'PBL201631','chname':'积分'};
+commandname[79]={'isfavourit':'1','locationno':'PBL200317','chname':'基金'};
+commandname[80]={'isfavourit':'1','locationno':'PBL201411','chname':'余额变动提醒'};
+
+try{
+	var myfavServices='PBL201786|PBL200812|PBL200811|PBL200779|PBL201097|PBL300101|PBL201139|PBL200317|PBL200603|PBL200745|PBL20164001|PBL100410';
+/*     var myfavSs = myfavServices.split('|');//顺序数组
+    var serviceIds="";
+    var serviceIdLs="";//临时数组
+    var serviceIdStr=localMapList_CommandStr;
+    if(serviceIdStr!=''){
+		for(i=0;i<myfavSs.length;i++){
+			if(serviceIdStr.indexOf(myfavSs[i])>-1){
+				serviceIdLs=serviceIdLs+myfavSs[i]+"|";
+			}
+		}
+		serviceIds= serviceIdStr.split('|');
+		for(i=0;i<serviceIds.length;i++){
+			if(serviceIdLs.indexOf(serviceIds[i])<0){
+				serviceIdLs=serviceIdLs+serviceIds[i]+"|";
+			}
+		}
+	var zhyw=serviceIdLs.substr(serviceIdLs.length-1,serviceIdLs.length);
+	if(zhyw=="|"){
+			serviceIdLs=serviceIdLs.substr(0,serviceIdLs.length-1);
+	} 
+	} */
+
+}catch(e){}
+
+		  
+
+var CookieZ;
+var fStr;
+var mCommonFucStr;
+var myquickAll7_tmp="";	//最近使用
+var myquickAll8_tmp="";	//大家都在用
+var structCode ="1";
+	function commonFucStrVal(){
+	     return mCommonFucStr;
+	}
+	function locationmapListVal(){
+	     return loctionmapList;
+	}
+	function myquickAll7Val(){
+	     return myquickAll7_tmp;
+	}
+	function myquickAll8Val(){
+	     return myquickAll8_tmp;
+	}
+	
+	function getLocationMap(locationno){
+		for(var i=0;i<commandname.length;i++){
+			var locationnotemp=commandname[i].locationno;
+			if(locationnotemp==locationno){
+				return commandname[i];
+			}
+		}
+		return "";
+	}
+	
+	function getCommand (){
+		var data1=new Array();
+		var index=0;
+		for(var i=0;i<commandname.length;i++){		
+		if(commandname[i].isfavourit=='1'){
+				data1[index]={'isfavourit':commandname[i].isfavourit,'locationno':commandname[i].locationno,'chname':commandname[i].chname};
+				index = index + 1;
+			}
+		}
+		return data1;
+	}
+	
+	function showMyQuickFucDiv(){
+		if(dse_sessionId==""||dse_sessionId==null){
+			//alert("未登录"+dse_sessionId);
+			perbankAtomLocationTW(serviceId,'','',true);
+		}else{
+	 	var sendParam = {};
+		sendParam["doFlag"]="0";
+		sendParam["SessionId"]=dse_sessionId;
+	    sendParam["tranCode"]="A00491";
+		EBDataStruct.sendAjax({
+	    						data: sendParam,
+	    						dataType: "json",
+	    						url: "AsynGetDataServlet",
+	    						failCallBack: function(result){perbankAtomLocationTW('PBL201700','','',true); },
+	    						successCallBack: function(kc){
+	    							showDiv(kc);
+	    						},
+	    						isDisplay: false,
+	    						displayArea: "pselected"
+	    					}); 
+		}
+	
+	}
+	function showDiv(KColl){
+			//ipvs5071返回 的最近使用和大家都在用数据
+			myquickAll7_tmp = KColl.getValueAt("fav_myLastFucs");
+			myquickAll8_tmp = KColl.getValueAt("fav_currentFucs");
+			// add by lexy 
+			queryCommFuc(dse_sessionId,'0','');
+			var commList = getCommand();
+			//alert("loctionmapList====" + commList);
+			//定义弹出的信息为页面的某一个元素
+			//注入数据
+			setTimeout("darwLi()",1500);
+			setTimeout("showPicture()",1000);
+	}
+	function showPicture(){
+		 /* parent.jQuery.blockUI({message: jQuery('#myQuickFucDiv'),
+				css: { 
+					top:'10%',
+					left:'30%',
+	             width:'55%',
+	             height:'75%'
+	     	}
+	}); 
+	if(/MSIE 9/i.test(navigator.appVersion)||/MSIE 8/i.test(navigator.appVersion)){
+		var winHeight = $(window).height();
+		var h = winHeight * 0.72;
+		h = Math.round(h) - 4;
+		jQuery("#quickfuc_float_jsp").height(h); 
+	}
+	if((/Trident\/7\./).test(navigator.appVersion)){
+		var winHeight = $(window).height();
+		var h = winHeight * 0.72;
+		h = Math.round(h) - 4;
+		jQuery("#quickfuc_float_jsp").height(h); 
+	} */
+	//mac 电脑显示太大！不能显示全！	
+	
+	$(".zuiai-fix-bg1").show();
+	
+		
+	}
+	/**
+	关闭登录
+	**/
+	/* function hideMyQuickFucDiv(){
+		//关闭弹出层
+	     parent.jQuery.unblockUI();
+	} */
+</script>
+
+<!-- <div id="myQuickFucDiv" style="display: none;">
+    <div id="quickfuc_float_x_id" class="icbc_more" style="width:98%;height:25px;cursor: auto;" align="right">
+        <a href="javascript:WanCheng();" style="background-color:#CC0033;"><span id="" style="font-size:15px;color: white;">完成</span></a>
+        <a href="javascript:hideMyQuickFucDiv();" style="background-color:gray;"><span id=""  style="font-size:15px;color: white;">关闭</span></a>
+    </div>
+	<div id="quickfuc_float_jsp_id">   -->
+			<!-- 	<iframe marginWidth="0" id="myQuickFucDiv" 
+					src="/icbc/newperbank/perbank3/quickFuc/myQuickFuc.jsp"
+					style="width: 100%;height: 100%;border:0; display: none;">
+				</iframe>  -->
+<!-- 	</div>
+	
+</div> -->
+
+<script>
+/* function WanCheng(){
+	quickfuc_float_jsp.WanCheng();
+} */
+ function showLogonDiv2(locationId){
+	if(locationId=='PBL201847'){
+		perbankAtomLocationTW('PBL201720>PBL201847','',dse_sessionId);
+	}else{
+		perbankAtomLocationTW(locationId,'',dse_sessionId);
+	}
+	//埋点
+	addPvValue(['pvModelElementId','favouriteLink']);//
+	addPvValue(['serviceid',locationId]);//记录原子服务id
+	try{ar_main();}catch(e){}
+	addPvValue(['pvModelElementId','']);//清空
+	addPvValue(['serviceid','']);//清空
+
+} 
+/*
+actionType 0查询 1保存
+*/
+function queryCommFuc(sessionId,actionType,commfucInput){
+	var sendParam1 = {};
+	sendParam1["SessionId"]=sessionId;
+	sendParam1["actionType"]=actionType;
+	if(actionType=='1'){
+		sendParam1["commfucInput"]=commfucInput;
+		setCookie("cookieCy","",-1);
+		setCookie("cookieCy",commfucInput,7);
+	}
+	sendParam1["tranCode"]="A00491";
+	EBDataStruct.sendAjax({
+    						data: sendParam1,
+    						dataType: "json",
+    						url: "AsynGetDataServlet",
+    						failCallBack: function(result){commFucError(result);},
+    						successCallBack: function(kc){
+    							commFucSuccsed(kc);
+    						},
+    						isDisplay: false,
+    						displayArea: "pselected"
+    					});	
+}
+function setCookie(name,value,seconds){
+	/* if(value==""){
+		parent.xsqb1();
+	}else{
+		parent.xsqb2();
+	} */
+	var value1=value.replace(/\|/g,'lis');
+	seconds=seconds||0;
+	var expires="";
+	if(seconds!=0){
+	var date =new Date();
+	date.setTime(date.getTime()+(seconds*24*60*60*1000));
+	}
+	document.cookie=name+"="+escape(value1)+";expires="+date.toGMTString();
+	//path=/";
+}
+
+function commFucError(result){
+	//alert('error');
+	drawTable('');
+}
+
+function commFucSuccsed(KColl){
+	//alert('success');
+	
+// 	alert("tmp====="+KColl.data.fav_myLastFucs+"--------->"+KColl.returnCode);
+	
+	var returnCode=KColl.getValueAt("returnCode");
+	var commonFucStr=KColl.getValueAt("commonFucStr");
+//	alert("commonFucStr===" + commonFucStr);
+	mCommonFucStr = commonFucStr;
+	
+	if(returnCode=="0"){
+		if(commonFucStr=='0'){
+			//alert('未查询，不显示常用功能');
+			drawTable(commonFucStr);
+			setCookie("cookieCy","",-1);
+		} else if(commonFucStr=='1'){
+			/* parent.xsqb(); */
+			//alert('已经查询，用户将常用功能清空，只显示加号按钮');
+			drawTable('');
+			setCookie("cookieCy","",-1);
+		} else if(commonFucStr=='2'){
+			//alert('已经查询，用户未设置常用功能，显示内管维护的功能');、
+			drawTable(myfavServices);
+			setCookie("cookieCy","",-1);
+			//drawTable(localMapList_CommandStr);
+			//drawTable(fStr);
+			//alert(fStr);
+		}else{
+			//alert('已经查询，用户设置了常用功能，显示用户设置的功能='+commonFucStr);
+			//alert(commonFucStr);
+			drawTable(commonFucStr);
+			setCookie("cookieCy","",-1);
+			setCookie("cookieCy",commonFucStr,7);
+		}
+		
+	}else{
+		drawTable('');
+	}
+}
+
+function drawTable(serviceIdStr){
+	$('#commonUseTbl').find('ul').html('');
+	var html_head = '';
+	var html_foot = '';
+	var html_content = '';
+	var curMap;
+	var tjortz="添加";//添加或调整
+	try{
+	serviceIds=serviceIdStr.split('|'); 
+	}catch(e){}
+	if(CookieZ!=null&&CookieZ!=""){
+	//alert("有CookieZ===="+CookieZ);
+		if(serviceIdStr!=''){
+			 //serviceIds = serviceIdStr.split('|');
+			 var cokz;
+			 if("lis".indexOf(CookieZ)){
+		 	  cokz=CookieZ.split("lis");
+			 }else{
+			 cokz=serviceIds;
+			 }
+			  for(i=0;i<cokz.length;i++){
+			  	if(cokz.length>=12){
+			  		tjortz="调整";
+			  	}else{
+			  		tjortz="添加";
+			  	}
+			  		//if(CookieZ.indexOf(serviceIds[i])>-1){
+			  			try{
+						curMap = getLocationMap(cokz[i]);
+						var chname=$.trim(curMap.chname);
+						if(chname!=null&&chname!=""&&typeof chname!= "undefined"){
+						html_content = html_content + '<li onclick="showLogonDiv2(\''+cokz[i]+'\');"  onmouseenter="tj(\''+cokz[i]+'\')" onmouseleave="th(\''+cokz[i]+'\')" >';
+						html_content = html_content + '<a class="active" style="cursor:pointer;" href="#"><img id="'+cokz[i]+'"  src="/icbc/newperbank/perbank3/images/quickFunc/'+cokz[i]+'_r.png" />';
+						if(chname.length<=5){
+							chname="<p  id='"+cokz[i]+"r' >"+chname+"</p>";
+						}else{
+							var nameq="";
+							var nameh="";
+							if(chname.length==7||chname.length==8||chname.length==6){
+							 	nameq=chname.substring(0,4);
+							 	nameh=chname.substring(4);
+								chname="<p  id='"+cokz[i]+"r'>"+nameq+"</p>"+"<p style='padding-top:0px;' id='"+cokz[i]+"n'>"+nameh+"</p>";
+							}else{
+								chname="<p  id='"+cokz[i]+"r'>"+chname+"</p>";
+							}
+						}
+						html_content = html_content +chname+ '</a></li>';
+						}
+			  			}
+			  			catch(e){}
+					//}	
+				}
+				html_content = html_content + '<li onclick="showMyQuickFucDiv(); ">';
+				html_content = html_content + '<a class="active"  style="cursor:pointer;" href="#"><img id="tj1" style="margin-top:7px;margin-bottom:7px;" onmouseenter="tj1(this.id)" onmouseleave="th1(this.id)" src="/icbc/newperbank/perbank3/images/quickFunc/zuiai_add_r.png" />';
+				html_content = html_content + '<p>'+tjortz+'</p></a>';
+				html_content = html_content + '</li>';
+		}
+	}else{
+	//alert("m有cookie");
+		//alert("serviceIdStr===" + serviceIdStr);
+		if(serviceIdStr!=''){
+			// serviceIds = serviceIdStr.split('|');
+			/*  alert(serviceIds);
+			 alert("serviceIds.length===" + serviceIds.length); */
+			 if(serviceIds.length>=12){
+			  		tjortz="调整";
+			  	}else{
+			  		tjortz="添加";
+			  	}
+			 if(serviceIds.length>11){
+				for(i=0;i<12;i++){
+					try{
+					curMap = getLocationMap(serviceIds[i]);
+					var chname=$.trim(curMap.chname);
+					if(chname!=null&&chname!=""&&typeof chname!= "undefined"){
+					html_content = html_content + '<li onclick="showLogonDiv2(\''+serviceIds[i]+'\');"  onmouseenter="tj(\''+serviceIds[i]+'\')" onmouseleave="th(\''+serviceIds[i]+'\')" >';
+					html_content = html_content + '<a class="active"  style="cursor:pointer;" href="#"><img id="'+serviceIds[i]+'"   src="/icbc/newperbank/perbank3/images/quickFunc/'+serviceIds[i]+'_r.png" />';
+					if(chname.length<=5){
+						chname="<p  id='"+serviceIds[i]+"r'>"+chname+"</p>";
+					}else{
+						var nameq="";
+						var nameh="";
+						if(chname.length==7||chname.length==8||chname.length==6){
+						 	nameq=chname.substring(0,4);
+						 	nameh=chname.substring(4);
+							chname="<p  id='"+serviceIds[i]+"r'>"+nameq+"</p>"+"<p style='padding-top:0px;' id='"+serviceIds[i]+"n'>"+nameh+"</p>";
+						}else{
+							chname="<p  id='"+serviceIds[i]+"r'>"+chname+"</p>";
+						}
+					}
+					html_content = html_content +chname+ '</a></li>';
+					}
+					
+					}catch(e){
+					}
+				}
+			 }else{
+			 for(i=0;i<serviceIds.length;i++){
+			 		try{
+					curMap = getLocationMap(serviceIds[i]);
+					var chname=$.trim(curMap.chname);
+					if(chname!=null&&chname!=""&&typeof chname!= "undefined"){
+					html_content = html_content + '<li onclick="showLogonDiv2(\''+serviceIds[i]+'\');"  onmouseenter="tj(\''+serviceIds[i]+'\')" onmouseleave="th(\''+serviceIds[i]+'\')" >';
+					html_content = html_content + '<a class="active"   style="cursor:pointer;" href="#"><img id="'+serviceIds[i]+'"   src="/icbc/newperbank/perbank3/images/quickFunc/'+serviceIds[i]+'_r.png" />';
+					if(chname.length<=5){
+						chname="<p  id='"+serviceIds[i]+"r'>"+chname+"</p>";
+					}else{
+						var nameq="";
+						var nameh="";
+						if(chname.length==7||chname.length==8||chname.length==6){
+						 	nameq=chname.substring(0,4);
+						 	nameh=chname.substring(4);
+							chname="<p  id='"+serviceIds[i]+"r'>"+nameq+"</p>"+"<p style='padding-top:0px;' id='"+serviceIds[i]+"n'>"+nameh+"</p>";
+						}else{
+							chname="<p  id='"+serviceIds[i]+"r'>"+chname+"</p>";
+						}
+					}
+					html_content = html_content +chname+ '</div></a></li>';
+					}
+			 		}catch(e){}
+				}
+			 }
+		 			html_content = html_content + '<li onclick="showMyQuickFucDiv(); ">';
+				html_content = html_content + '<a class="active"  style="cursor:pointer;" href="#"><img id="tj1" style="margin-top:7px;margin-bottom:7px;" onmouseenter="tj1(this.id)" onmouseleave="th1(this.id)" src="/icbc/newperbank/perbank3/images/quickFunc/zuiai_add_r.png" />';
+				html_content = html_content + '<p>'+tjortz+'</p></a>';
+				html_content = html_content + '</li>';
+			
+			 
+		}else{
+	 			html_content = html_content + '<li onclick="showMyQuickFucDiv(); ">';
+				html_content = html_content + '<a class="active"  style="cursor:pointer;" href="#"><img id="tj1" style="margin-top:7px;margin-bottom:7px;" onmouseenter="tj1(this.id)" onmouseleave="th1(this.id)" src="/icbc/newperbank/perbank3/images/quickFunc/zuiai_add_r.png" />';
+				html_content = html_content + '<p>'+tjortz+'</p></a>';
+				html_content = html_content + '</li>';
+		}
+	html_content = html_head + html_content + html_foot;
+}
+	jQuery("#commonUseTbl").find('ul').html(html_content);
+}
+try{
+	//alert("try");
+	if(dse_sessionId!=''){
+				//alert("走这里");
+				queryCommFuc(dse_sessionId,'0','');
+	}else{
+		var haveCookie=false;
+		var arrStr =document.cookie;
+		if(arrStr.indexOf("cookieCy")>-1){
+				haveCookie=true;
+		}
+		if(haveCookie){
+			var arrStr1 =document.cookie.split(";");
+			for(var i=0;i<arrStr1.length;i++ ){
+				var temp = arrStr1[i].split("=");
+				if($.trim(temp[0])=="cookieCy"){
+					CookieZ=temp[1];
+			}
+		}	
+			drawTable(myfavServices);
+		}else{
+			drawTable(myfavServices);
+		}
+	}
+	
+}catch(e){}
+ function tj(id){
+document.getElementById(id).src="/icbc/newperbank/perbank3/images/quickFunc/"+id+"_v.png"
+}
+function th(id){
+document.getElementById(id).src="/icbc/newperbank/perbank3/images/quickFunc/"+id+"_r.png";
+
+}
+function tj1(id){
+document.getElementById(id).src="/icbc/newperbank/perbank3/images/quickFunc/zuiai_add_v.png";
+}
+function th1(id){
+document.getElementById(id).src="/icbc/newperbank/perbank3/images/quickFunc/zuiai_add_r.png";
+//document.getElementById(id).addClass("pic-box1");
+} 
+</script>
+
+					</ul>
+    			</div>
+	  </div>
+</div>
+
+
+
+<link href="/icbc/newperbank/css/jquery.dad.css?ver=2019061605" rel="stylesheet" type="text/css">
+
+
+<script src="/icbc/newperbank/js/perbank3/common.js?ver=2019061605"></script>
+<script src="&#10;/icbc/newperbank/js/perbank3/jquery.menu-aim.mini.js?ver=2019061605"></script>
+<script src="&#10;/icbc/newperbank/js/perbank3/ie8indexOf.js?ver=2019061605"></script>
+<script src="&#10;/icbc/newperbank/js/jquery.dad.min.js?ver=2019061605"></script>
+
+
+<style>
+/*<最爱加号弹窗*/
+.zuiai-fix-bg1{ width:100%; height:100%; background:url(/icbc/newperbank/perbank3/css/frame/images/bg-hui.png) repeat; position:fixed; top:0; left:0; z-index:1000; display:none;}
+.zuiai-fix-bg1 .zuiai-fix-box1{ width:920px;  background-color:#f2f2f2; height:540px; position:absolute; left:50%; top:51%; margin-left:-460px; margin-top:-280px;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-top1{ background-color:#f7f7f7; height:42px; line-height:42px; position:relative;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-top1 .complete-btn1{ position:absolute; top:10px; right:24px; width:60px; height:24px; line-height:24px; text-align:center; font-size:14px; color:#ffffff; background-color:#FF7878; border-radius:3px; cursor:pointer;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-top1 h6>i{ position:absolute; left:26px; top:0; line-height:42px; height:42px; font-size:16px; color:#3e3a39;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-top1>h6{  line-height:42px; font-size:16px; color:#fff;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item2{ padding-top:24px;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1{ padding-top:30px;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1.bg-f{ height:136px;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-other-height{ height:312px; }
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-other-height1{ height:312px; overflow:auto;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1>h6{ font-size:14px; color:#3e3a39; padding-left:26px;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul{margin-top:0px;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul li{ float:left; width:60px; height:75px; margin-left:14px; cursor:pointer; text-align:center;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul li>a{ display:block; width:100%; height:100%; position:relative;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul li>a .pic-box1>span{ display:block; width:100%; height:100%;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul.uiai-fix-item-other-ul li{ margin-bottom:18px;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul li>a .fix-b{ width:20px; height:20px; position:absolute; top:-10px; right:-10px; }
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul li>a .fix-b.on{ background:url(/icbc/newperbank/perbank3/images/quickFunc/zuiai-fix-on.png) center center no-repeat;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul li>a .fix-b{ background:url(/icbc/newperbank/perbank3/images/quickFunc/zuiai-fix-nor.png) center center no-repeat;}
+
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul .li{ float:left; width:60px; height:75px; margin-left:14px; cursor:pointer; text-align:center;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul .li>a{ display:block; width:100%; height:100%; position:relative;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul .li>a .pic-box1>span{ display:block; width:100%; height:100%;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul.uiai-fix-item-other-ul li{ margin-bottom:18px;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul .li>a .fix-b{ width:20px; height:20px; position:absolute; top:-10px; right:-10px; }
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul .li>a .fix-b.on{ background:url(/icbc/newperbank/perbank3/images/quickFunc/zuiai-fix-on.png) center center no-repeat;}
+.zuiai-fix-bg1 .zuiai-fix-box1 .zuiai-fix-body1 .zuiai-fix-item1 .uiai-fix-item-ul .li>a .fix-b{ background:url(/icbc/newperbank/perbank3/images/quickFunc/zuiai-fix-nor.png) center center no-repeat;}
+
+.both{ clear:both;}
+.closeLayer{
+   cursor: hand;
+   z-index:99;
+   position:absolute;
+   margin-left:-10px;
+   height:23px;
+   width: 23px;
+   /* display:none; */
+}
+.img_square{
+    height:40px;
+    width: 40px;
+}
+.img_square1{
+    height:55px;
+    width: 55px;
+    line-height:55px;
+    vertical-align:middle;
+}
+
+.haveimg{
+    height:55px;
+    width: 55px;
+	background-image:url(/icbc/newperbank/perbank3/images/quickFunc/landi.png)
+}
+.search-box1 {
+    border-radius: 8px;
+    margin-top: 6px;
+    background: url(/icbc/newperbank/perbank3/css/frame/images/search-bg.png) 0 0 no-repeat;
+    background-position: center center;
+}
+.search-box1 > b {
+    position: absolute;
+    top: 10px;
+    width: 20px;
+    height: 21px;
+    background: url(/ebdpui/pc4promote/style/default/conditionchoose/manage-icon.png) center center no-repeat;
+    cursor: pointer;
+}
+.place-holder{
+		position: absolute;
+		/* top: 50%; */
+		top: 0px;
+		/* margin: -10px 0 0 4px; */
+		color:#666;
+		cursor: text;
+		font-size:13px;
+		z-index:2;
+		margin-left:400px;
+		
+	}
+.a1{ text-align:left;  line-height:42px; font-size:14px; color:#3e3a39;}
+.a2{  padding-left:19px; width:12px; float:left; height:40px; line-height:40px; font-size:40px; color:#FF7878;}
+.a3{ font-size:14px;width:570px;float:left;}
+.a8{ font-size:14px;}
+.a4{  left:19px;  line-height:42px; font-size:40px; color:#FF7878; vertical-align: middle;}
+.a5{  left:35px;line-height:42px; font-size:16px; color:#3e3a39; vertical-align: middle; margin-left: 4px;}
+.a6{ position:static;  font-size:14px; color:#3e3a39; vertical-align: middle;}
+.a7{ float:left; width:300px;line-height:42px; font-size:14px; color:#3e3a39; margin-left: 4px;}
+.a9{ font-size:14px;}
+.a10{ font-size:14px;text-align:center;}
+.complete-btn2{ position:absolute;  right:24px; width:60px; height:24px; line-height:24px; text-align:center; font-size:14px; color:#ffffff; background-color:#FF7878; border-radius:3px; cursor:pointer;}
+.ebdp-pc4promote-menu-level2-selected-type4 {
+  border-bottom: 3px solid #fc6469;
+}
+.ebdp-pc4promote-menu-level2-selected-type4 {
+  border-bottom: 3px solid #fc6469;
+  color: #fc6469;
+}
+
+#replace_img {
+	margin-top: 18px;
+}
+.table_favorite {
+	width:100%;
+	display: none;
+}
+#func_search_res{
+	display: none;
+}
+.table_favorite tr td {
+	text-align: center;
+  	vertical-align: middle;
+}
+
+.uiai-fix-item-ul .li { display: inline-block; margin-right: 0px; *display: inline; *zoom: 1;}
+</style>
+<!--fix-box end--> 
+
+<!--最爱加号弹窗-->
+<div class="zuiai-fix-bg1">
+	<div class="zuiai-fix-box1">
+        <div class="zuiai-fix-top1">
+        <h6>
+        <i>管理我的最爱</i>
+        <span style="width: 100%;">
+        <div class="search-box1">
+        <span class="place-holder" id="cpgjz" onclick="sousuob3()">产品关键字</span>
+        <input id="sousuo" style="margin-left: 380px;" onfocusin="sousuob2()" onfocusout="sousuob1()" type="text"><b onclick="sousuob()"></b>
+        </div>
+        </span>
+        <a class="complete-btn1" href="javascript:yc();">完 成</a>
+        </h6>
+        </div>
+        <div class="zuiai-fix-body1  bg-f">
+        	<div class="zuiai-fix-item1 zuiai-fix-item2" id="ower" style="height: 130px; padding-top: 0px;">
+	        	<div class="a1">
+	            		<div class="a2">·&nbsp;</div><div class="a7">已选择<span class="a8" id="yxcy">0</span>/<span class="a8" id="qbcy">12</span>个功能</div>
+	            	 	<div class="a3">&nbsp;</div>
+	        	</div>
+	                <div class="ul uiai-fix-item-ul" id="selectUi" style="height: 130px;">
+	                </div>
+           		 <div class="a1">
+            		<div class="a2" id="qtgn1" style="display: none;">·&nbsp;</div><div class="a7" id="qtgn"></div> 
+<!--             		<div class="a9"><a id="fanhui" style="display: none;  " class="complete-btn2" href="javascript:sousuof();">取消</a></div> -->
+	        	 </div>
+            </div>
+            
+			<div id="id4" style="width: 100%;">
+				<div class="ebdp-pc4promote-menu-level1-block">
+					<a class="ebdp-pc4promote-menu-level1-next-btn"></a>
+					<a class="ebdp-pc4promote-menu-level1-prev-btn"></a>
+					<div class="ebdp-pc4promote-menu-level1-wrapper" style="display: none;"></div>
+				</div>
+				<div class="ebdp-pc4promote-menu-level2-block">
+					<a class="ebdp-pc4promote-menu-level2-next-btn" style="display: none;"></a>
+					<a class="ebdp-pc4promote-menu-level2-prev-btn" style="display: none;"></a>
+					<div class="ebdp-pc4promote-menu-level2-wrapper a1">
+						<ul class="ebdp-pc4promote-menu-level2-type4" style="width: 90%; border-bottom-color: rgb(234, 232, 232); border-bottom-width: 1px; border-bottom-style: solid; float: left; background-color: rgb(255, 255, 255);">
+							<li class="ebdp-pc4promote-menu-level2-node-type4 ebdp-pc4promote-menu-level2-selected-type4" id="func_recommend" onclick="clickRecommendTap()" index="1">
+								<span class="ebdp-pc4promote-menu-level2-text" style="width: 100%;">为您推荐</span>
+							</li>
+							<li class="ebdp-pc4promote-menu-level2-node-type4" id="func_all" onclick="clickAllTap()" index="2">
+								<span class="ebdp-pc4promote-menu-level2-text" style="width: 100%;">全部功能</span>
+							</li>
+							<li class="ebdp-pc4promote-menu-level2-node-type4" id="func_search_res" onclick="clickRearchTap()" index="2">
+								<span class="ebdp-pc4promote-menu-level2-text" style="width: 100%;">搜索结果</span>
+							</li>
+						</ul>
+						<div class="a9" style="width: 10%; height: 48px; border-bottom-color: rgb(234, 232, 232); border-bottom-width: 1px; border-bottom-style: solid; float: right; background-color: rgb(255, 255, 255);">
+							<a class="complete-btn2" id="fanhui" style="top: 12px; display: none;" href="javascript:sousuof();">取消</a>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+            <div class="zuiai-fix-item1 " id="libiao">
+                <div class="uiai-fix-item-other-height1" id="all">
+	               <table class="table_favorite" id="table0">
+	               	<thead>
+	               		<tr><th colspan="2"><span class="a2">·&nbsp;</span> <span class="a5">银行卡·账户 </span></th>
+	               	</tr></thead>
+	               	<tbody id="table0_tbody">
+<!-- 	               		<tr> -->
+<!-- 	               			<td>账户服务</td> -->
+<!-- 	               			<td> -->
+<!-- 	               				<div id="table_div" class="a6 div_zuiai_all" >  -->
+<!-- 				                	<ul class="uiai-fix-item-ul uiai-fix-item-other-ul" id="zuiaiUL0"></ul> -->
+<!-- 	               				</div> -->
+<!-- 	               			</td> -->
+<!-- 	               		</tr> -->
+<!-- 	               		<tr> -->
+<!-- 	               			<td>借记卡服务</td> -->
+<!-- 	               			<td> -->
+<!-- 	               				<div class="a6 div_zuiai_all" > -->
+<!-- 				                	<ul class="uiai-fix-item-ul uiai-fix-item-other-ul" id="zuiaiUL1"></ul>  -->
+<!-- 			                	</div> -->
+<!-- 	               			</td> -->
+<!-- 	               		</tr> -->
+	               	</tbody>
+	               </table>
+	               
+	               <table class="table_favorite" id="table1">
+	               	<thead>
+	               		<tr><th colspan="2"><span class="a2">·&nbsp;</span> <span class="a5">信用卡</span></th>
+	               	</tr></thead>
+	               	<tbody id="table1_tbody">
+	               		
+	               	</tbody>
+	               </table>
+	               
+	               <table class="table_favorite" id="table2">
+	               	<thead>
+	               		<tr><th colspan="2"><span class="a2">·&nbsp;</span> <span class="a5">投资理财 </span></th>
+	               	</tr></thead>
+	               	<tbody id="table2_tbody">
+	               		
+	               	</tbody>
+	               </table>
+	               
+	               <table class="table_favorite" id="table3">
+	               	<thead>
+	               		<tr><th colspan="2"><span class="a2">·&nbsp;</span> <span class="a5">存款·贷款 </span></th>
+	               	</tr></thead>
+	               	<tbody id="table3_tbody">
+	               		
+	               	</tbody>
+	               </table>
+	               
+	               <table class="table_favorite" id="table4">
+	               	<thead>
+	               		<tr><th colspan="2"><span class="a2">·&nbsp;</span> <span class="a5">汇款 </span></th>
+	               	</tr></thead>
+	               	<tbody id="table4_tbody">
+	               		
+	               	</tbody>
+	               </table>
+	               
+	               <table class="table_favorite" id="table5">
+	               	<thead>
+	               		<tr><th colspan="2"><span class="a2">·&nbsp;</span> <span class="a5">其他 </span></th>
+	               	</tr></thead>
+	               	<tbody id="table5_tbody">
+	               		
+	               	</tbody>
+	               </table>
+	               
+	                <div class="a6 div_zuiai_recommend" id="zuiaiDiv6"><span class="a2">·&nbsp;</span> <span class="a5">最近使用 </span> 
+                		<ul class="uiai-fix-item-ul uiai-fix-item-other-ul" id="zuiaiUL6">
+<!--                 			<li id="replace_btn"><span><img _t="img" name="replace_img" id="replace_img" class="img_square" alt="一键替换" src="/icbc/newperbank/perbank3/images/quickFunc/PBL20164001_r.png"></span></li> -->
+		                </ul>
+	                </div>
+	                
+	                <div class="a6 div_zuiai_recommend" id="zuiaiDiv7"><span class="a2">·&nbsp;</span> <span class="a5">大家都在用 </span> 
+		                <ul class="uiai-fix-item-ul uiai-fix-item-other-ul" id="zuiaiUL7">
+		                </ul>
+	                </div>
+                </div>
+                
+                <div class="uiai-fix-item-other-height" id="oldall">
+                	<ul class="uiai-fix-item-ul uiai-fix-item-other-ul" style="margin-top: 18px;"></ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div> 
+
+<script type="text/javascript">
+
+var myquickAll_arr=new Array();
+myquickAll_arr.push('PBK100~PBL201786|PBK100~PBL200711|PBK100~PBL200715|PBK100~PBL200773|PBK100~PBL200771|PBK100~PBL200714|PBK110~PBL200721|PBK100~PBL200743|PBK100~PBL100410|PBK100~PBL200783|PBK100~PBL200784');
+myquickAll_arr.push('PBK200~PBL200779|PBK200~PBL200762|PBK210~PBL200722|PBK200~PBL200763|PBK210~PBL200769|PBK210~PBL200766');
+myquickAll_arr.push('PBK300~PBL201139|PBK300~PBL200317|PBK300~PBL201216|PBK300~PBL200511|PBK300~PBL201121|PBK300~PBL201123|PBK300~PBL200603|PBK300~PBL201311|PBK300~PBL201312|PBK300~PBL201333|PBK300~PBL201331|PBK300~PBL201332|PBK300~PBL201337|PBK300~PBL201370|PBK300~PBL201321|PBK300~PBL201322|PBK300~PBL201323|PBK300~PBL201344|PBK300~PBL201341|PBK300~PBL201342|PBK300~PBL201343|PBK300~PBL201345|PBK300~PBL202004|PBK300~PBL202014|PBK300~PBL202015|PBK300~PBL202022|PBK300~PBL201503|PBK300~PBL201508|PBK300~PBL201583|PBK300~PBL20139119');
+myquickAll_arr.push('PBK400~PBL201021|PBK400~PBL201031|PBK400~PBL201032|PBK410~PBL201099|PBK410~PBL201097|PBK410~PBL20109001|PBK410~PBL201041|PBK410~PBL201051|PBK410~PBL201061|PBK410~PBL201071|PBK410~PBL20109002|PBK410~PBL20109003|PBK410~PBL20109004');
+myquickAll_arr.push('PBK500~PBL200812|PBK500~PBL200811|PBK500~PBL200862|PBK500~PBL200821|PBK500~PBL200824|PBK500~PBL200882|PBK500~PBL200911|PBK500~PBL200912|PBK510~PBL200901|PBK510~PBL200902|PBK510~PBL200745');
+myquickAll_arr.push('PBK600~PBL201621|PBK600~PBL201626|PBK600~PBL201631|PBK600~PBL201411|PBK600~PBL201428|PBK600~PBL20164001|PBK600~PBL300101|PBK600~PBL750007');
+
+var favFucServAll=new Array();
+favFucServAll.push('PBK100~账户服务|PBK110~借记卡服务');
+favFucServAll.push('PBK200~信用卡账户|PBK210~卡片管理');
+favFucServAll.push('PBK300~投资理财');
+favFucServAll.push('PBK400~存款|PBK410~贷款');
+favFucServAll.push('PBK500~转账汇款|PBK510~结算套餐');
+favFucServAll.push('PBK600~生活服务');
+
+
+
+var myquickAll7="";	//最近使用
+var myquickAll7_new="";	//处理后的最近使用(PBL000~PBL333|PBL111~PBL2222)
+var myquickAll7_flag=false;	//最近使用是否空
+var myquickAll8="";	//大家都在用
+var myquickAll8_new="";	//处理后的最近使用(PBL000~PBL333|PBL111~PBL2222)
+var myquickAll8_flag=false;	//大家都在用是否空
+
+function darwLi(){
+	$("#oldall").hide();
+	$("#all").show();
+var myquickAll1="PBK100~PBL201786|PBK100~PBL200711|PBK100~PBL200715|PBK100~PBL200773|PBK100~PBL200771|PBK100~PBL200714|PBK110~PBL200721|PBK100~PBL200743|PBK100~PBL100410|PBK100~PBL200783|PBK100~PBL200784";
+var myquickAll2="PBK200~PBL200779|PBK200~PBL200762|PBK210~PBL200722|PBK200~PBL200763|PBK210~PBL200769|PBK210~PBL200766";
+var myquickAll3="PBK300~PBL201139|PBK300~PBL200317|PBK300~PBL201216|PBK300~PBL200511|PBK300~PBL201121|PBK300~PBL201123|PBK300~PBL200603|PBK300~PBL201311|PBK300~PBL201312|PBK300~PBL201333|PBK300~PBL201331|PBK300~PBL201332|PBK300~PBL201337|PBK300~PBL201370|PBK300~PBL201321|PBK300~PBL201322|PBK300~PBL201323|PBK300~PBL201344|PBK300~PBL201341|PBK300~PBL201342|PBK300~PBL201343|PBK300~PBL201345|PBK300~PBL202004|PBK300~PBL202014|PBK300~PBL202015|PBK300~PBL202022|PBK300~PBL201503|PBK300~PBL201508|PBK300~PBL201583|PBK300~PBL20139119";
+var myquickAll4="PBK400~PBL201021|PBK400~PBL201031|PBK400~PBL201032|PBK410~PBL201099|PBK410~PBL201097|PBK410~PBL20109001|PBK410~PBL201041|PBK410~PBL201051|PBK410~PBL201061|PBK410~PBL201071|PBK410~PBL20109002|PBK410~PBL20109003|PBK410~PBL20109004";
+var myquickAll5="PBK500~PBL200812|PBK500~PBL200811|PBK500~PBL200862|PBK500~PBL200821|PBK500~PBL200824|PBK500~PBL200882|PBK500~PBL200911|PBK500~PBL200912|PBK510~PBL200901|PBK510~PBL200902|PBK510~PBL200745";
+var myquickAll6="PBK600~PBL201621|PBK600~PBL201626|PBK600~PBL201631|PBK600~PBL201411|PBK600~PBL201428|PBK600~PBL20164001|PBK600~PBL300101|PBK600~PBL750007";
+	myquickAll7=parent.myquickAll7Val();
+	myquickAll8=parent.myquickAll8Val();
+// alert("======>"+myquickAll7);
+
+ var commonFucStr = parent.commonFucStrVal(); // 常用功能    parent指的是 layer_content.jsp
+ var favStr = parent.loctionmapList.getFavouriteStr(); // 取“其他应用”图标
+	if(commonFucStr=='0'||commonFucStr==null||commonFucStr==''){
+		//alert('未查询，不显示常用功能。');
+		arr0 = new Array();
+		arr =  new Array();
+		return false;
+	} else if(commonFucStr=='1'){
+		yxcy=0;
+		arr0 = new Array();
+		arr = favStr.split("|");
+	} else if(commonFucStr=='2'){
+		//alert('已经查询，用户未设置常用功能，显示内管维护的功能');
+		arr0 = myfavServices.split("|");
+		arr = getUnFavourite(arr0, favStr.split("|"));
+	} else{
+		//alert('已经查询，用户设置了常用功能，显示用户设置的功能');
+		arr0 = commonFucStr.split("|");
+		arr = getUnFavourite(arr0, favStr.split("|"));
+	}
+	yxcy=arr0.length;
+	qbcy=arr.length;
+	var newarr0="";
+
+	$('#yxcy').html(yxcy);
+	$('#ower').find('.ul').html('');
+	$('#all').find('ul').html('');
+	$('#all').find('tbody').html('');
+	
+	initTowMenuFrame();
+	//加载“其他应用”图标
+	var arr1 =getUnFavourite_new(arr0, myquickAll1.split("|"));
+	var arr2 =getUnFavourite_new(arr0, myquickAll2.split("|"));
+	var arr3 =getUnFavourite_new(arr0, myquickAll3.split("|"));
+	var arr4 =getUnFavourite_new(arr0, myquickAll4.split("|"));
+	var arr5 =getUnFavourite_new(arr0, myquickAll5.split("|"));
+	var arr6 =getUnFavourite_new(arr0, myquickAll6.split("|"));
+	var arr7 =myquickAll7.split("|");
+	var arrTmp="";
+	var pblN = 0;
+	$.each(arr7, function (i, data) {
+	  if(favStr.indexOf(data)>-1&&!arrTmp.indexOf(data)>-1){	
+	  	 pblN=pblN+1;
+// 	  	if(pblN > 11){
+// 	  		return;
+// 	  	}	
+	  	 if(arrTmp==""){
+	  	 	arrTmp=data;
+	  	 }else{
+	 	 	arrTmp=arrTmp+"|"+data;
+	  	 }
+	  }
+	});
+	myquickAll7=arrTmp;
+	var myquickAll7_arr = myquickAll7.split("|");
+	if("" == myquickAll7_new){
+		myquickAll7_new = dealRecommentMenu(myquickAll7_arr);
+	}
+	arr7=getUnFavourite_limit(arr0, myquickAll7_new.split("|"), 11);	//过滤掉 已选菜单
+// 	arr7=myquickAll7_new.split("|");
+	
+	var arr8 =myquickAll8.split("|");
+	var arrTmp1="";
+	var pblN1=0;
+	$.each(arr8, function (i, data) {
+	  if(favStr.indexOf(data)>-1&&!arrTmp1.indexOf(data)>-1){	
+	  	 pblN1=pblN1+1;
+// 	  	 if(pblN1>11){
+// 	  	 	return;
+// 	  	 }
+	  	 if(arrTmp1==""){
+	  	 	arrTmp1=data;
+	  	 }else{
+	 	 	arrTmp1=arrTmp1+"|"+data;
+	  	 }
+	  }
+	});
+	myquickAll8=arrTmp1;
+	var myquickAll8_arr = myquickAll8.split("|");
+	if("" == myquickAll8_new){
+		myquickAll8_new = dealRecommentMenu(myquickAll8_arr);
+	}
+	arr8=getUnFavourite_new(arr0, myquickAll8_new.split("|"));
+// 	arr8=myquickAll8_new.split("|");
+
+	 if(arr7.length == 0){
+	 	$('#zuiaiDiv6').hide();
+	 	myquickAll7_flag = true;
+	 } else {
+	 	$('#zuiaiDiv6').show();
+	 	myquickAll7_flag = false;
+	 }
+	 if(arr8.length == 0){
+	 	$('#zuiaiDiv7').hide();
+	 	myquickAll8_flag = true;
+	 }else{
+	 	$('#zuiaiDiv7').show();
+	 	myquickAll8_flag = false;
+	 }
+	 if(arr7.length == 0 && arr8.length == 0){
+	 	clickAllTap();
+	 }
+	
+		if (arr1!=undefined && arr1!= null && arr1!=''){
+			xh_new(arr1,'0');
+// 			$('#zuiaiUL0').append('<div id="both" class="both"></div>');
+		}
+		if (arr2!=undefined && arr2!= null && arr2!=''){
+			xh_new(arr2,'1');
+// 			$('#zuiaiUL1').append('<div id="both1" class="both"></div>');
+		}
+		if (arr3!=undefined && arr3!= null && arr3!=''){
+			xh_new(arr3,'2');
+// 			$('#zuiaiUL2').append('<div id="both2" class="both"></div>');
+		}
+		if (arr4!=undefined && arr4!= null && arr4!=''){
+			xh_new(arr4,'3');
+// 			$('#zuiaiUL3').append('<div id="both3" class="both"></div>');
+		}
+		if (arr5!=undefined && arr5!= null && arr5!=''){
+			xh_new(arr5,'4');
+// 			$('#zuiaiUL4').append('<div id="both4" class="both"></div>');
+		}
+		if (arr6!=undefined && arr6!= null && arr6!=''){
+			xh_new(arr6,'5');
+// 			$('#zuiaiUL5').append('<div id="both5" class="both"></div>');
+		}
+		if (arr7!=undefined && arr7!= null && arr7!=''){
+			xh1(arr7,'6');
+// 			$('#zuiaiUL6').append('<li id="replace_btn"><span><img _t="img" name="replace_img" id="replace_img" class="img_square" alt="一键替换" src="/icbc/newperbank/perbank3/images/quickFunc/PBL20164001_r.png"></span></li>');
+			$('#zuiaiUL6').append('<div id="both6" class="both"></div>');
+		}
+		if (arr8!=undefined && arr8!= null && arr8!=''){
+			xh2(arr8,'7');
+			$('#zuiaiUL7').append('<div id="both7" class="both"></div>');
+		}
+		
+		//加载“已选应用”图标
+		if (arr0!=undefined && arr0!= null && arr0!=''){
+			$.each(arr0, function (i, data) {
+			   // curMap = parent.loctionmapList.getLocationMap(data);
+			   curMap = parent.getLocationMap(data);
+			    var dataName = curMap.chname;
+			    if(dataName!=""&&dataName!=null){
+				var img_data = '<a onmouseenter="tjyx(\''+data+'\')" onmouseleave="scyx(\''+data+'\')"><b onclick="del(\''+data+'o\');" id="'+data+'a"  ></b><div id="'+data+'div" class="img_square1"><span><img _t="img" name="'+data+'" id="'+data+'img"  class="img_square"  alt="'+dataName+'" src="/icbc/newperbank/perbank3/images/quickFunc/'+data+'_r.png"/></span></div></a>';
+				var newdataname=$.trim(dataName);
+				var IdName=$.trim(dataName);
+						if(newdataname.length<=4){
+							newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+newdataname+"</p>";
+						}else{
+							var nameq="";
+							var nameh="";
+							if(newdataname.length==7||newdataname.length==8){
+							 	nameq=newdataname.substring(0,4);
+							 	nameh=newdataname.substring(4);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}else{
+							 	nameq=newdataname.substring(0,3);
+								nameh=newdataname.substring(3);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}
+						}
+				var pHtml = '<div id="'+data+'o" class="li" name='+IdName+'>'+img_data+ '<span id="img_name" class="imgnameCss">'+newdataname+'</span></div>'; 
+			
+				$('#ower').find('.ul').append(pHtml);
+			    }
+			});
+			$('#ower').find('.ul').append('<div  id="both9" class="both"></div>');
+		} else{
+		        var pHtml = '<div><font style="font-size: 14px"><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;您尚未设置功能，可以点击具体功能的加号进行添加。</font></div>'; 
+				$('#ower').find('.ul').append(pHtml+'<div id="both9" class="both"></div>'); 	
+		}
+		selectShowDiv();
+}
+
+
+var yxcy=0;
+var qbcy=0;
+function yc(){
+   $("#sousuo").val("");
+	WanCheng();
+   $(".zuiai-fix-bg1").hide();
+}
+
+//初始化二级标签结构
+function initTowMenuFrame(){
+	for(var i=0; i<favFucServAll.length; i++){
+		var favArr =favFucServAll[i].split("|");
+		drawFavTable(favArr,i);
+	}
+}
+
+//填充table, 搭建二级标签结构
+function drawFavTable(favArr,index){
+	for(var j=0; j<favArr.length; j++){
+		var html = '';
+		var favService = favArr[j];
+		var secondTapId,secondTapName;
+		if(favService.indexOf("~") > 0){
+			var arrTmp1 = favService.split("~");
+			secondTapId = arrTmp1[0];
+			secondTapName = arrTmp1[1];
+		}else{
+			secondTapId = favService;
+			secondTapName = favService;
+		}
+		html = '<tr><td width="10%" style="font-size:14px;">'+secondTapName+'</td><td width="90%"><div id="a6" class="a6 div_zuiai_all" ><ul class="uiai-fix-item-ul uiai-fix-item-other-ul" id="zuiaiUL_'+secondTapId+'"></ul></div></td></tr>';
+		$('#table'+index+'_tbody').append(html);
+	}
+}
+
+
+/* 	
+	遍历数组  拼接成字符串    
+	 返回格式二级id~三级id| 二级id~三级id 
+*/
+
+function dealRecommentMenu(arr){
+   var retStr = "";
+	for(var i=0; i<arr.length; i++){
+		var str = arr[i];
+		retStr = retStr+"|"+getServicIdOfParent(str);
+	}
+	return retStr.substring(1,retStr.length);
+}
+
+/*
+根据三级id(PBL0001) 获取 带有二级id 的字符串（PBL000~PBL0001） 
+如果二级id未知，二级id默认采用tmp (tmp~PBLxxxx)
+*/
+function getServicIdOfParent(serviceId){
+	for(var i=0; i<myquickAll_arr.length; i++){
+		var strTmp = myquickAll_arr[i];
+		if(strTmp.indexOf(serviceId)>-1){
+			var tmpArr = strTmp.split("|");
+			for(var j=0; j<tmpArr.length; j++){
+				var seridStr = tmpArr[j];
+				var arr = seridStr.split("~");
+				if(arr[1] == serviceId){
+					return seridStr;
+				}
+			}
+		}
+	}
+	return "tmp~"+serviceId;
+}
+
+/* 
+	删除动作(已选功能区转移到全量功能区或者最近使用功能区或者大家都在用功能区)
+	data参数 格式 PBL0000~PBL390200o
+*/
+function del(data) {
+		var myquickAll1="PBK100~PBL201786|PBK100~PBL200711|PBK100~PBL200715|PBK100~PBL200773|PBK100~PBL200771|PBK100~PBL200714|PBK110~PBL200721|PBK100~PBL200743|PBK100~PBL100410|PBK100~PBL200783|PBK100~PBL200784";
+		var myquickAll2="PBK200~PBL200779|PBK200~PBL200762|PBK210~PBL200722|PBK200~PBL200763|PBK210~PBL200769|PBK210~PBL200766";
+		var myquickAll3="PBK300~PBL201139|PBK300~PBL200317|PBK300~PBL201216|PBK300~PBL200511|PBK300~PBL201121|PBK300~PBL201123|PBK300~PBL200603|PBK300~PBL201311|PBK300~PBL201312|PBK300~PBL201333|PBK300~PBL201331|PBK300~PBL201332|PBK300~PBL201337|PBK300~PBL201370|PBK300~PBL201321|PBK300~PBL201322|PBK300~PBL201323|PBK300~PBL201344|PBK300~PBL201341|PBK300~PBL201342|PBK300~PBL201343|PBK300~PBL201345|PBK300~PBL202004|PBK300~PBL202014|PBK300~PBL202015|PBK300~PBL202022|PBK300~PBL201503|PBK300~PBL201508|PBK300~PBL201583|PBK300~PBL20139119";
+		var myquickAll4="PBK400~PBL201021|PBK400~PBL201031|PBK400~PBL201032|PBK410~PBL201099|PBK410~PBL201097|PBK410~PBL20109001|PBK410~PBL201041|PBK410~PBL201051|PBK410~PBL201061|PBK410~PBL201071|PBK410~PBL20109002|PBK410~PBL20109003|PBK410~PBL20109004";
+		var myquickAll5="PBK500~PBL200812|PBK500~PBL200811|PBK500~PBL200862|PBK500~PBL200821|PBK500~PBL200824|PBK500~PBL200882|PBK500~PBL200911|PBK500~PBL200912|PBK510~PBL200901|PBK510~PBL200902|PBK510~PBL200745";
+		var myquickAll6="PBK600~PBL201621|PBK600~PBL201626|PBK600~PBL201631|PBK600~PBL201411|PBK600~PBL201428|PBK600~PBL20164001|PBK600~PBL300101|PBK600~PBL750007";
+		var newdataTmp=data.replace('o','');	    //删除传来ID中的O
+		var newdata = "";
+		if(data.indexOf("~")<0){
+			newdataTmp = getServicIdOfParent(newdataTmp);
+		}	
+		var ids = newdataTmp.split("~");
+		newdata = ids[1];
+		scqt(newdata);	
+		var parentId = ids[0];	
+		var jDom = $("#"+newdata+"o"); // 当前元素
+		var owerHtml = ($("#"+newdata+"o").html());
+		jDom.remove(); //删除
+		
+		if(document.getElementById("all").style.display!="none"){
+			var owerHtml1 = "";
+			//全量功能区添加元素
+			if(myquickAll1.indexOf(newdataTmp)>-1
+				||myquickAll2.indexOf(newdataTmp)>-1
+				||myquickAll3.indexOf(newdataTmp)>-1
+				||myquickAll4.indexOf(newdataTmp)>-1
+				||myquickAll5.indexOf(newdataTmp)>-1
+				||myquickAll6.indexOf(newdataTmp)>-1
+				){
+				owerHtml1 = owerHtml.replace('tjyx','tjqt').replace('scyx','scqt').replace('del','add');
+				if(data.indexOf("~")<0){
+					owerHtml1 = owerHtml1.replace(data,newdataTmp+'o');
+				}
+				$('#zuiaiUL_'+parentId).append('<li id="'+newdata+'o" >'+owerHtml1+'</li>');
+// 				$('#both_'+parentId).remove();
+// 				$('#zuiaiUL_'+parentId).append('<div id="both_"'+parentId+' class="both"></div>');
+			}
+			//最近使用功能区添加元素
+			if(myquickAll7_new.indexOf(newdataTmp)>-1){
+				var owerHtmlqi = owerHtml.replace('tjyx','tjqtqi').replace('scyx','scqtqi').replace('del','addqi');
+				if(data.indexOf("~")<0){
+					owerHtmlqi = owerHtmlqi.replace(data,newdataTmp+'o');
+				}
+				$('#zuiaiUL6').append('<li id="'+newdata+'oqi" >'+owerHtmlqi+'</li>');
+// 				$('#replace_btn').remove();
+// 				$('#zuiaiUL6').append('<li id="replace_btn"><span><img _t="img" name="replace_img" id="replace_img" class="img_square" alt="一键替换" src="/icbc/newperbank/perbank3/images/quickFunc/PBL20164001_r.png"></span></li>');
+				$('#both6').remove();
+				$('#zuiaiUL6').append('<div id="both6" class="both"></div>');
+				$('#zuiaiDiv6').show();
+			}
+			//大家都在用功能区添加元素
+			 if(myquickAll8_new.indexOf(newdataTmp)>-1){
+				var owerHtmlba = owerHtml.replace('tjyx','tjqtba').replace('scyx','scqtba').replace('del','addba');
+				if(data.indexOf("~")<0){
+					owerHtmlba = owerHtmlba.replace(data,newdataTmp+'o');
+				}
+				$('#zuiaiUL7').append('<li id="'+newdata+'oba" >'+owerHtmlba+'</li>');
+				$('#both7').remove();
+				$('#zuiaiUL7').append('<div id="both7" class="both"></div>');
+				$('#zuiaiDiv7').show();
+			}
+		}
+		//搜索功能区
+		if(document.getElementById("oldall").style.display!="none"){
+// 			scqt(newdata);
+			var idName=$("#sousuo").val();
+			idName=$.trim(idName);
+			var curMap1 = parent.getLocationMap(newdata);
+			var dataName = curMap1.chname;
+			if(dataName.indexOf(idName)>-1){
+				var owerHtml_old = owerHtml.replace('tjyx','tjqtSerch').replace('scyx','scqtSerch').replace('del','addSerch');
+				$('#both8').remove();
+				$('#oldall').find('ul').append('<li id="'+newdata+'" >'+owerHtml_old+'</li><div id="both8" class="both"></div>');
+			}
+		}
+		var owerSpanNum =  $('#ower').find('.li').length;
+        if(owerSpanNum == 0){
+           //alert("您尚未设置常用功能，可以点击具体功能的加号进行添加。");
+            var pHtml = '<div><font style="font-size: 14px"><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;您尚未设置功能，可以点击具体功能的加号进行添加。</font></div>'; 
+		    $('#ower').find('.ul').append(pHtml); 
+        } 
+        	yxcy--;
+        	$('#yxcy').html(yxcy);
+}
+
+/* 添加动作(全量功能区转移到已选功能区)
+data参数 格式 PBL0000~PBL390200o
+*/
+function add(data){
+		var newdataTmp=data.replace('o','');	    //删除传来ID中的O	
+		if(data.indexOf("~")<0){
+			newdataTmp = getServicIdOfParent(newdataTmp);
+		}
+		var ids = newdataTmp.split("~");
+		var newdata = ids[1];
+		try{
+			 scqt(newdata);
+			 var jDom1 = $("#"+newdata+'oqi'); // 最近使用
+			 jDom1.remove(); //删除
+			 var jDom2 = $('#'+newdata+'oba'); // 大家都在用
+			 jDom2.remove(); //删除	
+		}catch(e){
+			newdata=newdata.replace('','');
+			data=data.replace('','');
+		}
+        if( $('#ower').find('font').length != 0){
+           $('#ower').find('.ul').html('');
+        }
+		 var owerSpanNum =  $('#ower').find('.li').length;
+	     if(owerSpanNum == 12){
+	        alert("最多支持添加12个功能！");
+	        return false;
+	     }
+	     var jDom =  $('#'+newdata+'o'); // 当前元素
+		var owerHtml = (jDom.html());
+		owerHtml = owerHtml.replace('tjqt','tjyx').replace('scqt','scyx').replace('add','del');
+		if(data.indexOf("~")<0){
+			owerHtml = owerHtml.replace(data,newdataTmp+'o');
+		}
+		jDom.remove(); //删除
+		$('#both9').remove();
+	    $('#ower').find('.ul').append('<div id="'+newdata+'o" class="li">'+owerHtml+'</div><div id="both9" class="both"></div>');
+	    yxcy++;
+        $('#yxcy').html(yxcy);
+	 //   refreshAll();
+	 dragFresh();
+}
+
+/* 
+	添加动作(最近使用功能区转移到已选功能区)
+	data参数 格式 PBL0000~PBL390200o
+*/
+function addqi(data){
+		var newdataTmp=data.replace('o','');	    //删除传来ID中的O	
+		if(data.indexOf("~")<0){
+			newdataTmp = getServicIdOfParent(newdataTmp);
+		}
+		var ids = newdataTmp.split("~");
+		var newdata = ids[1];
+		if( $('#ower').find('#'+newdata+'o').length != 0){
+           return;
+        }
+			
+		try{
+			 scqtqi(newdata);
+			 var jDom1 = $("#"+newdata+'o'); // 全量分组
+			 jDom1.remove(); //删除
+			 var jDom2 = $('#'+newdata+'oba'); // 大家都在用
+			 jDom2.remove(); //删除	
+		}catch(e){
+			newdata=newdata.replace('qi','');
+			data=data.replace('qi','');
+		}
+        if( $('#ower').find('font').length != 0){
+           $('#ower').find('.ul').html('');
+        }
+		 var owerSpanNum =  $('#ower').find('.li').length;
+	     if(owerSpanNum == 12){
+	        alert("最多支持添加12个功能！");
+	        return false;
+	     }
+		var jDom =  $('#'+newdata+'oqi'); // 当前元素
+		var owerHtml = (jDom.html());
+		owerHtml = owerHtml.replace('tjqtqi','tjyx').replace('scqtqi','scyx').replace('addqi','del');
+		if(data.indexOf("~")<0){
+			owerHtml = owerHtml.replace(data,newdataTmp+'o');
+		}
+		jDom.remove(); //删除
+		$('#both9').remove();
+	    $('#ower').find('.ul').append('<div id="'+newdata+'o" class="li">'+owerHtml+'</div><div id="both9" class="both"></div>');
+	    yxcy++;
+        $('#yxcy').html(yxcy);
+        dragFresh();
+}
+
+/* 
+	添加动作(大家都在用功能区转移到已选功能区)
+	data参数 格式 PBL0000~PBL390200o
+*/
+function addba(data){
+		var newdataTmp=data.replace('o','');	    //删除传来ID中的O	
+		if(data.indexOf("~")<0){
+			newdataTmp = getServicIdOfParent(newdataTmp);
+		}
+		var ids = newdataTmp.split("~");
+		var newdata = ids[1];	
+		try{
+			 scqtba(newdata);
+			 var jDom1 = $("#"+newdata+'o'); // 全量分组
+			 jDom1.remove(); //删除
+			 var jDom2 = $('#'+newdata+'oqi'); // 最近使用
+			 jDom2.remove(); //删除	
+		}catch(e){
+			newdata=newdata.replace('ba','');
+			data=data.replace('ba','');
+		}
+        if( $('#ower').find('font').length != 0){
+           $('#ower').find('.ul').html('');
+        }
+		 var owerSpanNum =  $('#ower').find('.li').length;
+	     if(owerSpanNum == 12){
+	        alert("最多支持添加12个功能！");
+	        return false;
+	     }
+		var jDom =  $('#'+newdata+'oba'); // 当前元素
+		var owerHtml = (jDom.html());
+		owerHtml = owerHtml.replace('tjqtba','tjyx').replace('scqtba','scyx').replace('addba','del');
+		if(data.indexOf("~")<0){
+			owerHtml = owerHtml.replace(data,newdataTmp+'o');
+		}
+		jDom.remove(); //删除
+		$('#both9').remove();
+	    $('#ower').find('.ul').append('<div id="'+newdata+'o" class="li">'+owerHtml+'</div><div id="both9" class="both"></div>');
+	    yxcy++;
+        $('#yxcy').html(yxcy);
+        
+        dragFresh();
+}
+
+/* 
+	添加动作(搜索功能区转移到已选功能区)
+	data参数 格式 PBL0000~PBL390200o
+*/
+function addSerch(data){
+		var newdataTmp=data.replace('o','');	    //删除传来ID中的O	
+		if(data.indexOf("~")<0){
+			newdataTmp = getServicIdOfParent(newdataTmp);
+		}
+		var ids = newdataTmp.split("~");
+		var newdata = ids[1];
+        if( $('#ower').find('font').length != 0){
+           $('#ower').find('.ul').html('');
+        }
+		 var owerSpanNum =  $('#ower').find('.li').length;
+	     if(owerSpanNum == 12){
+	        alert("最多支持添加12个功能！");
+	        return false;
+	     }
+	     var jDom =  $('#'+newdata); // 当前元素
+		var owerHtml = (jDom.html());
+		owerHtml = owerHtml.replace('tjqtSerch','tjyx').replace('scqtSerch','scyx').replace('addSerch','del');
+		if(data.indexOf("~")<0){
+			owerHtml = owerHtml.replace(data,newdataTmp+'o');
+		}
+		jDom.remove(); //删除
+		$('#both9').remove();
+	    $('#ower').find('.ul').append('<div id="'+newdata+'o" class="li">'+owerHtml+'</div><div id="both9" class="both"></div>');
+	    yxcy++;
+        $('#yxcy').html(yxcy);
+        
+        dragFresh();
+}
+
+
+// 刷新
+function refreshAll() {
+	var spans = $('#all').find('li');
+	//$('#all').find('div').html('');
+	spans.each(function (i ,data) {
+		var jDom = $(this);
+		var proHtml = $("<p>").append( jDom).html(); 
+		$('#all').find('ul').append(proHtml);
+	});
+}
+// 更多
+function moreBtnClick(){
+	$('#moreBtn').remove();
+	$('#all').find('li').show();
+}
+
+var arr0; // “已选应用”图标数组
+var arr; //“其他应用”图标数组
+var dtq="0";//动态区 
+var commonFucStrDTQ="";//动态区 
+var curMap;
+var commonDTQ=getCommand();
+var initSousuoStr = "";
+ $("#sousuo").keyup(function(){
+ 	var idName=$("#sousuo").val();
+	idName=$.trim(idName);
+	if(initSousuoStr == idName){
+		return;
+	}else{
+		initSousuoStr = idName;
+	}
+	if(idName==""){
+		sousuof();
+	}else{
+		$('#oldall').find('ul').html("<div class='a10'><span >请稍候...</span></span>");
+		$('#oldall').show();
+		$('#all').hide();
+		setTimeout("sousuob()",1500);
+	}
+}); 
+function sousuob(){
+	var idName=$("#sousuo").val();
+	idName=$.trim(idName);
+	if(idName==""){
+// 		alert("请输入产品关键字");
+		return;
+	}else{
+		clickSearchTap();
+	}
+	commonFucStrDTQ="";
+	for(i=0; i<commonDTQ.length; i++){
+		if(commonDTQ[i].chname.indexOf(idName)>-1){
+		commonFucStrDTQ=commonFucStrDTQ+commonDTQ[i].locationno+"|";
+		dtqbackvalue="";
+		}
+	}
+	if(commonFucStrDTQ!=""){
+	commonFucStrDTQ=commonFucStrDTQ.substring(0,commonFucStrDTQ.length-1);
+	$('#oldall').find('ul').html('');
+	}else{
+	$('#oldall').find('ul').html("<div class='a10'><span>无搜索结果</span></span>");
+	}
+	dtq="1";
+	drawDiv();
+}
+function sousuof(){
+	initSousuoStr = "";
+	$("#sousuo").val("");
+	clickRecommendTap();
+   var owerArr = new Array();
+   var spans = $('#ower').find('span>img');
+   if(spans.length != 0){
+	   spans.each(function (i ,data) {
+			var jDom = $(this);
+// 			if(jDom.attr('class')=='img_square dad-draggable-area'||jDom.attr('class')=='img_square haveimg dad-draggable-area'){
+			if(jDom.attr('class').indexOf('img_square')>-1){
+			     var imgID = jDom.attr('name');
+				 owerArr = owerArr+imgID+'|';
+			} 
+		}); 
+	    owerArr = owerArr.substring(0, owerArr.length -1);
+    }else{
+        owerArr = "";
+    }
+	queryCommFuc(parent.dse_sessionId,'1',owerArr);
+	$('#oldall').find('ul').html("<div class='a10'><span >请稍候...</span></span>");
+	queryCommFuc(dse_sessionId,'0','');
+ 	setTimeout("darwLi()",1500);
+
+}
+function sousuob1(){
+	var idName=$("#sousuo").val();
+	idName=$.trim(idName);
+	if(idName==""){
+		   $("#cpgjz").show();
+	}else{
+		   $("#cpgjz").hide();
+	}
+}
+function sousuob2(){
+		   $("#cpgjz").hide();
+}
+function sousuob3(){
+    $("#cpgjz").hide();
+	document.getElementById("sousuo").focus();
+}
+
+function drawDiv(){
+	$("#all").hide();
+	$("#oldall").show();
+    var commonFucStr = parent.commonFucStrVal(); // 常用功能
+    var favStr = parent.loctionmapList.getFavouriteStr(); // 取“其他应用”图标
+    if(dtq!="0"){
+    	favStr=commonFucStrDTQ;
+    	dtq="0";
+    	   var owerArr = new Array();
+		   var spans = $('#ower').find('span>img');
+		   if(spans.length != 0){
+			   spans.each(function (i ,data) {
+					var jDom = $(this);
+// 					if(jDom.attr('class')=='img_square dad-draggable-area'||jDom.attr('class')=='img_square haveimg dad-draggable-area'){
+					if(jDom.attr('class').indexOf('img_square')>-1){
+					     var imgID = jDom.attr('name');
+						 owerArr = owerArr+imgID+'|';
+					} 
+				}); 
+			    owerArr = owerArr.substring(0, owerArr.length -1);
+		    }else{
+		        owerArr = "1";
+		    }
+		 commonFucStr=owerArr;
+    }
+	if(commonFucStr=='0'||commonFucStr==null||commonFucStr==''){
+		//alert('未查询，不显示常用功能。');
+		arr0 = new Array();
+		arr =  new Array();
+		return false;
+	} else if(commonFucStr=='1'){
+		yxcy=0;
+		arr0 = new Array();
+		arr = favStr.split("|");
+	} else if(commonFucStr=='2'){
+		//alert('已经查询，用户未设置常用功能，显示内管维护的功能');
+		arr0 = myfavServices.split("|");
+		arr = getUnFavourite(arr0, favStr.split("|"));
+	} else{
+		//alert('已经查询，用户设置了常用功能，显示用户设置的功能');
+		arr0 = commonFucStr.split("|");
+		arr = getUnFavourite(arr0, favStr.split("|"));
+	}
+	yxcy=arr0.length;
+	qbcy=arr.length;
+	var newarr0="";
+	$('#yxcy').html(yxcy);
+	//$('#qbcy').html(qbcy+yxcy);
+	$('#ower').find('.ul').html('');
+	$('#all').find('ul').html('');
+		//加载“已选应用”图标
+		if (arr0!=undefined && arr0!= null && arr0!=''){
+			$.each(arr0, function (i, data) {
+			   // curMap = parent.loctionmapList.getLocationMap(data);
+			   scqt(data);
+			   curMap = parent.getLocationMap(data);
+			    var dataName = curMap.chname;
+			    if(dataName!=""&&dataName!=null){
+				var img_data = '<a onmouseenter="tjyx(\''+data+'\')" onmouseleave="scyx(\''+data+'\')"><b onclick="del(\''+data+'o\');" id="'+data+'a"  ></b><div id="'+data+'div" class="img_square1"><span><img _t="img" name="'+data+'" id="'+data+'img"  class="img_square"  alt="'+dataName+'" src="/icbc/newperbank/perbank3/images/quickFunc/'+data+'_r.png"/></span></div></a>';
+				var newdataname=$.trim(dataName);
+				var IdName=$.trim(dataName);
+						if(newdataname.length<=4){
+							newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+newdataname+"</p>";
+						}else{
+							var nameq="";
+							var nameh="";
+							if(newdataname.length==7||newdataname.length==8){
+							 	nameq=newdataname.substring(0,4);
+							 	nameh=newdataname.substring(4);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}else{
+							 	nameq=newdataname.substring(0,3);
+								nameh=newdataname.substring(3);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}
+						}
+				var pHtml = '<div id="'+data+'o" class="li" name='+IdName+'>'+img_data+ '<span id="img_name" class="imgnameCss">'+newdataname+'</span></div>'; 
+			
+				$('#ower').find('.ul').append(pHtml);
+			    }
+			});
+			$('#ower').find('.ul').append('<div  id="both9" class="both"></div>');
+		} else{
+		        var pHtml = '<div><font style="font-size: 14px"><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;您尚未设置功能，可以点击具体功能的加号进行添加。</font></div>'; 
+				$('#ower').find('.ul').append(pHtml+'<div id="both9" class="both"></div>'); 	
+		} 
+		//加载“其他应用”图标账户
+		if (arr!=undefined && arr!= null && arr!=''){
+			$.each(arr, function (i, data) {
+			    //curMap = parent.loctionmapList.getLocationMap(data);
+			     curMap = parent.getLocationMap(data);
+			    var dataName = curMap.chname;
+			    
+			    var totalsize = arr.length;
+				var n = i + 1;
+				
+				var newdataname=$.trim(dataName);
+				
+				
+				 if(newdataname!=""&&newdataname!=null){
+				var IdName=$.trim(dataName);
+				var img_data = '<a onmouseenter="tjqt(\''+data+'\')" onmouseleave="scqt(\''+data+'\')"><b onclick="add(\''+data+'o\');" id="'+data+'a"   ></b><div id="'+data+'div" class="img_square1"><span ><img _t="img" name="'+data+'" id="'+data+'img"   class="img_square" alt="'+dataName+'" src="/icbc/newperbank/perbank3/images/quickFunc/'+data+'_r.png"/></span></div></a>';
+						if(newdataname.length<=4){
+							newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+newdataname+"</p>";
+						}else{
+							var nameq="";
+							var nameh="";
+							if(newdataname.length==7||newdataname.length==8){
+							 	nameq=newdataname.substring(0,4);
+							 	nameh=newdataname.substring(4);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}else{
+							 	nameq=newdataname.substring(0,3);
+								nameh=newdataname.substring(3);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}
+						}
+				var pHtml = '<li id="'+data+'o" name='+IdName+'>'+img_data+ '<span id="img_name" class="imgnameCss">'+newdataname+'</span></li>'; 
+				$('#oldall').find('ul').append(pHtml);
+				}
+			});
+			$('#oldall').find('ul').append('<div id="both8" class="both"></div>');
+		}
+		
+		selectShowDiv();
+}
+
+//allStr = PBL201786|PBL200711|PBL200715
+function getUnFavourite(favStr,allStr){
+	var index = 0;
+	var tempArr = new Array();
+	var favString = ',';
+	for (j = 0; j<favStr.length; j++) {
+		var t2 = favStr[j];
+		favString = favString+t2 +',';
+	} 
+	for (i=0; i<allStr.length; i++) {
+		var t1 = allStr[i];
+ 		if(favString.indexOf(t1)=='-1'){
+	 		tempArr[index]=t1;
+			index++;
+ 		}
+	}
+	return tempArr;
+}
+
+//allStr = PBL0200~PBL201786|PBL0200~PBL200711|PBL0200~PBL200715
+function getUnFavourite_new(favStr,allStr){
+	var index = 0;
+	var tempArr = new Array();
+	var favString = ',';
+	for (j = 0; j<favStr.length; j++) {
+		var t2 = favStr[j];
+		favString = favString+t2 +',';
+	} 
+	for (i=0; i<allStr.length; i++) {
+		var t1 = allStr[i];
+		if(t1.indexOf("~") == "-1"){
+			continue;
+		}
+		var arrTmp = t1.split("~")
+ 		if(favString.indexOf(arrTmp[1])=='-1'){
+	 		tempArr[index]=t1;
+			index++;
+ 		}
+	}
+	return tempArr;
+}
+
+
+function getUnFavourite_limit(favStr,allStr,num){
+	var index = 0;
+	var tempArr = new Array();
+	var favString = ',';
+	for (j = 0; j<favStr.length; j++) {
+		var t2 = favStr[j];
+		favString = favString+t2 +',';
+	} 
+	for (i=0; i<allStr.length; i++) {
+		var t1 = allStr[i];
+		if(t1.indexOf("~") == "-1"){
+			continue;
+		}
+		var arrTmp = t1.split("~")
+ 		if(favString.indexOf(arrTmp[1])=='-1'){
+	 		tempArr[index]=t1;
+			index++;
+ 		}
+ 		if(index >= num){
+ 			break;
+ 		}
+	}
+	return tempArr;
+}
+
+
+function WanCheng(){
+   var owerArr = new Array();
+   var spans = $('#ower').find('span>img');
+   if(spans.length != 0){
+	   spans.each(function (i ,data) {
+			var jDom = $(this);
+// 			if(jDom.attr('class')=='img_square dad-draggable-area'||jDom.attr('class')=='img_square haveimg dad-draggable-area'){
+			if(jDom.attr('class').indexOf('img_square') >= 0){
+			     var imgID = jDom.attr('name');
+				 owerArr = owerArr+imgID+'|';
+			} 
+		}); 
+	    owerArr = owerArr.substring(0, owerArr.length -1);
+    }else{
+        owerArr = "";
+    }
+	queryCommFuc(parent.dse_sessionId,'1',owerArr);
+	sousuof();
+	//parent.hideMyQuickFucDiv();
+}
+
+ function tjyx(id){//已选应该事件
+	$('#'+id+'o').find("#"+id+"img").removeClass().addClass("img_square");
+ 	$('#'+id+'o').find("#"+id+"div").removeClass().addClass("img_square1 haveimg");
+ 	$('#'+id+'o').find("#"+id+"a").removeClass().addClass("fix-b j");
+}
+function scyx(id){
+	$('#'+id+'o').find("#"+id+"img").removeClass().addClass("img_square");
+ 	$('#'+id+'o').find("#"+id+"div").removeClass().addClass("img_square1");
+ 	$('#'+id+'o').find("#"+id+"a").removeClass();
+}
+ function tjqt(id){//未选应用事件
+	$('#'+id+'o').find("#"+id+"img").removeClass().addClass("img_square");
+ 	$('#'+id+'o').find("#"+id+"div").removeClass().addClass("img_square1 haveimg");
+ 	$('#'+id+'o').find("#"+id+"a").removeClass().addClass("fix-b on j");
+}
+function scqt(id){
+	$('#'+id+'o').find("#"+id+"img").removeClass().addClass("img_square");
+ 	$('#'+id+'o').find("#"+id+"div").removeClass().addClass("img_square1");
+ 	$('#'+id+'o').find("#"+id+"a").removeClass();
+}
+
+ function tjqtqi(id){//未选应用事件
+  	$('#zuiaiUL6').find('#'+id+'oqi').find("#"+id+"img").removeClass().addClass("img_square");
+ 	$('#zuiaiUL6').find('#'+id+'oqi').find("#"+id+"div").removeClass().addClass("img_square1 haveimg");
+ 	$('#zuiaiUL6').find('#'+id+'oqi').find("#"+id+"a").removeClass().addClass("fix-b on j");
+}
+function scqtqi(id){
+ 	$('#zuiaiUL6').find('#'+id+'oqi').find("#"+id+"img").removeClass().addClass("img_square");
+ 	$('#zuiaiUL6').find('#'+id+'oqi').find("#"+id+"div").removeClass().addClass("img_square1");
+ 	$('#zuiaiUL6').find('#'+id+'oqi').find("#"+id+"a").removeClass();
+}
+function tjqtba(id){//未选应用事件
+  	$('#zuiaiUL7').find('#'+id+'oba').find("#"+id+"img").removeClass().addClass("img_square");
+ 	$('#zuiaiUL7').find('#'+id+'oba').find("#"+id+"div").removeClass().addClass("img_square1 haveimg");
+ 	$('#zuiaiUL7').find('#'+id+'oba').find("#"+id+"a").removeClass().addClass("fix-b on j");
+}
+function scqtba(id){
+ 	$('#zuiaiUL7').find('#'+id+'oba').find("#"+id+"img").removeClass().addClass("img_square");
+ 	$('#zuiaiUL7').find('#'+id+'oba').find("#"+id+"div").removeClass().addClass("img_square1");
+ 	$('#zuiaiUL7').find('#'+id+'oba').find("#"+id+"a").removeClass();
+}
+
+function tjqtSerch(id){//未选应用事件
+  	$('#oldall').find('#'+id).find("#"+id+"img").removeClass().addClass("img_square");
+ 	$('#oldall').find('#'+id).find("#"+id+"div").removeClass().addClass("img_square1 haveimg");
+ 	$('#oldall').find('#'+id).find("#"+id+"a").removeClass().addClass("fix-b on j");
+}
+function scqtSerch(id){
+ 	$('#oldall').find('#'+id).find("#"+id+"img").removeClass().addClass("img_square");
+ 	$('#oldall').find('#'+id).find("#"+id+"div").removeClass().addClass("img_square1");
+ 	$('#oldall').find('#'+id).find("#"+id+"a").removeClass();
+}
+
+//arr = PBL0200~PBL201786|PBL0200~PBL200711|PBL0200~PBL200715
+function xh_new(arr,a){
+	var parentId = "";
+	$.each(arr, function (i, val) { 
+			    //curMap = parent.loctionmapList.getLocationMap(data);
+			    var xh_tempArr = val.split("~");
+			    parentId = xh_tempArr[0];
+			    var data = xh_tempArr[1];
+			    curMap = parent.getLocationMap(data);
+			    var dataName = curMap.chname;
+			    var totalsize = arr.length;
+				var n = i + 1;
+				var newdataname=$.trim(dataName);
+				
+	        if(newdataname!=""&&newdataname!=null){
+				var IdName=$.trim(dataName);
+				var img_data = '<a onmouseenter="tjqt(\''+data+'\')" onmouseleave="scqt(\''+data+'\')"><b onclick="add(\''+val+'o\');" id="'+data+'a"   ></b><div id="'+data+'div" class="img_square1"><span ><img _t="img" name="'+data+'" id="'+data+'img"   class="img_square" alt="'+dataName+'" src="/icbc/newperbank/perbank3/images/quickFunc/'+data+'_r.png"/></span></div></a>';
+						if(newdataname.length<=4){
+							newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+newdataname+"</p>";
+						}else{
+							var nameq="";
+							var nameh="";
+							if(newdataname.length==7||newdataname.length==8){
+							 	nameq=newdataname.substring(0,4);
+							 	nameh=newdataname.substring(4);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}else{
+							 	nameq=newdataname.substring(0,3);
+								nameh=newdataname.substring(3);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}
+						}
+				var pHtml = '<li id="'+data+'o" name="'+data+'o">'+img_data+ '<span id="img_name" class="imgnameCss">'+newdataname+'</span></li>'; 
+				$('#zuiaiUL_'+parentId+'').append(pHtml);
+			}
+	});
+// 	$('#zuiaiUL_'+parentId+'').append('<div id="both" class="both"></div>');
+}
+
+function xh1(arr,a){
+			var xunhuannum=0;
+	$.each(arr, function (i, val) { 
+			    //curMap = parent.loctionmapList.getLocationMap(data);
+			    var xh_tempArr = val.split("~");
+			    parentId = xh_tempArr[0];
+			    var data = xh_tempArr[1];
+			     curMap = parent.getLocationMap(data);
+			    var dataName = curMap.chname;
+			    var totalsize = arr.length;
+				var n = i + 1;
+				var newdataname=$.trim(dataName);
+				
+	        if(newdataname!=""&&newdataname!=null){
+	        	xunhuannum=xunhuannum+1;
+	        	if(xunhuannum>11){
+	        		return;
+	        	}
+				var IdName=$.trim(dataName);
+				var img_data = '<a onmouseenter="tjqtqi(\''+data+'\')" onmouseleave="scqtqi(\''+data+'\')"><b onclick="addqi(\''+val+'o\');" id="'+data+'a"   ></b><div id="'+data+'div" class="img_square1"><span ><img _t="img" name="'+data+'" id="'+data+'img"   class="img_square" alt="'+dataName+'" src="/icbc/newperbank/perbank3/images/quickFunc/'+data+'_r.png"/></span></div></a>';
+						if(newdataname.length<=4){
+							newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+newdataname+"</p>";
+						}else{
+							var nameq="";
+							var nameh="";
+							if(newdataname.length==7||newdataname.length==8){
+							 	nameq=newdataname.substring(0,4);
+							 	nameh=newdataname.substring(4);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}else{
+							 	nameq=newdataname.substring(0,3);
+								nameh=newdataname.substring(3);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}
+						}
+				var pHtml = '<li id="'+data+'oqi" name='+IdName+'>'+img_data+ '<span id="img_name" class="imgnameCss">'+newdataname+'</span></li>'; 
+				$('#zuiaiUL'+a+'').append(pHtml);
+				}
+			});
+}
+
+function xh2(arr,a){
+			var xunhuannum=0;
+	$.each(arr, function (i, val) { 
+				var xh_tempArr = val.split("~");
+			    parentId = xh_tempArr[0];
+			    var data = xh_tempArr[1];
+			     curMap = parent.getLocationMap(data);
+			    var dataName = curMap.chname;
+			    var totalsize = arr.length;
+				var n = i + 1;
+				var newdataname=$.trim(dataName);
+				
+	        if(newdataname!=""&&newdataname!=null){
+	        	xunhuannum=xunhuannum+1;
+	        	if(xunhuannum>24){
+	        		return;
+	        	}
+				var IdName=$.trim(dataName);
+				var img_data = '<a onmouseenter="tjqtba(\''+data+'\')" onmouseleave="scqtba(\''+data+'\')"><b onclick="addba(\''+val+'o\');" id="'+data+'a"   ></b><div id="'+data+'div" class="img_square1"><span ><img _t="img" name="'+data+'" id="'+data+'img"   class="img_square" alt="'+dataName+'" src="/icbc/newperbank/perbank3/images/quickFunc/'+data+'_r.png"/></span></div></a>';
+						if(newdataname.length<=4){
+							newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+newdataname+"</p>";
+						}else{
+							var nameq="";
+							var nameh="";
+							if(newdataname.length==7||newdataname.length==8){
+							 	nameq=newdataname.substring(0,4);
+							 	nameh=newdataname.substring(4);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}else{
+							 	nameq=newdataname.substring(0,3);
+								nameh=newdataname.substring(3);
+								newdataname="<p style='font-size:12px; color:#888889; margin-top:-20px;'>"+nameq+"</p>"+"<p style='font-size:12px; color:#888889; margin-top:2px;'>"+nameh+"</p>";
+							}
+						}
+				var pHtml = '<li id="'+data+'oba" name='+IdName+'>'+img_data+ '<span id="img_name" class="imgnameCss">'+newdataname+'</span></li>'; 
+				$('#zuiaiUL'+a+'').append(pHtml);
+				}
+			});
+}
+
+function clickRecommendTap(){
+	$('#func_all').removeClass('ebdp-pc4promote-menu-level2-selected-type4').show();
+	$('#func_recommend').addClass('ebdp-pc4promote-menu-level2-selected-type4').show();
+	$('#func_search_res').removeClass('ebdp-pc4promote-menu-level2-selected-type4').hide();
+	$('#fanhui').hide();
+	
+	 if(!myquickAll7_flag){
+	 	$('#zuiaiDiv6').show();
+	 }
+	 if(!myquickAll8_flag){
+	 	$('#zuiaiDiv7').show();
+	 }
+	$('.table_favorite').hide();
+}
+function clickAllTap(){
+	$('#func_all').addClass('ebdp-pc4promote-menu-level2-selected-type4').show();
+	$('#func_recommend').removeClass('ebdp-pc4promote-menu-level2-selected-type4').show();
+	$('#func_search_res').removeClass('ebdp-pc4promote-menu-level2-selected-type4').hide();
+	$('#fanhui').hide();
+	
+	$('.div_zuiai_recommend').hide();
+	$('.table_favorite').show();
+}
+function clickSearchTap(){
+	$('#func_all').hide();
+	$('#func_recommend').hide();
+	$('#func_search_res').addClass('ebdp-pc4promote-menu-level2-selected-type4').show();
+	$('#fanhui').show();
+	
+	$('.div_zuiai_recommend').hide();
+	$('.table_favorite').hide();
+}
+
+//判断是否展示搜索页面 ，如果输入框不是空则展现搜索页面，否则不展示
+function selectShowDiv(){
+	var idName=$("#sousuo").val();
+	idName=$.trim(idName);
+	if(idName==""){
+		$("#oldall").hide();
+		$("#all").show();
+	}else{
+		clickSearchTap();
+		$("#oldall").show();
+		$("#all").hide();
+	}
+	
+	dragFresh();
+}
+
+//设置拖动效果
+function dragFresh(){
+	$('#selectUi').dad({
+		draggable: 'img'
+	});
+}
+
+</script>
+
+
+<!-- 登录区域 -->
+<!-- 登录处理页面 -->
+
+
+
+
+
+
+
+
+
+<script src="/icbc/newperbank/js/blockui/JQuery.BlockUI.min.2.39.js"></script>
+
+
+
+<script language="JavaScript">
+
+/**
+显示登录
+**/
+function showLogonDiv(serviceId,transData,logoffstat){
+    //设置好内容之后再展现
+    var wi="200";
+	try{
+		wi=(jQuery("body").width()-310)/2;
+	}catch (e){}
+	if($.browser.msie && parseInt($.browser.version)<=8){
+		frames['ICBC_login_frame_f'].location="https://epass.icbc.com.cn/login/login.jsp?StructCode=1&orgurl=0&STNO=30&isFloat=1&betaFlag=1";
+	}
+    $.blockUI({message: $('#ICBC_login_float'),
+    			css: { 
+                 left: wi,
+                 border:'1px solid #AAA',
+                 width: '310px',
+                  top:'10%'
+            	}
+             });
+    //注入数据必须是先显示后设置
+    //
+    setTimeout("setValue('"+serviceId+"','"+transData+"','"+logoffstat+"')",1000);
+    setTimeout("setValue('"+serviceId+"','"+transData+"','"+logoffstat+"')",2000);
+    setTimeout("setValue('"+serviceId+"','"+transData+"','"+logoffstat+"')",3000);
+    
+}
+/**
+显示浮动广告
+**/
+function showAdDiv(obj){
+    //设置好内容之后再展现
+    var intWidth = obj.width.replace(/px/gi,'');
+    var left  = (document.body.clientWidth - intWidth)/2;
+    jQuery("#ICBC_common_frame_f").attr('src',obj.url);
+    $.blockUI({message: $('#ICBC_common_float'),
+    			css: { 
+                 width: obj.width,
+                 height: obj.height,
+                 top:'15%',
+                 left:left
+            	}
+             });
+}
+//呼出新页面时是设置值
+/**
+@serviceId 原子服务id
+@transData 交易数据
+@logoffstat 前登陆状态
+
+"1由于您已经在另一台计算机上登录网银，本次登录强行退出";
+"2根据客户指令，本次登录强行退出";
+"3对不起，您的操作已超时，感谢您使用"+normalBankName+"网银";
+"4您在登录过程中网卡信息发生变化，为保证安全，请重新登录网上银行，感谢您使用"+normalBankName+"网上银行。";
+"5您在登录过程中IP地址已发生变化，为保证安全，请重新登录网上银行，感谢您使用"+normalBankName+"网上银行。";
+"6您已注销我行个人网银，本次登录强行退出。";
+
+**/
+var isFreashFrame = "0";//是否刷新首页面0或""不刷新
+function setValue(serviceId,transData,logoffstat){
+	if(logoffstat!=null && typeof(logoffstat)!="undefined" && logoffstat!="undefined"){
+		isFreashFrame = logoffstat;
+	}
+	var serviceIdInto="";
+	if(serviceId.indexOf(">")>0){
+		serviceIdInto=serviceId;
+		serviceId=serviceId.substring(0,serviceId.indexOf(">"));
+			
+	}
+	/* frames['ICBC_login_frame_f'].form1.logonCardNum.focus();
+	frames['ICBC_login_frame_f'].form1.serviceId.value=serviceId;
+	frames['ICBC_login_frame_f'].form1.serviceIdInto.value=serviceIdInto;
+	frames['ICBC_login_frame_f'].form1.transData.value=transData;  */
+	
+	//支持fire的标准写法
+	//frames['ICBC_login_frame_f'].document.getElementById("logonCardNum").focus();
+	
+	try{
+		frames['ICBC_login_frame_f'].document.getElementById("serviceId").value=serviceId;
+		frames['ICBC_login_frame_f'].document.getElementById("serviceIdInto").value=serviceIdInto;
+		frames['ICBC_login_frame_f'].document.getElementById("transData").value=transData; 
+		if(serviceId!=""&&serviceId!=null&&serviceId!='undefined')
+			frames['ICBC_login_frame_f'].document.getElementById("serviceIdfirst").value=serviceId; 
+		else
+			frames['ICBC_login_frame_f'].document.getElementById("serviceIdfirst").value=""; 
+		
+		if(logoffstat=="1"){
+			frames['ICBC_login_frame_f'].jQuery("#logintips").html("重新登录");
+			frames['ICBC_login_frame_f'].showErrTip("您已经在另一台计算机上登录网银，本次登录强行退出");
+		}else if(logoffstat=="2"){
+			frames['ICBC_login_frame_f'].jQuery("#logintips").html("重新登录");
+			frames['ICBC_login_frame_f'].showErrTip("根据客户指令，本次登录强行退出");
+		}else if(logoffstat=="3"){
+			frames['ICBC_login_frame_f'].jQuery("#logintips").html("重新登录");
+			//frames['ICBC_login_frame_f'].showErrTip("");
+		}else if(logoffstat=="4"){
+			frames['ICBC_login_frame_f'].jQuery("#logintips").html("重新登录");
+			frames['ICBC_login_frame_f'].showErrTip("您的网卡发生变化，为保证安全，请重新登录网上银行");
+		}else if(logoffstat=="5"){
+			frames['ICBC_login_frame_f'].jQuery("#logintips").html("重新登录");
+			frames['ICBC_login_frame_f'].showErrTip("您的IP发生变化，为保证安全，请重新登录网上银行");
+		}else if(logoffstat=="6"){
+			frames['ICBC_login_frame_f'].jQuery("#logintips").html("重新登录");
+			frames['ICBC_login_frame_f'].showErrTip("您已注销我行个人网银，本次登录强行退出");
+		}else{
+			frames['ICBC_login_frame_f'].jQuery("#logintips").html("登录");
+		}
+		
+	}catch(e){}
+	
+	
+}
+/**
+关闭登录
+**/
+function hideLogonDiv(){
+	//关闭弹出层
+    $.unblockUI();
+    if(isFreashFrame!="" && isFreashFrame!="0"){//关闭登录窗口后刷新首页面
+    	//window.location="/icbc/newperbank/perbank3/frame/frame_index.jsp";//reload();
+    	document.topfameFrom4Login.submit();
+    }
+    //关闭窗口时需要隐藏loading
+    try{frames['perbank-content-frame'].AtomSerivceHideLoading();}catch(e){}
+    //关闭窗口时，重置固定登录框中输入
+    //try{frames['ICBC_login_frame'].resetSafe();}catch(e){}
+    try{frames['ICBC_login_frame'].location.reload();}catch(e){}
+    
+}
+
+jQuery(document).ready(function() {
+      	$('#ICBC_login_float_x').click(function() {
+      		//frames['ICBC_login_frame_f'].KeyPart.clear();
+      		try{
+	      		frames['ICBC_login_frame_f'].document.getElementById("KeyPart").clear();
+				//frames['ICBC_login_frame_f'].safeEdit1.clear();
+				frames['ICBC_login_frame_f'].document.getElementById("safeEdit1").clear();
+			}catch(e){}
+			hideLogonDiv();
+		});
+		
+		$('#ICBC_login_float_open').click(function() {
+			showLogonDiv();
+		});
+		           
+});
+
+
+	function hasFloatlogon(){
+		//只有点“请登录”并且是首页的时候
+		var h=jQuery("#ICBC_login_float").is(':visible');//可见即为首页
+		return h;
+		
+	}
+	
+
+
+
+</script>
+<div id="ICBC_login_float_open" style="width: 40px; height: 30px; display: none; background-color: red;">打开测试</div>
+<div>
+<div id="ICBC_login_float">
+	<div id="ICBC_login_float_left">  
+				<iframe name="ICBC_login_frame_f" id="ICBC_login_frame_f" src="https://epass.icbc.com.cn/login/login.jsp?StructCode=1&amp;orgurl=0&amp;STNO=30&amp;isFloat=1&amp;betaFlag=1" frameborder="no" marginwidth="0" marginheight="0" scrolling="no" style="border: 0px currentColor; width: 310px; height: 370px; overflow: hidden;"></iframe> 
+	</div>
+	<div id="ICBC_login_float_x"><div id="ICBC_login_float_xxx">&nbsp;</div></div>
+</div>
+
+<div id="ICBC_common_float">
+	<div id="ICBC_common_float_left">  
+				<iframe name="ICBC_common_frame_f" id="ICBC_common_frame_f" src="" frameborder="no" marginwidth="0" marginheight="0" scrolling="no" style="border: 0px currentColor; width: 100%; height: 100%; overflow: hidden;"></iframe> 
+	</div>
+	<div id="ICBC_common_float_x"><div id="ICBC_common_float_xxx" onclick="hideLogonDiv();">X</div></div>
+</div>
+</div>
+
+<form name="topfameFrom4Login" id="topfameFrom4Login" onsubmit="return false;" action="/icbc/newperbank/perbank3/frame/frame_index.jsp" method="post" target="_top">
+</form>	
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+<script language="javascript">
+	//检查是否还有遮罩处理的业务流程
+	//遮罩关闭时需要调用
+	//用户跳过流程时需要调用
+	function goToNext(){
+		framehideform.submit();
+	}
+	jQuery(document).ready(function(){
+			registFWFunction(goToNext);//注册窗口关闭事件			
+	});
+	
+	
+</script>
+<iframe name="perbank-content-frame-hide" class="content-frame" id="perbank-content-frame-hide" src="/icbc/newperbank/perbank3/login/login_after.jsp?dse_sessionId=GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE" frameborder="no" scrolling="no" vspace="0" style="border: 0px currentColor; top: 0px; width: 100%; overflow: hidden; display: none;"></iframe>	
+
+<!--主交易区start-->
+<form name="framehideform" id="framehideform" onsubmit="return false;" action="/icbc/newperbank/perbank3/login/login_after.jsp?dse_sessionId=GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE" method="post" target="perbank-content-frame-hide">
+</form>
+
+<!-- login_afterformsg.jsp用于筛选消息中心 -->
+<iframe name="perbank-content-frame-hideformsg" class="content-frame" id="perbank-content-frame-hideformsg" src="/icbc/newperbank/perbank3/login/login_afterformsg.jsp?dse_sessionId=GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE" frameborder="no" scrolling="no" vspace="0" style="border: 0px currentColor; top: 0px; width: 100%; overflow: hidden; display: none;"></iframe>	
+		
+		
+
+
+
+
+
+
+
+
+	<script language="JavaScript">
+
+		jQuery(document).ready(function() {
+		 	$('#userQustButton').hover(function(){
+		      	$('#userQustDiv').show();
+			},function(){
+			     $('#userQustDiv').hide();
+			});
+
+		});
+
+		function clearText() {
+			//如果内容没有变化则清除，否则保留
+			if (document.userQustForm.userQust.value == "请输入您要咨询的问题") {
+				jQuery("#userQust").val("");
+			}
+		}
+
+		/**
+		 控制只能输入30个字，如果大于30个字则不能再输入。
+		 **/
+		function justCount() {
+			var userQustva = jQuery("#userQust").val();
+			var len = userQustva.length;
+			if (len <= 30) {
+				var a = 30 - len;
+				jQuery("#userQustTips").html(a);
+			} else {
+				var tt = userQustva.substring(0, 30);
+				jQuery("#userQust").val(tt);
+			}
+		}
+
+		//var ifCanSubmit = true;
+		function serviceSubmit()
+			{
+			
+			//if(!ifCanSubmit)
+			//	return;
+			//2016年10月版，修改在线客户的生产问题，不再考虑江苏行的特殊需求。
+			document.onLineServiceForm.submit();
+			
+				//ifCanSubmit = false;
+			  //down = setTimeout("resetbutton()", 10000);
+			}
+			
+			/* 201710智能导航栏 客户服务 */
+			function serviceSubmit1()
+			{
+			document.onLineServiceForm1.submit();
+			}
+			  
+	</script>
+	
+	
+<form name="onLineServiceForm" action="/servlet/ICBCINBSReqServlet" method="post" target="null">
+    <input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE">
+<input name="requestTokenid" type="hidden" value="1560932434365799099022">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_OnLineCustomerServiceOp">
+<input name="dse_pageId" type="hidden" value="24">
+	<input name="queryprocflag" type="hidden" value="0">    
+	<input name="salesFlag" type="hidden" value="0"> 	
+</form>
+<form name="onLineServiceForm1" action="/servlet/ICBCINBSReqServlet" method="post" target="serviceNav">
+    <input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE">
+<input name="requestTokenid" type="hidden" value="1560932434365799099022">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_OnLineCustomerServiceOp">
+<input name="dse_pageId" type="hidden" value="24">
+	<input name="queryprocflag" type="hidden" value="0">    
+	<input name="salesFlag" type="hidden" value="0"> 	
+	<input name="navigationFlag" type="hidden" value="1"> 
+</form>
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+<script src="/icbc/newperbank/js/blockui/JQuery.BlockUI.min.2.39.js"></script>
+
+
+<script language="JavaScript">
+
+var myfunctiontemp=null;
+/**
+显示登录
+**/
+function perbankAtomLocationFWshow(){
+	var wi="15%";
+try{
+		wi=(jQuery("body").width()-800)/2;
+	}catch (e){} 
+	
+    $.blockUI({message: $('#ICBC_window_float'),
+    			css: { 
+                 width: '815px',
+                 left:wi,
+                 top:'10%'
+            	}
+             });
+     jQuery(".ICBC_window_float_left").show();
+   	 jQuery("#ICBC_window_float_process").hide();
+}
+/**
+ 关闭窗口
+ 并调用下一个交易
+**/
+function perbankAtomLocationFWhide(){
+	//关闭弹出层
+   // $.unblockUI();
+   window.frames["ICBC_window_flot_frame"].document.body.innerHTML="";//防止下一次弹出层时，先展现上一次iframe中的内容
+   jQuery(".ICBC_window_float_left").hide();
+   jQuery("#ICBC_window_float_process").show();
+    //检查是否有注册的回调函数，如果有则调用;
+    /**var i=10;
+    while(true){
+    	var myfunciton=funlist.pop();
+    	if(typeof myfunciton == "function"){
+    		myfunciton.call(this);
+    	}else{
+    		break;
+    	}
+    	//避免进入死循环
+    	i--;
+    	if(i==0){
+    		break;
+    	}
+    }**/
+    //只允许一个回调函数
+    if(typeof myfunctiontemp == "function"){
+    		myfunctiontemp.call(this);
+    }
+}
+/**
+只关闭窗口
+**/
+function perbankAtomLocationFWOnlyhide(){
+	//关闭弹出层
+    //$.unblockUI({message: $('#ICBC_window_float')});
+    setTimeout("hideBlockUI()",10);
+}
+
+function hideBlockUI(){
+	if(jQuery("#ICBC_window_float").is(':visible')){
+		$.unblockUI();
+		//check visible
+		setTimeout("hideBlockUI()",10);
+	}
+}
+
+/**
+注册回调函数
+**/
+function registFWFunction(myfunction){
+	//funlist.push(myfunction);
+	myfunctiontemp=myfunction;
+}
+
+jQuery(document).ready(function() {
+      	$('#ICBC_window_float_xxx').click(function() {
+			perbankAtomLocationFWhide();
+		});
+		
+		$('#ICBC_window_float_open').click(function() {
+			perbankAtomLocationFWshow();
+		});
+		
+		$('#ICBC_window_flot_frame').load(function() {
+			try{
+				$('#ICBC_window_flot_frame').contents().find("body").css("overflow","hidden");
+			}catch(e){}
+		});            
+});
+
+
+
+
+</script>
+
+<div>
+<div id="ICBC_window_float">
+	<div class="ICBC_window_float_left" id="ICBC_window_float_left">  
+				<iframe name="ICBC_window_flot_frame" id="ICBC_window_flot_frame" src="" frameborder="no" marginwidth="0" marginheight="0" scrolling="auto" style="border: 0px currentColor; width: 815px; overflow: hidden;"></iframe> 
+	</div>
+	<div class="ICBC_window_float_left" id="ICBC_window_float_x"><div id="ICBC_window_float_xxx">x</div></div>
+	<div id="ICBC_window_float_process" style="width: 99%; height: 18px; display: none;"></div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/icbc/newperbank/js/blockui/JQuery.BlockUI.min.2.39.js"></script>
+
+
+
+<script language="JavaScript">
+
+var myfunctiontemp=null;
+/**
+显示登录
+**/
+function draw_perbankAtomLocationFWshow(height,width){
+	var wi="15%";
+try{
+		wi=(jQuery("body").width()-800)/2;
+	}catch (e){} 
+	
+    $.blockUI({message: $('#DRAW_ICBC_window_float'),
+    			css: { 
+                 width: width,
+                 height: height,
+                 top: 0,
+                 left: 0,
+                  background:'rgba(0,0,0,0)'
+            	}
+             });
+     jQuery(".DRAW_ICBC_window_float_left").show();
+   	// jQuery("#DRAW_ICBC_window_float_process").hide();
+}
+/**
+ 关闭窗口
+ 并调用下一个交易
+**/
+function draw_perbankAtomLocationFWhide(){
+	//关闭弹出层
+   // $.unblockUI();
+   window.frames["DRAW_ICBC_window_flot_frame"].document.body.innerHTML="";//防止下一次弹出层时，先展现上一次iframe中的内容
+   jQuery(".DRAW_ICBC_window_float_left").hide();
+  // jQuery("#DRAW_ICBC_window_float_process").show();
+    //检查是否有注册的回调函数，如果有则调用;
+    /**var i=10;
+    while(true){
+    	var myfunciton=funlist.pop();
+    	if(typeof myfunciton == "function"){
+    		myfunciton.call(this);
+    	}else{
+    		break;
+    	}
+    	//避免进入死循环
+    	i--;
+    	if(i==0){
+    		break;
+    	}
+    }**/
+    //只允许一个回调函数
+    if(typeof myfunctiontemp == "function"){
+    		myfunctiontemp.call(this);
+    }
+}
+
+
+function DRAW_hideBlockUI(){
+	if(jQuery("#DRAW_ICBC_window_float").is(':visible')){
+		$.unblockUI();
+		//check visible
+		setTimeout("DRAW_hideBlockUI()",10);
+	}
+}
+
+jQuery(document).ready(function() {
+      	$('#DRAW_ICBC_window_float_xxx').click(function() {
+			draw_perbankAtomLocationFWhide();
+			DRAW_hideBlockUI();
+		});
+		
+		$('#DRAW_ICBC_window_float_open').click(function() {
+			draw_perbankAtomLocationFWshow();
+		});
+		           
+});
+
+
+
+
+</script>
+
+<div>
+<div id="DRAW_ICBC_window_float">
+	<div class="DRAW_ICBC_window_float_left" id="DRAW_ICBC_window_float_left">  
+				<iframe name="DRAW_ICBC_window_flot_frame" id="DRAW_ICBC_window_flot_frame" src="" frameborder="no" marginwidth="0" marginheight="0" scrolling="no" style="border: 0px currentColor; width: 100%; height: 100%; overflow: hidden;"></iframe> 
+	</div>
+	
+	<div class="DRAW_ICBC_window_float_left" id="DRAW_ICBC_window_float_x"><div id="DRAW_ICBC_window_float_xxx">x</div></div>
+	<!-- <div id="DRAW_ICBC_window_float_process" style="display:none;width:90%;height:90%"></div> -->
+</div>
+</div>
+
+
+
+
+
+<form name="topfameFrom" id="topfameFrom" onsubmit="return false;" action="/servlet/ICBCPERBANKLocationServiceServlet" method="post" target="perbank-content-frame">
+	<input name="transData" type="hidden" value=""> 
+	<input name="serviceId" type="hidden" value="PBL201786"> 
+	<input name="zoneNo" type="hidden" value="0908">
+	<input name="serviceIdInto" type="hidden" value="">
+	<input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE"> 
+	<input name="isflot" type="hidden" value="0">	
+	<input name="Language" type="hidden" value="zh_CN">	
+	<input name="requestChannel" type="hidden" value="302">	
+</form>	
+<form name="topfameFrom1" id="topfameFrom1" onsubmit="return false;" action="/servlet/ICBCPERBANKLocationServiceServlet" method="post" target="ICBC_window_flot_frame">
+	<input name="transData" type="hidden" value=""> 
+	<input name="serviceId" type="hidden" value="PBL201786"> 
+	<input name="zoneNo" type="hidden" value="0908">
+	<input name="serviceIdInto" type="hidden" value="">
+	<input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE"> 	
+	<input name="isflot" type="hidden" value="1">
+	<input name="Language" type="hidden" value="zh_CN">	
+	<input name="requestChannel" type="hidden" value="302">	
+</form>	
+<form name="draw_topfameFrom1" id="draw_topfameFrom1" onsubmit="return false;" action="/servlet/ICBCPERBANKLocationServiceServlet" method="post" target="DRAW_ICBC_window_flot_frame">
+	<input name="transData" type="hidden" value=""> 
+	<input name="serviceId" type="hidden" value="PBL201786"> 
+	<input name="zoneNo" type="hidden" value="0908">
+	<input name="serviceIdInto" type="hidden" value="">
+	<input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE"> 	
+	<input name="isflot" type="hidden" value="1">
+	<input name="Language" type="hidden" value="zh_CN">	
+	<input name="requestChannel" type="hidden" value="302">	
+</form>	
+<form name="topfameFrom2" id="topfameFrom2" onsubmit="return false;" action="/servlet/ICBCPERBANKLocationServiceServlet" method="post" target="news-pop-frame">
+	<input name="transData" type="hidden" value=""> 
+	<input name="serviceId" type="hidden" value=""> 
+	<input name="zoneNo" type="hidden" value="0908">
+	<input name="serviceIdInto" type="hidden" value="">
+	<input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE"> 	
+	<input name="isflot" type="hidden" value="0">
+	<input name="Language" type="hidden" value="zh_CN">	
+	<input name="requestChannel" type="hidden" value="302">	
+</form>
+<div class="width" id="atomService_content" style="margin-top: 0px; margin-bottom: 60px;">
+ 	<iframe name="perbank-content-frame" class="content-frame" id="perbank-content-frame" frameborder="no" scrolling="no" vspace="0" style="border: 0px currentColor; top: 0px; width: 100%; height: 582px; overflow: hidden;"></iframe>	
+</div>
+<div id="guessyoulike_div_outer" style="display: none;">
+
+<div style='background: url("/icbc/newperbank/perbank3/style/style_default/images/cainixihuan-bg.png") repeat-x; width: 100%; height: 400px;'>
+	
+		
+		
+		
+		
+		
+		
+		
+	
+
+
+ 
+	
+
+
+<div align="center">
+<iframe name="favoriteiframe" width="1000" height="400" src="/icbc/newperbank/perbank3/index/index_favorite_iframe_sub.jsp?&#10;&#9;&amp;dse_sessionId=GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE&#10;&#9;&amp;rflag=my&#10;&#9;&amp;Cust_Group_Num=&#10;&#9;&amp;View_Prod_Group_Num=&#10;&#9;&amp;Prod_Type_Cd=&amp;Prod_Num=" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" overflow="hidden"></iframe>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="footer-block">
+  <div class="width footer-block-body">
+    <div class="footer-left">
+      
+			<ul>
+			<li class="first"><a href="http://www.icbc.com.cn/icbc/%e5%ae%a2%e6%88%b7%e6%9c%8d%e5%8a%a1/map.htm" target="_blank">网站地图</a></li><li><a href="http://www.icbc.com.cn/icbc/%e5%ae%a2%e6%88%b7%e6%9c%8d%e5%8a%a1/service.htm" target="_blank">联系我们</a></li><li><a href="http://www.icbc.com.cn/icbcltd/%e7%bd%91%e7%ab%99%e5%a3%b0%e6%98%8e/%e7%bd%91%e7%ab%99%e5%a3%b0%e6%98%8e.htm" target="_blank">网站声明</a></li><li class="last"><a href="http://www.icbc.com.cn/icbc/%e5%ae%a2%e6%88%b7%e6%9c%8d%e5%8a%a1/business_offices.htm" target="_blank">服务网点</a></li>
+            </ul>
+        
+    </div>
+    <div class="footer-right">
+      <ul class="copyright-ul">
+		
+			<li>服务热线95588</li>
+		
+			<li>中国工商银行版权所有</li>
+			<li>京ICP证   030247号</li>
+	  </ul>
+    </div>
+  </div>
+</div>
+
+<div id="hall_div" style="top: 200px; width: auto; height: auto; right: 0px; display: none; position: fixed; z-index: 1;">
+	<a href="javascript:logPV('PBL20167001');perbankAtomLocationTW('PBL20167001','5',dse_sessionId);"><span class="hall-right"></span></a>
+</div>
+
+
+	
+
+
+
+
+	<!-- <script src="/icbc/newperbank/js/perbank3/tongji.js"></script> -->
+	
+	<script src="/icbc/newperbank/js/perbank3/js0005.js?ver=2019061605"></script>
+
+	<script>
+	try{
+	//--------------------------------------------------------
+	
+	addPvValue(['uip',clientIP]);//访客ip
+	addPvValue(['areacode',zoneNo]);//地区号
+	addPvValue(['stat_ss','']);//访客标识
+	addPvValue(['srcpageno','']);//来源页面编码
+	addPvValue(['curpageno','']);//当前页面编码
+	addPvValue(['noIdendifiedCusid','']);
+	addPvValue(['TRANSDATE','20190619']);
+	addPvValue(['TRANSTIME','162102']);
+	addPvValue(['requestChannel','302']);
+	addPvValue(['sessionId',dse_sessionId]);
+	addPvValue(['pvModelElementId','']);
+	addPvValue(['filterWord','']);
+	addPvValue(['labelname','']);
+	addPvValue(['cis',mainCIS]);
+	addPvValue(['url','/icbc/newperbank/perbank3/frame/frame_index.jsp']);
+	
+	//清理上一页面信息
+	}catch(e){}
+</script>
+
+<script language="javascript">
+
+$(window).scroll(function(){
+	var showFlag1 = false;
+	try{
+		showFlag1 = window.frames['perbank-content-frame'].frames['content-frame'].showFlag;
+	}catch(e){}
+		if($(window).scrollTop()>250 && showFlag1 == false){
+			window.frames['perbank-content-frame'].frames['content-frame'].showFlag = true ;
+			window.frames['perbank-content-frame'].frames['content-frame'].document.getElementById('mybank_finace').src ='/icbc/newperbank/perbank3/includes/menu_mybank_new.jsp?dse_sessionId=GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE&requestTokenid=1560932434365799099022';
+		
+		}	
+			});
+
+/**
+刷新页面
+根据最后一次调用的原子服务刷新当前页面
+**/
+function reSetIndex(firstZoneNoin){
+	var url  =window.top.location.href;
+	if(url.indexOf("?")>-1){
+		url=url.substr(0,url.indexOf("?"));
+	}
+	//自动加载不启动清除session
+	try{
+		isAutoLoad=true;
+	}catch(e){}
+	/* url="/icbc/newperbank/perbank3/frame/frame_index.jsp";
+	url = url + "?"+"serviceId="+serviceId+"&transData="+transData+"&dse_sessionId="+dse_sessionId+"&zoneNo="+firstZoneNoin;
+	window.location.href=url; */
+	perbankAtomLocationBW(serviceId,transData,dse_sessionId,firstZoneNoin);
+}
+
+jQuery(document).ready(function(){
+	//如果是需要登录则拦截
+	//退出交易不拦截
+	setTimeout('submitFirstForm()',1);
+	//document.topfameFrom.submit();
+	
+	//非自动刷新页面的情况则清除session
+ 	
+	$(window).unload(function(){
+		if(!isAutoLoad){//
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","/servlet/ICBCINBSReqServlet?dse_operationName=per_PersonalSignOffOp&dse_sessionId="+dse_sessionId+"&dse_applicationId=-1",false);
+			xmlhttp.send();
+		}
+	})
+
+
+	//活动大厅图标根据智能导航改变位置
+	navigateClick();
+});
+
+function navigateClick(){
+	$('.ebdp-pc4promote-navigationbar-left div').bind('click',function(){
+		var display = $('.ebdp-pc4promote-navigationbar-content').css("display");
+		if("none" == display){
+			$('#hall_div').css("right","0px");
+		} else {
+			var width = $('.ebdp-pc4promote-navigationbar-content').width()+4;
+			$('#hall_div').css("right",width+"px");
+		}
+	});
+}
+
+function hallFollowNav(){
+	$('#hall_div').css("right","0px");
+}
+
+function submitFirstForm(){
+	
+	perbankAtomLocationTW('PBL201786','','GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE')
+	
+}
+//快捷工具
+/**
+ 控制只能输入30个字，如果大于30个字则不能再输入。
+ **/
+function justCount() {
+	var userQustva = jQuery("#service-content").val();
+	var len = userQustva.length;
+	if (len <= 30) {
+		var a = 30 - len;
+		jQuery("#userQustTips").html(a);
+	} else {
+		var tt = userQustva.substring(0, 30);
+		jQuery("#service-content").val(tt);
+	}
+}
+
+/**
+ 跳转到门户。
+ **/
+function gotoInteService() {
+	var userQustva = jQuery("#service-content").val();
+	if (userQustva == "" || userQustva == "请输入您要咨询的问题") {//没有输入的两种情况。
+		document.getElementById("service-content").focus();
+		return;
+	} else {
+		var key = encodeURI(userQustva);
+		key = key.replace(/#/g,'%23');
+		var url="http://www.icbc.com.cn/ICBC/%E5%AE%A2%E6%88%B7%E6%9C%8D%E5%8A%A1/%E6%99%BA%E8%83%BD%E6%90%9C%E7%B4%A2/default.htm"+"?title="+key;
+		window.open(url,"_blank")
+	}
+}
+function downloadAss(){
+		window.open('http://www.icbc.com.cn/icbc/html/download/EbankToolsSoftware/x64/ICBCSetupIntegration_64.msi');
+}
+//快捷工具js
+var msgList = new Array();//消息队列
+var msgLen = 0;//消息队列长度
+var nowMsgNum = 1;//当前显示的第几个消息
+var isUserOpened = false;//用户是否打开过消息中心
+function initMsgCenter(mList,isFirstLoad){//login_afterformsg.jsp调用，用于初始化消息中心
+	isUserOpened = false;
+	msgList = mList;
+	msgLen = 0;
+	try{
+		msgLen = msgList.length;
+	}catch(e){
+		msgLen = 0;
+	}
+	shortcuttool.setTipByValue("3",msgLen);
+	$("#pop .page-prev").hide();
+	$("#pop .page-next").hide();
+	if(msgLen>1){
+		if(nowMsgNum == msgLen){
+			$("#pop .page-prev").show();
+		}else{
+			if(nowMsgNum == 1){
+				$("#pop .page-next").show();
+			}else{
+				$("#pop .page-prev").show();
+				$("#pop .page-next").show();
+			}
+		}
+		$("#pop .page-prev").unbind("click");
+		$("#pop .page-prev").bind("click",getPrevMsg);
+		$("#pop .page-next").unbind("click");
+		$("#pop .page-next").bind("click",getNextMsg);
+	}
+	jQuery("#pop").hide();
+	if(msgLen>0){//有消息，默认打开
+		if(isFirstLoad){//登录后第一次自动打开
+			eventClick('3','');
+		}
+	}else{
+		$(".ebdp-pc4promote-shortcuttool-tip").hide();//无消息，隐藏数字
+	}
+}
+//点击消息下一页
+function getNextMsg(){
+	nowMsgNum++;
+	if(nowMsgNum==msgLen){
+		$("#pop .page-next").hide();
+	}
+    displayMsgToFrame(nowMsgNum);
+    $("#pop .page-prev").show();
+    return false;
+}
+//点击消息上一页
+function getPrevMsg(){
+	nowMsgNum--;
+	if(nowMsgNum==1){
+		$("#pop .page-prev").hide();
+	}
+    displayMsgToFrame(nowMsgNum);
+    $("#pop .page-next").show();
+    return false;
+}
+//提交消息原子服务，展示在frame中
+function displayMsgToFrame(dMsgN){
+	var msgJson = eval('('+msgList[dMsgN-1]+')');
+	document.topfameFrom2.transData.value=msgJson.transdata;
+	document.topfameFrom2.serviceId.value=msgJson.serviceid;
+	document.topfameFrom2.submit();
+}
+//获取U盾、防钓鱼提示的UTipsNum，USTip、AntiPhishing页面调用
+function getUTipsNum(){
+	var msgJson = eval('('+msgList[nowMsgNum-1]+')');
+	return msgJson.UTipsNum;
+}
+function reInitMsgCenter(delServiceId){//U盾、防钓鱼提示页面选不再提示后
+	for(var i=0;i<msgList.length;i++){
+		if(msgList[i].indexOf(delServiceId)!=-1){
+			msgList.splice(i,1);
+		}
+	}
+	if(nowMsgNum<msgLen){
+		initMsgCenter(msgList,true);
+	}else{
+		nowMsgNum = 1;
+		initMsgCenter(msgList,false);
+	}
+}
+function eventClick(value,index){
+	if(value=="7"){
+		perbankAtomLocationTW('PBL20167001','5',dse_sessionId);
+	}
+	if(value=="5"){
+		$(window).scrollTop(0);
+		shortcuttool.setVisibleByValue("5",false);
+	}
+	if(value=="3" && jQuery("#pop").is(':hidden')){
+		if(msgLen!=0){
+			if(!isUserOpened){
+				displayMsgToFrame(nowMsgNum);
+				isUserOpened = true;
+			}
+			jQuery("#pop").show();
+		}else{
+			alert("您暂无通知消息。");
+		}
+	}
+	if(value=="2"){
+		downloadAss();
+	}
+	
+		if(value=="1"){
+			serviceSubmit();//inteService.jsp中
+		}
+	
+}
+function eventMouseEnter(value,index){
+	if(value=="4"){
+		jQuery("#erweima").stop().animate({"width":"274px"},500);
+	}
+	if(value=="2"){
+		jQuery("#helper").stop().animate({"width":"274px"},500);
+	}
+	if(value=="6"){
+		getFootPrint(dse_sessionId);
+		jQuery("#footprint").stop().animate({"width":"275px"},500);
+	}
+	
+}
+function eventMouseLeave(value,index){
+	if(value=="4"){
+		jQuery("#erweima").stop().animate({"width":"0"},500);
+	}
+	if(value=="2"){
+		jQuery("#helper").stop().animate({"width":"0"},500);
+	}
+	if(value=="6"){
+		jQuery("#footprint").stop().animate({"width":"0"},500);
+	}
+	
+}	
+</script>
+
+<div>
+	<div class="news-pop" id="pop">
+     	<div class="news-box">
+         	<div class="news-main">
+             	<b class="close-btn">x</b>
+             	<h4>重要提示</h4>
+                 <div class="news-body">
+                 	<iframe name="news-pop-frame" id="news-pop-frame" src="" frameborder="0" marginheight="0" scrolling="no" style="width: 100%; height: 200px; overflow: hidden; visibility: inherit; z-index: 1;"></iframe>
+                 </div>
+                 <div class="page-div">
+                 	<span class="page-prev">上一页</span>
+                     <span class="page-next">下一页</span>
+                 </div>
+             </div>
+         </div>
+     </div>
+	<div class="service-pop" id="service">
+    	<div class="service-box">
+        	<div><textarea name="service-content" id="service-content" onkeydown="javascript:justCount();" onkeyup="javascript:justCount();" maxlength="30" placeholder="请输入您要咨询的问题" rows="2" cols="20">请输入您要咨询的问题</textarea></div>
+            <div class="service-btn-box">
+            	<span>您可以输入<span id="userQustTips">30</span>个字</span><a class="service-btn" href="javascript:gotoInteService();"></a>
+            </div>
+        </div>
+    </div>
+    <div class="erweima-box" id="erweima">
+       	<ol>
+           	<li class="Eg" onclick="window.open('http://www.icbc.com.cn/ICBC/gnym2/2.htm')"></li>
+            <li class="El" onclick="window.open('http://www.icbc.com.cn/ICBC/gnym2/2.htm')"></li>
+            <li class="Eh" onclick="window.open('http://www.icbc.com.cn/ICBC/gnym2/2.htm')"></li>
+        </ol>
+    </div>
+    <div class="helper-pop" id="helper">
+    	<div class="helper-box">
+        	<p>一键快捷完成网银安全控件U盾驱动安装</p>
+        </div>
+    </div>
+    <div class="footprint-pop" id="footprint">
+    <input id="getFootInfoError" type="hidden" value="">
+     <div class="footprint-box">
+       <div class="footprint-content">
+       		<!-- <div class="footprint-leftfoot-out"><div class="footprint-leftfoot-bg">我的账户</div></div>
+       		<div class="footprint-rightfoot-out"><div class="footprint-rightfoot-bg">转账汇款</div></div> -->
+       </div>
+     </div>
+    </div>
+    
+	
+											
+</div>
+<!--fix-box end--> 
+<!-- 201710 智能导航栏    -->
+<script type="text/javascript">
+var link1 = function(){
+	var contentDom=navigationbar.getContentDom();
+	contentDom.html("<iframe  id='quickTran' name='quickTran'  frameborder='0' width='260px' height='100%' style='margin-top:-8px' src='/icbc/newperbank/perbank3/quickFuc/quickTrans.jsp?dse_sessionId=GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE'></iframe>");
+};
+var link2 = function(){
+	var contentDom=navigationbar.getContentDom();
+	contentDom.html("<iframe id='right' name='right' frameborder='0' width='100%' height='100%' scrolling='no' style='overflow:hidden; max-height:99%'></iframe>");
+	document.form152.submit();
+};	
+var checkLoginLink2 = function(){
+	if(dse_sessionId==""||dse_sessionId==null){
+		console.log("frame_index.jsp--AtomSerivceSubmitPre");
+		AtomSerivceSubmitPre('PBL201700','2','',"1",true);
+		return false;
+	}		
+	else{
+		return true;
+	}	
+};
+var link3 = function(){
+	var contentDom=navigationbar.getContentDom();
+	contentDom.html("<iframe id='inlifeVerticalFrame' name='inlifeVerticalFrame' frameborder='0' width='100%' height='100%' scrolling='no' style='overflow:hidden; max-height:99%'></iframe>");
+	document.inlifeVerticalForm.submit();
+};
+var link4 = function(){//消息中心
+	var contentDom=navigationbar.getContentDom();
+	contentDom.html("<iframe id='messageNav' name='messageNav' frameborder='0' width='100%' height='100%'></iframe>");
+	document.messageCenter.submit();
+};
+var link5 = function(){//在线客服
+	
+			serviceSubmit();//inteService.jsp中
+	
+	return false;
+};
+
+var link6 = function(){
+	var contentDom=navigationbar.getContentDom();
+	contentDom.html("<iframe id='fundCompare' name='fundCompare' frameborder='0' width='100%' height='100%' style='margin-top:-5px' src='/icbc/newperbank/perbank3/fund/frame_fund_compare.jsp?dse_sessionId=GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE'></iframe>");
+};
+var link7 = function(){
+	perbankAtomLocationTW('PBL201670','5','GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE');
+	navigationbar.closeContent();
+};
+
+function goinfo(id,type){
+	document.goinfopage.action=document.goinfopage.action = '/servlet/ICBCINBSReqServlet?safaritemp=' + new Date().getTime();
+	document.goinfopage.SMSID.value=id;
+	document.goinfopage.SMSType.value=type;
+	document.goinfopage.submit(); 
+}
+function goinreward(encdata){
+      var floatdialog_blank =new top.FloatDialog({"id":"first", "floatType":"0","url":"/servlet/ICBCINBSReqServlet?dse_sessionId=GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE&requestTokenid=1560932434365799099022&dse_operationName=per_DrwCommonOp&fromflag=1&encdata=" +encdata, "width":"900","height":"700", "eventGetResult": "", "positionY":"10%", "eventIframeLoad":fireSetIframeHeight});
+      floatdialog_blank.show();
+} 
+
+
+/**
+ * 动态调整弹出框高度，方法名固定 
+ */
+function fireSetIframeHeight(obj) {
+	var ifm= top.document.getElementById("ebdp-floatdialog-iframe"); 
+	var $middle = jQuery(ifm).parent(".ebdp-floatdialog-middle");
+	var subWeb = top.document.frames ? top.document.frames["ebdp-floatdialog-iframe"].document : ifm.contentDocument; 
+	jQuery(subWeb.body).css('overflow','auto');
+	if(ifm != null && subWeb != null) { 
+		var _height = subWeb.body.scrollHeight;
+		ifm.height = _height;
+		$middle.height(_height);
+		/* 兼容窗口高度不够的情况，设置最大高度(窗口最大高度*(1-据上边框位置)-上边栏-下边栏) */
+		var maxHeight = $(top.window).height();
+		if(maxHeight!=null && maxHeight!=undefined){
+			maxHeight = parseInt(maxHeight*0.9)-30-64;
+			jQuery(ifm).css('max-height', maxHeight+'px'); 
+			jQuery($middle).css('max-height', maxHeight+'px');
+			jQuery(ifm).css('min-height','260px');
+		}
+	}
+};
+</script>
+<!--智能导航栏交易快照form  -->
+<form name="form152" action="/servlet/ICBCINBSReqServlet" method="post" target="right"><!--智能导航栏 交易快照  -->
+	<input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE">
+<input name="requestTokenid" type="hidden" value="1560932434365799099022">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_TranSnapSaveAndLoadOp">
+<input name="dse_pageId" type="hidden" value="24">
+	<input name="isNavigation" type="hidden" value="1">
+	<input name="transFlag" type="hidden" value="5">
+</form>
+<!-- 智能导航栏金融日历简易版form -->
+<form name="inlifeVerticalForm" action="/servlet/ICBCINBSReqServlet" method="post" target="inlifeVerticalFrame">
+	<input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE">
+<input name="requestTokenid" type="hidden" value="1560932434365799099022">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_IntelligentLifeOp">
+<input name="dse_pageId" type="hidden" value="24">
+	<input name="tranFlag" type="hidden" value="0">
+	<input name="typeFlag" type="hidden" value="2">
+</form>
+<!-- 智能导航栏消息中心提交form -->
+<form name="messageCenter" action="/servlet/ICBCINBSReqServlet" method="post" target="messageNav">
+	<input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE">
+<input name="requestTokenid" type="hidden" value="1560932434365799099022">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_MessageCenterOp">
+<input name="dse_pageId" type="hidden" value="24">
+	<input name="tranFlag" type="hidden" value="3">
+</form>
+
+<form name="goinfopage" id="goinfopage" action="/servlet/ICBCINBSReqServlet" method="post" target="_blank">
+  <input name="dse_sessionId" type="hidden" value="GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE">
+<input name="requestTokenid" type="hidden" value="1560932434365799099022">
+<input name="dse_applicationId" type="hidden" value="-1">
+<input name="dse_operationName" type="hidden" value="per_SMSRecivedBoxOp">
+<input name="dse_pageId" type="hidden" value="24">
+  <input name="Begin_pos" type="hidden" value="0">
+  <input name="Tran_flag" type="hidden" value="1">  
+  <input name="checkList" type="hidden">
+  <input name="isCardTypes" type="hidden" value="1">
+  <input name="CardTypes" type="hidden" value="|011|">
+  <input name="SMSID" type="hidden">
+  <input name="SMSType" type="hidden">
+  <input name="nowDate" type="hidden" value="20190619">
+</form>
+
+
+
+
+ <div class="ebdp-pc4promote-navigationbar-outer" id="navigationbar">
+		<div class="ebdp-pc4promote-navigationbar-left"><div class="ebdp-pc4promote-navigationbar-left-middle" style="top: 200.5px; display: block;"><div class="ebdp-pc4promote-navigationbar-left-middle-link&#9;ebdp-pc4promote-navigationbar-left-middle-img7" data-key="7"></div><div class="ebdp-pc4promote-navigationbar-left-middle-link ebdp-pc4promote-navigationbar-left-middle-img1" data-key="1"></div><div class="ebdp-pc4promote-navigationbar-left-middle-link&#9;ebdp-pc4promote-navigationbar-left-middle-img2" data-key="2"></div><div class="ebdp-pc4promote-navigationbar-left-middle-link&#9;ebdp-pc4promote-navigationbar-left-middle-img3" data-key="3"></div><div class="ebdp-pc4promote-navigationbar-left-middle-link&#9;ebdp-pc4promote-navigationbar-left-middle-img4" data-key="4"></div><div class="ebdp-pc4promote-navigationbar-left-middle-link&#9;ebdp-pc4promote-navigationbar-left-middle-img5" data-key="5"></div><div class="ebdp-pc4promote-navigationbar-left-middle-link&#9;ebdp-pc4promote-navigationbar-left-middle-img6" style="display: none;" data-key="6"></div></div><div class="ebdp-pc4promote-navigationbar-left-bottom"><div class="ebdp-pc4promote-navigationbar-left-bottom-link&#9;ebdp-pc4promote-navigationbar-left-bottom-img1 ebdp-pc4promote-navigationbar-left-bottom-img1-shouqi"></div><div class="ebdp-pc4promote-navigationbar-left-bottom-link&#9;ebdp-pc4promote-navigationbar-left-bottom-img2"></div></div></div>		<div class="ebdp-pc4promote-navigationbar-content" style="display: none;"></div></div>
+<script type="text/javascript">
+if(!(navigationbar instanceof NavigationBar)){
+var navigationbar = new NavigationBar("navigationbar");
+navigationbar.setLink1Handler(link1);
+navigationbar.setLink2Handler(link2);
+navigationbar.setLink3Handler(link3);
+navigationbar.setLink4Handler(link4);
+navigationbar.setLink5loginCallBackHandler(link5);
+navigationbar.setLink6Handler(link6);
+navigationbar.setLink7Handler(link7);
+navigationbar.show();
+}else{
+try{delete window.navigationbar;}catch(e){} 
+var navigationbar = new NavigationBar("navigationbar");
+navigationbar.setLink1Handler(link1);
+navigationbar.setLink2Handler(link2);
+navigationbar.setLink3Handler(link3);
+navigationbar.setLink4Handler(link4);
+navigationbar.setLink5loginCallBackHandler(link5);
+navigationbar.setLink6Handler(link6);
+navigationbar.setLink7Handler(link7);
+navigationbar.show();
+}
+</script>
+ 
+<script> 
+ function delMessage(){
+	
+}
+jQuery(document).ready(function() {	
+navigationbar.hidelink(6);
+
+  navigationbar.setButtonMsg(4,'0');
+	
+}); 
+	
+</script>
+
+<script>
+//初始化快捷工具
+		
+	$("#pop .close-btn").bind("click",function(){
+		$("#pop").hide();
+		return false;
+	})
+	$(window).scroll(function(){
+		if($(window).scrollTop()>85){
+			
+		}else{
+			
+		}
+	});
+
+
+$(function(){
+//点击消息框以外的地方隐藏消息框
+	$(document).bind("click",function(e){
+		var target = $(e.target);
+		if(target.closest("#pop").length==0){
+			$("#pop").hide();
+		}
+	})	
+//首页默认的时候最爱展开
+
+//图片懒加载
+	$("img.lazy").show().lazyload({
+	   		placeholder: "/icbc/newperbank/perbank3/css/frame/images/loadering.gif"
+	});
+})
+</script>
+
+<iframe name="perbank-content-frame-version" id="perbank-content-frame-version" src="/icbc/newperbank/perbank3/frame/frame_index_version.jsp?dse_sessionId=GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE" frameborder="no" scrolling="no" vspace="0" style="border: 0px currentColor; top: 0px; width: 0px; height: 0px; overflow: hidden;"></iframe>
+
+
+
+
+
+
+<link href="/icbc/newperbank/perbank3/css/frame/css/style.css?ver=2019061605" rel="stylesheet" type="text/css">
+
+
+
+
+<title>???ú????</title>
+
+
+ <script type="text/javascript">
+    var bbs_display="";
+    var i_i = "10";
+ 	try{
+ 		bbs_display=sessionStorage.bbs_display;
+ 	}catch(e){
+		try{
+			if(GetCookie("bbs_display")=="1"){
+				bbs_display = GetCookie("bbs_display");
+			}else{
+				SetCookie("bbs_display","0");
+				bbs_display = GetCookie("bbs_display");
+				}
+			}catch(e){
+				bbs_display = "0";
+				}
+ 	} 
+ 	/* try{
+		if(GetCookie("bbs_display")=="1"){
+			bbs_display = GetCookie("bbs_display");
+		}else{
+			SetCookie("bbs_display","0");
+			bbs_display = GetCookie("bbs_display");
+			}
+		}catch(e){
+			bbs_display = "0";
+			} */
+ 	
+	function judge(){
+		var msg = "";
+		$('#noticemsg').html(msg);
+		if(msg!=""&&(bbs_display=="0"||bbs_display==undefined)){
+		    $("#notice").slideDown("slow");
+			setTimeout('hide()',i_i*1000);
+		}else{
+			document.getElementById("notice").style.display = "none";
+			
+		}
+		try{
+	 		sessionStorage.bbs_display="1";
+	 	}catch(e){
+	 		SetCookie("bbs_display","1");
+	 	} 
+		/* SetCookie("bbs_display","1"); */
+	}
+	
+	 function clock(){
+			document.getElementById("notice").style.display = "none"; 
+	} 
+	 function hide(){
+			$("#notice").slideUp("slow");
+	} 
+	 $(document).ready(function(){
+			judge();
+			
+		});
+	function SetCookie(name,value){
+		document.cookie = name + "=" +escape(value);
+		}
+	function GetCookie(name){
+		var arr,reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+		if(arr = document.cookie.match(reg))
+			return unescape(arr[2]);
+		else
+			return null;
+		}
+	function ClearCookie(name){
+		SetCookie(name,"");
+		}
+	/* $(window).on('onbeforeunload',ClearCookie('bbs_display'));  */
+ </script>
+
+	<div class="notice" id="notice" style="display: none;">
+		<div class="MSG" id="noticemsg"></div>
+		<div style="width: 2%; float: right;">
+			<div class="CloseX" onclick="clock()"></div>
+		</div>
+	</div>
+
+
+
+</boby><img width="0" height="0" style="display: none;" src="https://pageviewp.icbc.com.cn/perbank/image/perbank.gif?unit_id=9999&amp;urlname=frame_index.jsp&amp;title=%E4%B8%AD%E5%9B%BD%E5%B7%A5%E5%95%86%E9%93%B6%E8%A1%8C%E6%96%B0%E4%B8%80%E4%BB%A3%E7%BD%91%E4%B8%8A%E9%93%B6%E8%A1%8C&amp;chset=gb2312&amp;scr=1366x768&amp;col=24-bit&amp;lg=zh-cn&amp;je=1&amp;ec=1&amp;fv=10.0&amp;cnv=0.6630746038751356&amp;ref=https%3A%2F%2Fmybank.icbc.com.cn%2Ficbc%2Fnewperbank%2Fperbank3%2Fframe%2Fframe_index.jsp&amp;uagent=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64%3B%20Trident%2F7.0%3B%20rv%3A11.0)%20like%20Gecko&amp;privateBankFlagPV=0&amp;uip=134.159.206.51&amp;areacode=0908&amp;stat_ss=&amp;srcpageno=&amp;curpageno=&amp;noIdendifiedCusid=&amp;TRANSDATE=20190619&amp;TRANSTIME=162102&amp;requestChannel=302&amp;sessionId=GWASIJJBGUCPJVCMJGALBKAHFNDTDCERFNDGJRHE&amp;pvModelElementId=&amp;filterWord=&amp;labelname=&amp;cis=090800008250954&amp;url=%2Ficbc%2Fnewperbank%2Fperbank3%2Fframe%2Fframe_index.jsp&amp;prodcode=&amp;prodname=&amp;curmenu=&amp;searchWord=&amp;searchChannel=&amp;serviceid=" border="0">
